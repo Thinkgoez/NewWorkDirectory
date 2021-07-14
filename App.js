@@ -3,45 +3,41 @@ import React from 'react';
 import styled from 'styled-components/native'
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import {SafeAreaView, Text} from 'react-native';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 
 import {Header} from './src/components/Header/Header';
 import {Articles} from './src/pages/Articles';
+import { Summary } from './src/pages/Summary';
 
+const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
-
-const CancelComponent = React.memo(() => (
-  <SafeAreaView>
-    <Text>Cancel Page</Text>
-  </SafeAreaView>
-));
-const ConfirmComponent = React.memo(() => (
-  <SafeAreaView>
-    <Text>ConfirmPage</Text>
-  </SafeAreaView>
-));
 
 function func({...props}) {
   // props are bad
   return <Header {...props} />;
 }
-function func1() {
-  return <Header />;
+function func1({ scene }) {
+    const { options } = scene.descriptor;
+    const title =
+      options.headerTitle !== undefined
+        ? options.headerTitle
+        : options.title !== undefined
+        ? options.title
+        : scene.route.name;
+  
+    return (
+      <Header title={title} />
+    );
 }
 
 const App = () => {
   return (
     <StyledSafeAreaView>
     <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerTitleAlign: 'center',
-          header: func1,
-        }}>
-        <Stack.Screen name="Articles in Carton" component={Articles} />
-        <Stack.Screen name="Cancel" component={CancelComponent} />
-        <Stack.Screen name="Confirm" component={ConfirmComponent} />
-      </Stack.Navigator>
+      <Drawer.Navigator screenOptions={{header: func1, headerShown: true}}>
+        <Drawer.Screen name="Articles in Carton" component={Articles} />
+        <Drawer.Screen name="Summary" component={Summary} />
+      </Drawer.Navigator>
     </NavigationContainer>
     </StyledSafeAreaView>
   );

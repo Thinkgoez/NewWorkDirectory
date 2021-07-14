@@ -56,3 +56,6 @@ export const shadowMixin = css`
     ${({shadowOpacity}) => shadowOpacity !== undefined ? `shadow-opacity: ${shadowOpacity};`: ''}
     ${({shadowRadius}) => shadowRadius !== undefined ? `shadow-radius: ${shadowRadius};`: ''}
 `
+export const textMixin = css`
+    ${({textTransform}) => textTransform !== undefined ? `textTransform: ${textTransform};`: ''}
+`

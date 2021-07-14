@@ -1,12 +1,14 @@
 import React from 'react'
 import styled from 'styled-components/native'
+// import { FlatList } from 'react-navigation';
+
 import { StyledView, StyledText} from "../../common/SimpleComponents";
 import { ArticleItem } from "./ArticleItem";
 import { ArticlesListHeader } from './ArticlesListHeader';
 
 export const ArticlesList = ({ list=[], refetching=false, onRefetch, onSelect, ...props}) => {
     return(
-        <StyledView>
+        <StyledView flex={1} >
             {list && list.length > 0
             ? <StyledFlatList
                 data={list}
@@ -24,5 +26,4 @@ export const ArticlesList = ({ list=[], refetching=false, onRefetch, onSelect, .
 }
 
 const StyledFlatList = styled.FlatList`
-    
 `

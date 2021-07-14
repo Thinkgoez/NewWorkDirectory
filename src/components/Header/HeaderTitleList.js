@@ -1,5 +1,7 @@
-import React from 'react';
+// FIX IT WITH HEADER.js
 
+import React from 'react';
+import styled from 'styled-components/native'
 import {StyledView, StyledButton, StyledText} from '../common/SimpleComponents';
 
 const defaultTitles = [
@@ -8,7 +10,7 @@ const defaultTitles = [
   {title: 'Confirm', pressable: true},
 ];
 
-export const HeaderTitleList = ({titles=defaultTitles}) => {
+export const HeaderTitleList = ({title, right, left}) => {
   return (
     <StyledView
       flexDirection="row"
@@ -18,16 +20,26 @@ export const HeaderTitleList = ({titles=defaultTitles}) => {
       height="30%"
       paddingHorizontal='4px'
       paddingBottom='8px'>
-      {titles.map(item => (
-        <StyledButton key={item.title} disabled={!item.pressable}>
-          <StyledText
-            color={item.color || '#0d81ff'}
-            fontSize={'16px'}
-            fontWeight={'bold'}>
-            {item.title}
-          </StyledText>
-        </StyledButton>
-      ))}
+        {right && <StyledButton key={right.text} disabled={right.disabled}>
+          <TitleText color={right.color || '#0d81ff'}>
+            {right.title}
+          </TitleText>
+        </StyledButton>}
+        {title && <StyledButton key={title.text} disabled={title.disabled}>
+          <TitleText color={title.color || '#0d81ff'}>
+            {title?.text || title}
+          </TitleText>
+        </StyledButton>}
+        {left && <StyledButton key={left.text} disabled={left.disabled}>
+          <TitleText color={left.color || '#0d81ff'}>
+            {left.title}
+          </TitleText>
+        </StyledButton>}
     </StyledView>
   );
 };
+
+const TitleText = styled(StyledText)`
+  font-size:16px;
+  font-weight: bold;
+`

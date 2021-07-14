@@ -1,13 +1,14 @@
 import React from 'react'
 
-import { StyledButton } from '../../common/SimpleComponents'
+import { StyledView } from '../../common/SimpleComponents'
 import { IconText } from '../../common/CombinationComponents'
-import BoxIcon from '../../../assets/box.svg'
-import TagIcon from '../../../assets/tag.svg'
 
-export const PageHeader = ({id, count}) => (
-    <StyledButton flexDirection='row' justifyContent='space-between' paddingVertical='16px' paddingHorizontal='4px' backgroundColor='#e5e5e5'>
-        <IconText text={id} Icon={BoxIcon}/>
-        <IconText text={count} Icon={TagIcon}/>
-    </StyledButton>
+export const PageHeader = ({id, items}) => (
+    <StyledView flexDirection='row' justifyContent='space-between' paddingVertical='16px' paddingHorizontal='4px' backgroundColor='#e5e5e5'>
+        {id !== undefined && <IconText flex={4} text={id} />}
+        <StyledView flexDirection='row' justifyContent='space-between' flex={1} paddingRight={id ? '16px' : '0'}>
+            {items.map(item => <IconText key={item.id} text={item.text} Icon={item.icon} />)}
+        </StyledView>
+    </StyledView>
+    
 )

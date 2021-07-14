@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
+
 import {ArticlesList} from '../components/Articles/ArticlesList/ArticlesList';
 import {PageHeader} from '../components/Articles/PageHeader/PageHeader';
 import { StyledView } from '../components/common/SimpleComponents';
 
-// let deviceH = Dimensions.get('screen').height;
-// let windowH = Dimensions.get('window').height;
-// let bottomNavBarH = deviceH - windowH - StatusBar.currentHeight;
-// // should fix
+import TagIcon from '../assets/tag.svg'
+import BoxIcon from '../assets/box.svg'
+
+const ArticlesPageHeaderItems = [{id: 1, icon: BoxIcon, text: '321312312321312409496349058'}, {id: 2, icon: TagIcon, text: '9'}]
 
 const itemsList = [
   {
@@ -71,7 +72,7 @@ const itemsList = [
     size: 'XS',
     name: 'Langsleeve Women X',
     count: 3,
-  },
+  }
 ];
 
 export const Articles = () => {
@@ -86,10 +87,10 @@ export const Articles = () => {
     // Some code
   }
   return (
-    <StyledView paddingBottom='16px'>
-      <PageHeader id="321312312321312409496349058" count="9" />
+    <StyledView flex={1} paddingBottom='16px'>
+      <PageHeader items={ArticlesPageHeaderItems} />
       <ArticlesList
-        list={[]}
+        list={itemsList}
         refetching={loading}
         onRefetch={fakeFecth}
         onSelect={handlePessItem}
