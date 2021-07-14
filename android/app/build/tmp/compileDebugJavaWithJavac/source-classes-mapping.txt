@@ -1,0 +1,14 @@
+com/firsttask/MainActivity.java
+ com.firsttask.MainActivity
+com/firsttask/BuildConfig.java
+ com.firsttask.BuildConfig
+com/firsttask/ReactNativeFlipper.java
+ com.firsttask.ReactNativeFlipper
+ com.firsttask.ReactNativeFlipper$1
+ com.firsttask.ReactNativeFlipper$2
+ com.firsttask.ReactNativeFlipper$2$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
+com/firsttask/MainApplication.java
+ com.firsttask.MainApplication
+ com.firsttask.MainApplication$1
