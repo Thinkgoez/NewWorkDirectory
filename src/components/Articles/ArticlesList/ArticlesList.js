@@ -1,13 +1,14 @@
 import React from 'react'
 import styled from 'styled-components/native'
-import { StyledView } from "../../common/SimpleComponents";
+import { StyledView, StyledText} from "../../common/SimpleComponents";
 import { ArticleItem } from "./ArticleItem";
 import { ArticlesListHeader } from './ArticlesListHeader';
 
-export const ArticlesList = ({list=[], refetching=false, onRefetch, onSelect, ...props}) => {
+export const ArticlesList = ({ list=[], refetching=false, onRefetch, onSelect, ...props}) => {
     return(
         <StyledView>
-            <StyledFlatList
+            {list && list.length > 0
+            ? <StyledFlatList
                 data={list}
                 renderItem={({item}) => <ArticleItem {...item} onSelect={onSelect}/>}
                 keyExtractor={item => item.id}
@@ -15,6 +16,9 @@ export const ArticlesList = ({list=[], refetching=false, onRefetch, onSelect, ..
                 refreshing={refetching}
                 onRefresh={onRefetch}
             />
+            : <StyledView paddingTop='16px'><StyledText textAlign='center' fontSize='22px' fontWeight='bold'>Here is no any article ...</StyledText></StyledView>
+        }
+            
         </StyledView>
     )
 }

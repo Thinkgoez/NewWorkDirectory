@@ -89,7 +89,7 @@ export const Articles = () => {
     <StyledView paddingBottom='16px'>
       <PageHeader id="321312312321312409496349058" count="9" />
       <ArticlesList
-        list={itemsList}
+        list={[]}
         refetching={loading}
         onRefetch={fakeFecth}
         onSelect={handlePessItem}
