@@ -17,22 +17,22 @@ export const HeaderTitleList = ({title, right, left}) => {
       justifyContent="space-between"
       alignItems="center"
       width="100%"
-      height="30%"
+      height="40%"
       paddingHorizontal='4px'
-      paddingBottom='8px'>
+      paddingVertical='8px'>
         {right && <StyledButton key={right.text} disabled={right.disabled}>
           <TitleText color={right.color || '#0d81ff'}>
-            {right.title}
+          {right?.text || right}
           </TitleText>
         </StyledButton>}
         {title && <StyledButton key={title.text} disabled={title.disabled}>
-          <TitleText color={title.color || '#0d81ff'}>
+          <TitleText color={title.disabled ? '#000' : title.color || '#0d81ff'}>
             {title?.text || title}
           </TitleText>
         </StyledButton>}
         {left && <StyledButton key={left.text} disabled={left.disabled}>
           <TitleText color={left.color || '#0d81ff'}>
-            {left.title}
+          {left?.text || left}
           </TitleText>
         </StyledButton>}
     </StyledView>

@@ -5,6 +5,7 @@ INJECTED from /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/andro
 INJECTED from /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-25:12
 INJECTED from /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-25:12
 MERGED from /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-25:12
+MERGED from [hermes-debug.aar] /Users/developer/.gradle/caches/transforms-2/files-2.1/1edce69ab31add5d59154aaf433e2cc5/jetified-hermes-debug/AndroidManifest.xml:2:1-7:12
 MERGED from [com.facebook.flipper:flipper:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:8:1-18:12
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/d8279ebfbcca51b68586de1b9bc17210/jetified-flipper-network-plugin-0.75.1/AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/13e0ca18817a9e59a8c4a94704ec8c3c/jetified-flipper-fresco-plugin-0.75.1/AndroidManifest.xml:8:1-15:12
@@ -15,8 +16,7 @@ MERGED from [:react-native-screens] /Users/developer/Documents/Projects/NewRepo/
 MERGED from [:react-native-svg] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.react:react-native:0.64.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/f48ad73390f9d41c4966ce25bccc3bb7/jetified-react-native-0.64.2/AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5c64f35c4f864d4cd139ccbbff91ceb9/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [org.webkit:android-jsc:r245459] /Users/developer/.gradle/caches/transforms-2/files-2.1/65337ca8c0783fc27be60d476a5f6b75/jetified-android-jsc-r245459/AndroidManifest.xml:2:1-11:12
-MERGED from [:react-native-reanimated] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-reanimated/android/build/.transforms/b014313ffb8378204192c0f3ed5ebdce/jetified-react-native-reanimated-64-jsc/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-reanimated] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-reanimated/android/build/.transforms/7f7e62983840dab9f29b36ef8a6dcad2/jetified-react-native-reanimated-64-hermes/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.fresco:flipper:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/84c6a932a42f35f9b796c5d67e6eb742/jetified-flipper-2.2.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:stetho:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5f2c193a45b1b439ec8f5a8edcb37f33/jetified-stetho-2.2.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:fresco:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/336cee0c87f467fe6bfb36840b0630b2/jetified-fresco-2.2.0/AndroidManifest.xml:2:1-9:12
@@ -155,6 +155,8 @@ uses-sdk
 INJECTED from /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/android/app/src/main/AndroidManifest.xml
+MERGED from [hermes-debug.aar] /Users/developer/.gradle/caches/transforms-2/files-2.1/1edce69ab31add5d59154aaf433e2cc5/jetified-hermes-debug/AndroidManifest.xml:5:5-44
+MERGED from [hermes-debug.aar] /Users/developer/.gradle/caches/transforms-2/files-2.1/1edce69ab31add5d59154aaf433e2cc5/jetified-hermes-debug/AndroidManifest.xml:5:5-44
 MERGED from [com.facebook.flipper:flipper:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/d8279ebfbcca51b68586de1b9bc17210/jetified-flipper-network-plugin-0.75.1/AndroidManifest.xml:11:5-13:41
@@ -175,10 +177,8 @@ MERGED from [com.facebook.react:react-native:0.64.2] /Users/developer/.gradle/ca
 MERGED from [com.facebook.react:react-native:0.64.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/f48ad73390f9d41c4966ce25bccc3bb7/jetified-react-native-0.64.2/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5c64f35c4f864d4cd139ccbbff91ceb9/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5c64f35c4f864d4cd139ccbbff91ceb9/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [org.webkit:android-jsc:r245459] /Users/developer/.gradle/caches/transforms-2/files-2.1/65337ca8c0783fc27be60d476a5f6b75/jetified-android-jsc-r245459/AndroidManifest.xml:7:5-9:41
-MERGED from [org.webkit:android-jsc:r245459] /Users/developer/.gradle/caches/transforms-2/files-2.1/65337ca8c0783fc27be60d476a5f6b75/jetified-android-jsc-r245459/AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-reanimated] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-reanimated/android/build/.transforms/b014313ffb8378204192c0f3ed5ebdce/jetified-react-native-reanimated-64-jsc/AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-reanimated] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-reanimated/android/build/.transforms/b014313ffb8378204192c0f3ed5ebdce/jetified-react-native-reanimated-64-jsc/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-reanimated] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-reanimated/android/build/.transforms/7f7e62983840dab9f29b36ef8a6dcad2/jetified-react-native-reanimated-64-hermes/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-reanimated] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-reanimated/android/build/.transforms/7f7e62983840dab9f29b36ef8a6dcad2/jetified-react-native-reanimated-64-hermes/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.fresco:flipper:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/84c6a932a42f35f9b796c5d67e6eb742/jetified-flipper-2.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:flipper:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/84c6a932a42f35f9b796c5d67e6eb742/jetified-flipper-2.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:stetho:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5f2c193a45b1b439ec8f5a8edcb37f33/jetified-stetho-2.2.0/AndroidManifest.xml:5:5-7:41

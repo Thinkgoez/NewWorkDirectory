@@ -17,8 +17,9 @@ export const HeaderIconList = () => (
     flexDirection='row'
     justifyContent='space-between'
     alignItems='center'
+    borderBottom='1px #d9d9d9'
     width='100%'
-    height='70%'
+    height='60%'
   >
     <StyledButton flex='1'><HeaderIcon Icon={Bluetooth} text={'100%'}/></StyledButton>
     <StyledButton flex='2'><HeaderIcon Icon={Signal}/></StyledButton>
