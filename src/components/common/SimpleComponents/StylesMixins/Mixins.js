@@ -43,6 +43,8 @@ export const borderMixin = css`
                                                         border-bottom-color: ${borderBottom.split(' ')[1]};`: ''}
     ${({borderTop}) => borderTop !== undefined ? `border-top-width: ${borderTop.split(' ')[0]};
                                                         border-top-color: ${borderTop.split(' ')[1]};`: ''}
+    ${({borderRight}) => borderRight !== undefined ? `border-right-width: ${borderRight.split(' ')[0]};
+                                                        border-right-color: ${borderRight.split(' ')[1]};`: ''}
 `
 export const sizesMixin = css`
     ${({width}) => width !== undefined ? `width: ${width};`: ''}
