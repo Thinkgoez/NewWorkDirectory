@@ -11,8 +11,14 @@ import com.facebook.react.shell.MainReactPackage;
 import java.util.Arrays;
 import java.util.ArrayList;
 
+// @react-native-community/cameraroll
+import com.reactnativecommunity.cameraroll.CameraRollPackage;
 // @react-native-community/masked-view
 import org.reactnative.maskedview.RNCMaskedViewPackage;
+// react-native-camera
+import org.reactnative.camera.RNCameraPackage;
+// react-native-fs
+import com.rnfs.RNFSPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 // react-native-pager-view
@@ -70,7 +76,10 @@ public class PackageList {
   public ArrayList<ReactPackage> getPackages() {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
+      new CameraRollPackage(),
       new RNCMaskedViewPackage(),
+      new RNCameraPackage(),
+      new RNFSPackage(),
       new RNGestureHandlerPackage(),
       new PagerViewPackage(),
       new ReanimatedPackage(),

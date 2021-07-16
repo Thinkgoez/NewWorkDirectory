@@ -6,7 +6,8 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import { Articles } from './src/pages/Articles';
 import { Summary } from './src/pages/Summary';
-import Test from './src/components/common/CombinationComponents/ListItems/test'
+import { Camera } from './src/pages/Camera';
+import Test from './src/pages/Test/test'
 
 const Drawer = createDrawerNavigator();
 
@@ -16,10 +17,11 @@ const App = () => {
             <NavigationContainer>
                 <Drawer.Navigator
                     screenOptions={{ headerShown: false }}
-                    initialRouteName="Summary">
+                    initialRouteName="Camera">
                     <Drawer.Screen name="Articles in Carton" component={Articles} />
                     <Drawer.Screen name="Summary" component={Summary} />
                     <Drawer.Screen name="test" component={Test} />
+                    <Drawer.Screen name="Camera" component={Camera} />
                 </Drawer.Navigator>
             </NavigationContainer>
         </StyledSafeAreaView>

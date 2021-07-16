@@ -3,7 +3,7 @@
 import React from 'react'
 import { StyledButton, StyledText, StyledView } from '../common/SimpleComponents';
 
-export function SummaryTab({ state, descriptors, navigation, position }) {
+export function SummaryTab({ state, descriptors, navigation }) {
   return (
     <StyledView flexDirection='row'>
       {state.routes.map((route, index) => {

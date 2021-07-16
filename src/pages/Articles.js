@@ -84,9 +84,7 @@ const itemsList = {
 
 export const Articles = () => {
   const [loading, setLoading] = useState(false);
-  const pageTitle = {text: useRoute()?.name || 'Home', disabled: true}
-  const leftText = 'Cancel'
-  const rightText = 'Confirm'
+  const headerTitles = {title: {text: useRoute()?.name || 'Home', disabled: true}, leftText: 'Cancel', rightText: 'Confirm'}
 
   function fakeFecth() {
     setLoading(true);
@@ -99,7 +97,7 @@ export const Articles = () => {
   }
   return (
     <StyledView flex={1}>
-      <Header title={pageTitle} leftText={leftText} rightText={rightText} />
+      <Header headerTitles={headerTitles} />
       <PageHeader items={ArticlesPageHeaderItems} />
       <ContentList
         itemsList={itemsList}
