@@ -1,124 +1,163 @@
 import React from 'react';
-import { StyleSheet, Text, View, I18nManager, Alert } from 'react-native';
+import {
+    Text,
+    View,
+    StyleSheet,
+    LayoutAnimation,
+    TouchableOpacity,
+    Platform,
+    UIManager,
+} from 'react-native';
+import Animated from 'react-native-reanimated';
+import SwipeableItem from 'react-native-swipeable-item';
+import DraggableFlatList from 'react-native-draggable-flatlist';
+const { multiply, sub } = Animated;
 
-import { FlatList, RectButton } from 'react-native-gesture-handler';
-
-import AppleStyleSwipeableRow from './subtest';
-
-//  To toggle LTR/RTL change to `true`
-I18nManager.allowRTL(false);
-
-const Row = ({ item }) => (
-    <RectButton style={styles.rectButton} onPress={() => Alert.alert(item.from)}>
-        <Text style={styles.fromText}>{item.from}</Text>
-        <Text numberOfLines={2} style={styles.messageText}>
-            {item.message}
-        </Text>
-        <Text style={styles.dateText}>{item.when} ❭</Text>
-    </RectButton>
-);
-
-const SwipeableRow = ({ item }) => {
-    return (
-        <AppleStyleSwipeableRow>
-            <Row item={item} />
-        </AppleStyleSwipeableRow>
-    );
-
-};
-
-export default Example = () => {
-    return (
-        <FlatList
-            data={DATA}
-            ItemSeparatorComponent={() => <View style={styles.separator} />}
-            renderItem={({ item, index }) => (
-                <SwipeableRow item={item} index={index} />
-            )}
-            keyExtractor={(_item, index) => `message ${index}`}
-        />
-    );
+if (Platform.OS === 'android') {
+    UIManager.setLayoutAnimationEnabledExperimental &&
+        UIManager.setLayoutAnimationEnabledExperimental(true);
 }
 
+const NUM_ITEMS = 20;
+function getColor(i) {
+    const multiplier = 255 / (NUM_ITEMS - 1);
+    const colorVal = i * multiplier;
+    return `rgb(${colorVal}, ${Math.abs(128 - colorVal)}, ${255 - colorVal})`;
+}
+
+
+const initialData = [...Array(NUM_ITEMS)].fill(0).map((d, index) => {
+    const backgroundColor = getColor(index);
+    return {
+        text: `Row ${index}`,
+        key: `key-${backgroundColor}`,
+        backgroundColor,
+        height: 100,
+    };
+});
+
+class App extends React.Component {
+    state = {
+        data: initialData,
+    };
+
+    itemRefs = new Map();
+
+    deleteItem = (item) => {
+        const updatedData = this.state.data.filter((d) => d !== item);
+        // Animate list to close gap when item is deleted
+        LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
+        this.setState({ data: updatedData });
+    };
+
+    renderUnderlayLeft = ({ item, percentOpen }) => (
+        <Animated.View
+            style={[styles.row, styles.underlayLeft, { opacity: percentOpen }]} // Fade in on open
+        >
+            <TouchableOpacity onPressOut={() => this.deleteItem(item)}>
+                <Text style={styles.text}>{`Delete`}</Text>
+            </TouchableOpacity>
+        </Animated.View>
+    );
+
+    renderUnderlayRight = ({
+        item,
+        percentOpen,
+        open,
+        close,
+    }) => (
+        <Animated.View
+            style={[
+                styles.row,
+                styles.underlayRight,
+                {
+                    transform: [{ translateX: multiply(sub(1, percentOpen), -100) }], // Translate from left on open
+                },
+            ]}>
+            <TouchableOpacity onPressOut={close}>
+                <Text style={styles.text}>CLOSE</Text>
+            </TouchableOpacity>
+        </Animated.View>
+    );
+
+    renderItem = ({ item, index, drag }) => {
+        return (
+            <SwipeableItem
+                key={item.key}
+                item={item}
+                ref={(ref) => {
+                    if (ref && !this.itemRefs.get(item.key)) {
+                        this.itemRefs.set(item.key, ref);
+                    }
+                }}
+                onChange={({ open }) => {
+                    if (open) {
+                        // Close all other open items
+                        [...this.itemRefs.entries()].forEach(([key, ref]) => {
+                            if (key !== item.key && ref) ref.close();
+                        });
+                    }
+                }}
+                overSwipe={20}
+                renderUnderlayLeft={this.renderUnderlayLeft}
+                renderUnderlayRight={this.renderUnderlayRight}
+                snapPointsLeft={[150]}
+                snapPointsRight={[175]}>
+                <View
+                    style={[
+                        styles.row,
+                        { backgroundColor: item.backgroundColor, height: item.height },
+                    ]}>
+                    <TouchableOpacity onLongPress={drag}>
+                        <Text style={styles.text}>{item.text}</Text>
+                    </TouchableOpacity>
+                </View>
+            </SwipeableItem>
+        );
+    };
+
+    render() {
+        return (
+            <View style={styles.container}>
+                <DraggableFlatList
+                    keyExtractor={(item) => item.key}
+                    data={this.state.data}
+                    renderItem={this.renderItem}
+                    onDragEnd={({ data }) => this.setState({ data })}
+                    activationDistance={20}
+                />
+            </View>
+        );
+    }
+}
+
+export default App;
+
 const styles = StyleSheet.create({
-    rectButton: {
+    container: {
         flex: 1,
-        height: 80,
-        paddingVertical: 10,
-        paddingHorizontal: 20,
-        justifyContent: 'space-between',
-        flexDirection: 'column',
-        backgroundColor: 'white',
     },
-    separator: {
-        backgroundColor: 'rgb(200, 199, 204)',
-        height: StyleSheet.hairlineWidth,
+    row: {
+        flexDirection: 'row',
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 15,
     },
-    fromText: {
+    text: {
         fontWeight: 'bold',
-        backgroundColor: 'transparent',
+        color: 'white',
+        fontSize: 32,
     },
-    messageText: {
-        color: '#999',
-        backgroundColor: 'transparent',
+    underlayRight: {
+        flex: 1,
+        backgroundColor: 'teal',
+        justifyContent: 'flex-start',
     },
-    dateText: {
-        backgroundColor: 'transparent',
-        position: 'absolute',
-        right: 20,
-        top: 10,
-        color: '#999',
-        fontWeight: 'bold',
+    underlayLeft: {
+        flex: 1,
+        backgroundColor: 'tomato',
+        justifyContent: 'flex-end',
     },
 });
 
-const DATA = [
-    {
-        from: "D'Artagnan",
-        when: '3:11 PM',
-        message:
-            'Unus pro omnibus, omnes pro uno. Nunc scelerisque, massa non lacinia porta, quam odio dapibus enim, nec tincidunt dolor leo non neque',
-    },
-    {
-        from: 'Aramis',
-        when: '11:46 AM',
-        message:
-            'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus hendrerit ligula dignissim maximus aliquet. Integer tincidunt, tortor at finibus molestie, ex tellus laoreet libero, lobortis consectetur nisl diam viverra justo.',
-    },
-    {
-        from: 'Athos',
-        when: '6:06 AM',
-        message:
-            'Sed non arcu ullamcorper, eleifend velit eu, tristique metus. Duis id sapien eu orci varius malesuada et ac ipsum. Ut a magna vel urna tristique sagittis et dapibus augue. Vivamus non mauris a turpis auctor sagittis vitae vel ex. Curabitur accumsan quis mauris quis venenatis.',
-    },
-    {
-        from: 'Porthos',
-        when: 'Yesterday',
-        message:
-            'Vivamus id condimentum lorem. Duis semper euismod luctus. Morbi maximus urna ut mi tempus fermentum. Nam eget dui sed ligula rutrum venenatis.',
-    },
-    {
-        from: 'Domestos',
-        when: '2 days ago',
-        message:
-            'Aliquam imperdiet dolor eget aliquet feugiat. Fusce tincidunt mi diam. Pellentesque cursus semper sem. Aliquam ut ullamcorper massa, sed tincidunt eros.',
-    },
-    {
-        from: 'Cardinal Richelieu',
-        when: '2 days ago',
-        message:
-            'Pellentesque id quam ac tortor pellentesque tempor tristique ut nunc. Pellentesque posuere ut massa eget imperdiet. Ut at nisi magna. Ut volutpat tellus ut est viverra, eu egestas ex tincidunt. Cras tellus tellus, fringilla eget massa in, ultricies maximus eros.',
-    },
-    {
-        from: "D'Artagnan",
-        when: 'Week ago',
-        message:
-            'Aliquam non aliquet mi. Proin feugiat nisl maximus arcu imperdiet euismod nec at purus. Vestibulum sed dui eget mauris consequat dignissim.',
-    },
-    {
-        from: 'Cardinal Richelieu',
-        when: '2 weeks ago',
-        message:
-            'Vestibulum ac nisi non augue viverra ullamcorper quis vitae mi. Donec vitae risus aliquam, posuere urna fermentum, fermentum risus. ',
-    },
-];

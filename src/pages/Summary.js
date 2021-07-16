@@ -13,16 +13,9 @@ import BoxIcon from '../assets/box.svg'
 const SummaryPageHeaderItems = [{id: 1, icon: BoxIcon, text: '1'}, {id: 2, icon: TagIcon, text: '9'}]
 
 export const Summary = () => {
-  const [loading, setLoading] = useState(false);
   const pageTitle = {text: useRoute()?.name || 'Home', disabled: true}
   const leftText = 'Cancel'
   const rightText = 'Prepare'
-  function fakeFecth() {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 500);
-  }
   const handlePressItem = (el) => {
     // Some code
   }

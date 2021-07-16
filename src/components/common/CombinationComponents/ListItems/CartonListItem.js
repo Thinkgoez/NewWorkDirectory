@@ -9,15 +9,18 @@ import {
     StyledText,
 } from '../../SimpleComponents'
 
-const renderRightAction = () => <StyledView width='72px' backgroundColor='#fe3b30' justifyContent='center' alignItems='center'><StyledText color='#fff'>Delete</StyledText></StyledView>
+const RenderRightAction = ({onPress}) => <StyledButton onPress={onPress} width='72px' backgroundColor='#fe3b30' justifyContent='center' alignItems='center'><StyledText color='#fff'>Delete</StyledText></StyledButton>
 
-const CartonItem = ({ serialCode, count, onSelect }) => {
+const CartonItem = ({ item: {id, serialCode, count}, onSelect, closeRow, row, handleRightSwipe }) => {
     return (
         <Swipeable
+            ref={ref => row[id] = ref}
             friction={2}
             enableTrackpadTwoFingerGesture
             rightThreshold={30}
-            renderRightActions={renderRightAction}
+            renderRightActions={() => <RenderRightAction onPress={() => handleRightSwipe(id)} />}
+            overshootRight={false}
+            onSwipeableOpen={() => closeRow(id)}
         >
             <StyledButton
                 flexDirection="row"
@@ -27,6 +30,7 @@ const CartonItem = ({ serialCode, count, onSelect }) => {
                 paddingRight="4px"
                 borderBottom='1px #c3c3c3'
                 borderRight='1px #c3c3c3'
+                backgroundColor='#fff'
                 onPress={onSelect}
             >
                 <StyledText fontSize='12px' fontWeight='bold'>{serialCode}</StyledText>

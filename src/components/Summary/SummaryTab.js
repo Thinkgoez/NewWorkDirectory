@@ -1,4 +1,5 @@
 // SHOULD ANIMETE BG-COLOR in StyleButton component
+// Should check
 import React from 'react'
 import { StyledButton, StyledText, StyledView } from '../common/SimpleComponents';
 
