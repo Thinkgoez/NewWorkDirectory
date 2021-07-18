@@ -1,6 +1,5 @@
-import React, {useState} from 'react'
-import styled from 'styled-components/native'
-import { SwipeListView } from 'react-native-swipe-list-view';
+import React from 'react'
+import { FlatList } from 'react-native'
 
 import { ListHeader } from '../../';
 import { StyledView, StyledText } from "../../../SimpleComponents";
@@ -19,22 +18,18 @@ const ContentList = ({ itemsList, refetching = false, onRefetch, onSelect, handl
     return (
         <StyledView flex={1} backgroundColor='#fff'>
             {itemsList?.list && itemsList.list.length > 0
-                ? <StyledFlatList
+                ? <FlatList
                     data={itemsList.list}
                     renderItem={({ item }) => <itemsList.ListItemComponent item={item} onSelect={onSelect} row={row} closeRow={closeRow} handleRightSwipe={handleRightSwipe} />}
                     keyExtractor={item => item.id}
                     ListHeaderComponent={() => <ListHeader items={itemsList.headerItems} />}
                     refreshing={refetching}
                     onRefresh={onRefetch}
-                />
+                    />
                 : <StyledView paddingTop='16px'><StyledText textAlign='center' fontSize='22px' fontWeight='bold'>Here is no any article ...</StyledText></StyledView>
             }
-
         </StyledView>
     )
 }
-
-const StyledFlatList = styled.FlatList`
-`
 
 export default ContentList

@@ -3,86 +3,15 @@ import { Alert } from 'react-native';
 
 import { StyledView } from "../../common/SimpleComponents"
 import { ContentList } from '../../common/CombinationComponents'
-import { ArticleItem } from '../../common/CombinationComponents';
 
-import {useActive} from '../../../hooks/useActive'
-
-const itemsList = {
-    list: [
-        {
-            id: '1',
-            img: 'https://content.mycutegraphics.com/graphics/clothing/blue-sweater.png',
-            serialCode: 'CGO934',
-            color: 'White',
-            size: 'XS',
-            name: 'Langsleeve Women X',
-            count: 3,
-        },
-        {
-            id: '2',
-            img: 'https://content.mycutegraphics.com/graphics/clothing/blue-sweater.png',
-            serialCode: 'CGO934',
-            color: 'White',
-            size: 'XS',
-            name: 'Langsleeve Women X',
-            count: 3,
-        },
-        {
-            id: '3',
-            img: 'https://content.mycutegraphics.com/graphics/clothing/blue-sweater.png',
-            serialCode: 'CGO934',
-            color: 'White',
-            size: 'XS',
-            name: 'Langsleeve Women X',
-            count: 3,
-        },
-        {
-            id: '4',
-            img: 'https://content.mycutegraphics.com/graphics/clothing/blue-sweater.png',
-            serialCode: 'CGO934',
-            color: 'White',
-            size: 'XS',
-            name: 'Langsleeve Women X',
-            count: 3,
-        },
-        {
-            id: '5',
-            img: 'https://content.mycutegraphics.com/graphics/clothing/blue-sweater.png',
-            serialCode: 'CGO934',
-            color: 'White',
-            size: 'XS',
-            name: 'Langsleeve Women X',
-            count: 3,
-        },
-        {
-            id: '6',
-            img: 'https://content.mycutegraphics.com/graphics/clothing/blue-sweater.png',
-            serialCode: 'CGO934',
-            color: 'White',
-            size: 'XS',
-            name: 'Langsleeve Women X',
-            count: 3,
-        },
-        {
-            id: '7',
-            img: 'https://content.mycutegraphics.com/graphics/clothing/blue-sweater.png',
-            serialCode: 'CGO934',
-            color: 'White',
-            size: 'XS',
-            name: 'Langsleeve Women X',
-            count: 3,
-        }
-    ],
-    headerItems: ['Article no.', 'act'],
-    ListItemComponent: ArticleItem
-};
-
+import { useActive } from '../../../hooks/useActive'
+import { itemsList } from './itemsData/ArticleScreen'
 
 export const ArticleScreen = ({ navigation, route, ...props }) => {
     const [loading, setLoading] = useState(false);
     const isActive = useActive(navigation)
 
-    
+
     function fakeFecth() {
         setLoading(true);
         setTimeout(() => {

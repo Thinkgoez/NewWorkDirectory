@@ -12,15 +12,21 @@ import {
 const RenderRightAction = ({onPress}) => <StyledButton onPress={onPress} width='72px' backgroundColor='#fe3b30' justifyContent='center' alignItems='center'><StyledText color='#fff'>Delete</StyledText></StyledButton>
 
 const CartonItem = ({ item: {id, serialCode, count}, onSelect, closeRow, row, handleRightSwipe }) => {
+    const swipeRightHandler = () => {
+        handleRightSwipe(id)
+    }
+    const swipeOpenHandler = () => {
+        closeRow(id)
+    }
     return (
         <Swipeable
             ref={ref => row[id] = ref}
             friction={2}
             enableTrackpadTwoFingerGesture
             rightThreshold={30}
-            renderRightActions={() => <RenderRightAction onPress={() => handleRightSwipe(id)} />}
+            renderRightActions={() => <RenderRightAction onPress={swipeRightHandler} />}
             overshootRight={false}
-            onSwipeableOpen={() => closeRow(id)}
+            onSwipeableOpen={swipeOpenHandler}
         >
             <StyledButton
                 flexDirection="row"
