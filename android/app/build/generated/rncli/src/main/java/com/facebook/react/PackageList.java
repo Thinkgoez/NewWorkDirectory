@@ -25,10 +25,10 @@ import com.rnfs.RNFSPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 // react-native-get-random-values
 import org.linusu.RNGetRandomValuesPackage;
-// react-native-image-base64
-import fr.snapp.imagebase64.RNImgToBase64Package;
 // react-native-pager-view
 import com.reactnativepagerview.PagerViewPackage;
+// react-native-photo-editor
+import ui.photoeditor.RNPhotoEditorPackage;
 // react-native-reanimated
 import com.swmansion.reanimated.ReanimatedPackage;
 // react-native-safe-area-context
@@ -39,8 +39,6 @@ import com.swmansion.rnscreens.RNScreensPackage;
 import com.horcrux.svg.SvgPackage;
 // react-native-webview
 import com.reactnativecommunity.webview.RNCWebViewPackage;
-// rn-fetch-blob
-import com.RNFetchBlob.RNFetchBlobPackage;
 
 public class PackageList {
   private Application application;
@@ -93,14 +91,13 @@ public class PackageList {
       new RNFSPackage(),
       new RNGestureHandlerPackage(),
       new RNGetRandomValuesPackage(),
-      new RNImgToBase64Package(),
       new PagerViewPackage(),
+      new RNPhotoEditorPackage(),
       new ReanimatedPackage(),
       new SafeAreaContextPackage(),
       new RNScreensPackage(),
       new SvgPackage(),
-      new RNCWebViewPackage(),
-      new RNFetchBlobPackage()
+      new RNCWebViewPackage()
     ));
   }
 }

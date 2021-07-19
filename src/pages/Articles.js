@@ -28,7 +28,7 @@ export const ArticlesPage = () => {
     }
     return (
         <StyledView flex={1}>
-            <Header headerTitles={headerTitles} aheaderIcons={headerIcons} />
+            <Header headerTitles={headerTitles} headerIcons={headerIcons} />
             <PageHeader items={ArticlesPageHeaderItems} />
             <ContentList
                 itemsList={itemsList}

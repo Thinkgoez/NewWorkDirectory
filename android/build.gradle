@@ -9,6 +9,7 @@ buildscript {
         ndkVersion = "20.1.5948944"
     }
     repositories {
+        maven { url "https://jitpack.io" }
         google()
         jcenter()
     }
@@ -21,6 +22,7 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url "https://jitpack.io" }
         mavenLocal()
         maven {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
