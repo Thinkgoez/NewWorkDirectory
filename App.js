@@ -3,28 +3,37 @@ import React from 'react';
 import styled from 'styled-components/native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { PersistGate } from 'redux-persist/integration/react'
+import { Provider } from 'react-redux'
 
-import { Articles } from './src/pages/Articles';
-import { Summary } from './src/pages/Summary';
-import { Camera } from './src/pages/Camera';
+import { ArticlesPage } from './src/pages/Articles';
+import { SummaryPage } from './src/pages/Summary';
+import { CameraPage } from './src/pages/Camera';
 import Test from './src/pages/Test/test'
 
+import configureStore from './src/redux/configureStore';
+
 const Drawer = createDrawerNavigator();
+const { store, persistor } = configureStore()
 
 const App = () => {
     return (
-        <StyledSafeAreaView>
-            <NavigationContainer>
-                <Drawer.Navigator
-                    screenOptions={{ headerShown: false }}
-                    initialRouteName="Camera">
-                    <Drawer.Screen name="Articles in Carton" component={Articles} />
-                    <Drawer.Screen name="Summary" component={Summary} />
-                    <Drawer.Screen name="test" component={Test} />
-                    <Drawer.Screen name="Camera" component={Camera} />
-                </Drawer.Navigator>
-            </NavigationContainer>
-        </StyledSafeAreaView>
+        <Provider store={store}>
+            <PersistGate loading={null} persistor={persistor}>
+                <StyledSafeAreaView>
+                    <NavigationContainer>
+                        <Drawer.Navigator
+                            screenOptions={{ headerShown: false }}
+                            initialRouteName="Summary">
+                            <Drawer.Screen name="Articles in Carton" component={ArticlesPage} />
+                            <Drawer.Screen name="Summary" component={SummaryPage} />
+                            <Drawer.Screen name="test" component={Test} />
+                            <Drawer.Screen name="Camera" component={CameraPage} />
+                        </Drawer.Navigator>
+                    </NavigationContainer>
+                </StyledSafeAreaView>
+            </PersistGate>
+        </Provider>
     );
 };
 

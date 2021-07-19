@@ -12,7 +12,7 @@ const Bluetooth = ({ ...props }) => <BluetoothIcon width={50} height={35} {...pr
 const Signal = ({ ...props }) => <SignalIcon width={40} height={40} {...props} />
 const Cloud = ({ ...props }) => <CloudIcon width={45} height={45} {...props} />
 
-export const HeaderIconList = () => (
+export const HeaderIconList = ({center}) => (
     <StyledView
         flexDirection='row'
         justifyContent='space-between'
@@ -22,7 +22,7 @@ export const HeaderIconList = () => (
         height='60%'
     >
         <StyledButton flex='1'><HeaderIcon Icon={Bluetooth} text={'100%'} /></StyledButton>
-        <StyledButton flex='2'><HeaderIcon Icon={Signal} /></StyledButton>
+        <StyledButton onPress={center.handleClick} flex='2'><HeaderIcon Icon={Signal} /></StyledButton>
         <StyledButton flex='1'><HeaderIcon Icon={Cloud} /></StyledButton>
     </StyledView>
 )

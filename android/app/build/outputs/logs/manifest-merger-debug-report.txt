@@ -10,14 +10,19 @@ MERGED from [com.facebook.flipper:flipper:0.75.1] /Users/developer/.gradle/cache
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/d8279ebfbcca51b68586de1b9bc17210/jetified-flipper-network-plugin-0.75.1/AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/13e0ca18817a9e59a8c4a94704ec8c3c/jetified-flipper-fresco-plugin-0.75.1/AndroidManifest.xml:8:1-15:12
 MERGED from [:react-native-fs] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-fs/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-13:12
+MERGED from [:react-native-async-storage_async-storage] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-community_cameraroll] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/@react-native-community/cameraroll/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-community_masked-view] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-camera] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:2:1-18:12
 MERGED from [:react-native-gesture-handler] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-get-random-values] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-get-random-values/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-image-base64] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-image-base64/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-pager-view] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-pager-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-safe-area-context] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-svg] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-webview] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-23:12
+MERGED from [:rn-fetch-blob] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-47:12
 MERGED from [com.facebook.react:react-native:0.64.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/f48ad73390f9d41c4966ce25bccc3bb7/jetified-react-native-0.64.2/AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.android.gms:play-services-vision:17.0.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/ec6dc98bbe27d0c329cfd387f9f846dd/jetified-play-services-vision-17.0.2/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/301f15c2a0c5a135208b8195150a6e24/jetified-play-services-vision-common-17.0.2/AndroidManifest.xml:2:1-9:12
@@ -109,6 +114,8 @@ uses-permission#android.permission.INTERNET
 ADDED from /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:4:5-67
 MERGED from [com.facebook.flipper:flipper:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:15:5-67
 MERGED from [com.facebook.flipper:flipper:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:15:5-67
+MERGED from [:rn-fetch-blob] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-67
+MERGED from [:rn-fetch-blob] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-67
 	android:name
 		ADDED from /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:4:22-64
 uses-permission#android.permission.CAMERA
@@ -125,6 +132,8 @@ uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:8:5-81
 MERGED from [:react-native-fs] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-fs/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-81
 MERGED from [:react-native-fs] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-fs/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-81
+MERGED from [:rn-fetch-blob] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:33:5-81
+MERGED from [:rn-fetch-blob] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:33:5-81
 	android:name
 		ADDED from /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:8:22-78
 uses-permission#android.permission.RECORD_AUDIO
@@ -135,6 +144,10 @@ application
 ADDED from /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:11:5-29:19
 MERGED from /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:11:5-29:19
 MERGED from /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:11:5-29:19
+MERGED from [:react-native-webview] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
+MERGED from [:react-native-webview] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
+MERGED from [:rn-fetch-blob] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:35:5-45:19
+MERGED from [:rn-fetch-blob] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:35:5-45:19
 MERGED from [com.facebook.react:react-native:0.64.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/f48ad73390f9d41c4966ce25bccc3bb7/jetified-react-native-0.64.2/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.react:react-native:0.64.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/f48ad73390f9d41c4966ce25bccc3bb7/jetified-react-native-0.64.2/AndroidManifest.xml:11:5-20
 MERGED from [com.google.android.gms:play-services-vision:17.0.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/ec6dc98bbe27d0c329cfd387f9f846dd/jetified-play-services-vision-17.0.2/AndroidManifest.xml:7:5-20
@@ -221,6 +234,8 @@ MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.75.1] /Users/developer
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/13e0ca18817a9e59a8c4a94704ec8c3c/jetified-flipper-fresco-plugin-0.75.1/AndroidManifest.xml:11:5-13:41
 MERGED from [:react-native-fs] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-fs/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-fs] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-fs/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-async-storage_async-storage] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-async-storage_async-storage] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_cameraroll] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/@react-native-community/cameraroll/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_cameraroll] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/@react-native-community/cameraroll/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_masked-view] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
@@ -229,6 +244,10 @@ MERGED from [:react-native-camera] /Users/developer/Documents/Projects/NewRepo/N
 MERGED from [:react-native-camera] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-gesture-handler] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-gesture-handler] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-get-random-values] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-get-random-values/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-get-random-values] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-get-random-values/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-image-base64] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-image-base64/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-image-base64] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-image-base64/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-pager-view] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-pager-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-pager-view] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-pager-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-safe-area-context] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
@@ -237,6 +256,10 @@ MERGED from [:react-native-screens] /Users/developer/Documents/Projects/NewRepo/
 MERGED from [:react-native-screens] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-svg] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-svg] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-webview] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-webview] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:rn-fetch-blob] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:rn-fetch-blob] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.64.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/f48ad73390f9d41c4966ce25bccc3bb7/jetified-react-native-0.64.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.64.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/f48ad73390f9d41c4966ce25bccc3bb7/jetified-react-native-0.64.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.gms:play-services-vision:17.0.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/ec6dc98bbe27d0c329cfd387f9f846dd/jetified-play-services-vision-17.0.2/AndroidManifest.xml:5:5-44
@@ -389,6 +412,8 @@ ADDED from /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/android/
 		ADDED from /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/android/app/src/debug/AndroidManifest.xml:11:19-83
 uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from [com.facebook.flipper:flipper:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:16:5-76
+MERGED from [:rn-fetch-blob] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:5-76
+MERGED from [:rn-fetch-blob] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:5-76
 	android:name
 		ADDED from [com.facebook.flipper:flipper:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:16:22-73
 uses-feature#android.hardware.camera
@@ -403,6 +428,44 @@ ADDED from [:react-native-camera] /Users/developer/Documents/Projects/NewRepo/Ne
 		ADDED from [:react-native-camera] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:16:9-33
 	android:name
 		ADDED from [:react-native-camera] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:15:9-57
+provider#com.reactnativecommunity.webview.RNCWebViewFileProvider
+ADDED from [:react-native-webview] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-20:20
+	android:grantUriPermissions
+		ADDED from [:react-native-webview] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-47
+	android:authorities
+		ADDED from [:react-native-webview] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-64
+	android:exported
+		ADDED from [:react-native-webview] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-37
+	android:name
+		ADDED from [:react-native-webview] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-83
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:react-native-webview] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:63
+	android:resource
+		ADDED from [:react-native-webview] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-60
+	android:name
+		ADDED from [:react-native-webview] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-67
+uses-permission#com.android.vending.CHECK_LICENSE
+ADDED from [:rn-fetch-blob] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-73
+	android:name
+		ADDED from [:rn-fetch-blob] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:22-70
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [:rn-fetch-blob] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:5-68
+	android:name
+		ADDED from [:rn-fetch-blob] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:22-65
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:rn-fetch-blob] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:27:5-79
+	android:name
+		ADDED from [:rn-fetch-blob] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:27:22-76
+provider#com.RNFetchBlob.Utils.FileProvider
+ADDED from [:rn-fetch-blob] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:36:9-44:20
+	android:grantUriPermissions
+		ADDED from [:rn-fetch-blob] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:40:13-47
+	android:authorities
+		ADDED from [:rn-fetch-blob] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:38:13-60
+	android:exported
+		ADDED from [:rn-fetch-blob] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:39:13-37
+	android:name
+		ADDED from [:rn-fetch-blob] /Users/developer/Documents/Projects/NewRepo/NewWorkDirectory/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:37:13-62
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/c2006abc7875d792407af90189d51631/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
 	android:exported

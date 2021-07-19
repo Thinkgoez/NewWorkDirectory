@@ -2,15 +2,15 @@ import React from 'react'
 import { useIsFocused } from '@react-navigation/core';
 
 import { StyledText } from '../components/common/SimpleComponents'
-import { CameraView } from '../components/Camera/CameraView';
+import { CameraContent } from '../components/Camera/CameraContent';
 
-export const Camera = () => {
+export const CameraPage = () => {
     const isFocused = useIsFocused();
 
     if (isFocused === false) {
         return <StyledText>No access to camera</StyledText>;
     } else if (isFocused !== null && isFocused) {
-        return <CameraView />;
+        return <CameraContent />;
     } else {
         return null;
     }
