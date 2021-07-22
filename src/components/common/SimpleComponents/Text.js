@@ -10,5 +10,6 @@ const Text = styled.Text`
     ${(({textAlign}) => textAlign !== undefined ? `text-align: ${textAlign};`: '')}
     ${(({alignSelf}) => alignSelf !== undefined ? `align-self: ${alignSelf};`: '')}
     ${(({justifySelf}) => justifySelf !== undefined ? `justify-self: ${justifySelf};`: '')}
+    ${(({textTransform}) => textTransform !== undefined ? `text-transform: ${textTransform};`: '')}
 `
 export default Text

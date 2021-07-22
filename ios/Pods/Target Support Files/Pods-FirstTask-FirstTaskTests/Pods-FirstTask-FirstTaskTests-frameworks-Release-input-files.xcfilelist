@@ -1,2 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-FirstTask-FirstTaskTests/Pods-FirstTask-FirstTaskTests-frameworks.sh
+${PODS_ROOT}/PhotoEditorSDK/PhotoEditorSDK.framework
+${PODS_ROOT}/imglyKit/ImglyKit.framework
 ${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL

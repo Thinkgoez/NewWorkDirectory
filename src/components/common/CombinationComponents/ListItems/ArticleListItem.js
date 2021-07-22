@@ -10,19 +10,25 @@ import {
     StyledImage,
 } from '../../SimpleComponents'
 
-const RenderRightAction = ({onPress}) => <StyledButton onPress={onPress} width='72px' backgroundColor='#fe3b30' justifyContent='center' alignItems='center'><StyledText color='#fff'>Delete</StyledText></StyledButton>
+const RenderRightAction = ({ onPress }) => <StyledButton onPress={onPress} width='72px' backgroundColor='#fe3b30' justifyContent='center' alignItems='center'><StyledText color='#fff'>Delete</StyledText></StyledButton>
 const IMAGE_WIDTH = '40px';
 
-const ArticleItem = ({ item: {id, img, serialCode, color, size, name, count}, onSelect, closeRow, row, handleRightSwipe }) => {
+const ArticleItem = ({ item: { id, img, serialCode, color, size, name, count }, onSelect, closeRow, row, handleRightSwipe }) => {
+    const swipeRightHandler = () => {
+        handleRightSwipe(id)
+    }
+    const swipeOpenHandler = () => {
+        closeRow(id)
+    }
     return (
         <Swipeable
             ref={ref => row[id] = ref}
             friction={2}
             enableTrackpadTwoFingerGesture
             rightThreshold={30}
-            renderRightActions={() => <RenderRightAction onPress={() => handleRightSwipe(id)} />}
+            renderRightActions={() => <RenderRightAction onPress={swipeRightHandler} />}
             overshootRight={false}
-            onSwipeableOpen={() => closeRow(id)}
+            onSwipeableOpen={swipeOpenHandler}
         >
             <StyledButton
                 flexDirection="row"
@@ -32,7 +38,9 @@ const ArticleItem = ({ item: {id, img, serialCode, color, size, name, count}, on
                 paddingRight="4px"
                 backgroundColor='#fff'
                 borderBottom='1px #c3c3c3'
+                activeOpacity={1}
                 onPress={onSelect}
+                // disabled={true}
             >
                 <StyledView
                     paddingVertical='4px'
@@ -46,7 +54,6 @@ const ArticleItem = ({ item: {id, img, serialCode, color, size, name, count}, on
                 >
                     <StyledImage source={{ uri: img }} resizeMode="contain" width={IMAGE_WIDTH} height={IMAGE_WIDTH} />
                 </StyledView>
-
                 <StyledView justifyContent="space-between" height="64px" flexGrow="1">
                     <StyledText>{serialCode}</StyledText>
                     <StyledView flexDirection="row">

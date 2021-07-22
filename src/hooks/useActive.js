@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export function useActive(navigation) {
     // This hook subscribe the blur and focus events on Screens and change the flag isActive
     const [isActive, setIsActive] = useState(navigation.isFocused())
 
-    React.useEffect(() => {
+    useEffect(() => {
         const unBlur = navigation.addListener('blur', () => {
             setIsActive(false)
         });
