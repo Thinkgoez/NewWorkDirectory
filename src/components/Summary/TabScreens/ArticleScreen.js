@@ -4,12 +4,10 @@ import { Alert } from 'react-native';
 import { StyledView } from "../../common/SimpleComponents"
 import { ContentList } from '../../common/CombinationComponents'
 
-import { useActive } from '../../../hooks/useActive'
 import { itemsList } from './itemsData/ArticleScreen'
 
 export const ArticleScreen = ({ navigation, route, ...props }) => {
     const [loading, setLoading] = useState(false);
-    const isActive = useActive(navigation)
 
 
     function fakeFecth() {
@@ -27,7 +25,6 @@ export const ArticleScreen = ({ navigation, route, ...props }) => {
     return (
         <StyledView flex={1}>
             <ContentList
-                // key={isActive}
                 itemsList={itemsList}
                 refetching={loading}
                 onRefetch={fakeFecth}

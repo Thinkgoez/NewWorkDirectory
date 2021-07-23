@@ -1,19 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     Text,
     View,
     StyleSheet,
-    FlatList,
     LayoutAnimation,
     TouchableOpacity,
     Platform,
     UIManager,
 } from 'react-native';
 import Animated from 'react-native-reanimated';
-import SwipeableItem, { UnderlayParams } from 'react-native-swipeable-item';
-import DraggableFlatList, {
-    RenderItemParams,
-} from 'react-native-draggable-flatlist';
+import SwipeableItem from 'react-native-swipeable-item';
+import DraggableFlatList from 'react-native-draggable-flatlist';
+import { useIsFocused } from '@react-navigation/native';
+
 const { multiply, sub } = Animated;
 
 if (Platform.OS === 'android') {
@@ -38,31 +37,40 @@ const initialData = [...Array(NUM_ITEMS)].fill(0).map((d, index) => {
     };
 });
 
-class App extends React.Component {
-    state = {
-        data: initialData,
-    };
+const App = () => {
+    const isFocused = useIsFocused()
+    const [data, setData] = useState(initialData)
+    let itemRefs = new Map();
+    useEffect(() => {
+        return () => {
+            if(isFocused && itemRefs.has('prev')) itemRefs.get('prev').close()
+        }
+    }, [isFocused])
+    // useEffect(() => {
+    //     console.log('Just mounted', isFocused, '+', route?.name)
+    //     return () => {
+    //         console.log('Just unmounted:', isFocused, '+', route?.name)
+    //     }
+    // },[])
 
-    itemRefs = new Map();
+    // const deleteItem = (item) => {
+    //     const updatedData = data.filter((d) => d !== item);
+    //     // Animate list to close gap when item is deleted
+    //     LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
+    //     setData(updatedData)
+    // };
 
-    deleteItem = (item) => {
-        const updatedData = this.state.data.filter((d) => d !== item);
-        // Animate list to close gap when item is deleted
-        LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
-        this.setState({ data: updatedData });
-    };
-
-    renderUnderlayLeft = ({ item, percentOpen }) => (
+    const renderUnderlayLeft = ({ item, percentOpen }) => (
         <Animated.View
             style={[styles.row, styles.underlayLeft, { opacity: percentOpen }]} // Fade in on open
         >
-            <TouchableOpacity onPressOut={() => this.deleteItem(item)}>
+            <TouchableOpacity onPressOut={() => deleteItem(item)}>
                 <Text style={styles.text}>{`[x]`}</Text>
             </TouchableOpacity>
         </Animated.View>
     );
 
-    renderUnderlayRight = ({
+    const renderUnderlayRight = ({
         item,
         percentOpen,
         open,
@@ -82,27 +90,30 @@ class App extends React.Component {
         </Animated.View>
     );
 
-    renderItem = ({ item, index, drag }) => {
+    const renderItem = ({ item, index, drag }) => {
         return (
             <SwipeableItem
                 key={item.key}
                 item={item}
                 ref={(ref) => {
-                    if (ref && !this.itemRefs.get(item.key)) {
-                        this.itemRefs.set(item.key, ref);
+                    if (ref && !itemRefs.get(item.key)) {
+                        itemRefs.set(item.key, ref);
                     }
                 }}
                 onChange={({ open }) => {
                     if (open) {
                         // Close all other open items
-                        [...this.itemRefs.entries()].forEach(([key, ref]) => {
+                        // if (itemRefs.get('prev')) itemRefs.get('prev').close();
+                        [...itemRefs.entries()].forEach(([key, ref]) => {
                             if (key !== item.key && ref) ref.close();
                         });
+                        itemRefs.set('prev', itemRefs.get(item.key))
+                        // console.log(itemRefs.get('prev'))
                     }
                 }}
                 overSwipe={20}
-                renderUnderlayLeft={this.renderUnderlayLeft}
-                renderUnderlayRight={this.renderUnderlayRight}
+                renderUnderlayLeft={renderUnderlayLeft}
+                renderUnderlayRight={renderUnderlayRight}
                 snapPointsLeft={[150]}
                 snapPointsRight={[175]}>
                 <View
@@ -118,19 +129,18 @@ class App extends React.Component {
         );
     };
 
-    render() {
-        return (
-            <View style={styles.container}>
-                <DraggableFlatList
-                    keyExtractor={(item) => item.key}
-                    data={this.state.data}
-                    renderItem={this.renderItem}
-                    onDragEnd={({ data }) => this.setState({ data })}
-                    activationDistance={20}
-                />
-            </View>
-        );
-    }
+
+    return (
+        <View style={styles.container}>
+            <DraggableFlatList
+                keyExtractor={(item) => item.key}
+                data={data}
+                renderItem={renderItem}
+                onDragEnd={({ data }) => setData(data)}
+                activationDistance={20}
+            />
+        </View>
+    );
 }
 
 export default App;

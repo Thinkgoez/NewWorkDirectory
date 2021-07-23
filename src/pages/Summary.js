@@ -1,4 +1,3 @@
-// To slowly render, FIX IT
 import React from 'react';
 
 import { PageHeader } from '../components/Header/PageHeader/PageHeader';
@@ -9,9 +8,7 @@ import { Header } from '../components/Header/Header'
 import TagIcon from '../assets/tag.svg'
 import BoxIcon from '../assets/box.svg'
 
-
 const SummaryPageHeaderItems = [{ id: 1, icon: BoxIcon, text: '1' }, { id: 2, icon: TagIcon, text: '9' }]
-
 
 export const SummaryPage = ({navigation, route, ...props}) => {
     const headerTitles = { title: { text: route?.name || 'Summary', disabled: true }, leftText: 'Cancel', rightText: 'Prepare' }

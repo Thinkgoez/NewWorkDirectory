@@ -1,9 +1,9 @@
+// testing field 
 import React from 'react'
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs'
 
 import { StyledView } from '../../components/common/SimpleComponents'
-// import SwipableList from './SwipableList'
-import SwipableList from './SwipableList2'
+import SwipableList from './SwipableList'
 const Tabs = createMaterialTopTabNavigator()
 
 export default SummaryContent = () => {
