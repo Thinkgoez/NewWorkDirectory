@@ -12,7 +12,7 @@ import { itemsList } from './items/ArticleItems';
 
 const ArticlesPageHeaderItems = [{ id: 1, icon: BoxIcon, text: '321312312321312409496349058' }, { id: 2, icon: TagIcon, text: '9' }]
 
-export const ArticlesPage = () => {
+export default ArticlesPage = () => {
     const [loading, setLoading] = useState(false);
     const headerTitles = { title: { text: useRoute()?.name || 'Home', disabled: true }, leftText: 'Cancel', rightText: 'Confirm' }
     const headerIcons = { center: { handleClick: () => { } }, leftText: 'Cancel', rightText: 'Confirm' }

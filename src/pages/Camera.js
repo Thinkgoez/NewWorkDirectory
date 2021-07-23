@@ -4,7 +4,7 @@ import { useIsFocused } from '@react-navigation/core';
 import { StyledText } from '../components/common/SimpleComponents'
 import { CameraContent } from '../components/Camera/CameraContent';
 
-export const CameraPage = () => {
+const CameraPage = () => {
     const isFocused = useIsFocused();
 
     if (isFocused === false) {
@@ -16,3 +16,4 @@ export const CameraPage = () => {
     }
 
 }
+export default CameraPage

@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Alert } from 'react-native';
 import styled from 'styled-components/native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -9,12 +9,14 @@ import { PersistGate } from 'redux-persist/integration/react'
 import { Provider } from 'react-redux'
 import { setJSExceptionHandler, setNativeExceptionHandler } from 'react-native-exception-handler';
 
-import { ArticlesPage } from './src/pages/Articles';
+const ArticlesPage = React.lazy(() => import('./src/pages/Articles'));
+const CameraPage = React.lazy(() => import('./src/pages/Camera'));
 import { SummaryPage } from './src/pages/Summary';
-import { CameraPage } from './src/pages/Camera';
+// import { CameraPage } from './src/pages/Camera';
 import Test from './src/pages/Test/test';
 
 import configureStore from './src/redux/configureStore';
+import { PendingView } from './src/components/common/SimpleComponents';
 
 
 const Drawer = createDrawerNavigator();
@@ -48,16 +50,18 @@ const App = () => {
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
                 <StyledSafeAreaView>
-                    <NavigationContainer>
-                        <Drawer.Navigator
-                            screenOptions={{ headerShown: false }}
-                            initialRouteName="Summary">
-                            <Drawer.Screen name="Articles in Carton" component={ArticlesPage} />
-                            <Drawer.Screen name="Summary" component={SummaryPage} />
-                            {/* <Drawer.Screen name="test" component={Test} /> */}
-                            <Drawer.Screen name="Camera" component={CameraPage} />
-                        </Drawer.Navigator>
-                    </NavigationContainer>
+                    <Suspense fallback={<PendingView />}>
+                        <NavigationContainer>
+                            <Drawer.Navigator
+                                screenOptions={{ headerShown: false }}
+                                initialRouteName="Summary">
+                                <Drawer.Screen name="Articles in Carton" component={ArticlesPage} />
+                                <Drawer.Screen name="Summary" component={SummaryPage} />
+                                {/* <Drawer.Screen name="test" component={Test} /> */}
+                                <Drawer.Screen name="Camera" component={CameraPage} />
+                            </Drawer.Navigator>
+                        </NavigationContainer>
+                    </Suspense>
                 </StyledSafeAreaView>
             </PersistGate>
         </Provider>
@@ -65,8 +69,8 @@ const App = () => {
 };
 
 const StyledSafeAreaView = styled.SafeAreaView`
-height: 100%;
-width: 100%;
+    height: 100%;
+    width: 100%;
 `;
 
 export default App;
