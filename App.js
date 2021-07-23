@@ -12,11 +12,12 @@ import { setJSExceptionHandler, setNativeExceptionHandler } from 'react-native-e
 const ArticlesPage = React.lazy(() => import('./src/pages/Articles'));
 const CameraPage = React.lazy(() => import('./src/pages/Camera'));
 import { SummaryPage } from './src/pages/Summary';
-// import { CameraPage } from './src/pages/Camera';
+import { Map } from './src/pages/Map'
 import Test from './src/pages/Test/test';
 
 import configureStore from './src/redux/configureStore';
 import { PendingView } from './src/components/common/SimpleComponents';
+;
 
 
 const Drawer = createDrawerNavigator();
@@ -54,11 +55,12 @@ const App = () => {
                         <NavigationContainer>
                             <Drawer.Navigator
                                 screenOptions={{ headerShown: false }}
-                                initialRouteName="Summary">
+                                initialRouteName="Map">
                                 <Drawer.Screen name="Articles in Carton" component={ArticlesPage} />
                                 <Drawer.Screen name="Summary" component={SummaryPage} />
                                 {/* <Drawer.Screen name="test" component={Test} /> */}
                                 <Drawer.Screen name="Camera" component={CameraPage} />
+                                <Drawer.Screen name="Map" component={Map} />
                             </Drawer.Navigator>
                         </NavigationContainer>
                     </Suspense>

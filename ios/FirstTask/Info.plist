@@ -17,6 +17,12 @@
 	<!-- Include this only if you are planning to use the microphone for video recording -->
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Your message to user when the microphone is accessed for the first time</string>
+	
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>YOUR TEXT</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>YOUR TEXT</string>
+
 
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>

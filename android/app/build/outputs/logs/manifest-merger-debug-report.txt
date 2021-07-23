@@ -1,10 +1,10 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-29:12
-INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-29:12
-INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-29:12
-INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-29:12
-MERGED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-29:12
+ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-37:12
+INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-37:12
+INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-37:12
+INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-37:12
+MERGED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-37:12
 MERGED from [hermes-debug.aar] /Users/developer/.gradle/caches/transforms-2/files-2.1/7b3baefa9f166a891cf8022919d99377/jetified-hermes-debug/AndroidManifest.xml:2:1-7:12
 MERGED from [com.facebook.flipper:flipper:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/8e8077f7e347b958a0f92b8e942b7b9e/jetified-flipper-0.75.1/AndroidManifest.xml:8:1-18:12
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/7c7a86ef4e9513d367938b9569e5298b/jetified-flipper-network-plugin-0.75.1/AndroidManifest.xml:8:1-15:12
@@ -12,12 +12,15 @@ MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.75.1] /Users/developer
 MERGED from [androidx.multidex:multidex:2.0.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/930c94206f2ade2fa74877acffb9d78a/multidex-2.0.1/AndroidManifest.xml:17:1-22:12
 MERGED from [:react-native-async-storage_async-storage] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-community_cameraroll] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-community/cameraroll/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-community_geolocation] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-community/geolocation/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-community_masked-view] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-camera] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:2:1-18:12
 MERGED from [:react-native-exception-handler] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-exception-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-16:12
 MERGED from [:react-native-fs] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-fs/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-13:12
 MERGED from [:react-native-gesture-handler] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-maps] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-12:12
 MERGED from [:react-native-pager-view] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-pager-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-permissions] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-permissions/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-photoeditorsdk] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-photoeditorsdk/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-21:12
 MERGED from [:react-native-safe-area-context] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
@@ -75,12 +78,15 @@ MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/devel
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/6e9c2b66dec1c44388b96ba65a7681f9/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.media:media:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a6a3410c5ff35b25cedb7ab47cc8ccf8/media-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/37d8b8b243cbe823553b1c5095c20343/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:17:1-38:12
 MERGED from [com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5946af34b60eaa2dccaa9974ff1e3e8d/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:2:1-18:12
 MERGED from [com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/f88b9524c9806faac041392cbd7735a6/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:2:1-18:12
 MERGED from [com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a6e112dde513007dc4d0854b6793b349/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/dda88af35d7f7184c197f29be9ab5bf6/jetified-play-services-location-17.0.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.mlkit:vision-common:16.5.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a7b41c261480e0507a3a357a42455d2c/jetified-vision-common-16.5.0/AndroidManifest.xml:2:1-18:12
 MERGED from [com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.android.gms:play-services-base:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/9eb99048fb4186fc89b6e5f5fdd82122/jetified-play-services-base-17.6.0/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/26b428dda6b376e4ca511f73d677fabb/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-tasks:17.2.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/9955eb8759e35b5e5c05c75fddba9ec3/jetified-play-services-tasks-17.2.1/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-basement:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/fa2bce141643bdebe69acb35e908aa37/jetified-play-services-basement-17.6.0/AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.fragment:fragment:1.2.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/b18f7bbe6b91c199529309a150b63156/fragment-1.2.1/AndroidManifest.xml:17:1-24:12
@@ -131,6 +137,7 @@ MERGED from [com.facebook.fresco:imagepipeline:2.2.0] /Users/developer/.gradle/c
 MERGED from [com.facebook.fresco:nativeimagetranscoder:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/38bee81dc212b90b686ad2d96aaf0aaa/jetified-nativeimagetranscoder-2.2.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:imagepipeline-base:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/aec2ffd8e2b4d570807559934dc3f477/jetified-imagepipeline-base-2.2.0/AndroidManifest.xml:2:1-9:12
 MERGED from [ly.img.android:authorization:8.3.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/0f48bd39001e00c167171a09a3de7c58/jetified-authorization-8.3.0.0/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/developer/.gradle/caches/transforms-2/files-2.1/79c327b7191770dc0c25ed8e39bc3a9c/jetified-android-maps-utils-0.5/AndroidManifest.xml:2:1-13:12
 MERGED from [com.facebook.fresco:fbcore:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/448293441c00bf4c41d91ee22f45fd40/jetified-fbcore-2.2.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:ui-common:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/21dd7efc2b8bbf676e8261f1964644c0/jetified-ui-common-2.2.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/developer/.gradle/caches/transforms-2/files-2.1/46d9cd7b3db66f39940f1bab7b33bee9/jetified-image-1.0.0-beta1/AndroidManifest.xml:2:1-9:12
@@ -144,13 +151,13 @@ INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/androi
 		INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/debug/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-29:12
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-37:12
 		INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/debug/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/debug/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-29:12
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-37:12
 		INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:11-69
@@ -158,6 +165,10 @@ uses-permission#android.permission.INTERNET
 ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:4:5-67
 MERGED from [com.facebook.flipper:flipper:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/8e8077f7e347b958a0f92b8e942b7b9e/jetified-flipper-0.75.1/AndroidManifest.xml:15:5-67
 MERGED from [com.facebook.flipper:flipper:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/8e8077f7e347b958a0f92b8e942b7b9e/jetified-flipper-0.75.1/AndroidManifest.xml:15:5-67
+MERGED from [:react-native-maps] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [:react-native-maps] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:26:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:26:5-67
 	android:name
@@ -192,10 +203,24 @@ uses-permission#android.permission.RECORD_AUDIO
 ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:8:5-70
 	android:name
 		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:8:22-68
+uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
+ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:9:5-85
+	android:name
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:9:22-82
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:10:5-81
+MERGED from [:react-native-maps] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-81
+MERGED from [:react-native-maps] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-81
+	android:name
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:10:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:11:22-76
 application
-ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:10:5-28:19
-MERGED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:10:5-28:19
-MERGED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:10:5-28:19
+ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:13:5-36:19
+MERGED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:13:5-36:19
+MERGED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:13:5-36:19
 MERGED from [:react-native-exception-handler] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-exception-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-14:19
 MERGED from [:react-native-exception-handler] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-exception-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-14:19
 MERGED from [:react-native-photoeditorsdk] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-photoeditorsdk/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-19:19
@@ -274,18 +299,24 @@ MERGED from [ly.img.android.sdk:core:8.3.0] /Users/developer/.gradle/caches/tran
 MERGED from [ly.img.android.sdk:core:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/ec5c1f305065888b9dd490f62a7b51e2/jetified-core-8.3.0/AndroidManifest.xml:18:5-24:19
 MERGED from [com.google.android.material:material:1.1.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/cc011120c47cbdabe7929f32a9d05fd9/material-1.1.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.1.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/cc011120c47cbdabe7929f32a9d05fd9/material-1.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:30:5-36:19
 MERGED from [com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5946af34b60eaa2dccaa9974ff1e3e8d/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:8:5-16:19
 MERGED from [com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5946af34b60eaa2dccaa9974ff1e3e8d/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:8:5-16:19
 MERGED from [com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/f88b9524c9806faac041392cbd7735a6/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:8:5-16:19
 MERGED from [com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/f88b9524c9806faac041392cbd7735a6/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:8:5-16:19
 MERGED from [com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a6e112dde513007dc4d0854b6793b349/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:8:5-16:19
 MERGED from [com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a6e112dde513007dc4d0854b6793b349/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/dda88af35d7f7184c197f29be9ab5bf6/jetified-play-services-location-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/dda88af35d7f7184c197f29be9ab5bf6/jetified-play-services-location-17.0.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.mlkit:vision-common:16.5.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a7b41c261480e0507a3a357a42455d2c/jetified-vision-common-16.5.0/AndroidManifest.xml:8:5-16:19
 MERGED from [com.google.mlkit:vision-common:16.5.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a7b41c261480e0507a3a357a42455d2c/jetified-vision-common-16.5.0/AndroidManifest.xml:8:5-16:19
 MERGED from [com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:8:5-24:19
 MERGED from [com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:8:5-24:19
 MERGED from [com.google.android.gms:play-services-base:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/9eb99048fb4186fc89b6e5f5fdd82122/jetified-play-services-base-17.6.0/AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.android.gms:play-services-base:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/9eb99048fb4186fc89b6e5f5fdd82122/jetified-play-services-base-17.6.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/26b428dda6b376e4ca511f73d677fabb/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/26b428dda6b376e4ca511f73d677fabb/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-tasks:17.2.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/9955eb8759e35b5e5c05c75fddba9ec3/jetified-play-services-tasks-17.2.1/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-tasks:17.2.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/9955eb8759e35b5e5c05c75fddba9ec3/jetified-play-services-tasks-17.2.1/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-basement:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/fa2bce141643bdebe69acb35e908aa37/jetified-play-services-basement-17.6.0/AndroidManifest.xml:22:5-26:19
@@ -300,6 +331,8 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/deve
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/369e8c29569adf1297d3c056a53223ab/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
 MERGED from [com.facebook.soloader:soloader:0.10.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/cc78fe12640c1b2252206b351b5c3999/jetified-soloader-0.10.1/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:soloader:0.10.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/cc78fe12640c1b2252206b351b5c3999/jetified-soloader-0.10.1/AndroidManifest.xml:11:5-20
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/developer/.gradle/caches/transforms-2/files-2.1/79c327b7191770dc0c25ed8e39bc3a9c/jetified-android-maps-utils-0.5/AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/developer/.gradle/caches/transforms-2/files-2.1/79c327b7191770dc0c25ed8e39bc3a9c/jetified-android-maps-utils-0.5/AndroidManifest.xml:7:5-11:19
 MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/developer/.gradle/caches/transforms-2/files-2.1/46d9cd7b3db66f39940f1bab7b33bee9/jetified-image-1.0.0-beta1/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/developer/.gradle/caches/transforms-2/files-2.1/46d9cd7b3db66f39940f1bab7b33bee9/jetified-image-1.0.0-beta1/AndroidManifest.xml:7:5-20
 	android:appComponentFactory
@@ -307,53 +340,67 @@ MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/developer/.gradle
 	android:supportsRtl
 		ADDED from [ly.img.android.sdk:serializer:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/9aefb65cee71eecfabd704f2ff191165/jetified-serializer-8.3.0/AndroidManifest.xml:27:9-35
 	android:label
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:12:7-39
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:12:7-39
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:15:7-39
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:15:7-39
 	tools:ignore
 		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/debug/AndroidManifest.xml:10:9-48
 	android:roundIcon
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:14:7-52
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:14:7-52
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:17:7-52
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:17:7-52
 	android:largeHeap
 		ADDED from [ly.img.android.sdk.assets:sticker-shapes:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/c7e446c573c67da141312d39e31c1b24/jetified-sticker-shapes-8.3.0/AndroidManifest.xml:25:18-42
 	tools:targetApi
 		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/debug/AndroidManifest.xml:9:9-29
 	android:icon
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:13:7-41
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:13:7-41
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:16:7-41
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:16:7-41
 	android:allowBackup
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:15:7-34
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:15:7-34
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:18:7-34
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:18:7-34
 	android:theme
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:16:7-38
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:16:7-38
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:19:7-38
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:19:7-38
 	android:usesCleartextTraffic
 		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/debug/AndroidManifest.xml:8:9-44
 	android:name
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:11:7-38
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:11:7-38
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:14:7-38
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:14:7-38
+meta-data#com.google.android.geo.API_KEY
+ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:20:7-22:66
+	android:value
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:22:9-64
+	android:name
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:21:9-54
+uses-library#org.apache.http.legacy
+ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:23:7-85
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
+	android:required
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:23:59-83
+	android:name
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:23:21-58
 activity#com.firsttask.MainActivity
-ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:17:7-27:18
+ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:25:7-35:18
 	android:label
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:19:9-41
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:27:9-41
 	android:launchMode
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:21:9-40
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:29:9-40
 	android:windowSoftInputMode
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:22:9-51
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:30:9-51
 	android:configChanges
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:20:9-86
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:28:9-86
 	android:name
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:18:9-37
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:26:9-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:23:9-26:25
+ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:31:9-34:25
 action#android.intent.action.MAIN
-ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:24:13-65
+ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:32:13-65
 	android:name
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:24:21-62
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:32:21-62
 category#android.intent.category.LAUNCHER
-ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:25:13-73
+ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:33:13-73
 	android:name
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:25:23-70
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:33:23-70
 uses-sdk
 INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml
@@ -372,6 +419,8 @@ MERGED from [:react-native-async-storage_async-storage] /Users/developer/Documen
 MERGED from [:react-native-async-storage_async-storage] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_cameraroll] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-community/cameraroll/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_cameraroll] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-community/cameraroll/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_geolocation] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-community/geolocation/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_geolocation] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-community/geolocation/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_masked-view] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_masked-view] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-camera] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:5:5-7:41
@@ -382,8 +431,12 @@ MERGED from [:react-native-fs] /Users/developer/Documents/Projects/Second/NewWor
 MERGED from [:react-native-fs] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-fs/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-gesture-handler] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-gesture-handler] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-maps] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-maps] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-pager-view] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-pager-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-pager-view] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-pager-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-permissions] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-permissions/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-permissions] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-permissions/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-photoeditorsdk] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-photoeditorsdk/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
 MERGED from [:react-native-photoeditorsdk] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-photoeditorsdk/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
 MERGED from [:react-native-safe-area-context] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
@@ -498,18 +551,24 @@ MERGED from [androidx.media:media:1.0.0] /Users/developer/.gradle/caches/transfo
 MERGED from [androidx.media:media:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a6a3410c5ff35b25cedb7ab47cc8ccf8/media-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/37d8b8b243cbe823553b1c5095c20343/documentfile-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/37d8b8b243cbe823553b1c5095c20343/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5946af34b60eaa2dccaa9974ff1e3e8d/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:6:5-44
 MERGED from [com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5946af34b60eaa2dccaa9974ff1e3e8d/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:6:5-44
 MERGED from [com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/f88b9524c9806faac041392cbd7735a6/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:6:5-44
 MERGED from [com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/f88b9524c9806faac041392cbd7735a6/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:6:5-44
 MERGED from [com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a6e112dde513007dc4d0854b6793b349/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:6:5-44
 MERGED from [com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a6e112dde513007dc4d0854b6793b349/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/dda88af35d7f7184c197f29be9ab5bf6/jetified-play-services-location-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/dda88af35d7f7184c197f29be9ab5bf6/jetified-play-services-location-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.mlkit:vision-common:16.5.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a7b41c261480e0507a3a357a42455d2c/jetified-vision-common-16.5.0/AndroidManifest.xml:6:5-44
 MERGED from [com.google.mlkit:vision-common:16.5.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a7b41c261480e0507a3a357a42455d2c/jetified-vision-common-16.5.0/AndroidManifest.xml:6:5-44
 MERGED from [com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:6:5-44
 MERGED from [com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:6:5-44
 MERGED from [com.google.android.gms:play-services-base:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/9eb99048fb4186fc89b6e5f5fdd82122/jetified-play-services-base-17.6.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-base:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/9eb99048fb4186fc89b6e5f5fdd82122/jetified-play-services-base-17.6.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/26b428dda6b376e4ca511f73d677fabb/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/26b428dda6b376e4ca511f73d677fabb/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-tasks:17.2.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/9955eb8759e35b5e5c05c75fddba9ec3/jetified-play-services-tasks-17.2.1/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-tasks:17.2.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/9955eb8759e35b5e5c05c75fddba9ec3/jetified-play-services-tasks-17.2.1/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-basement:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/fa2bce141643bdebe69acb35e908aa37/jetified-play-services-basement-17.6.0/AndroidManifest.xml:20:5-44
@@ -610,6 +669,8 @@ MERGED from [com.facebook.fresco:imagepipeline-base:2.2.0] /Users/developer/.gra
 MERGED from [com.facebook.fresco:imagepipeline-base:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/aec2ffd8e2b4d570807559934dc3f477/jetified-imagepipeline-base-2.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [ly.img.android:authorization:8.3.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/0f48bd39001e00c167171a09a3de7c58/jetified-authorization-8.3.0.0/AndroidManifest.xml:7:5-9:41
 MERGED from [ly.img.android:authorization:8.3.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/0f48bd39001e00c167171a09a3de7c58/jetified-authorization-8.3.0.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/developer/.gradle/caches/transforms-2/files-2.1/79c327b7191770dc0c25ed8e39bc3a9c/jetified-android-maps-utils-0.5/AndroidManifest.xml:5:5-43
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/developer/.gradle/caches/transforms-2/files-2.1/79c327b7191770dc0c25ed8e39bc3a9c/jetified-android-maps-utils-0.5/AndroidManifest.xml:5:5-43
 MERGED from [com.facebook.fresco:fbcore:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/448293441c00bf4c41d91ee22f45fd40/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:fbcore:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/448293441c00bf4c41d91ee22f45fd40/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:ui-common:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/21dd7efc2b8bbf676e8261f1964644c0/jetified-ui-common-2.2.0/AndroidManifest.xml:5:5-7:41
@@ -679,6 +740,8 @@ MERGED from [ly.img.android.sdk.ui.mobile_ui:core:8.3.0] /Users/developer/.gradl
 MERGED from [ly.img.android.sdk.ui.mobile_ui:core:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/ea4e89243f8387f6baa579bc5a383cdd/jetified-core-8.3.0/AndroidManifest.xml:25:5-27:35
 MERGED from [ly.img.android.sdk:core:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/ec5c1f305065888b9dd490f62a7b51e2/jetified-core-8.3.0/AndroidManifest.xml:14:5-16:35
 MERGED from [ly.img.android.sdk:core:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/ec5c1f305065888b9dd490f62a7b51e2/jetified-core-8.3.0/AndroidManifest.xml:14:5-16:35
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
 	android:glEsVersion
 		ADDED from [ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e55ca7526893e53e606d697955b69750/jetified-photo-main-8.3.0/AndroidManifest.xml:26:9-41
 	android:required
@@ -719,6 +782,14 @@ ADDED from [ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/
 		ADDED from [ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:42:13-71
 	android:name
 		ADDED from [ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:36:13-75
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:23:22-76
 service#com.google.mlkit.common.internal.MlKitComponentDiscoveryService
 ADDED from [com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5946af34b60eaa2dccaa9974ff1e3e8d/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:9:9-15:19
 MERGED from [com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/f88b9524c9806faac041392cbd7735a6/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:9:9-15:19
@@ -787,16 +858,12 @@ ADDED from [com.google.android.gms:play-services-base:17.6.0] /Users/developer/.
 		ADDED from [com.google.android.gms:play-services-base:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/9eb99048fb4186fc89b6e5f5fdd82122/jetified-play-services-base-17.6.0/AndroidManifest.xml:24:13-79
 meta-data#com.google.android.gms.version
 ADDED from [com.google.android.gms:play-services-basement:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/fa2bce141643bdebe69acb35e908aa37/jetified-play-services-basement-17.6.0/AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/developer/.gradle/caches/transforms-2/files-2.1/79c327b7191770dc0c25ed8e39bc3a9c/jetified-android-maps-utils-0.5/AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/developer/.gradle/caches/transforms-2/files-2.1/79c327b7191770dc0c25ed8e39bc3a9c/jetified-android-maps-utils-0.5/AndroidManifest.xml:8:9-10:69
 	android:value
 		ADDED from [com.google.android.gms:play-services-basement:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/fa2bce141643bdebe69acb35e908aa37/jetified-play-services-basement-17.6.0/AndroidManifest.xml:25:13-66
 	android:name
 		ADDED from [com.google.android.gms:play-services-basement:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/fa2bce141643bdebe69acb35e908aa37/jetified-play-services-basement-17.6.0/AndroidManifest.xml:24:13-58
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
-MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:22:5-79
-	android:name
-		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:22-76
 service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
 ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
 MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:36:9-38:40

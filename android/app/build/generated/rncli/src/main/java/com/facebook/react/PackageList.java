@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 // @react-native-community/cameraroll
 import com.reactnativecommunity.cameraroll.CameraRollPackage;
+// @react-native-community/geolocation
+import com.reactnativecommunity.geolocation.GeolocationPackage;
 // @react-native-community/masked-view
 import org.reactnative.maskedview.RNCMaskedViewPackage;
 // react-native-camera
@@ -25,8 +27,12 @@ import com.masteratul.exceptionhandler.ReactNativeExceptionHandlerPackage;
 import com.rnfs.RNFSPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
+// react-native-maps
+import com.airbnb.android.react.maps.MapsPackage;
 // react-native-pager-view
 import com.reactnativepagerview.PagerViewPackage;
+// react-native-permissions
+import com.zoontek.rnpermissions.RNPermissionsPackage;
 // react-native-photoeditorsdk
 import ly.img.react_native.pesdk.RNPhotoEditorSDKPackage;
 // react-native-reanimated
@@ -84,12 +90,15 @@ public class PackageList {
       new MainReactPackage(mConfig),
       new AsyncStoragePackage(),
       new CameraRollPackage(),
+      new GeolocationPackage(),
       new RNCMaskedViewPackage(),
       new RNCameraPackage(),
       new ReactNativeExceptionHandlerPackage(),
       new RNFSPackage(),
       new RNGestureHandlerPackage(),
+      new MapsPackage(),
       new PagerViewPackage(),
+      new RNPermissionsPackage(),
       new RNPhotoEditorSDKPackage(),
       new ReanimatedPackage(),
       new SafeAreaContextPackage(),
