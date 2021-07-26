@@ -19,6 +19,7 @@
     "@react-navigation/stack": "^5.14.5",
     "@svgr/core": "^4.3.3",
     "@svgr/plugin-svgo": "^4.3.1",
+    "formik": "^2.2.9",
     "path-dirname": "^1.0.2",
     "react": "17.0.1",
     "react-native": "0.64.2",
@@ -44,7 +45,8 @@
     "redux": "^4.1.0",
     "redux-persist": "^6.0.0",
     "semver": "^6.3.0",
-    "styled-components": "^5.3.0"
+    "styled-components": "^5.3.0",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

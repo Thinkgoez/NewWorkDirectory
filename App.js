@@ -12,6 +12,7 @@ const ArticlesPage = React.lazy(() => import('./src/pages/Articles'));
 const CameraPage = React.lazy(() => import('./src/pages/Camera'));
 import { SummaryPage } from './src/pages/Summary';
 import { Map } from './src/pages/Map'
+import { Login } from './src/pages/Login'
 // import Test from './src/pages/Test/test';
 
 import configureStore from './src/redux/configureStore';
@@ -51,12 +52,13 @@ const App = () => {
                         <NavigationContainer>
                             <Drawer.Navigator
                                 screenOptions={{ headerShown: false }}
-                                initialRouteName='Summary'>
+                                initialRouteName='Login'>
                                 <Drawer.Screen name='Articles in Carton' component={ArticlesPage} />
                                 <Drawer.Screen name='Summary' component={SummaryPage} />
                                 {/* <Drawer.Screen name='test' component={Test} /> */}
                                 <Drawer.Screen name='Camera' component={CameraPage} />
                                 <Drawer.Screen name='Map' component={Map} options={{header: mapHeader, headerShown: true}} />
+                                <Drawer.Screen name='Login' component={Login}/>
                             </Drawer.Navigator>
                         </NavigationContainer>
                     </Suspense>

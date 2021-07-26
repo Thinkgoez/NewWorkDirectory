@@ -1,5 +1,5 @@
 import styled from 'styled-components/native'
-import { flexMixin, paddingMixin, sizesMixin, borderMixin, marginMixin, shadowMixin } from './StylesMixins/Mixins'
+import { flexMixin, paddingMixin, sizesMixin, borderMixin, marginMixin, shadowMixin, positionMixin } from './StylesMixins/Mixins'
 
 const StyledTouchableOpacity= styled.TouchableOpacity`
     ${flexMixin}
@@ -8,6 +8,7 @@ const StyledTouchableOpacity= styled.TouchableOpacity`
     ${marginMixin}
     ${sizesMixin}
     ${shadowMixin}
+    ${positionMixin}
     ${(({color}) => color !== undefined ? `color: ${color};`: '')}
     ${(({textAlign}) => textAlign !== undefined ? `text-align: ${textAlign};`: '')}
     ${(({backgroundColor}) => backgroundColor !== undefined ? `background-color: ${backgroundColor};`: '')}
