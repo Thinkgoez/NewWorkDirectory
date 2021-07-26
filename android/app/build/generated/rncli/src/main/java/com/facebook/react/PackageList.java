@@ -15,8 +15,6 @@ import java.util.ArrayList;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 // @react-native-community/cameraroll
 import com.reactnativecommunity.cameraroll.CameraRollPackage;
-// @react-native-community/geolocation
-import com.reactnativecommunity.geolocation.GeolocationPackage;
 // @react-native-community/masked-view
 import org.reactnative.maskedview.RNCMaskedViewPackage;
 // react-native-camera
@@ -25,6 +23,8 @@ import org.reactnative.camera.RNCameraPackage;
 import com.masteratul.exceptionhandler.ReactNativeExceptionHandlerPackage;
 // react-native-fs
 import com.rnfs.RNFSPackage;
+// react-native-geolocation-service
+import com.agontuk.RNFusedLocation.RNFusedLocationPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 // react-native-maps
@@ -90,11 +90,11 @@ public class PackageList {
       new MainReactPackage(mConfig),
       new AsyncStoragePackage(),
       new CameraRollPackage(),
-      new GeolocationPackage(),
       new RNCMaskedViewPackage(),
       new RNCameraPackage(),
       new ReactNativeExceptionHandlerPackage(),
       new RNFSPackage(),
+      new RNFusedLocationPackage(),
       new RNGestureHandlerPackage(),
       new MapsPackage(),
       new PagerViewPackage(),

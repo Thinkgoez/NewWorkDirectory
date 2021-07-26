@@ -1,0 +1,1 @@
+export const setNewCoords = (payload) => ({ type: 'SET_NEW_COORDS', payload })

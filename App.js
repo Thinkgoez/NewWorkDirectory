@@ -1,5 +1,4 @@
 import 'react-native-gesture-handler';
-
 import React, { Suspense } from 'react';
 import { Alert } from 'react-native';
 import styled from 'styled-components/native';
@@ -13,12 +12,11 @@ const ArticlesPage = React.lazy(() => import('./src/pages/Articles'));
 const CameraPage = React.lazy(() => import('./src/pages/Camera'));
 import { SummaryPage } from './src/pages/Summary';
 import { Map } from './src/pages/Map'
-import Test from './src/pages/Test/test';
+// import Test from './src/pages/Test/test';
 
 import configureStore from './src/redux/configureStore';
 import { PendingView } from './src/components/common/SimpleComponents';
-;
-
+import { mapHeader } from './src/components/Map/header';
 
 const Drawer = createDrawerNavigator();
 const { store, persistor } = configureStore()
@@ -35,7 +33,7 @@ const errorHandler = (e, isFatal) => {
             }]
         );
     } else {
-        console.log(e); // So that we can see it in the ADB logs in case of Android if needed
+        console.log(e);
     }
 };
 
@@ -43,8 +41,6 @@ setJSExceptionHandler(errorHandler, true);
 setNativeExceptionHandler((errorString) => {
     console.log('setNativeExceptionHandler');
 });
-
-// PESDK.unlockWithLicense(require('./pesdk_license'));
 
 const App = () => {
     return (
@@ -55,12 +51,12 @@ const App = () => {
                         <NavigationContainer>
                             <Drawer.Navigator
                                 screenOptions={{ headerShown: false }}
-                                initialRouteName="Map">
-                                <Drawer.Screen name="Articles in Carton" component={ArticlesPage} />
-                                <Drawer.Screen name="Summary" component={SummaryPage} />
-                                {/* <Drawer.Screen name="test" component={Test} /> */}
-                                <Drawer.Screen name="Camera" component={CameraPage} />
-                                <Drawer.Screen name="Map" component={Map} />
+                                initialRouteName='Summary'>
+                                <Drawer.Screen name='Articles in Carton' component={ArticlesPage} />
+                                <Drawer.Screen name='Summary' component={SummaryPage} />
+                                {/* <Drawer.Screen name='test' component={Test} /> */}
+                                <Drawer.Screen name='Camera' component={CameraPage} />
+                                <Drawer.Screen name='Map' component={Map} options={{header: mapHeader, headerShown: true}} />
                             </Drawer.Navigator>
                         </NavigationContainer>
                     </Suspense>
