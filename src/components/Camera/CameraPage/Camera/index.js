@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import CameraRoll from "@react-native-community/cameraroll";
+import CameraRoll from '@react-native-community/cameraroll';
 import { useDispatch } from 'react-redux'
 import { RNCamera } from 'react-native-camera';
 import { StyleSheet, PermissionsAndroid, Platform } from 'react-native';
@@ -20,7 +20,7 @@ const hasAndroidPermission = async () => {
 }
 const savePicture = async (tag) => {
     // saving to phone's gallery
-    if (Platform.OS === "android" && !(await hasAndroidPermission())) {
+    if (Platform.OS === 'android' && !(await hasAndroidPermission())) {
         return;
     }
     return CameraRoll.save(tag, { type: 'photo' })

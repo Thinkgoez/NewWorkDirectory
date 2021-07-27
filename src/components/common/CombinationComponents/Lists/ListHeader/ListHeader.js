@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledText, StyledView } from "../../../SimpleComponents"
+import { StyledText, StyledView } from '../../../SimpleComponents'
 
 const ListHeader = ({items=[]}) => {
     return(

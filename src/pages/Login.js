@@ -6,8 +6,6 @@ import { StyledText, StyledView, StyledButton } from '../components/common/Simpl
 import { CunstomInput, SecureToggle } from '../components/common/CombinationComponents/';
 import Check from '../assets/check.svg'
 
-// const passreg = /(?!.*([A-Za-z0-9#?!@$ %^&*-,.])\1{2})(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-,.])/ // at least one upper case English letter, one lower case English letter, one number and one special character
-
 export const Login = () => {
     return (
         <ScrollView>
@@ -24,51 +22,45 @@ export const Form = () => {
     const [isSecure, setIsSecure] = useState(true)
     const [passObjectValidation, setPassObject] = useState({})
 
-    const toggleViewPass = () => setIsSecure(!isSecure)
-    const validate = (values) => {
-        const { email, password } = values
+    const toggleViewPass = () => setIsSecure(prev => !prev)
+    const validate = ({ email, password }) => {
         const errors = {};
-        let validObj = {}
-        if(email !== undefined){
-            if (!email.trim()) {
-                errors.email = 'Required'
-            } else if (!/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/.test(email)) {
-                errors.email = 'Invalid email'
-            }
+        let validObj = {}; // object of valid requirements for errorList
+        errorList.forEach(err => validObj[err.id] = true) // setting default value true, below if pass is invalid change to false
+
+        if (!email.trim()) {
+            errors.email = 'Required'
+        } else if (!/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/.test(email)) { // email check
+            errors.email = 'Invalid email'
         }
+
         if (!password.trim()) {
             errors.password = 'Required'
+            validObj = {}
         } else {
-            validObj.required = true
-            if(!/(?=.*?[a-z])/.test(password)){
+            if (!/(?=.*?[a-z])/.test(password)) { // check for lower
                 errors.password = 'Invalid password'
-            } else {
-                validObj.lower = true
+                validObj.lower = false
             }
-            if(!/(?=.*?[A-Z])/.test(password)){
+            if (!/(?=.*?[A-Z])/.test(password)) { // check for upper
                 errors.password = 'Invalid password'
-            } else {
-                validObj.upper = true
+                validObj.upper = false
             }
-            if(!/(?=.*?[0-9])/.test(password)){
+            if (!/(?=.*?[0-9])/.test(password)) { // check for number
                 errors.password = 'Invalid password'
-            } else {
-                validObj.number = true
+                validObj.number = false
             }
-            if(!/(?=.*?[#?!@$ %^&*-,.])/.test(password)){
+            if (!/(?=.*?[#?!@$ %^&*-,./])/.test(password)) { // check for special character
                 errors.password = 'Invalid password'
-            } else {
-                validObj.special = true
+                validObj.special = false
             }
-            if(!/(?!.*([A-Za-z0-9#?!@$ %^&*-,.])\1{2})/.test(password)){
+            if (/([A-Za-z0-9#?!@$ %^&*-,./])\1{2,}/.test(password)) { // true when 2 or more repeat in row
                 errors.password = 'Invalid password'
-            } else {
-                validObj.repeat = true
+                validObj.repeat = false
             }
-            if(password.length < 8) {
+            if (password.length < 8) {
                 errors.password = 'Too short'
-            } else {
-                validObj.count = true
+                validObj.count = false
             }
         }
         setPassObject(validObj)
@@ -85,11 +77,12 @@ export const Form = () => {
                 <StyledView>
                     <StyledView paddingBottom='16px'>
                         {errorList.map(error => {
+                            const isValid = passObjectValidation[error.id]
                             return (
                                 <StyledView key={error.id} flexDirection='row' alignItems='center'>
-                                    <StyledView width='5px' height='5px' borderRadius='2px' backgroundColor={passObjectValidation[error.id]? 'green' :'#b8b8b8'} marginRight='8px' />
+                                    <StyledView width='5px' height='5px' borderRadius='2px' backgroundColor={isValid ? 'green' : '#b8b8b8'} marginRight='8px' />
                                     <StyledText marginRight='16px'>{error.title}</StyledText>
-                                    {passObjectValidation[error.id] && <Check fill='green' width='16px' height='16px'/>}
+                                    {isValid && <Check fill='green' width='16px' height='16px' />}
                                 </StyledView>
                             )
                         })}
@@ -111,7 +104,7 @@ export const Form = () => {
                     />
                     <CunstomInput
                         onChangeText={value => {
-                            validateForm({password: value, email: values.email})
+                            validateForm({ password: value, email: values.email })
                             handleChange('password')(value)
                         }}
                         onBlur={handleBlur('password')}
@@ -140,11 +133,11 @@ export const Form = () => {
 }
 
 const errorList = [
-    { id: 'required', title: 'non empty', order: 0 },
-    { id: 'lower', title: 'at least 1 lower', order: 1 },
-    { id: 'upper', title: 'at least 1 upper', order: 2 },
-    { id: 'number', title: 'at least 1 number', order: 3 },
-    { id: 'special', title: 'at least 1 special character', order: 4 },
-    { id: 'repeat', title: "don't repeat repeat more than 2 in row", order: 5 },
-    { id: 'count', title: 'better than 7 characters', order: 6 }
+    { id: 'required', title: 'non empty' },
+    { id: 'lower', title: 'at least 1 lower' },
+    { id: 'upper', title: 'at least 1 upper' },
+    { id: 'number', title: 'at least 1 number' },
+    { id: 'special', title: 'at least 1 special character' },
+    { id: 'repeat', title: 'do not repeat repeat more than 2 in row' },
+    { id: 'count', title: 'better than 7 characters' }
 ]

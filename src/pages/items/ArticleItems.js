@@ -1,4 +1,4 @@
-import { ArticleItem } from "../../components/common/CombinationComponents";
+import { ArticleItem } from '../../components/common/CombinationComponents';
 
 export const itemsList = {
     list: [

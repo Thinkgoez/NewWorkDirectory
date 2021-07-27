@@ -1,4 +1,3 @@
-// SHOULD ANIMETE BG-COLOR in StyleButton component
 // Should check
 import React from 'react'
 import { StyledButton, StyledText, StyledView } from '../common/SimpleComponents';
@@ -34,7 +33,7 @@ export function SummaryTab({ state, descriptors, navigation }) {
 
                 return (
                     <StyledButton
-                        accessibilityRole="button"
+                        accessibilityRole='button'
                         accessibilityState={isFocused ? { selected: true } : {}}
                         accessibilityLabel={options.tabBarAccessibilityLabel}
                         testID={options.tabBarTestID}

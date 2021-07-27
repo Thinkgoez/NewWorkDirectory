@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledButton, StyledText, StyledView } from "../../../common/SimpleComponents"
+import { StyledButton, StyledText, StyledView } from '../../../common/SimpleComponents'
 
 export const CameraTools = ({ takePictureHandle, changeFlashMode, activeFlashMode }) => {
     const flashModes = ['off', 'on', 'auto', 'torch']

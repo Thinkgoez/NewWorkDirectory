@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { Alert } from 'react-native';
 
-import { StyledView } from "../../common/SimpleComponents"
+import { StyledView } from '../../common/SimpleComponents'
 import { ContentList } from '../../common/CombinationComponents'
 
 import { itemsList } from './itemsData/CartonScreen';
 
-export const CartonScreen = ({ navigation }) => {
+export const CartonScreen = () => {
     const [loading, setLoading] = useState(false);
     function fakeFecth() {
         setLoading(true);

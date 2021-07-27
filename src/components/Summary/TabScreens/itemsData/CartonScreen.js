@@ -1,4 +1,4 @@
-import { CartonItem } from "../../../common/CombinationComponents";
+import { CartonItem } from '../../../common/CombinationComponents';
 
 export const itemsList = {
     list: [

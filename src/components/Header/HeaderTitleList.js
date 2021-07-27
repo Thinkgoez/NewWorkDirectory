@@ -4,11 +4,11 @@ import { StyledView, StyledButton, StyledTitleText } from '../common/SimpleCompo
 export const HeaderTitleList = ({ title, right, left }) => {
     return (
         <StyledView
-            flexDirection="row"
-            justifyContent="space-between"
-            alignItems="center"
-            width="100%"
-            height="40%"
+            flexDirection='row'
+            justifyContent='space-between'
+            alignItems='center'
+            width='100%'
+            height='40%'
             paddingHorizontal='4px'
             paddingVertical='8px'>
             {left && <StyledButton key={left.text} disabled={left.disabled}>

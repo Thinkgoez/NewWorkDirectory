@@ -11,7 +11,8 @@ const SecureToggle = ({ isSecure, secureToggle }) => {
             bottom='20px'
             right='10px'
             alignItems='center'
-            justifyContent='center'>
+            justifyContent='center'
+        >
                 {isSecure ? <Invisible width='20px' height='20px' fill='#b8b8b8'/> : <Visible width='20px' height='20px' fill='#434141'/>}
         </StyledButton>
     )

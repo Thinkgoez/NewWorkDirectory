@@ -3,7 +3,7 @@ import { FlatList } from 'react-native'
 import { useIsFocused } from '@react-navigation/native';
 
 import { ListHeader } from '../../';
-import { StyledView, StyledText } from "../../../SimpleComponents";
+import { StyledView, StyledText } from '../../../SimpleComponents';
 
 // Take itemsList strutucre like: {list: [listItems], headerItems: [string], ListItemComponent: Component}
 // listItems: { id: string | number, img: string(url), serialCode: string, color: string, size: string, name: string, count: string | number }

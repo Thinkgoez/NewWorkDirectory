@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import CameraRoll from "@react-native-community/cameraroll";
+import CameraRoll from '@react-native-community/cameraroll';
 
 import { StyledView } from '../../common/SimpleComponents';
 import { Gallery } from './Gallery';
