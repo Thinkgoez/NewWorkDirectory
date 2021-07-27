@@ -8,7 +8,6 @@ import { PhotoEditorSdk } from './PhotoEditorSdk/PhotoEditorSdk';
 const Stack = createStackNavigator()
 
 export const CameraContent = () => {
-
     return (
         <StyledView backgroundColor='#efeff0' flex={1} borderRadius='5px'>
             <Stack.Navigator>

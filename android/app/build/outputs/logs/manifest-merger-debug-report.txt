@@ -25,6 +25,7 @@ MERGED from [:react-native-photoeditorsdk] /Users/developer/Documents/Projects/S
 MERGED from [:react-native-safe-area-context] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-svg] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-webview] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-23:12
 MERGED from [com.facebook.react:react-native:0.64.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/ca267dc86634ead6f4ab6c97d3fdd11b/jetified-react-native-0.64.2/AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/3fa3b3b1782e2d4306d0d0e87d1c3120/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/8caa643896dc077dea25bc0ad4394701/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -225,6 +226,8 @@ MERGED from [:react-native-exception-handler] /Users/developer/Documents/Project
 MERGED from [:react-native-exception-handler] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-exception-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-14:19
 MERGED from [:react-native-photoeditorsdk] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-photoeditorsdk/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-19:19
 MERGED from [:react-native-photoeditorsdk] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-photoeditorsdk/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-19:19
+MERGED from [:react-native-webview] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
+MERGED from [:react-native-webview] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
 MERGED from [com.facebook.react:react-native:0.64.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/ca267dc86634ead6f4ab6c97d3fdd11b/jetified-react-native-0.64.2/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.react:react-native:0.64.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/ca267dc86634ead6f4ab6c97d3fdd11b/jetified-react-native-0.64.2/AndroidManifest.xml:11:5-20
 MERGED from [ly.img.android.sdk.assets:sticker-shapes:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/c7e446c573c67da141312d39e31c1b24/jetified-sticker-shapes-8.3.0/AndroidManifest.xml:25:5-26:19
@@ -445,6 +448,8 @@ MERGED from [:react-native-screens] /Users/developer/Documents/Projects/Second/N
 MERGED from [:react-native-screens] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-svg] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-svg] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-webview] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-webview] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.64.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/ca267dc86634ead6f4ab6c97d3fdd11b/jetified-react-native-0.64.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.64.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/ca267dc86634ead6f4ab6c97d3fdd11b/jetified-react-native-0.64.2/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/3fa3b3b1782e2d4306d0d0e87d1c3120/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
@@ -732,6 +737,22 @@ MERGED from [ly.img.android.sdk:core:8.3.0] /Users/developer/.gradle/caches/tran
 		ADDED from [:react-native-photoeditorsdk] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-photoeditorsdk/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-44
 	android:name
 		ADDED from [:react-native-photoeditorsdk] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-photoeditorsdk/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-56
+provider#com.reactnativecommunity.webview.RNCWebViewFileProvider
+ADDED from [:react-native-webview] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-20:20
+	android:grantUriPermissions
+		ADDED from [:react-native-webview] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-47
+	android:authorities
+		ADDED from [:react-native-webview] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-64
+	android:exported
+		ADDED from [:react-native-webview] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-37
+	android:name
+		ADDED from [:react-native-webview] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-83
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:react-native-webview] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:63
+	android:resource
+		ADDED from [:react-native-webview] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-60
+	android:name
+		ADDED from [:react-native-webview] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-67
 uses-feature#0x00020000
 ADDED from [ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e55ca7526893e53e606d697955b69750/jetified-photo-main-8.3.0/AndroidManifest.xml:25:5-27:35
 MERGED from [ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:30:5-32:35

@@ -143,142 +143,159 @@
 74-->[:react-native-photoeditorsdk] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-photoeditorsdk/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-36
 75            android:exported="false" />
 75-->[:react-native-photoeditorsdk] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-photoeditorsdk/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-37
-76
-77        <activity
-77-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e55ca7526893e53e606d697955b69750/jetified-photo-main-8.3.0/AndroidManifest.xml:30:9-39:20
-78            android:name="ly.img.android.pesdk.ui.activity.PhotoEditorActivity"
-78-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e55ca7526893e53e606d697955b69750/jetified-photo-main-8.3.0/AndroidManifest.xml:31:13-80
-79            android:configChanges="keyboard|keyboardHidden|screenSize"
-79-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e55ca7526893e53e606d697955b69750/jetified-photo-main-8.3.0/AndroidManifest.xml:32:13-71
-80            android:exported="true"
-80-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e55ca7526893e53e606d697955b69750/jetified-photo-main-8.3.0/AndroidManifest.xml:33:13-36
-81            android:hardwareAccelerated="true"
-81-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e55ca7526893e53e606d697955b69750/jetified-photo-main-8.3.0/AndroidManifest.xml:34:13-47
-82            android:label="@string/app_name"
-82-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e55ca7526893e53e606d697955b69750/jetified-photo-main-8.3.0/AndroidManifest.xml:35:13-45
-83            android:screenOrientation="portrait"
-83-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e55ca7526893e53e606d697955b69750/jetified-photo-main-8.3.0/AndroidManifest.xml:36:13-49
-84            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-84-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e55ca7526893e53e606d697955b69750/jetified-photo-main-8.3.0/AndroidManifest.xml:37:13-71
-85            android:windowSoftInputMode="adjustPan" >
-85-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e55ca7526893e53e606d697955b69750/jetified-photo-main-8.3.0/AndroidManifest.xml:38:13-52
-86        </activity>
-87        <activity
-87-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:35:9-44:20
-88            android:name="ly.img.android.pesdk.ui.activity.EditorActivity"
-88-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:36:13-75
-89            android:configChanges="keyboard|keyboardHidden|screenSize"
-89-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:37:13-71
-90            android:exported="true"
-90-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:38:13-36
-91            android:hardwareAccelerated="true"
-91-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:39:13-47
-92            android:label="@string/app_name"
-92-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:40:13-45
-93            android:screenOrientation="portrait"
-93-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:41:13-49
-94            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-94-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:42:13-71
-95            android:windowSoftInputMode="adjustPan" >
-95-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:43:13-52
-96        </activity>
-97
-98        <service
-98-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5946af34b60eaa2dccaa9974ff1e3e8d/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:9:9-15:19
-99            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
-99-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5946af34b60eaa2dccaa9974ff1e3e8d/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:10:13-91
-100            android:directBootAware="true"
-100-->[com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:17:13-43
-101            android:exported="false" >
-101-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5946af34b60eaa2dccaa9974ff1e3e8d/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:11:13-37
-102            <meta-data
-102-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5946af34b60eaa2dccaa9974ff1e3e8d/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:12:13-14:85
-103                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
-103-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5946af34b60eaa2dccaa9974ff1e3e8d/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:13:17-120
-104                android:value="com.google.firebase.components.ComponentRegistrar" />
-104-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5946af34b60eaa2dccaa9974ff1e3e8d/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:14:17-82
-105            <meta-data
-105-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/f88b9524c9806faac041392cbd7735a6/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:12:13-14:85
-106                android:name="com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar"
-106-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/f88b9524c9806faac041392cbd7735a6/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:13:17-114
-107                android:value="com.google.firebase.components.ComponentRegistrar" />
-107-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/f88b9524c9806faac041392cbd7735a6/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:14:17-82
-108            <meta-data
-108-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a6e112dde513007dc4d0854b6793b349/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:12:13-14:85
-109                android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar"
-109-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a6e112dde513007dc4d0854b6793b349/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:13:17-114
-110                android:value="com.google.firebase.components.ComponentRegistrar" />
-110-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a6e112dde513007dc4d0854b6793b349/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:14:17-82
+76        <provider
+76-->[:react-native-webview] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-20:20
+77            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
+77-->[:react-native-webview] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-83
+78            android:authorities="com.firsttask.fileprovider"
+78-->[:react-native-webview] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-64
+79            android:exported="false"
+79-->[:react-native-webview] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-37
+80            android:grantUriPermissions="true" >
+80-->[:react-native-webview] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-47
+81            <meta-data
+81-->[:react-native-webview] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:63
+82                android:name="android.support.FILE_PROVIDER_PATHS"
+82-->[:react-native-webview] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-67
+83                android:resource="@xml/file_provider_paths" />
+83-->[:react-native-webview] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-60
+84        </provider>
+85
+86        <activity
+86-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e55ca7526893e53e606d697955b69750/jetified-photo-main-8.3.0/AndroidManifest.xml:30:9-39:20
+87            android:name="ly.img.android.pesdk.ui.activity.PhotoEditorActivity"
+87-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e55ca7526893e53e606d697955b69750/jetified-photo-main-8.3.0/AndroidManifest.xml:31:13-80
+88            android:configChanges="keyboard|keyboardHidden|screenSize"
+88-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e55ca7526893e53e606d697955b69750/jetified-photo-main-8.3.0/AndroidManifest.xml:32:13-71
+89            android:exported="true"
+89-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e55ca7526893e53e606d697955b69750/jetified-photo-main-8.3.0/AndroidManifest.xml:33:13-36
+90            android:hardwareAccelerated="true"
+90-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e55ca7526893e53e606d697955b69750/jetified-photo-main-8.3.0/AndroidManifest.xml:34:13-47
+91            android:label="@string/app_name"
+91-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e55ca7526893e53e606d697955b69750/jetified-photo-main-8.3.0/AndroidManifest.xml:35:13-45
+92            android:screenOrientation="portrait"
+92-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e55ca7526893e53e606d697955b69750/jetified-photo-main-8.3.0/AndroidManifest.xml:36:13-49
+93            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+93-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e55ca7526893e53e606d697955b69750/jetified-photo-main-8.3.0/AndroidManifest.xml:37:13-71
+94            android:windowSoftInputMode="adjustPan" >
+94-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e55ca7526893e53e606d697955b69750/jetified-photo-main-8.3.0/AndroidManifest.xml:38:13-52
+95        </activity>
+96        <activity
+96-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:35:9-44:20
+97            android:name="ly.img.android.pesdk.ui.activity.EditorActivity"
+97-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:36:13-75
+98            android:configChanges="keyboard|keyboardHidden|screenSize"
+98-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:37:13-71
+99            android:exported="true"
+99-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:38:13-36
+100            android:hardwareAccelerated="true"
+100-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:39:13-47
+101            android:label="@string/app_name"
+101-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:40:13-45
+102            android:screenOrientation="portrait"
+102-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:41:13-49
+103            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+103-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:42:13-71
+104            android:windowSoftInputMode="adjustPan" >
+104-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:43:13-52
+105        </activity>
+106
+107        <service
+107-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5946af34b60eaa2dccaa9974ff1e3e8d/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:9:9-15:19
+108            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+108-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5946af34b60eaa2dccaa9974ff1e3e8d/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:10:13-91
+109            android:directBootAware="true"
+109-->[com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:17:13-43
+110            android:exported="false" >
+110-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5946af34b60eaa2dccaa9974ff1e3e8d/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:11:13-37
 111            <meta-data
-111-->[com.google.mlkit:vision-common:16.5.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a7b41c261480e0507a3a357a42455d2c/jetified-vision-common-16.5.0/AndroidManifest.xml:12:13-14:85
-112                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
-112-->[com.google.mlkit:vision-common:16.5.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a7b41c261480e0507a3a357a42455d2c/jetified-vision-common-16.5.0/AndroidManifest.xml:13:17-124
+111-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5946af34b60eaa2dccaa9974ff1e3e8d/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:12:13-14:85
+112                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
+112-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5946af34b60eaa2dccaa9974ff1e3e8d/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:13:17-120
 113                android:value="com.google.firebase.components.ComponentRegistrar" />
-113-->[com.google.mlkit:vision-common:16.5.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a7b41c261480e0507a3a357a42455d2c/jetified-vision-common-16.5.0/AndroidManifest.xml:14:17-82
+113-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5946af34b60eaa2dccaa9974ff1e3e8d/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:14:17-82
 114            <meta-data
-114-->[com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:20:13-22:85
-115                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
-115-->[com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:21:17-120
+114-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/f88b9524c9806faac041392cbd7735a6/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:12:13-14:85
+115                android:name="com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar"
+115-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/f88b9524c9806faac041392cbd7735a6/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:13:17-114
 116                android:value="com.google.firebase.components.ComponentRegistrar" />
-116-->[com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:22:17-82
-117        </service>
-118
-119        <provider
-119-->[com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:9:9-13:38
-120            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
-120-->[com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:10:13-78
-121            android:authorities="com.firsttask.mlkitinitprovider"
-121-->[com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:11:13-69
-122            android:exported="false"
-122-->[com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:12:13-37
-123            android:initOrder="99" />
-123-->[com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:13:13-35
-124
-125        <activity
-125-->[com.google.android.gms:play-services-base:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/9eb99048fb4186fc89b6e5f5fdd82122/jetified-play-services-base-17.6.0/AndroidManifest.xml:23:9-26:75
-126            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-126-->[com.google.android.gms:play-services-base:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/9eb99048fb4186fc89b6e5f5fdd82122/jetified-play-services-base-17.6.0/AndroidManifest.xml:24:13-79
-127            android:exported="false"
-127-->[com.google.android.gms:play-services-base:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/9eb99048fb4186fc89b6e5f5fdd82122/jetified-play-services-base-17.6.0/AndroidManifest.xml:25:13-37
-128            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-128-->[com.google.android.gms:play-services-base:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/9eb99048fb4186fc89b6e5f5fdd82122/jetified-play-services-base-17.6.0/AndroidManifest.xml:26:13-72
-129
-130        <meta-data
-130-->[com.google.android.gms:play-services-basement:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/fa2bce141643bdebe69acb35e908aa37/jetified-play-services-basement-17.6.0/AndroidManifest.xml:23:9-25:69
-131            android:name="com.google.android.gms.version"
-131-->[com.google.android.gms:play-services-basement:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/fa2bce141643bdebe69acb35e908aa37/jetified-play-services-basement-17.6.0/AndroidManifest.xml:24:13-58
-132            android:value="@integer/google_play_services_version" />
-132-->[com.google.android.gms:play-services-basement:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/fa2bce141643bdebe69acb35e908aa37/jetified-play-services-basement-17.6.0/AndroidManifest.xml:25:13-66
+116-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/f88b9524c9806faac041392cbd7735a6/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:14:17-82
+117            <meta-data
+117-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a6e112dde513007dc4d0854b6793b349/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:12:13-14:85
+118                android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar"
+118-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a6e112dde513007dc4d0854b6793b349/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:13:17-114
+119                android:value="com.google.firebase.components.ComponentRegistrar" />
+119-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a6e112dde513007dc4d0854b6793b349/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:14:17-82
+120            <meta-data
+120-->[com.google.mlkit:vision-common:16.5.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a7b41c261480e0507a3a357a42455d2c/jetified-vision-common-16.5.0/AndroidManifest.xml:12:13-14:85
+121                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+121-->[com.google.mlkit:vision-common:16.5.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a7b41c261480e0507a3a357a42455d2c/jetified-vision-common-16.5.0/AndroidManifest.xml:13:17-124
+122                android:value="com.google.firebase.components.ComponentRegistrar" />
+122-->[com.google.mlkit:vision-common:16.5.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a7b41c261480e0507a3a357a42455d2c/jetified-vision-common-16.5.0/AndroidManifest.xml:14:17-82
+123            <meta-data
+123-->[com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:20:13-22:85
+124                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+124-->[com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:21:17-120
+125                android:value="com.google.firebase.components.ComponentRegistrar" />
+125-->[com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:22:17-82
+126        </service>
+127
+128        <provider
+128-->[com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:9:9-13:38
+129            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+129-->[com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:10:13-78
+130            android:authorities="com.firsttask.mlkitinitprovider"
+130-->[com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:11:13-69
+131            android:exported="false"
+131-->[com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:12:13-37
+132            android:initOrder="99" />
+132-->[com.google.mlkit:common:17.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/bbc93cc64b83694acba9ec0188e1613a/jetified-common-17.2.0/AndroidManifest.xml:13:13-35
 133
-134        <service
-134-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
-135            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-135-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:30:13-103
-136            android:exported="false" >
-136-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:31:13-37
-137            <meta-data
-137-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:32:13-34:39
-138                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-138-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:33:17-94
-139                android:value="cct" />
-139-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:34:17-36
-140        </service>
-141        <service
-141-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:26:9-30:19
-142            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-142-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:27:13-117
-143            android:exported="false"
-143-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:28:13-37
-144            android:permission="android.permission.BIND_JOB_SERVICE" >
-144-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:29:13-69
-145        </service>
-146
-147        <receiver
-147-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:32:9-34:40
-148            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-148-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:33:13-132
-149            android:exported="false" />
-149-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:34:13-37
-150    </application>
-151
-152</manifest>
+134        <activity
+134-->[com.google.android.gms:play-services-base:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/9eb99048fb4186fc89b6e5f5fdd82122/jetified-play-services-base-17.6.0/AndroidManifest.xml:23:9-26:75
+135            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+135-->[com.google.android.gms:play-services-base:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/9eb99048fb4186fc89b6e5f5fdd82122/jetified-play-services-base-17.6.0/AndroidManifest.xml:24:13-79
+136            android:exported="false"
+136-->[com.google.android.gms:play-services-base:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/9eb99048fb4186fc89b6e5f5fdd82122/jetified-play-services-base-17.6.0/AndroidManifest.xml:25:13-37
+137            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+137-->[com.google.android.gms:play-services-base:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/9eb99048fb4186fc89b6e5f5fdd82122/jetified-play-services-base-17.6.0/AndroidManifest.xml:26:13-72
+138
+139        <meta-data
+139-->[com.google.android.gms:play-services-basement:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/fa2bce141643bdebe69acb35e908aa37/jetified-play-services-basement-17.6.0/AndroidManifest.xml:23:9-25:69
+140            android:name="com.google.android.gms.version"
+140-->[com.google.android.gms:play-services-basement:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/fa2bce141643bdebe69acb35e908aa37/jetified-play-services-basement-17.6.0/AndroidManifest.xml:24:13-58
+141            android:value="@integer/google_play_services_version" />
+141-->[com.google.android.gms:play-services-basement:17.6.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/fa2bce141643bdebe69acb35e908aa37/jetified-play-services-basement-17.6.0/AndroidManifest.xml:25:13-66
+142
+143        <service
+143-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
+144            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+144-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:30:13-103
+145            android:exported="false" >
+145-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:31:13-37
+146            <meta-data
+146-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:32:13-34:39
+147                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+147-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:33:17-94
+148                android:value="cct" />
+148-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:34:17-36
+149        </service>
+150        <service
+150-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:26:9-30:19
+151            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+151-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:27:13-117
+152            android:exported="false"
+152-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:28:13-37
+153            android:permission="android.permission.BIND_JOB_SERVICE" >
+153-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:29:13-69
+154        </service>
+155
+156        <receiver
+156-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:32:9-34:40
+157            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+157-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:33:13-132
+158            android:exported="false" />
+158-->[com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:34:13-37
+159    </application>
+160
+161</manifest>

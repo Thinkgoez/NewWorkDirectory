@@ -73,6 +73,15 @@
             android:authorities="com.firsttask.IMGLYAutoInit"
             android:enabled="false"
             android:exported="false" />
+        <provider
+            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
+            android:authorities="com.firsttask.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
 
         <activity
             android:name="ly.img.android.pesdk.ui.activity.PhotoEditorActivity"

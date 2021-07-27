@@ -10,6 +10,7 @@ import { setJSExceptionHandler, setNativeExceptionHandler } from 'react-native-e
 
 const ArticlesPage = React.lazy(() => import('./src/pages/Articles'));
 const CameraPage = React.lazy(() => import('./src/pages/Camera'));
+const WebViewPage = React.lazy(() => import('./src/pages/WebViewPage'));
 import { SummaryPage } from './src/pages/Summary';
 import { Map } from './src/pages/Map'
 import { Login } from './src/pages/Login'
@@ -52,13 +53,14 @@ const App = () => {
                         <NavigationContainer>
                             <Drawer.Navigator
                                 screenOptions={{ headerShown: false }}
-                                initialRouteName='Map'>
+                                initialRouteName='WebViewPage'>
                                 <Drawer.Screen name='Articles in Carton' component={ArticlesPage} />
                                 <Drawer.Screen name='Summary' component={SummaryPage} />
                                 {/* <Drawer.Screen name='test' component={Test} /> */}
                                 <Drawer.Screen name='Camera' component={CameraPage} />
                                 <Drawer.Screen name='Map' component={Map} options={{header: mapHeader, headerShown: true}} />
                                 <Drawer.Screen name='Login' component={Login}/>
+                                <Drawer.Screen name='WebViewPage' component={WebViewPage}/>
                             </Drawer.Navigator>
                         </NavigationContainer>
                     </Suspense>

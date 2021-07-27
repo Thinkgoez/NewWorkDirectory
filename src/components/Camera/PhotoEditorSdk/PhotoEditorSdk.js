@@ -13,6 +13,7 @@ export const PhotoEditorSdk = ({ route, navigation }) => {
     let newPath = imageUrl.split('.')
     newPath[newPath.length - 2] += '_edited_' + (new Date(Date.now())).getDate(); // edited image's new name
     newPath = newPath.join('.')
+    
     const handleExport = (result) => { // result: {hasChanges: Boolean, image: String(path to new file), serialization: default = null(read the doc)}
         navigation?.goBack()
         RNFS.unlink(imageUrl)

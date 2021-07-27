@@ -1,4 +1,5 @@
 const initialState = {
+    // Ukraine
     latitude: 48.264920,
     longitude: 31.105520,
     latitudeDelta: 20,
