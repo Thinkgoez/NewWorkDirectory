@@ -17,6 +17,8 @@
 	<!-- Include this only if you are planning to use the microphone for video recording -->
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Your message to user when the microphone is accessed for the first time</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>$(PRODUCT_NAME) requires FaceID access to allows you quick and secure access.</string>
 	
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>YOUR TEXT</string>

@@ -1,9 +1,10 @@
 import styled from 'styled-components/native'
-import { paddingMixin, sizesMixin} from './StylesMixins/Mixins'
+import { marginMixin, paddingMixin, sizesMixin} from './StylesMixins/Mixins'
 
 const Image = styled.Image`
   ${sizesMixin}
   ${paddingMixin}
+  ${marginMixin}
   ${({backgroundColor}) => backgroundColor ? `background-color: ${backgroundColor};` : ''}
 `;
 

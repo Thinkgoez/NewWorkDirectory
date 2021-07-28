@@ -5,3 +5,4 @@ export { default as ArticleItem } from './ListItems/ArticleListItem';
 export { default as CartonItem } from './ListItems/CartonListItem';
 export { default as SecureToggle } from './SecureToggle';
 export { default as CunstomInput } from './FormInput';
+export { default as Timer } from './Timer';

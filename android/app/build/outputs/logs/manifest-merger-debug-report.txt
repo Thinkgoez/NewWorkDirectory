@@ -1,10 +1,10 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-38:12
-INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-38:12
-INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-38:12
-INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-38:12
-MERGED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-38:12
+ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-40:12
+INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-40:12
+INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-40:12
+INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-40:12
+MERGED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-40:12
 MERGED from [hermes-debug.aar] /Users/developer/.gradle/caches/transforms-2/files-2.1/7b3baefa9f166a891cf8022919d99377/jetified-hermes-debug/AndroidManifest.xml:2:1-7:12
 MERGED from [com.facebook.flipper:flipper:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/8e8077f7e347b958a0f92b8e942b7b9e/jetified-flipper-0.75.1/AndroidManifest.xml:8:1-18:12
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/7c7a86ef4e9513d367938b9569e5298b/jetified-flipper-network-plugin-0.75.1/AndroidManifest.xml:8:1-15:12
@@ -15,6 +15,7 @@ MERGED from [:react-native-community_cameraroll] /Users/developer/Documents/Proj
 MERGED from [:react-native-community_masked-view] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-camera] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:2:1-18:12
 MERGED from [:react-native-exception-handler] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-exception-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-16:12
+MERGED from [:react-native-fingerprint-scanner] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-fingerprint-scanner/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-16:12
 MERGED from [:react-native-fs] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-fs/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-13:12
 MERGED from [:react-native-geolocation-service] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-geolocation-service/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-gesture-handler] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
@@ -72,6 +73,8 @@ MERGED from [com.google.android.material:material:1.1.0] /Users/developer/.gradl
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5367cd6ad4bc4f3594623adcb4f8f054/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/66e559b7f023e7925e1bba86d598ff2d/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/69ebe1228af776b69cde87b5624aba90/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.biometric:biometric:1.0.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/83a71d21375169b648eb71fb9823cf0a/biometric-1.0.1/AndroidManifest.xml:17:1-34:12
+MERGED from [com.wei.android.lib:fingerprintidentify:1.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/3cd1b5ea49fe7ec05205586837db79ca/jetified-fingerprintidentify-1.2.6/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/69db503f52561eb2d561882b41fa084e/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.sqlite:sqlite-framework:2.1.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/ec86b46d7332696666e3036bcf01f590/sqlite-framework-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/406b9ea6a29c5a162b7594977a8efb9b/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:17:1-24:12
@@ -152,13 +155,13 @@ INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/androi
 		INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/debug/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-38:12
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-40:12
 		INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/debug/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/debug/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-38:12
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:1-40:12
 		INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:1:11-69
@@ -218,10 +221,26 @@ uses-permission#android.permission.ACCESS_FINE_LOCATION
 ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:11:5-79
 	android:name
 		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:11:22-76
+uses-permission#android.permission.USE_BIOMETRIC
+ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:13:5-72
+MERGED from [:react-native-fingerprint-scanner] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-fingerprint-scanner/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-72
+MERGED from [:react-native-fingerprint-scanner] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-fingerprint-scanner/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-72
+MERGED from [androidx.biometric:biometric:1.0.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/83a71d21375169b648eb71fb9823cf0a/biometric-1.0.1/AndroidManifest.xml:24:5-72
+MERGED from [androidx.biometric:biometric:1.0.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/83a71d21375169b648eb71fb9823cf0a/biometric-1.0.1/AndroidManifest.xml:24:5-72
+	android:name
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:13:22-69
+uses-permission#android.permission.USE_FINGERPRINT
+ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:14:5-74
+MERGED from [:react-native-fingerprint-scanner] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-fingerprint-scanner/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-74
+MERGED from [:react-native-fingerprint-scanner] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-fingerprint-scanner/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-74
+MERGED from [androidx.biometric:biometric:1.0.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/83a71d21375169b648eb71fb9823cf0a/biometric-1.0.1/AndroidManifest.xml:25:5-74
+MERGED from [androidx.biometric:biometric:1.0.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/83a71d21375169b648eb71fb9823cf0a/biometric-1.0.1/AndroidManifest.xml:25:5-74
+	android:name
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:14:22-71
 application
-ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:14:5-37:19
-MERGED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:14:5-37:19
-MERGED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:14:5-37:19
+ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:16:5-39:19
+MERGED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:16:5-39:19
+MERGED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:16:5-39:19
 MERGED from [:react-native-exception-handler] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-exception-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-14:19
 MERGED from [:react-native-exception-handler] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-exception-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-14:19
 MERGED from [:react-native-photoeditorsdk] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-photoeditorsdk/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-19:19
@@ -302,6 +321,8 @@ MERGED from [ly.img.android.sdk:core:8.3.0] /Users/developer/.gradle/caches/tran
 MERGED from [ly.img.android.sdk:core:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/ec5c1f305065888b9dd490f62a7b51e2/jetified-core-8.3.0/AndroidManifest.xml:18:5-24:19
 MERGED from [com.google.android.material:material:1.1.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/cc011120c47cbdabe7929f32a9d05fd9/material-1.1.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.1.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/cc011120c47cbdabe7929f32a9d05fd9/material-1.1.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.biometric:biometric:1.0.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/83a71d21375169b648eb71fb9823cf0a/biometric-1.0.1/AndroidManifest.xml:27:5-32:19
+MERGED from [androidx.biometric:biometric:1.0.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/83a71d21375169b648eb71fb9823cf0a/biometric-1.0.1/AndroidManifest.xml:27:5-32:19
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:30:5-36:19
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:30:5-36:19
 MERGED from [com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5946af34b60eaa2dccaa9974ff1e3e8d/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:8:5-16:19
@@ -343,67 +364,67 @@ MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/developer/.gradle
 	android:supportsRtl
 		ADDED from [ly.img.android.sdk:serializer:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/9aefb65cee71eecfabd704f2ff191165/jetified-serializer-8.3.0/AndroidManifest.xml:27:9-35
 	android:label
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:16:7-39
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:16:7-39
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:18:7-39
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:18:7-39
 	tools:ignore
 		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/debug/AndroidManifest.xml:10:9-48
 	android:roundIcon
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:18:7-52
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:18:7-52
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:20:7-52
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:20:7-52
 	android:largeHeap
 		ADDED from [ly.img.android.sdk.assets:sticker-shapes:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/c7e446c573c67da141312d39e31c1b24/jetified-sticker-shapes-8.3.0/AndroidManifest.xml:25:18-42
 	tools:targetApi
 		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/debug/AndroidManifest.xml:9:9-29
 	android:icon
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:17:7-41
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:17:7-41
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:19:7-41
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:19:7-41
 	android:allowBackup
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:19:7-34
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:19:7-34
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:21:7-34
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:21:7-34
 	android:theme
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:20:7-38
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:20:7-38
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:22:7-38
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:22:7-38
 	android:usesCleartextTraffic
 		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/debug/AndroidManifest.xml:8:9-44
 	android:name
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:15:7-38
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:15:7-38
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:17:7-38
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:17:7-38
 meta-data#com.google.android.geo.API_KEY
-ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:21:7-23:66
+ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:23:7-25:66
 	android:value
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:23:9-64
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:25:9-64
 	android:name
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:22:9-54
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:24:9-54
 uses-library#org.apache.http.legacy
-ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:24:7-85
+ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:26:7-85
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
 	android:required
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:24:59-83
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:26:59-83
 	android:name
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:24:21-58
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:26:21-58
 activity#com.firsttask.MainActivity
-ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:26:7-36:18
+ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:28:7-38:18
 	android:label
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:28:9-41
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:30:9-41
 	android:launchMode
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:30:9-40
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:32:9-40
 	android:windowSoftInputMode
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:31:9-51
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:33:9-51
 	android:configChanges
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:29:9-86
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:31:9-86
 	android:name
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:27:9-37
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:29:9-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:32:9-35:25
+ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:34:9-37:25
 action#android.intent.action.MAIN
-ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:33:13-65
+ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:35:13-65
 	android:name
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:33:21-62
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:35:21-62
 category#android.intent.category.LAUNCHER
-ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:34:13-73
+ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:36:13-73
 	android:name
-		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:34:23-70
+		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:36:23-70
 uses-sdk
 INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml
@@ -428,6 +449,8 @@ MERGED from [:react-native-camera] /Users/developer/Documents/Projects/Second/Ne
 MERGED from [:react-native-camera] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-exception-handler] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-exception-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-exception-handler] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-exception-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-fingerprint-scanner] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-fingerprint-scanner/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-fingerprint-scanner] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-fingerprint-scanner/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-fs] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-fs/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-fs] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-fs/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-geolocation-service] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-geolocation-service/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
@@ -542,6 +565,10 @@ MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/developer/.gradle/
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/66e559b7f023e7925e1bba86d598ff2d/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/69ebe1228af776b69cde87b5624aba90/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/69ebe1228af776b69cde87b5624aba90/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.biometric:biometric:1.0.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/83a71d21375169b648eb71fb9823cf0a/biometric-1.0.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.biometric:biometric:1.0.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/83a71d21375169b648eb71fb9823cf0a/biometric-1.0.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.wei.android.lib:fingerprintidentify:1.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/3cd1b5ea49fe7ec05205586837db79ca/jetified-fingerprintidentify-1.2.6/AndroidManifest.xml:7:5-9:41
+MERGED from [com.wei.android.lib:fingerprintidentify:1.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/3cd1b5ea49fe7ec05205586837db79ca/jetified-fingerprintidentify-1.2.6/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/69db503f52561eb2d561882b41fa084e/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/69db503f52561eb2d561882b41fa084e/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.sqlite:sqlite-framework:2.1.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/ec86b46d7332696666e3036bcf01f590/sqlite-framework-2.1.0/AndroidManifest.xml:20:5-22:41
@@ -722,6 +749,14 @@ activity#com.masteratul.exceptionhandler.DefaultErrorScreen
 ADDED from [:react-native-exception-handler] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-exception-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-13:20
 	android:name
 		ADDED from [:react-native-exception-handler] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-exception-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:19-84
+uses-permission#com.fingerprints.service.ACCESS_FINGERPRINT_MANAGER
+ADDED from [:react-native-fingerprint-scanner] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-fingerprint-scanner/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-91
+	android:name
+		ADDED from [:react-native-fingerprint-scanner] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-fingerprint-scanner/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-88
+uses-permission#com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY
+ADDED from [:react-native-fingerprint-scanner] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-fingerprint-scanner/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:5-117
+	android:name
+		ADDED from [:react-native-fingerprint-scanner] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-fingerprint-scanner/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:22-114
 provider#ly.img.android.IMGLYAutoInit
 ADDED from [:react-native-photoeditorsdk] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-photoeditorsdk/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:9-18:47
 MERGED from [ly.img.android.sdk:core:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/ec5c1f305065888b9dd490f62a7b51e2/jetified-core-8.3.0/AndroidManifest.xml:19:9-23:40
@@ -803,6 +838,14 @@ ADDED from [ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/
 		ADDED from [ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:42:13-71
 	android:name
 		ADDED from [ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:36:13-75
+activity#androidx.biometric.DeviceCredentialHandlerActivity
+ADDED from [androidx.biometric:biometric:1.0.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/83a71d21375169b648eb71fb9823cf0a/biometric-1.0.1/AndroidManifest.xml:28:9-31:67
+	android:exported
+		ADDED from [androidx.biometric:biometric:1.0.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/83a71d21375169b648eb71fb9823cf0a/biometric-1.0.1/AndroidManifest.xml:30:13-36
+	android:theme
+		ADDED from [androidx.biometric:biometric:1.0.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/83a71d21375169b648eb71fb9823cf0a/biometric-1.0.1/AndroidManifest.xml:31:13-64
+	android:name
+		ADDED from [androidx.biometric:biometric:1.0.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/83a71d21375169b648eb71fb9823cf0a/biometric-1.0.1/AndroidManifest.xml:29:13-78
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79

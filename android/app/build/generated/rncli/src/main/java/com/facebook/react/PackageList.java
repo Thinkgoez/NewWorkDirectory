@@ -21,6 +21,8 @@ import org.reactnative.maskedview.RNCMaskedViewPackage;
 import org.reactnative.camera.RNCameraPackage;
 // react-native-exception-handler
 import com.masteratul.exceptionhandler.ReactNativeExceptionHandlerPackage;
+// react-native-fingerprint-scanner
+import com.hieuvp.fingerprint.ReactNativeFingerprintScannerPackage;
 // react-native-fs
 import com.rnfs.RNFSPackage;
 // react-native-geolocation-service
@@ -95,6 +97,7 @@ public class PackageList {
       new RNCMaskedViewPackage(),
       new RNCameraPackage(),
       new ReactNativeExceptionHandlerPackage(),
+      new ReactNativeFingerprintScannerPackage(),
       new RNFSPackage(),
       new RNFusedLocationPackage(),
       new RNGestureHandlerPackage(),
