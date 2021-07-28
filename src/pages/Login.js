@@ -1,21 +1,25 @@
 import React, { useState } from 'react'
-import { ScrollView } from 'react-native';
+import { Platform, ScrollView, KeyboardAvoidingView } from 'react-native';
 import { Formik } from 'formik';
+import styled from 'styled-components/native'
 
 import { StyledText, StyledView, StyledButton } from '../components/common/SimpleComponents'
 import { CunstomInput, SecureToggle } from '../components/common/CombinationComponents/';
 import Check from '../assets/check.svg'
 
 export const Login = () => {
+    const keyboardVerticalOffset = Platform.select({ ios: 50, android: 40 })
     return (
-        <ScrollView>
-            <StyledView backgroundColor='#ed993f' alignItems='center' justifyContent='center' height='228px'>
-                <StyledText color='#fff' fontSize='100px'>D</StyledText>
-            </StyledView>
-            <StyledView paddingHorizontal='32px' paddingTop='8px'>
-                <Form />
-            </StyledView>
-        </ScrollView>
+        <KeyboardAvoidingView behavior={Platform.select({ ios: 'position', android: 'height' })} keyboardVerticalOffset={keyboardVerticalOffset}>
+            <ScrollView>
+                <StyledView backgroundColor='#ed993f' alignItems='center' justifyContent='center' height='228px'>
+                    <StyledText color='#fff' fontSize='100px'>D</StyledText>
+                </StyledView>
+                <StyledView paddingHorizontal='32px' paddingTop='8px'>
+                    <Form />
+                </StyledView>
+            </ScrollView>
+        </KeyboardAvoidingView>
     )
 }
 export const Form = () => {
@@ -74,8 +78,8 @@ export const Form = () => {
             validate={validate}
         >
             {({ handleChange, handleBlur, handleSubmit, values, errors, touched, setFieldError, validateForm }) => (
-                <StyledView>
-                    <StyledView paddingBottom='16px'>
+                <StyledView paddingBottom='20px'>
+                    <StyledView paddingBottom='16px' marginBottom='64px'>
                         {errorList.map(error => {
                             const isValid = passObjectValidation[error.id]
                             return (
@@ -87,6 +91,166 @@ export const Form = () => {
                             )
                         })}
                     </StyledView>
+                    <CunstomInput
+                        onChangeText={value => {
+                            handleChange('email')(value)
+                            setFieldError('email', null)
+                        }}
+                        onBlur={handleBlur('email')}
+                        value={values.email}
+                        label='Username'
+                        autoCapitalize='none'
+                        paddingVertical='2px'
+                        paddingHorizontal='4px'
+                        borderBottom={touched.email && errors.email ? '1px red' : '1px #e2e2e3'}
+                        marginBottom='16px'
+                        error={touched.email && errors.email}
+                    />
+                    <CunstomInput
+                        onChangeText={value => {
+                            validateForm({ password: value, email: values.email })
+                            handleChange('password')(value)
+                        }}
+                        onBlur={handleBlur('password')}
+                        value={values.password}
+                        label='Password'
+                        autoCapitalize='none'
+                        paddingVertical='2px'
+                        paddingHorizontal='4px'
+                        borderBottom={touched.password && errors.password ? '1px red' : '1px #e2e2e3'}
+                        marginBottom='16px'
+                        secureTextEntry={isSecure}
+                        error={touched.password && errors.password}
+                        SecureToggle={() => <SecureToggle isSecure={isSecure} secureToggle={toggleViewPass} />}
+                    />
+                    <CunstomInput
+                        onChangeText={value => {
+                            handleChange('email')(value)
+                            setFieldError('email', null)
+                        }}
+                        onBlur={handleBlur('email')}
+                        value={values.email}
+                        label='Username'
+                        autoCapitalize='none'
+                        paddingVertical='2px'
+                        paddingHorizontal='4px'
+                        borderBottom={touched.email && errors.email ? '1px red' : '1px #e2e2e3'}
+                        marginBottom='16px'
+                        error={touched.email && errors.email}
+                    />
+                    <CunstomInput
+                        onChangeText={value => {
+                            validateForm({ password: value, email: values.email })
+                            handleChange('password')(value)
+                        }}
+                        onBlur={handleBlur('password')}
+                        value={values.password}
+                        label='Password'
+                        autoCapitalize='none'
+                        paddingVertical='2px'
+                        paddingHorizontal='4px'
+                        borderBottom={touched.password && errors.password ? '1px red' : '1px #e2e2e3'}
+                        marginBottom='16px'
+                        secureTextEntry={isSecure}
+                        error={touched.password && errors.password}
+                        SecureToggle={() => <SecureToggle isSecure={isSecure} secureToggle={toggleViewPass} />}
+                    />
+                    <CunstomInput
+                        onChangeText={value => {
+                            handleChange('email')(value)
+                            setFieldError('email', null)
+                        }}
+                        onBlur={handleBlur('email')}
+                        value={values.email}
+                        label='Username'
+                        autoCapitalize='none'
+                        paddingVertical='2px'
+                        paddingHorizontal='4px'
+                        borderBottom={touched.email && errors.email ? '1px red' : '1px #e2e2e3'}
+                        marginBottom='16px'
+                        error={touched.email && errors.email}
+                    />
+                    <CunstomInput
+                        onChangeText={value => {
+                            validateForm({ password: value, email: values.email })
+                            handleChange('password')(value)
+                        }}
+                        onBlur={handleBlur('password')}
+                        value={values.password}
+                        label='Password'
+                        autoCapitalize='none'
+                        paddingVertical='2px'
+                        paddingHorizontal='4px'
+                        borderBottom={touched.password && errors.password ? '1px red' : '1px #e2e2e3'}
+                        marginBottom='16px'
+                        secureTextEntry={isSecure}
+                        error={touched.password && errors.password}
+                        SecureToggle={() => <SecureToggle isSecure={isSecure} secureToggle={toggleViewPass} />}
+                    />
+                    <CunstomInput
+                        onChangeText={value => {
+                            handleChange('email')(value)
+                            setFieldError('email', null)
+                        }}
+                        onBlur={handleBlur('email')}
+                        value={values.email}
+                        label='Username'
+                        autoCapitalize='none'
+                        paddingVertical='2px'
+                        paddingHorizontal='4px'
+                        borderBottom={touched.email && errors.email ? '1px red' : '1px #e2e2e3'}
+                        marginBottom='16px'
+                        error={touched.email && errors.email}
+                    />
+                    <CunstomInput
+                        onChangeText={value => {
+                            validateForm({ password: value, email: values.email })
+                            handleChange('password')(value)
+                        }}
+                        onBlur={handleBlur('password')}
+                        value={values.password}
+                        label='Password'
+                        autoCapitalize='none'
+                        paddingVertical='2px'
+                        paddingHorizontal='4px'
+                        borderBottom={touched.password && errors.password ? '1px red' : '1px #e2e2e3'}
+                        marginBottom='16px'
+                        secureTextEntry={isSecure}
+                        error={touched.password && errors.password}
+                        SecureToggle={() => <SecureToggle isSecure={isSecure} secureToggle={toggleViewPass} />}
+                    />
+                    <CunstomInput
+                        onChangeText={value => {
+                            handleChange('email')(value)
+                            setFieldError('email', null)
+                        }}
+                        onBlur={handleBlur('email')}
+                        value={values.email}
+                        label='Username'
+                        autoCapitalize='none'
+                        paddingVertical='2px'
+                        paddingHorizontal='4px'
+                        borderBottom={touched.email && errors.email ? '1px red' : '1px #e2e2e3'}
+                        marginBottom='16px'
+                        error={touched.email && errors.email}
+                    />
+                    <CunstomInput
+                        onChangeText={value => {
+                            validateForm({ password: value, email: values.email })
+                            handleChange('password')(value)
+                        }}
+                        onBlur={handleBlur('password')}
+                        value={values.password}
+                        label='Password'
+                        autoCapitalize='none'
+                        paddingVertical='2px'
+                        paddingHorizontal='4px'
+                        borderBottom={touched.password && errors.password ? '1px red' : '1px #e2e2e3'}
+                        marginBottom='16px'
+                        secureTextEntry={isSecure}
+                        error={touched.password && errors.password}
+                        SecureToggle={() => <SecureToggle isSecure={isSecure} secureToggle={toggleViewPass} />}
+                    />
                     <CunstomInput
                         onChangeText={value => {
                             handleChange('email')(value)
@@ -131,6 +295,11 @@ export const Form = () => {
         </Formik>
     )
 }
+
+const StyledKeyboardAvodingView = styled.KeyboardAvoidingView`
+    flex: 1;
+    ${Platform.OS === 'android' && 'padding-bottom: 20px;'}
+`
 
 const errorList = [
     { id: 'required', title: 'non empty' },

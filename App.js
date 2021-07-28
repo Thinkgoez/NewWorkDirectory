@@ -53,7 +53,7 @@ const App = () => {
                         <NavigationContainer>
                             <Drawer.Navigator
                                 screenOptions={{ headerShown: false }}
-                                initialRouteName='WebViewPage'>
+                                initialRouteName='Login'>
                                 <Drawer.Screen name='Articles in Carton' component={ArticlesPage} />
                                 <Drawer.Screen name='Summary' component={SummaryPage} />
                                 {/* <Drawer.Screen name='test' component={Test} /> */}
