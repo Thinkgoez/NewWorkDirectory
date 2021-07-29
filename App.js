@@ -150,21 +150,28 @@ let App = () => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#F5FCFF",
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: "#F5FCFF",
+    },
+    text: {
+      fontSize: 24,
+      fontWeight: "700",
+      margin: 20,
+      lineHeight: 30,
+      color: "#333",
+      textAlign: "center",
     },
     bootsplash: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        height: 100,
-        width,
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: "#F5FCFF",
     },
     logo: {
-        aspectRatio: width / 100 
+      width: 100,
     },
-});
+  });
 
 export default App;

@@ -16,12 +16,12 @@
         "source": "/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/res/mipmap-xhdpi/bootsplash_logo.png"
     },
     {
-        "merged": "/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/build/intermediates/res/merged/debug/drawable_bootsplash.xml.flat",
-        "source": "/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/res/drawable/bootsplash.xml"
-    },
-    {
         "merged": "/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_bootsplash_logo.png.flat",
         "source": "/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/res/mipmap-mdpi/bootsplash_logo.png"
+    },
+    {
+        "merged": "/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/build/intermediates/res/merged/debug/drawable_bootsplash.xml.flat",
+        "source": "/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/res/drawable/bootsplash.xml"
     },
     {
         "merged": "/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
