@@ -3,12 +3,13 @@ import React, { useState, useEffect } from 'react'
 import { StyledText } from '../SimpleComponents'
 
 const Timer = ({ onDone }) => {
-    const [time, setTime] = useState(5)
+    const [time, setTime] = useState(59)
     const [timerId, setTimerId] = useState(null)
     useEffect(() => {
-        runTimer()
+        const timer = runTimer()
         return () => {
-            console.log('timer cleared', timerId)
+            clearInterval(timer)
+            console.log('timer cleared', timer)
         }
     }, [])
 
@@ -18,11 +19,12 @@ const Timer = ({ onDone }) => {
                 if (time > 0) setTime(prev => prev - 1)
             }, 1000)
             setTimerId(id)
+            return id
         }
+        return timerId
     }
     if (time <= 0) {
-        clearInterval(timerId)
-        onDone()
+        setTimeout(() => { onDone() }, 0) // setTimeout fixes warning described above
     }
     return <StyledText>{time} left</StyledText>
 }
