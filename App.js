@@ -1,12 +1,15 @@
 import 'react-native-gesture-handler';
-import React, { Suspense } from 'react';
-import { Alert } from 'react-native';
+import React, { Suspense, useEffect, useRef, useState } from 'react';
+import { Alert, Animated, Dimensions, StyleSheet, Text, View } from 'react-native';
 import styled from 'styled-components/native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { PersistGate } from 'redux-persist/integration/react'
 import { Provider } from 'react-redux'
 import { setJSExceptionHandler, setNativeExceptionHandler } from 'react-native-exception-handler';
+import BootSplash from "react-native-bootsplash";
+
+let bootSplashLogo = require("./src/assets/bootsplash_logo.png");
 
 const ArticlesPage = React.lazy(() => import('./src/pages/Articles'));
 const CameraPage = React.lazy(() => import('./src/pages/Camera'));
@@ -24,6 +27,8 @@ import { mapHeader } from './src/components/Map/header';
 
 const Drawer = createDrawerNavigator();
 const { store, persistor } = configureStore()
+var width = Dimensions.get('window').width; //full width: ;
+var height = Dimensions.get('window').height; //full height
 
 const errorHandler = (e, isFatal) => {
     if (isFatal) {
@@ -46,16 +51,16 @@ setNativeExceptionHandler((errorString) => {
     console.log('setNativeExceptionHandler');
 });
 
-const App = () => {
+const AppContent = () => {
     return (
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
                 <StyledSafeAreaView>
-                    <Suspense fallback={<PendingView />}>
+                    <Suspense fallback={<PendingView color='#00ff00'/>}>
                         <NavigationContainer>
                             <Drawer.Navigator
                                 screenOptions={{ headerShown: false }}
-                                initialRouteName='FingerPrint'>
+                                initialRouteName='Articles in Carton'>
                                 <Drawer.Screen name='Articles in Carton' component={ArticlesPage} />
                                 <Drawer.Screen name='Summary' component={SummaryPage} />
                                 {/* <Drawer.Screen name='test' component={Test} /> */}
@@ -77,5 +82,89 @@ const StyledSafeAreaView = styled.SafeAreaView`
     height: 100%;
     width: 100%;
 `;
+
+let App = () => {
+    let [bootSplashIsVisible, setBootSplashIsVisible] = useState(true);
+    let [bootSplashLogoIsLoaded, setBootSplashLogoIsLoaded] = useState(false);
+    let opacity = useRef(new Animated.Value(1));
+    let translateY = useRef(new Animated.Value(0));
+
+    let init = async () => {
+        // You can uncomment this line to add a delay on app startup
+        // await fakeApiCallWithoutBadNetwork(3000);
+
+        await BootSplash.hide();
+
+        Animated.stagger(250, [
+            Animated.spring(translateY.current, {
+                useNativeDriver: true,
+                toValue: -50,
+            }),
+            Animated.spring(translateY.current, {
+                useNativeDriver: true,
+                toValue: height,
+            }),
+        ]).start();
+
+        Animated.timing(opacity.current, {
+            useNativeDriver: true,
+            toValue: 0,
+            duration: 150,
+            delay: 350,
+        }).start(() => {
+            setBootSplashIsVisible(false);
+        });
+    };
+
+    useEffect(() => {
+        bootSplashLogoIsLoaded && init();
+    }, [bootSplashLogoIsLoaded]);
+
+    return (
+        <View style={styles.container}>
+            {bootSplashIsVisible
+                ? <Animated.View
+                    style={[
+                        styles.bootsplash,
+                        { opacity: opacity.current },
+                    ]}
+                >
+                    <Animated.Image
+                        source={bootSplashLogo}
+                        fadeDuration={0}
+                        onLoadEnd={() => setBootSplashLogoIsLoaded(true)}
+                        resizeMode='stretch'
+                        style={[
+                            styles.logo,
+                            { transform: [{ translateY: translateY.current }] },
+                        ]}
+                    />
+                </Animated.View>
+
+                : <AppContent />
+            }
+        </View>
+    );
+};
+
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#F5FCFF",
+    },
+    bootsplash: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        height: 100,
+        width,
+    },
+    logo: {
+        aspectRatio: width / 100 
+    },
+});
 
 export default App;
