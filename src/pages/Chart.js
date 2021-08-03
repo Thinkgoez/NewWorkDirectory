@@ -45,7 +45,7 @@ const Chart = () => {
                 onSelect={handleSelect}
                 chartDescription={{
                     text: 'Simple bar',
-                    positionY: 550,
+                    positionY: 560,
                     positionX: 1000
                 }}
                 marker= {{
