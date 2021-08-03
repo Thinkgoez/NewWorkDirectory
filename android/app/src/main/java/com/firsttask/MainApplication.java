@@ -14,7 +14,7 @@ import com.horcrux.svg.SvgPackage;
 import com.facebook.react.bridge.JSIModulePackage;
 import com.swmansion.reanimated.ReanimatedJSIModulePackage;
 
-public class MainApplication extends Application implements ReactApplication {
+public class MainApplication extends androidx.multidex.MultiDexApplication implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost =
       new ReactNativeHost(this) {

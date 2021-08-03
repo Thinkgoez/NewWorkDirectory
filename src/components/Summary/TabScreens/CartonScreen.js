@@ -1,32 +1,12 @@
 import React, { useState } from 'react'
 import { Alert } from 'react-native';
 
-import { StyledView } from "../../common/SimpleComponents"
+import { StyledView } from '../../common/SimpleComponents'
 import { ContentList } from '../../common/CombinationComponents'
-import { CartonItem } from '../../common/CombinationComponents';
 
-import {useActive} from '../../../hooks/useActive'
+import { itemsList } from './itemsData/CartonScreen';
 
-
-const itemsList = {
-    list: [
-        {
-            id: '1',
-            serialCode: '9437257326478324283892O934',
-            count: 3,
-        },
-        {
-            id: '2',
-            serialCode: '11112232193214489732857328',
-            count: 2,
-        },
-    ],
-    headerItems: ['carton no.', 'act'],
-    ListItemComponent: CartonItem
-};
-
-export const CartonScreen = ({navigation}) => {
-    const isActive = useActive(navigation)
+export const CartonScreen = () => {
     const [loading, setLoading] = useState(false);
     function fakeFecth() {
         setLoading(true);
@@ -43,7 +23,6 @@ export const CartonScreen = ({navigation}) => {
     return (
         <StyledView flex={1}>
             <ContentList
-                key={isActive}
                 itemsList={itemsList}
                 refetching={loading}
                 onRefetch={fakeFecth}

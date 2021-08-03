@@ -61,3 +61,10 @@ export const shadowMixin = css`
 export const textMixin = css`
     ${({textTransform}) => textTransform !== undefined ? `textTransform: ${textTransform};`: ''}
 `
+export const positionMixin = css`
+    ${({position}) => position !== undefined ? `position: ${position};`: ''}
+    ${({left}) => left !== undefined ? `left: ${left};`: ''}
+    ${({right}) => right !== undefined ? `right: ${right};`: ''}
+    ${({top}) => top !== undefined ? `top: ${top};`: ''}
+    ${({bottom}) => bottom !== undefined ? `bottom: ${bottom};`: ''}
+`

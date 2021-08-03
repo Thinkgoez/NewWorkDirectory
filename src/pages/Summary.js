@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import { useRoute } from '@react-navigation/native';
+import React from 'react';
 
 import { PageHeader } from '../components/Header/PageHeader/PageHeader';
 import { StyledView } from '../components/common/SimpleComponents';
@@ -9,21 +8,21 @@ import { Header } from '../components/Header/Header'
 import TagIcon from '../assets/tag.svg'
 import BoxIcon from '../assets/box.svg'
 
+const SummaryPageHeaderItems = [{ id: 1, icon: BoxIcon, text: '1' }, { id: 2, icon: TagIcon, text: '9' }]
 
-const SummaryPageHeaderItems = [{id: 1, icon: BoxIcon, text: '1'}, {id: 2, icon: TagIcon, text: '9'}]
+const SummaryPage = ({navigation, route, ...props}) => {
+    const headerTitles = { title: { text: route?.name || 'Summary', disabled: true }, leftText: 'Cancel', rightText: 'Prepare' }
+    const headerIcons = { center: { handleClick: () => { navigation.navigate('Camera') } }, leftText: 'Cancel', rightText: 'Confirm' }
 
-export const Summary = () => {
-  const pageTitle = {text: useRoute()?.name || 'Home', disabled: true}
-  const leftText = 'Cancel'
-  const rightText = 'Prepare'
-  const handlePressItem = (el) => {
-    // Some code
-  }
-  return (
-    <StyledView paddingBottom='16px' flex={1}>
-        <Header title={pageTitle} leftText={leftText} rightText={rightText} />
-        <PageHeader id="2601-las vegas (tst)" items={SummaryPageHeaderItems} />
-        <SummaryContent />
-    </StyledView>
-  );
+    const handlePressItem = (el) => {
+        // Some code
+    }
+    return (
+        <StyledView paddingBottom='16px' flex={1}>
+            <Header headerTitles={headerTitles} headerIcons={headerIcons} />
+            <PageHeader id="2601-las vegas (tst)" items={SummaryPageHeaderItems} />
+            <SummaryContent />
+        </StyledView>
+    );
 };
+export default SummaryPage
