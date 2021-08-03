@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react'
-import styled from 'styled-components/native'
 import Geolocation from 'react-native-geolocation-service';
 import { useDispatch, useSelector } from 'react-redux';
-import MapView, { PROVIDER_GOOGLE, Marker, Callout } from 'react-native-maps';
+import { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 import { request, PERMISSIONS } from 'react-native-permissions'
 import { Platform, PermissionsAndroid } from 'react-native';
 import Svg, { Image } from 'react-native-svg';
 
-import { StyledText, StyledView } from '../components/common/SimpleComponents';
+import { StyledCallout, StyledMapView, StyledText, StyledView } from '../components/common/SimpleComponents';
 import { setNewCoords } from '../redux/actions/mapAction'
 import MarkerSVG from '../assets/marker.svg'
 
@@ -16,8 +15,7 @@ const coordsList = [
     { latitude: 47.8404428, longitude: 34.2257533, title: 'Simple place', id: 2 },
 ]
 
-export const Map = () => {
-    let mapRef
+const Map = () => {
     const dispatch = useDispatch()
     const { longitude, latitude, latitudeDelta, longitudeDelta, loading } = useSelector(({ map }) => map)
 
@@ -65,8 +63,7 @@ export const Map = () => {
     }
     return (
         <StyledView flex={1}>
-            <MapView
-                ref={ref => mapRef = ref}
+            <StyledMapView
                 provider={PROVIDER_GOOGLE}
                 showsUserLocation={true}
                 region={{
@@ -75,14 +72,14 @@ export const Map = () => {
                     latitudeDelta,
                     longitudeDelta,
                 }}
-                style={{ flex: 1 }}
+                flex={1}
             >
                 {!loading && <Marker coordinate={{ latitude, longitude }} >
                     <MarkerSVG fill='#000' width='50px' height='50px' />
-                    <StyledCallout>
+                    <StyledCallout paddingVertical='4px'>
                         <StyledView flex={1} backgroundColor='#988fac' alignItems='center'>
                             <StyledText color='#fff'>You are here!</StyledText>
-                            <Svg height='200' width='200'>
+                            <Svg height='150' width='200'>
                                 <Image
                                     width={200}
                                     height={150}
@@ -95,12 +92,9 @@ export const Map = () => {
                 {coordsList.map(place => (
                     <Marker key={place.id} coordinate={{ latitude: place.latitude, longitude: place.longitude }} pinColor='#c934eb' title={place.title} />
                 ))}
-            </MapView>
+            </StyledMapView>
         </StyledView>
     )
 }
 
-const StyledCallout = styled(Callout)`
-    width: 200px;
-    height: 150px;
-`
+export default Map

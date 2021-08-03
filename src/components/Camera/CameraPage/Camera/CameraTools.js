@@ -1,8 +1,9 @@
 import React from 'react'
 import { StyledButton, StyledText, StyledView } from '../../../common/SimpleComponents'
 
+const flashModes = ['off', 'on', 'auto', 'torch']
+
 export const CameraTools = ({ takePictureHandle, changeFlashMode, activeFlashMode }) => {
-    const flashModes = ['off', 'on', 'auto', 'torch']
     return (
         <StyledView flex={1} justifyContent='space-between' width='100%'>
             <StyledView backgroundColor='rgba(0,0,0,0.3)' height='45px' flexDirection='row' justifyContent='space-evenly' alignItems='center'>

@@ -1,34 +1,14 @@
 import 'react-native-gesture-handler';
-import React, { Suspense, useEffect, useRef, useState } from 'react';
-import { Alert, Animated, Dimensions, StyleSheet, Text, View } from 'react-native';
-import styled from 'styled-components/native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { PersistGate } from 'redux-persist/integration/react'
-import { Provider } from 'react-redux'
+import React, { useEffect, useRef, useState } from 'react';
+import { Alert, Animated, Dimensions, StyleSheet } from 'react-native';
 import { setJSExceptionHandler, setNativeExceptionHandler } from 'react-native-exception-handler';
-import BootSplash from "react-native-bootsplash";
+import BootSplash from 'react-native-bootsplash';
 
-let bootSplashLogo = require("./src/assets/bootsplash_logo.png");
+import { StyledView } from './src/components/common/SimpleComponents';
+import AppContent from './src/pages/AppContent';
 
-const ArticlesPage = React.lazy(() => import('./src/pages/Articles'));
-const CameraPage = React.lazy(() => import('./src/pages/Camera'));
-const WebViewPage = React.lazy(() => import('./src/pages/WebViewPage'));
-const FingerPrint = React.lazy(() => import('./src/pages/FingerPrint'));
-// const FingerPrint = React.lazy(() => import('./src/pages/FingerPrint2'));
-import { SummaryPage } from './src/pages/Summary';
-import { Map } from './src/pages/Map'
-import { Login } from './src/pages/Login'
-// import Test from './src/pages/Test/test';
-
-import configureStore from './src/redux/configureStore';
-import { PendingView } from './src/components/common/SimpleComponents';
-import { mapHeader } from './src/components/Map/header';
-
-const Drawer = createDrawerNavigator();
-const { store, persistor } = configureStore()
-var width = Dimensions.get('window').width; //full width: ;
-var height = Dimensions.get('window').height; //full height
+const bootSplashLogo = require('./src/assets/bootsplash_logo.png');
+const height = Dimensions.get('window').height;
 
 const errorHandler = (e, isFatal) => {
     if (isFatal) {
@@ -47,52 +27,18 @@ const errorHandler = (e, isFatal) => {
 };
 
 setJSExceptionHandler(errorHandler, true);
-setNativeExceptionHandler((errorString) => {
+setNativeExceptionHandler(() => {
     console.log('setNativeExceptionHandler');
 });
 
-const AppContent = () => {
-    return (
-        <Provider store={store}>
-            <PersistGate loading={null} persistor={persistor}>
-                <StyledSafeAreaView>
-                    <Suspense fallback={<PendingView color='#00ff00'/>}>
-                        <NavigationContainer>
-                            <Drawer.Navigator
-                                screenOptions={{ headerShown: false }}
-                                initialRouteName='Articles in Carton'>
-                                <Drawer.Screen name='Articles in Carton' component={ArticlesPage} />
-                                <Drawer.Screen name='Summary' component={SummaryPage} />
-                                {/* <Drawer.Screen name='test' component={Test} /> */}
-                                <Drawer.Screen name='Camera' component={CameraPage} />
-                                <Drawer.Screen name='Map' component={Map} options={{ header: mapHeader, headerShown: true }} />
-                                <Drawer.Screen name='Login' component={Login} />
-                                <Drawer.Screen name='WebViewPage' component={WebViewPage} />
-                                <Drawer.Screen name='FingerPrint' component={FingerPrint} />
-                            </Drawer.Navigator>
-                        </NavigationContainer>
-                    </Suspense>
-                </StyledSafeAreaView>
-            </PersistGate>
-        </Provider>
-    );
-};
 
-const StyledSafeAreaView = styled.SafeAreaView`
-    height: 100%;
-    width: 100%;
-`;
+const App = () => {
+    const [bootSplashIsVisible, setBootSplashIsVisible] = useState(true);
+    const [bootSplashLogoIsLoaded, setBootSplashLogoIsLoaded] = useState(false);
+    const opacity = useRef(new Animated.Value(1));
+    const translateY = useRef(new Animated.Value(0));
 
-let App = () => {
-    let [bootSplashIsVisible, setBootSplashIsVisible] = useState(true);
-    let [bootSplashLogoIsLoaded, setBootSplashLogoIsLoaded] = useState(false);
-    let opacity = useRef(new Animated.Value(1));
-    let translateY = useRef(new Animated.Value(0));
-
-    let init = async () => {
-        // You can uncomment this line to add a delay on app startup
-        // await fakeApiCallWithoutBadNetwork(3000);
-
+    const init = async () => {
         await BootSplash.hide();
 
         Animated.stagger(250, [
@@ -121,7 +67,7 @@ let App = () => {
     }, [bootSplashLogoIsLoaded]);
 
     return (
-        <View style={styles.container}>
+        <StyledView flex={1} justifyContent='center' alignItems='center' backgroundColor='#F5FCFF'>
             {bootSplashIsVisible
                 ? <Animated.View
                     style={[
@@ -143,35 +89,21 @@ let App = () => {
 
                 : <AppContent />
             }
-        </View>
+        </StyledView>
     );
 };
 
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
-      backgroundColor: "#F5FCFF",
-    },
-    text: {
-      fontSize: 24,
-      fontWeight: "700",
-      margin: 20,
-      lineHeight: 30,
-      color: "#333",
-      textAlign: "center",
-    },
     bootsplash: {
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
-      backgroundColor: "#F5FCFF",
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#F5FCFF',
     },
     logo: {
-      width: 100,
+        width: 100,
     },
-  });
+});
 
 export default App;

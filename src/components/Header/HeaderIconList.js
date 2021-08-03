@@ -1,16 +1,8 @@
 import React from 'react';
 
 import { StyledView, StyledButton } from '../common/SimpleComponents'
-
-import SignalIcon from '../../assets/signal.svg'
-import CloudIcon from '../../assets/cloud.svg'
-import BluetoothIcon from '../../assets/bluetooth.svg'
-
+import { BluetoothIcon, CloudIcon, SignalIcon } from './HeaderIcons';
 import { HeaderIcon } from './HeaderIcon'
-
-const Bluetooth = ({ ...props }) => <BluetoothIcon width={50} height={35} {...props} />
-const Signal = ({ ...props }) => <SignalIcon width={40} height={40} {...props} />
-const Cloud = ({ ...props }) => <CloudIcon width={45} height={45} {...props} />
 
 export const HeaderIconList = ({center}) => (
     <StyledView
@@ -19,10 +11,10 @@ export const HeaderIconList = ({center}) => (
         alignItems='center'
         borderBottom='1px #d9d9d9'
         width='100%'
-        height='60%'
+        paddingVertical='4px'
     >
-        <StyledButton flex='1'><HeaderIcon Icon={Bluetooth} text={'100%'} /></StyledButton>
-        <StyledButton onPress={center.handleClick} flex='2'><HeaderIcon Icon={Signal} /></StyledButton>
-        <StyledButton flex='1'><HeaderIcon Icon={Cloud} /></StyledButton>
+        <StyledButton flex='1'><HeaderIcon Icon={BluetoothIcon} text={'100%'} /></StyledButton>
+        <StyledButton onPress={center.handleClick} flex='2'><HeaderIcon Icon={SignalIcon} /></StyledButton>
+        <StyledButton flex='1'><HeaderIcon Icon={CloudIcon} /></StyledButton>
     </StyledView>
 )

@@ -1,4 +1,3 @@
-// TODO: fix distance between color and size in item
 import React from 'react';
 import Swipeable from 'react-native-gesture-handler/Swipeable';
 
@@ -54,7 +53,7 @@ const ArticleItem = ({ item: { id, img, serialCode, color, size, name, count }, 
                 >
                     <StyledImage source={{ uri: img }} resizeMode='contain' width={IMAGE_WIDTH} height={IMAGE_WIDTH} />
                 </StyledView>
-                <StyledView justifyContent='space-between' height='64px' flexGrow='1'>
+                <StyledView justifyContent='space-between' paddingVertical='4px' flexGrow='1'>
                     <StyledText>{serialCode}</StyledText>
                     <StyledView flexDirection='row'>
                         <StyledText marginRight='56px'>{color}</StyledText>

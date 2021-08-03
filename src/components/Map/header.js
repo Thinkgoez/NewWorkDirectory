@@ -6,6 +6,6 @@ export const mapHeader = ({ scene: { descriptor: { navigation } } }) => {
         navigation.openDrawer()
     }
     return (
-        <StyledButton onPress={handlePress} height='32px' alignItems='center' flexDirection='row' justifyContent='center' borderBottom='1px #000'><StyledText>Navigation</StyledText></StyledButton>
+        <StyledButton onPress={handlePress} paddingVertical='8px' alignItems='center' flexDirection='row' justifyContent='center' borderBottom='1px #000'><StyledText>Navigation</StyledText></StyledButton>
     )
 }

@@ -8,7 +8,6 @@ export const HeaderTitleList = ({ title, right, left }) => {
             justifyContent='space-between'
             alignItems='center'
             width='100%'
-            height='40%'
             paddingHorizontal='4px'
             paddingVertical='8px'>
             {left && <StyledButton key={left.text} disabled={left.disabled}>

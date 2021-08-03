@@ -1,23 +1,12 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import { FlatList } from 'react-native'
-import { useNavigation, StackActions } from '@react-navigation/native';
 
-import { StyledView, StyledImage, StyledButton } from '../../common/SimpleComponents'
-
-const GalleryItem = ({ item }) => {
-    const navigation = useNavigation()
-    const pushAction = StackActions.push('Canvas', { url: item })
-    const handlePress = () => {
-        navigation.dispatch(pushAction)
-    }
-    return(
-        <StyledButton onPress={handlePress}><StyledImage width='100px' height='100px' source={{ uri: item }}/></StyledButton>
-    )
-}
-
-const renderItem = ({ item }) => <GalleryItem item={item}  />
+import { StyledView } from '../../common/SimpleComponents'
+import { GalleryItem } from './GalleyItem'
 
 export const Gallery = ({gallery}) => {
+    const renderItem = useCallback(renderGalleryItem, [])
+    const renderGalleryItem = ({ item }) => <GalleryItem item={item}  />
     return (
         <StyledView>
             <FlatList
@@ -25,7 +14,6 @@ export const Gallery = ({gallery}) => {
                 renderItem={renderItem}
                 keyExtractor={(i) => i}
                 horizontal
-                // onEndReached={fetchGallery}
             />
         </StyledView>
     )

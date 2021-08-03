@@ -10,7 +10,7 @@ import BoxIcon from '../assets/box.svg'
 
 const SummaryPageHeaderItems = [{ id: 1, icon: BoxIcon, text: '1' }, { id: 2, icon: TagIcon, text: '9' }]
 
-export const SummaryPage = ({navigation, route, ...props}) => {
+const SummaryPage = ({navigation, route, ...props}) => {
     const headerTitles = { title: { text: route?.name || 'Summary', disabled: true }, leftText: 'Cancel', rightText: 'Prepare' }
     const headerIcons = { center: { handleClick: () => { navigation.navigate('Camera') } }, leftText: 'Cancel', rightText: 'Confirm' }
 
@@ -25,3 +25,4 @@ export const SummaryPage = ({navigation, route, ...props}) => {
         </StyledView>
     );
 };
+export default SummaryPage

@@ -7,3 +7,7 @@ export { default as PendingView } from './PendingView';
 export { default as StyledInput } from './Input';
 export { default as StyledLabel } from './Label';
 export { default as FPImage } from './FingerPrintImg';
+export { default as StyledWebView } from './WebView';
+export { default as StyledMapView } from './map/MapView';
+export { default as StyledCallout } from './map/Callout';
+export { default as StyledSafeAreaView } from './SafeAreaView';

@@ -1,9 +1,8 @@
-import React from 'react';
-import { WebView } from 'react-native-webview';
-import { StyledText, StyledView } from '../components/common/SimpleComponents';
+import React, { useEffect, useRef } from 'react';
+import { StyledText, StyledView, StyledWebView } from '../components/common/SimpleComponents';
 
 const WebViewPage = () => {
-    let webRef
+    const webRef = useRef()
     const run = `
         let scary = document.createElement('div');
         scary.style.position = 'absolute';
@@ -28,21 +27,24 @@ const WebViewPage = () => {
         document.body.append(scary);
         true;
     `;
-    //scary.style.visibility = visible ? 'visible' : 'hidden'
-//         scary.style.animation = '3s ease-in 1s infinite reverse both running slidein';
-    setTimeout(() => {
-        webRef.injectJavaScript(run);
-    }, 2000);
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            webRef.current.injectJavaScript(run);
+        }, 2000);
+        return () => clearTimeout(timeout)
+    }, [])
 
     return (
-        // <WebView
-        //     originWhitelist={['*']}
-        //     source={{ html: '<h1>Hello world</h1>' }}
-        // />
         <StyledView backgroundColor='#345678' paddingTop='8px' flex={1}>
-            <StyledText height='32px' textAlign='center' color='#ebe834' marginBottom='8px'>WebView</StyledText>
-            <WebView ref={ref => webRef = ref} source={{ uri: 'https://reactnative.dev/' }} style={{ flex: 1 }} automaticallyAdjustContentInsets={false} />
+            <StyledText textAlign='center' color='#ebe834' marginBottom='8px'>WebView</StyledText>
+            <StyledWebView
+                ref={webRef}
+                source={{ uri: 'https://reactnative.dev/' }}
+                automaticallyAdjustContentInsets={false}
+                flex={1}
+            />
         </StyledView>
     );
 }
+
 export default WebViewPage

@@ -9,8 +9,7 @@ import { itemsList } from './itemsData/ArticleScreen'
 export const ArticleScreen = ({ navigation, route, ...props }) => {
     const [loading, setLoading] = useState(false);
 
-
-    function fakeFecth() {
+    const fakeFecth = () => {
         setLoading(true);
         setTimeout(() => {
             setLoading(false);
