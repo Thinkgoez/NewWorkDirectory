@@ -6,12 +6,11 @@ import { CunstomInput, SecureToggle } from '../common/CombinationComponents/';
 import { errorList, validateLoginSchema } from './validationForm';
 import Check from '../../assets/check.svg'
 
-export const LoginForm = () => {
+export const LoginForm = ({handleSubmit}) => {
     const [isSecure, setIsSecure] = useState(true)
     const [passErrors, setPassErrors] = useState(errorList.map(errItem => errItem.message)) // default value is all posible password errors
    
     const toggleViewPass = () => setIsSecure(prev => !prev)
-    const handleSubmit = (values) => console.log(values)
     const validate = validateLoginSchema(setPassErrors)
     return (
         <Formik

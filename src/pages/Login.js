@@ -1,11 +1,33 @@
 import React from 'react'
 import { Platform, ScrollView, KeyboardAvoidingView } from 'react-native';
+import { Notifier, Easing } from 'react-native-notifier';
 
+import { CustomNotification } from '../components/common/CombinationComponents';
 import { StyledText, StyledView } from '../components/common/SimpleComponents'
 import { LoginForm } from '../components/Login/Form';
 
 const Login = () => {
+    const customNotOptions = {
+        imgSource: require('../assets/shrek.jpg'),
+        iconProps: { borderColor: '#fff' },
+        titleProps: { color: '#ffc7c7' },
+        descProps: { color: '#faa5a5' }
+    }
+
     const keyboardVerticalOffset = Platform.select({ ios: 50, android: 40 })
+    const NotificationComponent = CustomNotification(customNotOptions)
+    const handleSubmit = (values) => {
+        Notifier.showNotification({
+            title: 'Hacked!',
+            description: `Is this "${values.password}" your pass?`,
+            duration: 5000,
+            showAnimationDuration: 800,
+            showEasing: Easing.bounce,
+            hideEasing: Easing.ease,
+            hideOnPress: true,
+            Component: NotificationComponent
+        });
+    }
     return (
         <KeyboardAvoidingView behavior={Platform.select({ ios: 'position', android: 'height' })} keyboardVerticalOffset={keyboardVerticalOffset}>
             <ScrollView>
@@ -13,7 +35,7 @@ const Login = () => {
                     <StyledText color='#fff' fontSize='100px'>D</StyledText>
                 </StyledView>
                 <StyledView paddingHorizontal='32px' paddingTop='8px'>
-                    <LoginForm />
+                    <LoginForm handleSubmit={handleSubmit} />
                 </StyledView>
             </ScrollView>
         </KeyboardAvoidingView>

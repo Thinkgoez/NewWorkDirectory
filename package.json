@@ -32,6 +32,7 @@
     "react-native-geolocation-service": "^5.3.0-beta.1",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-maps": "^0.28.0",
+    "react-native-notifier": "^1.6.1",
     "react-native-pager-view": "^5.2.1",
     "react-native-permissions": "^3.0.5",
     "react-native-photoeditorsdk": "^2.10.0",
