@@ -31,6 +31,8 @@ import com.rnfs.RNFSPackage;
 import com.agontuk.RNFusedLocation.RNFusedLocationPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
+// react-native-i18n
+import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
 // react-native-maps
 import com.airbnb.android.react.maps.MapsPackage;
 // react-native-pager-view
@@ -104,6 +106,7 @@ public class PackageList {
       new RNFSPackage(),
       new RNFusedLocationPackage(),
       new RNGestureHandlerPackage(),
+      new RNI18nPackage(),
       new MapsPackage(),
       new PagerViewPackage(),
       new RNPermissionsPackage(),

@@ -3,6 +3,7 @@ import CameraRoll from '@react-native-community/cameraroll';
 import { useDispatch } from 'react-redux'
 import { RNCamera } from 'react-native-camera';
 import { StyleSheet, PermissionsAndroid, Platform } from 'react-native';
+import I18n from 'react-native-i18n';
 
 import { PendingView } from '../../../common/SimpleComponents';
 import { addPhoto } from '../../../../redux/actions/galleryActions';

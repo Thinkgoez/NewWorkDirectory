@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { PersistGate } from 'redux-persist/integration/react'
 import { Provider } from 'react-redux'
+import I18n from 'react-native-i18n';
 
 const ArticlesPage = React.lazy(() => import('./Articles'));
 const CameraPage = React.lazy(() => import('./Camera'));
@@ -28,14 +29,14 @@ const AppContent = () => (
                     <NavigationContainer>
                         <Drawer.Navigator
                             screenOptions={{ headerShown: false }}
-                            initialRouteName='Login'>
-                            <Drawer.Screen name='Articles in Carton' component={ArticlesPage} />
-                            <Drawer.Screen name='Summary' component={Summary} />
-                            <Drawer.Screen name='Camera' component={CameraPage} />
-                            <Drawer.Screen name='Map' component={Map} options={{ header: mapHeader, headerShown: true }} />
-                            <Drawer.Screen name='Login' component={Login} />
-                            <Drawer.Screen name='WebViewPage' component={WebViewPage} />
-                            <Drawer.Screen name='FingerPrint' component={FingerPrint} />
+                            initialRouteName={'Articles in Carton'}>
+                            <Drawer.Screen name={'Articles in Carton'} options={{title: I18n.t('pages.ArticlesInCarton.title')}} component={ArticlesPage} />
+                            <Drawer.Screen name={'Summary'} options={{title: I18n.t('pages.Summary.title')}} component={Summary} />
+                            <Drawer.Screen name={'Camera'} options={{title: I18n.t('pages.Camera.title')}} component={CameraPage} />
+                            <Drawer.Screen name={'Map'} options={{title: I18n.t('pages.Map.title'), header: mapHeader, headerShown: true}} component={Map} />
+                            <Drawer.Screen name={'Login'} options={{title: I18n.t('pages.Login.title')}} component={Login} />
+                            <Drawer.Screen name={'FingerPrint'} options={{title: I18n.t('pages.FingerPrint.title')}} component={FingerPrint} />
+                            <Drawer.Screen name={'WebViewPage'} options={{title: I18n.t('pages.WebViewPage.title')}} component={WebViewPage} />
                         </Drawer.Navigator>
                     </NavigationContainer>
                 </Suspense>

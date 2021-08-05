@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useRoute } from '@react-navigation/native';
+import I18n from 'react-native-i18n';
 
 import { ContentList } from '../components/common/CombinationComponents';
 import { PageHeader } from '../components/Header/PageHeader/PageHeader';
@@ -14,9 +14,9 @@ const ArticlesPageHeaderItems = [{ id: 1, icon: BoxIcon, text: '3213123123213124
 
 export default ArticlesPage = () => {
     const [loading, setLoading] = useState(false);
-    const headerTitles = { title: { text: useRoute()?.name || 'Home', disabled: true }, leftText: 'Cancel', rightText: 'Confirm' }
-    const headerIcons = { center: { handleClick: () => { } }, leftText: 'Cancel', rightText: 'Confirm' }
-    
+    const headerTitles = { title: { text: I18n.t('pages.Articles.title'), disabled: true }, leftText: I18n.t('pageHeader.Cancel'), rightText: I18n.t('pageHeader.Confirm') }
+    const headerIcons = { center: { handleClick: () => { } } }
+
     function fakeFecth() {
         setLoading(true);
         setTimeout(() => {
