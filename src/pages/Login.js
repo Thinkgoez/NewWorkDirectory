@@ -8,7 +8,7 @@ import { LoginForm } from '../components/Login/Form';
 
 const Login = () => {
     const customNotOptions = {
-        imgSource: require('../assets/shrek.jpg'),
+        imgSource: require('../assets/thief.jpeg'),
         iconProps: { borderColor: '#fff' },
         titleProps: { color: '#ffc7c7' },
         descProps: { color: '#faa5a5' }
@@ -18,7 +18,7 @@ const Login = () => {
     const NotificationComponent = CustomNotification(customNotOptions)
     const handleSubmit = (values) => {
         Notifier.showNotification({
-            title: 'Hacked!',
+            title: 'Hacked!(was ez)',
             description: `Is this "${values.password}" your pass?`,
             duration: 5000,
             showAnimationDuration: 800,

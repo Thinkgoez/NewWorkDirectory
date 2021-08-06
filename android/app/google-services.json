@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "981388400957",
+    "project_id": "midyear-freedom-320712",
+    "storage_bucket": "midyear-freedom-320712.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981388400957:android:2663e5ae7d18815bd04d54",
+        "android_client_info": {
+          "package_name": "com.firsttask"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "981388400957-mvqjbknne89acoishq2euphhermr0smo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1wSkK_5PkKx_xOw8V9CW962f9OtGwbN8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "981388400957-mvqjbknne89acoishq2euphhermr0smo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

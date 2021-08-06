@@ -17,6 +17,10 @@ import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.reactnativecommunity.cameraroll.CameraRollPackage;
 // @react-native-community/masked-view
 import org.reactnative.maskedview.RNCMaskedViewPackage;
+// @react-native-firebase/app
+import io.invertase.firebase.app.ReactNativeFirebaseAppPackage;
+// @react-native-firebase/messaging
+import io.invertase.firebase.messaging.ReactNativeFirebaseMessagingPackage;
 // react-native-bootsplash
 import com.zoontek.rnbootsplash.RNBootSplashPackage;
 // react-native-camera
@@ -39,6 +43,8 @@ import com.reactnativepagerview.PagerViewPackage;
 import com.zoontek.rnpermissions.RNPermissionsPackage;
 // react-native-photoeditorsdk
 import ly.img.react_native.pesdk.RNPhotoEditorSDKPackage;
+// react-native-push-notification
+import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
 // react-native-reanimated
 import com.swmansion.reanimated.ReanimatedPackage;
 // react-native-safe-area-context
@@ -97,6 +103,8 @@ public class PackageList {
       new AsyncStoragePackage(),
       new CameraRollPackage(),
       new RNCMaskedViewPackage(),
+      new ReactNativeFirebaseAppPackage(),
+      new ReactNativeFirebaseMessagingPackage(),
       new RNBootSplashPackage(),
       new RNCameraPackage(),
       new ReactNativeExceptionHandlerPackage(),
@@ -108,6 +116,7 @@ public class PackageList {
       new PagerViewPackage(),
       new RNPermissionsPackage(),
       new RNPhotoEditorSDKPackage(),
+      new ReactNativePushNotificationPackage(),
       new ReanimatedPackage(),
       new SafeAreaContextPackage(),
       new RNScreensPackage(),

@@ -14,9 +14,6 @@ const SummaryPage = ({navigation, route, ...props}) => {
     const headerTitles = { title: { text: route?.name || 'Summary', disabled: true }, leftText: 'Cancel', rightText: 'Prepare' }
     const headerIcons = { center: { handleClick: () => { navigation.navigate('Camera') } }, leftText: 'Cancel', rightText: 'Confirm' }
 
-    const handlePressItem = (el) => {
-        // Some code
-    }
     return (
         <StyledView paddingBottom='16px' flex={1}>
             <Header headerTitles={headerTitles} headerIcons={headerIcons} />

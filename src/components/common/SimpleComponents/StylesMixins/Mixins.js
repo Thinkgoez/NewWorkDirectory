@@ -8,6 +8,7 @@ export const flexMixin = css`
     ${({flexGrow}) => flexGrow !== undefined ? `flex-grow: ${flexGrow};`: ''}
     ${({flexShrink}) => flexShrink !== undefined ? `flex-shrink: ${flexShrink};`: ''}
     ${({flexBasis}) => flexBasis !== undefined ? `flex-basis ${flexBasis};`: ''}
+    ${({flexWrap}) => flexWrap !== undefined ? `flex-wrap ${flexWrap};`: ''}
 `
 
 // should rework to be able passing object like padding: {top: 20px , left: 20px, ...}

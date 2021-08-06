@@ -7,3 +7,4 @@ export { default as SecureToggle } from './SecureToggle';
 export { default as CunstomInput } from './FormInput';
 export { default as Timer } from './Timer';
 export { default as CustomNotification } from './Notification';
+export { default as NotifButton } from './NotifButton';

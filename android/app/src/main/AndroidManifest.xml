@@ -9,11 +9,11 @@
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
     <application
       android:name=".MainApplication"
@@ -22,9 +22,41 @@
       android:roundIcon="@mipmap/ic_launcher_round"
       android:allowBackup="false"
       android:theme="@style/AppTheme">
+
+      <meta-data android:name="com.dieam.reactnativepushnotification.notification_color"
+        android:resource="@color/white"/>
+      <!-- <meta-data
+        android:name="com.google.firebase.messaging.default_notification_channel_id"
+        android:value="@string/default_firebase_notification_channel_id"
+      /> -->
+      <meta-data
+        android:name="com.dieam.reactnativepushnotification.default_notification_channel_id"
+        android:value="@string/default_notification_channel_id"
+      />
+      <meta-data  android:name="com.dieam.reactnativepushnotification.notification_foreground"
+        android:value="false"/>
+      <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationActions" />
+      <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationPublisher" />
+      <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationBootEventReceiver">
+          <intent-filter>
+              <action android:name="android.intent.action.BOOT_COMPLETED" />
+              <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+              <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+          </intent-filter>
+      </receiver>
+
+      <service
+            android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+      </service>
+      
       <meta-data
         android:name="com.google.android.geo.API_KEY"
-        android:value="AIzaSyCFYjOFVhiMRmOPWB5hEBUN9PCV5XEdf68"/>
+        android:value="AIzaSyCFYjOFVhiMRmOPWB5hEBUN9PCV5XEdf68"
+        />
       <uses-library android:name="org.apache.http.legacy" android:required="false"/>
 
       <activity
@@ -35,11 +67,6 @@
         android:exported="true"
         android:launchMode="singleTask"
         >
-
-        <!-- <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter> -->
       </activity>
       <activity
         android:name="com.zoontek.rnbootsplash.RNBootSplashActivity"
