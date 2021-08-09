@@ -17,6 +17,8 @@ import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.reactnativecommunity.cameraroll.CameraRollPackage;
 // @react-native-community/masked-view
 import org.reactnative.maskedview.RNCMaskedViewPackage;
+// @sentry/react-native
+import io.sentry.react.RNSentryPackage;
 // react-native-bootsplash
 import com.zoontek.rnbootsplash.RNBootSplashPackage;
 // react-native-camera
@@ -97,6 +99,7 @@ public class PackageList {
       new AsyncStoragePackage(),
       new CameraRollPackage(),
       new RNCMaskedViewPackage(),
+      new RNSentryPackage(),
       new RNBootSplashPackage(),
       new RNCameraPackage(),
       new ReactNativeExceptionHandlerPackage(),

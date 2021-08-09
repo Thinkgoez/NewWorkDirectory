@@ -13,6 +13,7 @@ MERGED from [androidx.multidex:multidex:2.0.1] /Users/developer/.gradle/caches/t
 MERGED from [:react-native-async-storage_async-storage] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-community_cameraroll] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-community/cameraroll/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-community_masked-view] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:sentry_react-native] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@sentry/react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-20:12
 MERGED from [:react-native-bootsplash] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-bootsplash/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-camera] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:2:1-18:12
 MERGED from [:react-native-exception-handler] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-exception-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-16:12
@@ -120,6 +121,10 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/deve
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/46f226e30cceb23a27ff0320c8c72a83/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5e522bfeaa5519a9d7f7bb4ddbe15499/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e726f91fd21f33d3849884eeb994dc90/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [io.sentry:sentry-android:5.1.0-beta.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/8f8e712e1bebf5bf3595e9d6b6784a9e/jetified-sentry-android-5.1.0-beta.2/AndroidManifest.xml:2:1-11:12
+MERGED from [io.sentry:sentry-android-ndk:5.1.0-beta.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/a285d32b4ddb2126e68effd79366ef5f/jetified-sentry-android-ndk-5.1.0-beta.2/AndroidManifest.xml:2:1-9:12
+MERGED from [io.sentry:sentry-android-core:5.1.0-beta.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/b813119240ea02f84566c1f37b648a91/jetified-sentry-android-core-5.1.0-beta.2/AndroidManifest.xml:2:1-25:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/121dc0db3ea3ba28c1bf94a892c24eb7/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:17:1-32:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5557e20e95fef86e14b0a988f48734cd/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/1ea2765daa5ae4e28c35857db1828ecf/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/24eec12afad81f9bc2872ea8b1920ab9/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
@@ -170,12 +175,16 @@ uses-permission#android.permission.INTERNET
 ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:4:5-67
 MERGED from [com.facebook.flipper:flipper:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/8e8077f7e347b958a0f92b8e942b7b9e/jetified-flipper-0.75.1/AndroidManifest.xml:15:5-67
 MERGED from [com.facebook.flipper:flipper:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/8e8077f7e347b958a0f92b8e942b7b9e/jetified-flipper-0.75.1/AndroidManifest.xml:15:5-67
+MERGED from [:sentry_react-native] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@sentry/react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-67
+MERGED from [:sentry_react-native] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@sentry/react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-67
 MERGED from [:react-native-maps] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-67
 MERGED from [:react-native-maps] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-67
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:26:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:26:5-67
+MERGED from [io.sentry:sentry-android-core:5.1.0-beta.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/b813119240ea02f84566c1f37b648a91/jetified-sentry-android-core-5.1.0-beta.2/AndroidManifest.xml:9:5-67
+MERGED from [io.sentry:sentry-android-core:5.1.0-beta.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/b813119240ea02f84566c1f37b648a91/jetified-sentry-android-core-5.1.0-beta.2/AndroidManifest.xml:9:5-67
 	android:name
 		ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:4:22-64
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
@@ -242,6 +251,8 @@ application
 ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:16:5-51:19
 MERGED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:16:5-51:19
 MERGED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:16:5-51:19
+MERGED from [:sentry_react-native] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@sentry/react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:5-18:19
+MERGED from [:sentry_react-native] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@sentry/react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:5-18:19
 MERGED from [:react-native-exception-handler] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-exception-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-14:19
 MERGED from [:react-native-exception-handler] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-exception-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-14:19
 MERGED from [:react-native-photoeditorsdk] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-photoeditorsdk/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-19:19
@@ -354,6 +365,10 @@ MERGED from [androidx.core:core:1.2.0] /Users/developer/.gradle/caches/transform
 MERGED from [androidx.core:core:1.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/8043aebd0f933e96a344ac7db4080885/core-1.2.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/369e8c29569adf1297d3c056a53223ab/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/369e8c29569adf1297d3c056a53223ab/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [io.sentry:sentry-android-core:5.1.0-beta.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/b813119240ea02f84566c1f37b648a91/jetified-sentry-android-core-5.1.0-beta.2/AndroidManifest.xml:11:5-23:19
+MERGED from [io.sentry:sentry-android-core:5.1.0-beta.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/b813119240ea02f84566c1f37b648a91/jetified-sentry-android-core-5.1.0-beta.2/AndroidManifest.xml:11:5-23:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/121dc0db3ea3ba28c1bf94a892c24eb7/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:24:5-30:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/121dc0db3ea3ba28c1bf94a892c24eb7/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:24:5-30:19
 MERGED from [com.facebook.soloader:soloader:0.10.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/cc78fe12640c1b2252206b351b5c3999/jetified-soloader-0.10.1/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:soloader:0.10.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/cc78fe12640c1b2252206b351b5c3999/jetified-soloader-0.10.1/AndroidManifest.xml:11:5-20
 MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/developer/.gradle/caches/transforms-2/files-2.1/79c327b7191770dc0c25ed8e39bc3a9c/jetified-android-maps-utils-0.5/AndroidManifest.xml:7:5-11:19
@@ -456,6 +471,8 @@ MERGED from [:react-native-community_cameraroll] /Users/developer/Documents/Proj
 MERGED from [:react-native-community_cameraroll] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-community/cameraroll/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_masked-view] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_masked-view] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:sentry_react-native] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@sentry/react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:sentry_react-native] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@sentry/react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-bootsplash] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-bootsplash/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-bootsplash] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-bootsplash/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-camera] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:5:5-7:41
@@ -670,6 +687,14 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/developer/.gra
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5e522bfeaa5519a9d7f7bb4ddbe15499/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cardview:cardview:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e726f91fd21f33d3849884eeb994dc90/cardview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/e726f91fd21f33d3849884eeb994dc90/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [io.sentry:sentry-android:5.1.0-beta.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/8f8e712e1bebf5bf3595e9d6b6784a9e/jetified-sentry-android-5.1.0-beta.2/AndroidManifest.xml:6:5-9:57
+MERGED from [io.sentry:sentry-android:5.1.0-beta.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/8f8e712e1bebf5bf3595e9d6b6784a9e/jetified-sentry-android-5.1.0-beta.2/AndroidManifest.xml:6:5-9:57
+MERGED from [io.sentry:sentry-android-ndk:5.1.0-beta.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/a285d32b4ddb2126e68effd79366ef5f/jetified-sentry-android-ndk-5.1.0-beta.2/AndroidManifest.xml:5:5-7:41
+MERGED from [io.sentry:sentry-android-ndk:5.1.0-beta.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/a285d32b4ddb2126e68effd79366ef5f/jetified-sentry-android-ndk-5.1.0-beta.2/AndroidManifest.xml:5:5-7:41
+MERGED from [io.sentry:sentry-android-core:5.1.0-beta.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/b813119240ea02f84566c1f37b648a91/jetified-sentry-android-core-5.1.0-beta.2/AndroidManifest.xml:5:5-7:41
+MERGED from [io.sentry:sentry-android-core:5.1.0-beta.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/b813119240ea02f84566c1f37b648a91/jetified-sentry-android-core-5.1.0-beta.2/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/121dc0db3ea3ba28c1bf94a892c24eb7/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/121dc0db3ea3ba28c1bf94a892c24eb7/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5557e20e95fef86e14b0a988f48734cd/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5557e20e95fef86e14b0a988f48734cd/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/1ea2765daa5ae4e28c35857db1828ecf/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
@@ -744,6 +769,22 @@ uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from [com.facebook.flipper:flipper:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/8e8077f7e347b958a0f92b8e942b7b9e/jetified-flipper-0.75.1/AndroidManifest.xml:16:5-76
 	android:name
 		ADDED from [com.facebook.flipper:flipper:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/8e8077f7e347b958a0f92b8e942b7b9e/jetified-flipper-0.75.1/AndroidManifest.xml:16:22-73
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:sentry_react-native] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@sentry/react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-79
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from [:sentry_react-native] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@sentry/react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:22-76
+meta-data#io.sentry.auto-init
+ADDED from [:sentry_react-native] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@sentry/react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:9-17:37
+	android:value
+		ADDED from [:sentry_react-native] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@sentry/react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-34
+	android:name
+		ADDED from [:sentry_react-native] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@sentry/react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-47
 uses-feature#android.hardware.camera
 ADDED from [:react-native-camera] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:11:5-13:36
 MERGED from [ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/eba2be3f6ad65c5a7925ba0ec2cc5eea/jetified-all-8.3.0/AndroidManifest.xml:27:5-29:36
@@ -859,14 +900,6 @@ ADDED from [androidx.biometric:biometric:1.0.1] /Users/developer/.gradle/caches/
 		ADDED from [androidx.biometric:biometric:1.0.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/83a71d21375169b648eb71fb9823cf0a/biometric-1.0.1/AndroidManifest.xml:31:13-64
 	android:name
 		ADDED from [androidx.biometric:biometric:1.0.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/83a71d21375169b648eb71fb9823cf0a/biometric-1.0.1/AndroidManifest.xml:29:13-78
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
-MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/developer/.gradle/caches/transforms-2/files-2.1/1f10339151f3ab77004cc0db99251c85/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
-MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:22:5-79
-	android:name
-		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:23:22-76
 service#com.google.mlkit.common.internal.MlKitComponentDiscoveryService
 ADDED from [com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5946af34b60eaa2dccaa9974ff1e3e8d/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:9:9-15:19
 MERGED from [com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/f88b9524c9806faac041392cbd7735a6/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:9:9-15:19
@@ -969,3 +1002,31 @@ ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/dev
 		ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:34:13-37
 	android:name
 		ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/4f9181543f6f8a71404d1bbec3dae9e0/jetified-transport-runtime-2.2.6/AndroidManifest.xml:33:13-132
+provider#io.sentry.android.core.SentryInitProvider
+ADDED from [io.sentry:sentry-android-core:5.1.0-beta.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/b813119240ea02f84566c1f37b648a91/jetified-sentry-android-core-5.1.0-beta.2/AndroidManifest.xml:14:9-17:40
+	android:authorities
+		ADDED from [io.sentry:sentry-android-core:5.1.0-beta.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/b813119240ea02f84566c1f37b648a91/jetified-sentry-android-core-5.1.0-beta.2/AndroidManifest.xml:16:13-70
+	android:exported
+		ADDED from [io.sentry:sentry-android-core:5.1.0-beta.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/b813119240ea02f84566c1f37b648a91/jetified-sentry-android-core-5.1.0-beta.2/AndroidManifest.xml:17:13-37
+	android:name
+		ADDED from [io.sentry:sentry-android-core:5.1.0-beta.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/b813119240ea02f84566c1f37b648a91/jetified-sentry-android-core-5.1.0-beta.2/AndroidManifest.xml:15:13-69
+provider#io.sentry.android.core.SentryPerformanceProvider
+ADDED from [io.sentry:sentry-android-core:5.1.0-beta.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/b813119240ea02f84566c1f37b648a91/jetified-sentry-android-core-5.1.0-beta.2/AndroidManifest.xml:18:9-22:39
+	android:authorities
+		ADDED from [io.sentry:sentry-android-core:5.1.0-beta.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/b813119240ea02f84566c1f37b648a91/jetified-sentry-android-core-5.1.0-beta.2/AndroidManifest.xml:20:13-77
+	android:exported
+		ADDED from [io.sentry:sentry-android-core:5.1.0-beta.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/b813119240ea02f84566c1f37b648a91/jetified-sentry-android-core-5.1.0-beta.2/AndroidManifest.xml:21:13-37
+	android:initOrder
+		ADDED from [io.sentry:sentry-android-core:5.1.0-beta.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/b813119240ea02f84566c1f37b648a91/jetified-sentry-android-core-5.1.0-beta.2/AndroidManifest.xml:22:13-36
+	android:name
+		ADDED from [io.sentry:sentry-android-core:5.1.0-beta.2] /Users/developer/.gradle/caches/transforms-2/files-2.1/b813119240ea02f84566c1f37b648a91/jetified-sentry-android-core-5.1.0-beta.2/AndroidManifest.xml:19:13-76
+provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/121dc0db3ea3ba28c1bf94a892c24eb7/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
+	android:authorities
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/121dc0db3ea3ba28c1bf94a892c24eb7/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
+	android:multiprocess
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/121dc0db3ea3ba28c1bf94a892c24eb7/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
+	android:exported
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/121dc0db3ea3ba28c1bf94a892c24eb7/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/121dc0db3ea3ba28c1bf94a892c24eb7/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79

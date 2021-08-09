@@ -1,17 +1,16 @@
-import React, { useCallback } from 'react'
+import React from 'react'
 import { FlatList } from 'react-native'
 
 import { StyledView } from '../../common/SimpleComponents'
 import { GalleryItem } from './GalleyItem'
 
 export const Gallery = ({gallery}) => {
-    const renderItem = useCallback(renderGalleryItem, [])
-    const renderGalleryItem = ({ item }) => <GalleryItem item={item}  />
+    const renderGalleryItem = ({ item }) => <GalleryItem item={item} />
     return (
-        <StyledView>
+        <StyledView height='100px'>
             <FlatList
-                data={gallery}
-                renderItem={renderItem}
+                data={gallery}  
+                renderItem={renderGalleryItem}
                 keyExtractor={(i) => i}
                 horizontal
             />

@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Alert, Animated, Dimensions, StyleSheet } from 'react-native';
 import { setJSExceptionHandler, setNativeExceptionHandler } from 'react-native-exception-handler';
 import BootSplash from 'react-native-bootsplash';
+import * as Sentry from "@sentry/react-native";
 
 import { StyledView } from './src/components/common/SimpleComponents';
 import AppContent from './src/pages/AppContent';
@@ -31,6 +32,10 @@ setNativeExceptionHandler(() => {
     console.log('setNativeExceptionHandler');
 });
 
+// Sentry.init({
+//   dsn: "https://353a8a3b40564bb5b095e8b2c167e1ae@o949599.ingest.sentry.io/5898355",
+// });
+// throw new Error("My first Sentry error!");
 
 const App = () => {
     const [bootSplashIsVisible, setBootSplashIsVisible] = useState(true);
@@ -107,3 +112,28 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+
+// Total cleaning:
+// echo "Cleaning all the things";
+// watchman watch-del-all;
+// rm -rf node_modules;
+// rm -rf $TMPDIR/react-*
+// rm -rf $TMPDIR/npm-*
+// cd ios
+// rm -rf Pods;
+// rm -rf Podfile.lock;
+// rm -rf build;
+// npm cache clean --force
+// pod cache clean --all
+// cd ../android
+// rm -rf build
+// cd ..
+// rm -rf ~/Library/Developer/Xcode/DerivedData
+
+// echo "Installing things again";
+// npm install;
+// cd ios
+// pod install
+// cd ..;
+
+// npm start -- --reset-cache;
