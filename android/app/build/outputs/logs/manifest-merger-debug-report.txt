@@ -126,6 +126,7 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/developer/.grad
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/3a47e332c3629679b00c3f3172af58b1/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/77c890a745411eb2bf13955c7e16da2d/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [:react-native-reanimated] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-reanimated/android/build/.transforms/7b698f9d725e3bac0c34a9ac9341e102/jetified-react-native-reanimated-64-hermes/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-sound] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-sound/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-12:12
 MERGED from [com.facebook.fresco:flipper:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/97dcd5b0d642c45c6a79d293a20bd782/jetified-flipper-2.2.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:stetho:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a28938a553110aeba815b9f2e7df9ebf/jetified-stetho-2.2.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:fresco:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a590e19d76182cbbb0cc51495b9ae213/jetified-fresco-2.2.0/AndroidManifest.xml:2:1-9:12
@@ -682,6 +683,8 @@ MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/developer/.gradle/cac
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/77c890a745411eb2bf13955c7e16da2d/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [:react-native-reanimated] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-reanimated/android/build/.transforms/7b698f9d725e3bac0c34a9ac9341e102/jetified-react-native-reanimated-64-hermes/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-reanimated] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-reanimated/android/build/.transforms/7b698f9d725e3bac0c34a9ac9341e102/jetified-react-native-reanimated-64-hermes/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-sound] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-sound/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
+MERGED from [:react-native-sound] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-sound/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
 MERGED from [com.facebook.fresco:flipper:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/97dcd5b0d642c45c6a79d293a20bd782/jetified-flipper-2.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:flipper:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/97dcd5b0d642c45c6a79d293a20bd782/jetified-flipper-2.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:stetho:2.2.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/a28938a553110aeba815b9f2e7df9ebf/jetified-stetho-2.2.0/AndroidManifest.xml:5:5-7:41

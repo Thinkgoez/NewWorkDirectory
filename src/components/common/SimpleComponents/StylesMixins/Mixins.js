@@ -8,6 +8,7 @@ export const flexMixin = css`
     ${({flexGrow}) => flexGrow !== undefined ? `flex-grow: ${flexGrow};`: ''}
     ${({flexShrink}) => flexShrink !== undefined ? `flex-shrink: ${flexShrink};`: ''}
     ${({flexBasis}) => flexBasis !== undefined ? `flex-basis ${flexBasis};`: ''}
+    ${({alignSelf}) => alignSelf !== undefined ? `align-self ${alignSelf};`: ''}
 `
 
 // should rework to be able passing object like padding: {top: 20px , left: 20px, ...}
@@ -45,6 +46,8 @@ export const borderMixin = css`
                                                         border-top-color: ${borderTop.split(' ')[1]};`: ''}
     ${({borderRight}) => borderRight !== undefined ? `border-right-width: ${borderRight.split(' ')[0]};
                                                         border-right-color: ${borderRight.split(' ')[1]};`: ''}
+    ${({borderWidth}) => borderWidth !== undefined ? `border-width: ${borderWidth};`: ''}
+    ${({borderColor}) => borderColor !== undefined ? `border-color: ${borderColor};`: ''}
 `
 export const sizesMixin = css`
     ${({width}) => width !== undefined ? `width: ${width};`: ''}
