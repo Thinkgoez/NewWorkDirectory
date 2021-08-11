@@ -13,8 +13,10 @@ MERGED from [androidx.multidex:multidex:2.0.1] /Users/developer/.gradle/caches/t
 MERGED from [:react-native-async-storage_async-storage] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-community_cameraroll] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-community/cameraroll/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-community_masked-view] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:lottie-react-native] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/lottie-react-native/src/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-bootsplash] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-bootsplash/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-camera] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:2:1-18:12
+MERGED from [:react-native-document-picker] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-document-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-exception-handler] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-exception-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-16:12
 MERGED from [:react-native-fingerprint-scanner] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-fingerprint-scanner/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-16:12
 MERGED from [:react-native-fs] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-fs/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-13:12
@@ -74,6 +76,7 @@ MERGED from [com.google.android.material:material:1.1.0] /Users/developer/.gradl
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/5367cd6ad4bc4f3594623adcb4f8f054/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/66e559b7f023e7925e1bba86d598ff2d/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/69ebe1228af776b69cde87b5624aba90/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.airbnb.android:lottie:3.4.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/148eb3591bba6ccc42b5b1e2a58a9fe5/jetified-lottie-3.4.0/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.biometric:biometric:1.0.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/83a71d21375169b648eb71fb9823cf0a/biometric-1.0.1/AndroidManifest.xml:17:1-34:12
 MERGED from [com.wei.android.lib:fingerprintidentify:1.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/3cd1b5ea49fe7ec05205586837db79ca/jetified-fingerprintidentify-1.2.6/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/69db503f52561eb2d561882b41fa084e/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
@@ -171,6 +174,8 @@ uses-permission#android.permission.INTERNET
 ADDED from /Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:4:5-67
 MERGED from [com.facebook.flipper:flipper:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/8e8077f7e347b958a0f92b8e942b7b9e/jetified-flipper-0.75.1/AndroidManifest.xml:15:5-67
 MERGED from [com.facebook.flipper:flipper:0.75.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/8e8077f7e347b958a0f92b8e942b7b9e/jetified-flipper-0.75.1/AndroidManifest.xml:15:5-67
+MERGED from [:lottie-react-native] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/lottie-react-native/src/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [:lottie-react-native] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/lottie-react-native/src/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-67
 MERGED from [:react-native-maps] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-67
 MERGED from [:react-native-maps] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-67
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:24:5-67
@@ -323,6 +328,8 @@ MERGED from [ly.img.android.sdk:core:8.3.0] /Users/developer/.gradle/caches/tran
 MERGED from [ly.img.android.sdk:core:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/ec5c1f305065888b9dd490f62a7b51e2/jetified-core-8.3.0/AndroidManifest.xml:18:5-24:19
 MERGED from [com.google.android.material:material:1.1.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/cc011120c47cbdabe7929f32a9d05fd9/material-1.1.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.1.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/cc011120c47cbdabe7929f32a9d05fd9/material-1.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.airbnb.android:lottie:3.4.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/148eb3591bba6ccc42b5b1e2a58a9fe5/jetified-lottie-3.4.0/AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:lottie:3.4.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/148eb3591bba6ccc42b5b1e2a58a9fe5/jetified-lottie-3.4.0/AndroidManifest.xml:9:5-20
 MERGED from [androidx.biometric:biometric:1.0.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/83a71d21375169b648eb71fb9823cf0a/biometric-1.0.1/AndroidManifest.xml:27:5-32:19
 MERGED from [androidx.biometric:biometric:1.0.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/83a71d21375169b648eb71fb9823cf0a/biometric-1.0.1/AndroidManifest.xml:27:5-32:19
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/11826fd103f454c4ea41b9bac6d290d1/jetified-play-services-maps-17.0.0/AndroidManifest.xml:30:5-36:19
@@ -457,10 +464,14 @@ MERGED from [:react-native-community_cameraroll] /Users/developer/Documents/Proj
 MERGED from [:react-native-community_cameraroll] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-community/cameraroll/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_masked-view] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_masked-view] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:lottie-react-native] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/lottie-react-native/src/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:lottie-react-native] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/lottie-react-native/src/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-bootsplash] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-bootsplash/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-bootsplash] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-bootsplash/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-camera] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-camera] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-document-picker] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-document-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-document-picker] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-document-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-exception-handler] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-exception-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-exception-handler] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-exception-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-fingerprint-scanner] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-fingerprint-scanner/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
@@ -579,6 +590,8 @@ MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/developer/.gradle/
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/66e559b7f023e7925e1bba86d598ff2d/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/69ebe1228af776b69cde87b5624aba90/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/69ebe1228af776b69cde87b5624aba90/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.airbnb.android:lottie:3.4.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/148eb3591bba6ccc42b5b1e2a58a9fe5/jetified-lottie-3.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie:3.4.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/148eb3591bba6ccc42b5b1e2a58a9fe5/jetified-lottie-3.4.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.biometric:biometric:1.0.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/83a71d21375169b648eb71fb9823cf0a/biometric-1.0.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.biometric:biometric:1.0.1] /Users/developer/.gradle/caches/transforms-2/files-2.1/83a71d21375169b648eb71fb9823cf0a/biometric-1.0.1/AndroidManifest.xml:20:5-22:41
 MERGED from [com.wei.android.lib:fingerprintidentify:1.2.6] /Users/developer/.gradle/caches/transforms-2/files-2.1/3cd1b5ea49fe7ec05205586837db79ca/jetified-fingerprintidentify-1.2.6/AndroidManifest.xml:7:5-9:41

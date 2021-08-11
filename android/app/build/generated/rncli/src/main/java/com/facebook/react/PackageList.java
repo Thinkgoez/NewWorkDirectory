@@ -17,10 +17,14 @@ import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.reactnativecommunity.cameraroll.CameraRollPackage;
 // @react-native-community/masked-view
 import org.reactnative.maskedview.RNCMaskedViewPackage;
+// lottie-react-native
+import com.airbnb.android.react.lottie.LottiePackage;
 // react-native-bootsplash
 import com.zoontek.rnbootsplash.RNBootSplashPackage;
 // react-native-camera
 import org.reactnative.camera.RNCameraPackage;
+// react-native-document-picker
+import com.reactnativedocumentpicker.DocumentPickerPackage;
 // react-native-exception-handler
 import com.masteratul.exceptionhandler.ReactNativeExceptionHandlerPackage;
 // react-native-fingerprint-scanner
@@ -99,8 +103,10 @@ public class PackageList {
       new AsyncStoragePackage(),
       new CameraRollPackage(),
       new RNCMaskedViewPackage(),
+      new LottiePackage(),
       new RNBootSplashPackage(),
       new RNCameraPackage(),
+      new DocumentPickerPackage(),
       new ReactNativeExceptionHandlerPackage(),
       new ReactNativeFingerprintScannerPackage(),
       new RNFSPackage(),

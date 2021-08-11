@@ -1,8 +1,9 @@
 import styled from 'styled-components/native'
-import { borderMixin, marginMixin, paddingMixin, positionMixin, textMixin } from './StylesMixins/Mixins'
+import { borderMixin, marginMixin, paddingMixin, positionMixin, sizesMixin, textMixin } from './StylesMixins/Mixins'
 
 const Text = styled.Text`
     ${marginMixin}
+    ${sizesMixin}
     ${textMixin}
     ${positionMixin}
     ${paddingMixin}

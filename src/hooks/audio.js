@@ -1,18 +1,23 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Alert } from 'react-native';
 import Sound from 'react-native-sound';
 
 export const useAudio = (audioInfo) => {
-    const [status, setStatus] = useState('')
+    const [isPlaying, setIsPLaying] = useState(false)
+    const gifRef = useRef(null)
     const [sound, setSound] = useState(null)
     const [progress, setProgress] = useState(0)
     const [timerId, setTimerId] = useState(null)
     const onLoad = () => {
-        setStatus('pending');
-        if (audioInfo.isRequire) {
-            const sound = new Sound(audioInfo.url, error => callback(error, sound));
-        } else {
-            const sound = new Sound(audioInfo.url, audioInfo.basePath, error => callback(error, sound));
+        // setStatus('pending'); // TODO rework to loading with loader
+        try {
+            if (audioInfo.isRequire) {
+                const soundInstance = new Sound(audioInfo.url, error => callback(error, soundInstance));
+            } else {
+                const soundInstance = new Sound(audioInfo.url, audioInfo.basePath, error => callback(error, soundInstance));
+            }
+        } catch (err) {
+            console.log('fail to load sound:', err)
         }
     }
     useEffect(() => () => { // return clean interval
@@ -23,15 +28,18 @@ export const useAudio = (audioInfo) => {
 
     const onPause = () => {
         clearInterval(timerId)
+        gifRef.current?.pause()
         if (sound) {
             sound.pause()
-            setStatus('pause')
+            setIsPLaying(false)
+            // setStatus('pause')
         }
     }
     const callback = (error, sound) => {
         if (error) {
             Alert.alert('error', error.message);
-            setStatus('fail');
+            setIsPLaying(false)
+            // setStatus('fail');
         } else {
             setSound(sound)
             playAudio(sound)
@@ -39,9 +47,12 @@ export const useAudio = (audioInfo) => {
     };
     const playAudio = (sound) => {
         setTimerId(setInterval(getTime, 1000, sound))
-        setStatus('playing');
+        // setStatus('playing');
+        setIsPLaying(true)
+        gifRef.current?.play()
         sound.play(() => {
-            setStatus('end');
+            // setStatus('end');
+            setIsPLaying(false)
             setProgress(1)
             clearInterval(timerId)
         });
@@ -79,8 +90,9 @@ export const useAudio = (audioInfo) => {
         onLoad,
         onPause,
         onRewind,
-        isLoaded: !!sound,
+        isOpen: !!sound,
         progress,
-        status
+        isPlaying,
+        gifRef
     }
 }
