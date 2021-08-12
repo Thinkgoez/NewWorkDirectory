@@ -7,7 +7,9 @@ export const flexMixin = css`
     ${({flexDirection}) => flexDirection !== undefined ? `flex-direction: ${flexDirection};`: ''}
     ${({flexGrow}) => flexGrow !== undefined ? `flex-grow: ${flexGrow};`: ''}
     ${({flexShrink}) => flexShrink !== undefined ? `flex-shrink: ${flexShrink};`: ''}
-    ${({flexBasis}) => flexBasis !== undefined ? `flex-basis ${flexBasis};`: ''}
+    ${({flexBasis}) => flexBasis !== undefined ? `flex-basis: ${flexBasis};`: ''}
+    ${({alignSelf}) => alignSelf !== undefined ? `align-self: ${alignSelf};`: ''}
+
 `
 
 // should rework to be able passing object like padding: {top: 20px , left: 20px, ...}
