@@ -63,7 +63,18 @@ export const AudioItem = ({ audioInfo }) => {
                 >{audioInfo.title}</StyledText>
                 {isOpen
                     ? <StyledLottieView ref={gifRef} source={require('../../assets/sound.json')} colorFilters={gifColors} />
-                    : <PlayButton onPress={onLoad} />
+                    : <StyledButton onPress={onLoad} marginRight='10px' >
+                        <StyledText
+                            fontSize='16px'
+                            backgroundColor='rgba(220,220,220,1)'
+                            borderRadius='4px'
+                            borderWidth='1px'
+                            borderColor='rgba(80,80,80,0.5)'
+                            overflow='hidden'
+                            paddingVertical='7px'
+                            paddingHorizontal='7px'
+                        >Play</StyledText>
+                    </StyledButton>
                 }
             </StyledView>
             {isOpen
@@ -95,18 +106,3 @@ const StyledLottieView = styled(LottieView)`
     width: 25px;
     height: 25px; 
 `
-
-const PlayButton = ({ onPress, disabled }) => (
-    <StyledButton onPress={onPress} marginRight='10px' disabled={disabled} backgroundColor={disabled ? '#ccc' : 'transparent'}>
-        <StyledText
-            fontSize='16px'
-            backgroundColor='rgba(220,220,220,1)'
-            borderRadius='4px'
-            borderWidth='1px'
-            borderColor='rgba(80,80,80,0.5)'
-            overflow='hidden'
-            paddingVertical='7px'
-            paddingHorizontal='7px'
-        >Play</StyledText>
-    </StyledButton>
-)
