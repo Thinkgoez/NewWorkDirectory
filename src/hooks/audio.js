@@ -9,7 +9,6 @@ export const useAudio = (audioInfo) => {
     const [progress, setProgress] = useState(0)
     const [timerId, setTimerId] = useState(null)
     const onLoad = () => {
-        // setStatus('pending'); // TODO rework to loading with loader
         try {
             if (audioInfo.isRequire) {
                 const soundInstance = new Sound(audioInfo.url, error => callback(error, soundInstance));
@@ -32,14 +31,12 @@ export const useAudio = (audioInfo) => {
         if (sound) {
             sound.pause()
             setIsPLaying(false)
-            // setStatus('pause')
         }
     }
     const callback = (error, sound) => {
         if (error) {
             Alert.alert('error', error.message);
             setIsPLaying(false)
-            // setStatus('fail');
         } else {
             setSound(sound)
             playAudio(sound)
@@ -47,12 +44,11 @@ export const useAudio = (audioInfo) => {
     };
     const playAudio = (sound) => {
         setTimerId(setInterval(getTime, 1000, sound))
-        // setStatus('playing');
         setIsPLaying(true)
         gifRef.current?.play()
         sound.play(() => {
-            // setStatus('end');
             setIsPLaying(false)
+            gifRef.current?.pause()
             setProgress(1)
             clearInterval(timerId)
         });

@@ -15,6 +15,7 @@
 		7A26079069303B63BED553B8 /* libPods-FirstTask-FirstTaskTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D1ED6BE35EE8AADB977BBD /* libPods-FirstTask-FirstTaskTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8B33F36426B2B4930083083D /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B33F36326B2B4930083083D /* BootSplash.storyboard */; };
+		8BBDE35A26C5372C00CD0704 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDE35926C5372C00CD0704 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = FirstTask/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87504B14BD355A66C5237691 /* Pods-FirstTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstTask.release.xcconfig"; path = "Target Support Files/Pods-FirstTask/Pods-FirstTask.release.xcconfig"; sourceTree = "<group>"; };
 		8B33F36326B2B4930083083D /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = FirstTask/BootSplash.storyboard; sourceTree = "<group>"; };
+		8BBDE35826C5372C00CD0704 /* FirstTask-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FirstTask-Bridging-Header.h"; sourceTree = "<group>"; };
+		8BBDE35926C5372C00CD0704 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		A9D1ED6BE35EE8AADB977BBD /* libPods-FirstTask-FirstTaskTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FirstTask-FirstTaskTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E53A582BB7479874690FD5AF /* libPods-FirstTask.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FirstTask.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E982035D0190DDAE867FC8BF /* Pods-FirstTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstTask.debug.xcconfig"; path = "Target Support Files/Pods-FirstTask/Pods-FirstTask.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,12 +133,14 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				8BBDE35926C5372C00CD0704 /* File.swift */,
 				13B07FAE1A68108700A75B9A /* FirstTask */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* FirstTaskTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				7AC6A00CD75DD412CCFFA283 /* Pods */,
+				8BBDE35826C5372C00CD0704 /* FirstTask-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -210,7 +215,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -415,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				8BBDE35A26C5372C00CD0704 /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +440,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 55D9FCFD699AD0566DAF9607 /* Pods-FirstTask-FirstTaskTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -461,6 +468,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2F26B07B5536BEF37CB6FF02 /* Pods-FirstTask-FirstTaskTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = FirstTaskTests/Info.plist;
@@ -503,6 +511,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = FirstTask;
+				SWIFT_OBJC_BRIDGING_HEADER = "FirstTask-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -530,6 +539,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = FirstTask;
+				SWIFT_OBJC_BRIDGING_HEADER = "FirstTask-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

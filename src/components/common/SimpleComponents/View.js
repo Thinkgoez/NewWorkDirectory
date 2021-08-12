@@ -1,5 +1,5 @@
 import styled from 'styled-components/native'
-import { flexMixin, borderMixin, paddingMixin, sizesMixin, shadowMixin, marginMixin} from './StylesMixins/Mixins'
+import { flexMixin, borderMixin, paddingMixin, sizesMixin, shadowMixin, marginMixin, positionMixin} from './StylesMixins/Mixins'
 
 const View = styled.View`
     ${flexMixin}
@@ -8,6 +8,7 @@ const View = styled.View`
     ${marginMixin}
     ${sizesMixin}
     ${shadowMixin}
+    ${positionMixin}
     ${({color}) => color !== undefined ? `color: ${color};`: ''}
     ${({textAlign}) => textAlign !== undefined ? `text-align: ${textAlign};`: ''}
     ${({backgroundColor}) => backgroundColor !== undefined ? `background-color: ${backgroundColor};`: ''}

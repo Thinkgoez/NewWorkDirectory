@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { AudioItem } from '../components/Sound/AudioItem';
 import { StyledButton, StyledText, StyledView } from '../components/common/SimpleComponents'
 import { addAudio, clearAudioStore } from '../redux/actions/audioActions';
-import { compileNewPathToSound } from '../components/Sound/tools';
+import { createNewSound } from '../components/Sound/tools';
 
 import AddIcon from '../assets/add.svg'
 import RemoveIcon from '../assets/delete.svg'
@@ -15,22 +15,19 @@ import RemoveIcon from '../assets/delete.svg'
 const MainView = () => {
     const dispatch = useDispatch()
     const audioItems = useSelector(({ audio }) => audio.items)
-    // const audioTests = [
-    //     {
-    //         title: 'MASN - Psycho!',
-    //         isRequire: true,
-    //         url: require('../assets/psycho.mp3'),
-    //     },
-    // ];
+
     const clearAudios = () => dispatch(clearAudioStore())
-    // clearAudios()
     const renderItem = ({ item }) => <AudioItem audioInfo={item} />
     const loadSingleFile = async () => {
         try {
             const res = await DocumentPicker.pickSingle({
                 type: [DocumentPicker.types.audio],
             })
-            const newSoundItem = await compileNewPathToSound(res.name, res.uri)
+            const [error, newSoundItem] = await createNewSound(res.name, res.uri)
+            if(error){
+                // handle error
+                console.log(error)
+            }
             if (newSoundItem) {
                 dispatch(addAudio(newSoundItem))
             }
@@ -95,13 +92,11 @@ const MainView = () => {
                         textAlign='center'
                     >Load file</StyledText>
                 </StyledButton>
-
             </StyledView>
-
             <FlatList
                 data={audioItems}
                 renderItem={renderItem}
-                keyExtractor={({ title }) => title}
+                keyExtractor={({ id }) => id}
                 style={{ flex: 1 }}
             />
         </StyledView >

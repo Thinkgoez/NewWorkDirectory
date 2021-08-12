@@ -1,5 +1,5 @@
 import styled from 'styled-components/native'
-import { borderMixin, marginMixin, paddingMixin, positionMixin, sizesMixin, textMixin } from './StylesMixins/Mixins'
+import { borderMixin, flexMixin, marginMixin, paddingMixin, positionMixin, sizesMixin, textMixin } from './StylesMixins/Mixins'
 
 const Text = styled.Text`
     ${marginMixin}
@@ -8,6 +8,7 @@ const Text = styled.Text`
     ${positionMixin}
     ${paddingMixin}
     ${borderMixin}
+    ${flexMixin}
     ${(({color}) => color !== undefined ? `color: ${color};`: '')}
     ${(({fontSize}) => fontSize !== undefined ? `font-size: ${fontSize};`: '')}
     ${(({fontWeight}) => fontWeight !== undefined ? `font-weight: ${fontWeight};`: '')}
@@ -16,5 +17,6 @@ const Text = styled.Text`
     ${(({justifySelf}) => justifySelf !== undefined ? `justify-self: ${justifySelf};`: '')}
     ${(({textTransform}) => textTransform !== undefined ? `text-transform: ${textTransform};`: '')}
     ${(({overflow}) => overflow !== undefined ? `overflow: ${overflow};`: '')}
+    ${(({lineHeight}) => lineHeight !== undefined ? `line-height: ${lineHeight};`: '')}
 `
 export default Text

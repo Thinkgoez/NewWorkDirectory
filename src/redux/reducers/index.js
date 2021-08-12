@@ -1,5 +1,4 @@
-import { combineReducers } from 'redux'
-;
+import { combineReducers } from 'redux';
 import { audioReducer } from './audio';
 import { galleryReducer } from './gallery';
 import { mapReducer } from './map';

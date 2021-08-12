@@ -34,6 +34,7 @@
     "react-native-fs": "^2.18.0",
     "react-native-geolocation-service": "^5.3.0-beta.1",
     "react-native-gesture-handler": "^1.10.3",
+    "react-native-get-random-values": "^1.7.0",
     "react-native-maps": "^0.28.0",
     "react-native-pager-view": "^5.2.1",
     "react-native-permissions": "^3.0.5",
@@ -54,6 +55,7 @@
     "redux-persist": "^6.0.0",
     "semver": "^6.3.0",
     "styled-components": "^5.3.0",
+    "uuid": "^8.3.2",
     "yup": "^0.32.9"
   },
   "devDependencies": {

@@ -35,6 +35,8 @@ import com.rnfs.RNFSPackage;
 import com.agontuk.RNFusedLocation.RNFusedLocationPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
+// react-native-get-random-values
+import org.linusu.RNGetRandomValuesPackage;
 // react-native-maps
 import com.airbnb.android.react.maps.MapsPackage;
 // react-native-pager-view
@@ -112,6 +114,7 @@ public class PackageList {
       new RNFSPackage(),
       new RNFusedLocationPackage(),
       new RNGestureHandlerPackage(),
+      new RNGetRandomValuesPackage(),
       new MapsPackage(),
       new PagerViewPackage(),
       new RNPermissionsPackage(),

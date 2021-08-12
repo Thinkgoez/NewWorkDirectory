@@ -14,6 +14,7 @@ const StyledTouchableOpacity= styled.TouchableOpacity`
     ${(({backgroundColor}) => backgroundColor !== undefined ? `background-color: ${backgroundColor};`: '')}
     ${(({border}) => border !== undefined ? `border: ${border};`: '')}
     ${(({borderRadius}) => borderRadius !== undefined ? `border-radius: ${borderRadius};`: '')}
+    ${(({transform}) => transform !== undefined ? `transform: ${transform};`: '')}
 `
 
 export default StyledTouchableOpacity

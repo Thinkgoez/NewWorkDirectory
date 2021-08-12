@@ -8,6 +8,7 @@ import { StyledView } from './src/components/common/SimpleComponents';
 import AppContent from './src/pages/AppContent';
 
 const bootSplashLogo = require('./src/assets/bootsplash_logo.png');
+
 const height = Dimensions.get('window').height;
 
 const errorHandler = (e, isFatal) => {
@@ -26,10 +27,10 @@ const errorHandler = (e, isFatal) => {
     }
 };
 
-// setJSExceptionHandler(errorHandler, true);
-// setNativeExceptionHandler(() => {
-//     console.log('setNativeExceptionHandler');
-// });
+setJSExceptionHandler(errorHandler, true);
+setNativeExceptionHandler(() => {
+    console.log('setNativeExceptionHandler');
+});
 
 
 const App = () => {
@@ -86,7 +87,6 @@ const App = () => {
                         ]}
                     />
                 </Animated.View>
-
                 : <AppContent />
             }
         </StyledView>

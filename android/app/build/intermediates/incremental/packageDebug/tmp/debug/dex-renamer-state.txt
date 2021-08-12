@@ -1,4 +1,4 @@
-#Wed Aug 11 16:47:18 EEST 2021
+#Thu Aug 12 11:12:14 EEST 2021
 path.4=classes_1.dex
 path.3=classes_0.dex
 path.2=classes2.dex
@@ -19,12 +19,14 @@ base.8=/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/b
 base.7=/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/build/intermediates/dex/debug/mergeLibDexDebug/classes_12.dex
 base.6=/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/build/intermediates/dex/debug/mergeLibDexDebug/classes_11.dex
 base.5=/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/build/intermediates/dex/debug/mergeLibDexDebug/classes_10.dex
+renamed.26=classes27.dex
 renamed.25=classes26.dex
 renamed.24=classes25.dex
 renamed.23=classes24.dex
 renamed.22=classes23.dex
 renamed.21=classes22.dex
 renamed.20=classes21.dex
+base.26=/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/build/intermediates/dex/debug/mergeLibDexDebug/classes_22.dex
 base.25=/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/build/intermediates/dex/debug/mergeLibDexDebug/classes_21.dex
 renamed.18=classes19.dex
 renamed.17=classes18.dex
@@ -77,3 +79,4 @@ path.24=classes_20.dex
 path.21=classes_9.dex
 path.22=classes2.dex
 path.25=classes_21.dex
+path.26=classes_22.dex
