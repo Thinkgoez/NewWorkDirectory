@@ -2357,6 +2357,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable oval_marker
 drawable pesdk_filter_category_b_w
 drawable pesdk_filter_category_cold
 drawable pesdk_filter_category_duotone
@@ -2364,6 +2365,12 @@ drawable pesdk_filter_category_legacy
 drawable pesdk_filter_category_smooth
 drawable pesdk_filter_category_vintage
 drawable pesdk_filter_category_warm
+drawable rectangle_marker
+drawable rectangle_marker_left
+drawable rectangle_marker_right
+drawable rectangle_marker_top
+drawable rectangle_marker_top_left
+drawable rectangle_marker_top_right
 drawable redbox_top_border_background
 drawable test_custom_background
 drawable tooltip_frame_dark
@@ -2627,6 +2634,8 @@ id on
 id optionBar
 id optionList
 id outline
+id oval_markerContent
+id oval_tvContent
 id parallax
 id parentPanel
 id parent_matrix
@@ -2641,6 +2650,8 @@ id progress_horizontal
 id quickOptionList
 id radio
 id react_test_id
+id rectangle_markerContent
+id rectangle_tvContent
 id redEye
 id right
 id right_icon
@@ -2949,6 +2960,8 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout oval_marker
+layout rectangle_marker
 layout redbox_item_frame
 layout redbox_item_title
 layout redbox_view

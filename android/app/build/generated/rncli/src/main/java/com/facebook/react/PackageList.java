@@ -21,6 +21,8 @@ import org.reactnative.maskedview.RNCMaskedViewPackage;
 import com.zoontek.rnbootsplash.RNBootSplashPackage;
 // react-native-camera
 import org.reactnative.camera.RNCameraPackage;
+// react-native-charts-wrapper
+import com.github.wuxudong.rncharts.MPAndroidChartPackage;
 // react-native-exception-handler
 import com.masteratul.exceptionhandler.ReactNativeExceptionHandlerPackage;
 // react-native-fingerprint-scanner
@@ -99,6 +101,7 @@ public class PackageList {
       new RNCMaskedViewPackage(),
       new RNBootSplashPackage(),
       new RNCameraPackage(),
+      new MPAndroidChartPackage(),
       new ReactNativeExceptionHandlerPackage(),
       new ReactNativeFingerprintScannerPackage(),
       new RNFSPackage(),

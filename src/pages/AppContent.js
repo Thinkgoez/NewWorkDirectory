@@ -12,6 +12,7 @@ const FingerPrint = React.lazy(() => import('./FingerPrint'));
 const Map = React.lazy(() => import('./Map'));
 const Login = React.lazy(() => import('./Login'));
 const Summary = React.lazy(() => import('./Summary'));
+const Chart = React.lazy(() => import('./Chart'));
 
 import configureStore from '../redux/configureStore';
 import { PendingView, StyledSafeAreaView } from '../components/common/SimpleComponents';
@@ -28,7 +29,7 @@ const AppContent = () => (
                     <NavigationContainer>
                         <Drawer.Navigator
                             screenOptions={{ headerShown: false }}
-                            initialRouteName='Login'>
+                            initialRouteName='Chart'>
                             <Drawer.Screen name='Articles in Carton' component={ArticlesPage} />
                             <Drawer.Screen name='Summary' component={Summary} />
                             <Drawer.Screen name='Camera' component={CameraPage} />
@@ -36,6 +37,7 @@ const AppContent = () => (
                             <Drawer.Screen name='Login' component={Login} />
                             <Drawer.Screen name='WebViewPage' component={WebViewPage} />
                             <Drawer.Screen name='FingerPrint' component={FingerPrint} />
+                            <Drawer.Screen name='Chart' component={Chart} />
                         </Drawer.Navigator>
                     </NavigationContainer>
                 </Suspense>
@@ -45,3 +47,28 @@ const AppContent = () => (
 )
 
 export default AppContent;
+
+// Total cleaning:
+// echo "Cleaning all the things";
+// watchman watch-del-all;
+// rm -rf node_modules;
+// rm -rf $TMPDIR/react-*
+// rm -rf $TMPDIR/npm-*
+// cd ios
+// rm -rf Pods;
+// rm -rf Podfile.lock;
+// rm -rf build;
+// npm cache clean --force
+// pod cache clean --all
+// cd ../android
+// rm -rf build
+// cd ..
+// rm -rf ~/Library/Developer/Xcode/DerivedData
+
+// echo "Installing things again";
+// npm install;
+// cd ios
+// pod install
+// cd ..;
+
+// npm start -- --reset-cache;
