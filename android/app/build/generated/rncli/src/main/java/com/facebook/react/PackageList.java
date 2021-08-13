@@ -49,6 +49,8 @@ import com.swmansion.rnscreens.RNScreensPackage;
 import com.horcrux.svg.SvgPackage;
 // react-native-webview
 import com.reactnativecommunity.webview.RNCWebViewPackage;
+// rn-fetch-blob
+import com.RNFetchBlob.RNFetchBlobPackage;
 
 public class PackageList {
   private Application application;
@@ -112,7 +114,8 @@ public class PackageList {
       new SafeAreaContextPackage(),
       new RNScreensPackage(),
       new SvgPackage(),
-      new RNCWebViewPackage()
+      new RNCWebViewPackage(),
+      new RNFetchBlobPackage()
     ));
   }
 }

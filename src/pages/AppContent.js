@@ -12,6 +12,7 @@ const FingerPrint = React.lazy(() => import('./FingerPrint'));
 const Map = React.lazy(() => import('./Map'));
 const Login = React.lazy(() => import('./Login'));
 const Summary = React.lazy(() => import('./Summary'));
+const FetchBlob = React.lazy(() => import('./FetchBlob'));
 
 import configureStore from '../redux/configureStore';
 import { PendingView, StyledSafeAreaView } from '../components/common/SimpleComponents';
@@ -28,7 +29,7 @@ const AppContent = () => (
                     <NavigationContainer>
                         <Drawer.Navigator
                             screenOptions={{ headerShown: false }}
-                            initialRouteName='Login'>
+                            initialRouteName='FetchBlob'>
                             <Drawer.Screen name='Articles in Carton' component={ArticlesPage} />
                             <Drawer.Screen name='Summary' component={Summary} />
                             <Drawer.Screen name='Camera' component={CameraPage} />
@@ -36,6 +37,7 @@ const AppContent = () => (
                             <Drawer.Screen name='Login' component={Login} />
                             <Drawer.Screen name='WebViewPage' component={WebViewPage} />
                             <Drawer.Screen name='FingerPrint' component={FingerPrint} />
+                            <Drawer.Screen name='FetchBlob' component={FetchBlob} />
                         </Drawer.Navigator>
                     </NavigationContainer>
                 </Suspense>
