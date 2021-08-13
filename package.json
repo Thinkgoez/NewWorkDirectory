@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.15.5",
     "@react-native-community/cameraroll": "^4.0.4",
+    "@react-native-community/datetimepicker": "^3.5.2",
     "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/drawer": "^5.12.5",
     "@react-navigation/material-top-tabs": "^5.3.15",
@@ -25,6 +26,7 @@
     "react-native": "0.64.2",
     "react-native-bootsplash": "^3.2.4",
     "react-native-camera": "^4.0.0",
+    "react-native-date-picker": "^3.3.2",
     "react-native-draggable-flatlist": "^2.6.2",
     "react-native-exception-handler": "^2.10.10",
     "react-native-fingerprint-scanner": "^6.0.0",
@@ -32,6 +34,7 @@
     "react-native-geolocation-service": "^5.3.0-beta.1",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-maps": "^0.28.0",
+    "react-native-modal-datetime-picker": "^10.2.0",
     "react-native-pager-view": "^5.2.1",
     "react-native-permissions": "^3.0.5",
     "react-native-photoeditorsdk": "^2.10.0",

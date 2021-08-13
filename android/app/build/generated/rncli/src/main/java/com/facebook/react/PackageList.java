@@ -15,12 +15,16 @@ import java.util.ArrayList;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 // @react-native-community/cameraroll
 import com.reactnativecommunity.cameraroll.CameraRollPackage;
+// @react-native-community/datetimepicker
+import com.reactcommunity.rndatetimepicker.RNDateTimePickerPackage;
 // @react-native-community/masked-view
 import org.reactnative.maskedview.RNCMaskedViewPackage;
 // react-native-bootsplash
 import com.zoontek.rnbootsplash.RNBootSplashPackage;
 // react-native-camera
 import org.reactnative.camera.RNCameraPackage;
+// react-native-date-picker
+import com.henninghall.date_picker.DatePickerPackage;
 // react-native-exception-handler
 import com.masteratul.exceptionhandler.ReactNativeExceptionHandlerPackage;
 // react-native-fingerprint-scanner
@@ -96,9 +100,11 @@ public class PackageList {
       new MainReactPackage(mConfig),
       new AsyncStoragePackage(),
       new CameraRollPackage(),
+      new RNDateTimePickerPackage(),
       new RNCMaskedViewPackage(),
       new RNBootSplashPackage(),
       new RNCameraPackage(),
+      new DatePickerPackage(),
       new ReactNativeExceptionHandlerPackage(),
       new ReactNativeFingerprintScannerPackage(),
       new RNFSPackage(),

@@ -9,6 +9,7 @@ const ArticlesPage = React.lazy(() => import('./Articles'));
 const CameraPage = React.lazy(() => import('./Camera'));
 const WebViewPage = React.lazy(() => import('./WebViewPage'));
 const FingerPrint = React.lazy(() => import('./FingerPrint'));
+const DateTimePicker = React.lazy(() => import('./DateTimePicker'));
 const Map = React.lazy(() => import('./Map'));
 const Login = React.lazy(() => import('./Login'));
 const Summary = React.lazy(() => import('./Summary'));
@@ -28,7 +29,7 @@ const AppContent = () => (
                     <NavigationContainer>
                         <Drawer.Navigator
                             screenOptions={{ headerShown: false }}
-                            initialRouteName='Login'>
+                            initialRouteName='DateTimePicker'>
                             <Drawer.Screen name='Articles in Carton' component={ArticlesPage} />
                             <Drawer.Screen name='Summary' component={Summary} />
                             <Drawer.Screen name='Camera' component={CameraPage} />
@@ -36,6 +37,7 @@ const AppContent = () => (
                             <Drawer.Screen name='Login' component={Login} />
                             <Drawer.Screen name='WebViewPage' component={WebViewPage} />
                             <Drawer.Screen name='FingerPrint' component={FingerPrint} />
+                            <Drawer.Screen name='DateTimePicker' component={DateTimePicker} />
                         </Drawer.Navigator>
                     </NavigationContainer>
                 </Suspense>
