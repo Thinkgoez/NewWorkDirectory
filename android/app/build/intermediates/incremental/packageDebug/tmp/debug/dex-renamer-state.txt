@@ -1,4 +1,4 @@
-#Thu Aug 05 14:27:09 EEST 2021
+#Fri Aug 06 16:05:58 EEST 2021
 path.4=classes_1.dex
 path.3=classes_0.dex
 path.2=classes2.dex
@@ -19,7 +19,6 @@ base.8=/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/b
 base.7=/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/build/intermediates/dex/debug/mergeLibDexDebug/classes_12.dex
 base.6=/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/build/intermediates/dex/debug/mergeLibDexDebug/classes_11.dex
 base.5=/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/build/intermediates/dex/debug/mergeLibDexDebug/classes_10.dex
-renamed.23=classes24.dex
 renamed.22=classes23.dex
 renamed.21=classes22.dex
 renamed.20=classes21.dex
@@ -43,7 +42,6 @@ base.14=/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/
 base.19=/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/build/intermediates/dex/debug/mergeLibDexDebug/classes_7.dex
 base.18=/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/build/intermediates/dex/debug/mergeLibDexDebug/classes_6.dex
 base.20=/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/build/intermediates/dex/debug/mergeLibDexDebug/classes_8.dex
-base.23=/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/build/intermediates/dex/debug/mergeLibDexDebug/classes_19.dex
 base.22=/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes2.dex
 base.21=/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/build/intermediates/dex/debug/mergeLibDexDebug/classes_9.dex
 renamed.3=classes4.dex
@@ -68,6 +66,5 @@ base.12=/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/
 path.20=classes_8.dex
 base.11=/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/build/intermediates/dex/debug/mergeLibDexDebug/classes_16.dex
 base.10=/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/build/intermediates/dex/debug/mergeLibDexDebug/classes_15.dex
-path.23=classes_19.dex
 path.21=classes_9.dex
 path.22=classes2.dex
