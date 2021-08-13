@@ -1,5 +1,5 @@
 import React from 'react';
-import { processColor, StyleSheet } from 'react-native'
+import { processColor } from 'react-native'
 import { BarChart } from 'react-native-charts-wrapper';
 
 import { StyledView } from '../components/common/SimpleComponents';
@@ -40,7 +40,6 @@ const Chart = () => {
                     yValue: 0,
                 }}
                 visibleRange={{ x: { max: 3 }}}
-                style={styles.barChart}
                 chartBackgroundColor={processColor('#f0f0c0')}
                 onSelect={handleSelect}
                 chartDescription={{
@@ -60,8 +59,4 @@ const Chart = () => {
     );
 };
 
-const styles = StyleSheet.create({
-    barChart: {
-    }
-})
 export default Chart
