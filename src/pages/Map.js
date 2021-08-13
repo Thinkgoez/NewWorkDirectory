@@ -5,14 +5,15 @@ import { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 import { request, PERMISSIONS } from 'react-native-permissions'
 import { Platform, PermissionsAndroid } from 'react-native';
 import Svg, { Image } from 'react-native-svg';
+import I18n from 'react-native-i18n';
 
 import { StyledCallout, StyledMapView, StyledText, StyledView } from '../components/common/SimpleComponents';
 import { setNewCoords } from '../redux/actions/mapAction'
 import MarkerSVG from '../assets/marker.svg'
 
 const coordsList = [
-    { latitude: 47.8405622, longitude: 35.1257554, title: 'Good place', id: 1 },
-    { latitude: 47.8404428, longitude: 34.2257533, title: 'Simple place', id: 2 },
+    { latitude: 47.8405622, longitude: 35.1257554, title: I18n.t('pages.Map.Markers.goodPlace'), id: 1 },
+    { latitude: 47.8404428, longitude: 34.2257533, title: I18n.t('pages.Map.Markers.simplePlace'), id: 2 },
 ]
 
 const Map = () => {
@@ -45,12 +46,11 @@ const Map = () => {
             const granted = await PermissionsAndroid.request(
                 PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
                 {
-                    title: 'Loaction Permission',
-                    message:
-                        'App needs access to your location ',
+                    title: 'Location Permission',
+                    message: 'App needs access to your location',
                     buttonNeutral: 'Ask Me Later',
                     buttonNegative: 'Cancel',
-                    buttonPositive: 'OK'
+                    buttonPositive: 'Ok'
                 }
             );
             if (granted === PermissionsAndroid.RESULTS.GRANTED) {
@@ -78,7 +78,7 @@ const Map = () => {
                     <MarkerSVG fill='#000' width='50px' height='50px' />
                     <StyledCallout paddingVertical='4px'>
                         <StyledView flex={1} backgroundColor='#988fac' alignItems='center'>
-                            <StyledText color='#fff'>You are here!</StyledText>
+                            <StyledText color='#fff'>{I18n.t('pages.Map.Markers.youAreHere')}!</StyledText>
                             <Svg height='150' width='200'>
                                 <Image
                                     width={200}

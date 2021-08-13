@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import I18n from 'react-native-i18n';
 import { useNavigationState, useRoute } from '@react-navigation/native';
 
 import { ContentList } from '../components/common/CombinationComponents';
@@ -16,10 +17,10 @@ const ArticlesPageHeaderItems = [{ id: 1, icon: BoxIcon, text: '3213123123213124
 
 export default ArticlesPage = ({ navigation }) => {
     const [loading, setLoading] = useState(false);
-    const headerTitles = { title: { text: useRoute()?.name || 'Home', disabled: true }, leftText: 'Cancel', rightText: 'Confirm' }
-    const headerIcons = { center: { handleClick: () => { } }, leftText: 'Cancel', rightText: 'Confirm' }
+    const headerTitles = { title: { text: I18n.t('pages.Articles.title'), disabled: true }, leftText: I18n.t('pageHeader.Cancel'), rightText: I18n.t('pageHeader.Confirm') }
+    const headerIcons = { center: { handleClick: () => { } } }
 
-    function fakeFetch() {
+    function fakeFecth() {
         setLoading(true);
         setTimeout(() => {
             setLoading(false);
@@ -47,7 +48,7 @@ export default ArticlesPage = ({ navigation }) => {
             <ContentList
                 itemsList={itemsList}
                 refetching={loading}
-                onRefetch={fakeFetch}
+                onRefetch={fakeFecth}
                 onSelect={handlePessItem}
             />
         </StyledView>

@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { PersistGate } from 'redux-persist/integration/react'
 import { Provider } from 'react-redux'
+import I18n from 'react-native-i18n';
 import { NotifierWrapper } from 'react-native-notifier';
 
 const ArticlesPage = React.lazy(() => import('./Articles'));
@@ -43,6 +44,7 @@ const AppContent = () => {
                                     <Drawer.Screen name='FingerPrint' component={FingerPrint} />
                                     <Drawer.Screen name='Chart' component={Chart} />
                                     <Drawer.Screen name='Notifications' component={Notifications} />
+                                    <Drawer.Screen name={'WebViewPage'} options={{title: I18n.t('pages.WebViewPage.title')}} component={WebViewPage} />
                                 </Drawer.Navigator>
                             </NavigationContainer>
                         </Suspense>
