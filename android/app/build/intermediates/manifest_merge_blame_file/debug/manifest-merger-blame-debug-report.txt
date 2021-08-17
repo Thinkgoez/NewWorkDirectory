@@ -78,11 +78,11 @@
 36-->[:react-native-fingerprint-scanner] /Users/developer/Documents/Projects/Second/NewWorkDirectory/node_modules/react-native-fingerprint-scanner/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:22-114
 37
 38    <uses-feature
-38-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/4e0ef2e2cc74329c4fab7e740d863fc9/jetified-photo-main-8.3.0/AndroidManifest.xml:25:5-27:35
+38-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/3131743615ccecda5643ef5aa30c4c3f/jetified-photo-main-8.3.0/AndroidManifest.xml:25:5-27:35
 39        android:glEsVersion="0x00020000"
-39-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/4e0ef2e2cc74329c4fab7e740d863fc9/jetified-photo-main-8.3.0/AndroidManifest.xml:26:9-41
+39-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/3131743615ccecda5643ef5aa30c4c3f/jetified-photo-main-8.3.0/AndroidManifest.xml:26:9-41
 40        android:required="true" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-40-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/4e0ef2e2cc74329c4fab7e740d863fc9/jetified-photo-main-8.3.0/AndroidManifest.xml:27:9-32
+40-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/3131743615ccecda5643ef5aa30c4c3f/jetified-photo-main-8.3.0/AndroidManifest.xml:27:9-32
 41    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> <!-- for android -->
 41-->[com.google.firebase:firebase-messaging:22.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/b3f68e707182bcbb22422e221b42fa63/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:25:5-82
 41-->[com.google.firebase:firebase-messaging:22.0.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/b3f68e707182bcbb22422e221b42fa63/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:25:22-79
@@ -158,7 +158,7 @@
 72        android:roundIcon="@mipmap/ic_launcher_round"
 72-->/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:22:7-52
 73        android:supportsRtl="true"
-73-->[ly.img.android.sdk:serializer:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/80d12aa4510cf59cd77577fb90b7c406/jetified-serializer-8.3.0/AndroidManifest.xml:27:9-35
+73-->[ly.img.android.sdk:serializer:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/409ff22d52ba08b9cbb97fe70f91a50a/jetified-serializer-8.3.0/AndroidManifest.xml:27:9-35
 74        android:theme="@style/AppTheme"
 74-->/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/AndroidManifest.xml:24:7-38
 75        android:usesCleartextTraffic="true" >
@@ -364,42 +364,42 @@
 183        </provider>
 184
 185        <activity
-185-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/4e0ef2e2cc74329c4fab7e740d863fc9/jetified-photo-main-8.3.0/AndroidManifest.xml:30:9-39:20
+185-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/3131743615ccecda5643ef5aa30c4c3f/jetified-photo-main-8.3.0/AndroidManifest.xml:30:9-39:20
 186            android:name="ly.img.android.pesdk.ui.activity.PhotoEditorActivity"
-186-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/4e0ef2e2cc74329c4fab7e740d863fc9/jetified-photo-main-8.3.0/AndroidManifest.xml:31:13-80
+186-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/3131743615ccecda5643ef5aa30c4c3f/jetified-photo-main-8.3.0/AndroidManifest.xml:31:13-80
 187            android:configChanges="keyboard|keyboardHidden|screenSize"
-187-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/4e0ef2e2cc74329c4fab7e740d863fc9/jetified-photo-main-8.3.0/AndroidManifest.xml:32:13-71
+187-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/3131743615ccecda5643ef5aa30c4c3f/jetified-photo-main-8.3.0/AndroidManifest.xml:32:13-71
 188            android:exported="true"
-188-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/4e0ef2e2cc74329c4fab7e740d863fc9/jetified-photo-main-8.3.0/AndroidManifest.xml:33:13-36
+188-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/3131743615ccecda5643ef5aa30c4c3f/jetified-photo-main-8.3.0/AndroidManifest.xml:33:13-36
 189            android:hardwareAccelerated="true"
-189-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/4e0ef2e2cc74329c4fab7e740d863fc9/jetified-photo-main-8.3.0/AndroidManifest.xml:34:13-47
+189-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/3131743615ccecda5643ef5aa30c4c3f/jetified-photo-main-8.3.0/AndroidManifest.xml:34:13-47
 190            android:label="@string/app_name"
-190-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/4e0ef2e2cc74329c4fab7e740d863fc9/jetified-photo-main-8.3.0/AndroidManifest.xml:35:13-45
+190-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/3131743615ccecda5643ef5aa30c4c3f/jetified-photo-main-8.3.0/AndroidManifest.xml:35:13-45
 191            android:screenOrientation="portrait"
-191-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/4e0ef2e2cc74329c4fab7e740d863fc9/jetified-photo-main-8.3.0/AndroidManifest.xml:36:13-49
+191-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/3131743615ccecda5643ef5aa30c4c3f/jetified-photo-main-8.3.0/AndroidManifest.xml:36:13-49
 192            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-192-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/4e0ef2e2cc74329c4fab7e740d863fc9/jetified-photo-main-8.3.0/AndroidManifest.xml:37:13-71
+192-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/3131743615ccecda5643ef5aa30c4c3f/jetified-photo-main-8.3.0/AndroidManifest.xml:37:13-71
 193            android:windowSoftInputMode="adjustPan" >
-193-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/4e0ef2e2cc74329c4fab7e740d863fc9/jetified-photo-main-8.3.0/AndroidManifest.xml:38:13-52
+193-->[ly.img.android.sdk.ui.mobile_ui:photo-main:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/3131743615ccecda5643ef5aa30c4c3f/jetified-photo-main-8.3.0/AndroidManifest.xml:38:13-52
 194        </activity>
 195        <activity
-195-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/7f733af241689aef7c9f44d208331aad/jetified-all-8.3.0/AndroidManifest.xml:35:9-44:20
+195-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/d3e817a13a9261f1a64ec4fe79e69dd8/jetified-all-8.3.0/AndroidManifest.xml:35:9-44:20
 196            android:name="ly.img.android.pesdk.ui.activity.EditorActivity"
-196-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/7f733af241689aef7c9f44d208331aad/jetified-all-8.3.0/AndroidManifest.xml:36:13-75
+196-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/d3e817a13a9261f1a64ec4fe79e69dd8/jetified-all-8.3.0/AndroidManifest.xml:36:13-75
 197            android:configChanges="keyboard|keyboardHidden|screenSize"
-197-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/7f733af241689aef7c9f44d208331aad/jetified-all-8.3.0/AndroidManifest.xml:37:13-71
+197-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/d3e817a13a9261f1a64ec4fe79e69dd8/jetified-all-8.3.0/AndroidManifest.xml:37:13-71
 198            android:exported="true"
-198-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/7f733af241689aef7c9f44d208331aad/jetified-all-8.3.0/AndroidManifest.xml:38:13-36
+198-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/d3e817a13a9261f1a64ec4fe79e69dd8/jetified-all-8.3.0/AndroidManifest.xml:38:13-36
 199            android:hardwareAccelerated="true"
-199-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/7f733af241689aef7c9f44d208331aad/jetified-all-8.3.0/AndroidManifest.xml:39:13-47
+199-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/d3e817a13a9261f1a64ec4fe79e69dd8/jetified-all-8.3.0/AndroidManifest.xml:39:13-47
 200            android:label="@string/app_name"
-200-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/7f733af241689aef7c9f44d208331aad/jetified-all-8.3.0/AndroidManifest.xml:40:13-45
+200-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/d3e817a13a9261f1a64ec4fe79e69dd8/jetified-all-8.3.0/AndroidManifest.xml:40:13-45
 201            android:screenOrientation="portrait"
-201-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/7f733af241689aef7c9f44d208331aad/jetified-all-8.3.0/AndroidManifest.xml:41:13-49
+201-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/d3e817a13a9261f1a64ec4fe79e69dd8/jetified-all-8.3.0/AndroidManifest.xml:41:13-49
 202            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-202-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/7f733af241689aef7c9f44d208331aad/jetified-all-8.3.0/AndroidManifest.xml:42:13-71
+202-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/d3e817a13a9261f1a64ec4fe79e69dd8/jetified-all-8.3.0/AndroidManifest.xml:42:13-71
 203            android:windowSoftInputMode="adjustPan" >
-203-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/7f733af241689aef7c9f44d208331aad/jetified-all-8.3.0/AndroidManifest.xml:43:13-52
+203-->[ly.img.android.sdk.ui.mobile_ui:all:8.3.0] /Users/developer/.gradle/caches/transforms-2/files-2.1/d3e817a13a9261f1a64ec4fe79e69dd8/jetified-all-8.3.0/AndroidManifest.xml:43:13-52
 204        </activity>
 205
 206        <receiver

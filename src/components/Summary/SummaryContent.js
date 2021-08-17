@@ -1,7 +1,6 @@
 import React from 'react'
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs'
 import I18n from 'react-native-i18n'
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 
 import { StyledView } from '../common/SimpleComponents'
 import { InfoBlock } from '../common/CombinationComponents';

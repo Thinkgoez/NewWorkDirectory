@@ -9,7 +9,7 @@ export const useBarcode = () => {
 
     const eventHandler = () => {
         // DO some stuff
-        const str = 'a'
+        const str = 'A'
         if (/[a-z]/.test(str)) {
             setError(false)
         } else {
