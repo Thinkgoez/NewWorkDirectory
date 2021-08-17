@@ -1,10 +1,11 @@
 import styled from 'styled-components/native'
-import { marginMixin, positionMixin, textMixin } from './StylesMixins/Mixins'
+import { marginMixin, paddingMixin, positionMixin, textMixin } from './StylesMixins/Mixins'
 
 const Text = styled.Text`
     ${marginMixin}
     ${textMixin}
     ${positionMixin}
+    ${paddingMixin}
     ${(({color}) => color !== undefined ? `color: ${color};`: '')}
     ${(({fontSize}) => fontSize !== undefined ? `font-size: ${fontSize};`: '')}
     ${(({fontWeight}) => fontWeight !== undefined ? `font-weight: ${fontWeight};`: '')}

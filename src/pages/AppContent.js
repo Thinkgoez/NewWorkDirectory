@@ -6,6 +6,7 @@ import { PersistGate } from 'redux-persist/integration/react'
 import { Provider } from 'react-redux'
 import I18n from 'react-native-i18n';
 import { NotifierWrapper } from 'react-native-notifier';
+import FlashMessage from "react-native-flash-message";
 
 const ArticlesPage = React.lazy(() => import('./Articles'));
 const CameraPage = React.lazy(() => import('./Camera'));
@@ -16,6 +17,7 @@ const Login = React.lazy(() => import('./Login'));
 const Summary = React.lazy(() => import('./Summary'));
 const Chart = React.lazy(() => import('./Chart'));
 const Notifications = React.lazy(() => import('./Notifications'));
+const FlashMessagePage = React.lazy(() => import('./FlashMessagePage'));
 
 import configureStore from '../redux/configureStore';
 import { PendingView, StyledSafeAreaView } from '../components/common/SimpleComponents';
@@ -34,17 +36,19 @@ const AppContent = () => {
                             <NavigationContainer>
                                 <Drawer.Navigator
                                     screenOptions={{ headerShown: false }}
-                                    initialRouteName='Articles in Carton'>
+                                    initialRouteName='FlashMessagePage'>
                                     <Drawer.Screen name='Articles in Carton' component={ArticlesPage} />
                                     <Drawer.Screen name='Summary' component={Summary} />
                                     <Drawer.Screen name='Camera' component={CameraPage} />
                                     <Drawer.Screen name='Map' component={Map} options={{ header: mapHeader, headerShown: true }} />
                                     <Drawer.Screen name='Login' component={Login} />
-                                    <Drawer.Screen name={'WebViewPage'} options={{title: I18n.t('pages.WebViewPage.title')}} component={WebViewPage} />
+                                    <Drawer.Screen name={'WebViewPage'} options={{ title: I18n.t('pages.WebViewPage.title') }} component={WebViewPage} />
                                     <Drawer.Screen name='FingerPrint' component={FingerPrint} />
                                     <Drawer.Screen name='Chart' component={Chart} />
                                     <Drawer.Screen name='Notifications' component={Notifications} />
+                                    <Drawer.Screen name='FlashMessagePage' component={FlashMessagePage} />
                                 </Drawer.Navigator>
+                                <FlashMessage position='top' />
                             </NavigationContainer>
                         </Suspense>
                     </StyledSafeAreaView>

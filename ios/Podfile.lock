@@ -1,5 +1,8 @@
 PODS:
   - boost-for-react-native (1.63.0)
+  - Charts (3.3.0):
+    - Charts/Core (= 3.3.0)
+  - Charts/Core (3.3.0)
   - CocoaAsyncSocket (7.6.5)
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.64.2)
@@ -431,6 +434,10 @@ PODS:
     - React-Core
   - RNCAsyncStorage (1.15.5):
     - React-Core
+  - RNCharts (0.5.7):
+    - Charts (= 3.3.0)
+    - React
+    - SwiftyJSON (= 5.0)
   - RNCMaskedView (0.1.11):
     - React
   - RNCPushNotificationIOS (1.8.0):
@@ -488,6 +495,7 @@ PODS:
     - React-RCTImage
   - RNSVG (12.1.1):
     - React
+  - SwiftyJSON (5.0.0)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -556,6 +564,7 @@ DEPENDENCIES:
   - ReactNativeExceptionHandler (from `../node_modules/react-native-exception-handler`)
   - RNBootSplash (from `../node_modules/react-native-bootsplash`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
+  - RNCharts (from `../node_modules/react-native-charts-wrapper`)
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
   - "RNCPushNotificationIOS (from `../node_modules/@react-native-community/push-notification-ios`)"
   - "RNFBApp (from `../node_modules/@react-native-firebase/app`)"
@@ -573,6 +582,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - boost-for-react-native
+    - Charts
     - CocoaAsyncSocket
     - Firebase
     - FirebaseCore
@@ -595,6 +605,8 @@ SPEC REPOS:
     - nanopb
     - OpenSSL-Universal
     - PhotoEditorSDK
+    - PromisesObjC
+    - SwiftyJSON
     - YogaKit
 
 EXTERNAL SOURCES:
@@ -682,6 +694,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-bootsplash"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-async-storage/async-storage"
+  RNCharts:
+    :path: "../node_modules/react-native-charts-wrapper"
   RNCMaskedView:
     :path: "../node_modules/@react-native-community/masked-view"
   RNCPushNotificationIOS:
@@ -711,6 +725,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
+  Charts: e0dd4cd8f257bccf98407b58183ddca8e8d5b578
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
   FBLazyVector: e686045572151edef46010a6f819ade377dfeb4b
@@ -776,6 +791,7 @@ SPEC CHECKSUMS:
   ReactNativeExceptionHandler: b11ff67c78802b2f62eed0e10e75cb1ef7947c60
   RNBootSplash: 4844706cbb56a3270556c9b94e59dedadccd47e4
   RNCAsyncStorage: 56a3355a10b5d660c48c6e37325ac85ebfd09885
+  RNCharts: d364ca2085e24edb9ee0390d3fb7209257daa44c
   RNCMaskedView: 0e1bc4bfa8365eba5fbbb71e07fbdc0555249489
   RNCPushNotificationIOS: 61a7c72bd1ebad3568025957d001e0f0e7b32191
   RNFBApp: 97b2da195d4606716b284a7c8a988dd8ed5cec41
@@ -788,9 +804,10 @@ SPEC CHECKSUMS:
   RNReanimated: 9c13c86454bfd54dab7505c1a054470bfecd2563
   RNScreens: 21b73c94c9117e1110a79ee0ee80c93ccefed8ce
   RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Yoga: 575c581c63e0d35c9a83f4b46d01d63abc1100ac
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: a20b256d70a0f23b6114401e36cf290ca9411494
+PODFILE CHECKSUM: 90bcdb07f03db8621f748b6a4e6e37f3326dd32a
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.2
