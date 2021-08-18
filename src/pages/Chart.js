@@ -1,28 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { processColor } from 'react-native'
 import { BarChart } from 'react-native-charts-wrapper';
+import { ThemeContext } from 'styled-components';
 
 import { StyledView } from '../components/common/SimpleComponents';
 
-const data = {
-    dataSets: [
-        {
-            values: [5, 40, 77, 81, 43],
-            label: 'grivnas',
-            config: {
-                color: processColor('#c0e5fe') // for bars
-            }
-        },
-    ],
-    
-}
-
 const Chart = () => {
+    const theme =useContext(ThemeContext)
     const handleSelect = ({ nativeEvent, ...props }) => {
         // nativeEvent: {x, y}
     }
+    const data = {
+        dataSets: [
+            {
+                values: [5, 40, 77, 81, 43],
+                label: 'grivnas',
+                config: {
+                    color: processColor('chartBarFILL') // for bars
+                }
+            },
+        ],
+    }
     return (
-        <StyledView flex={1} justifyContent='flex-end' backgroundColor='#c9c9c9'>
+        <StyledView flex={1} justifyContent='flex-end' backgroundColor='chartPageBG'>
             <BarChart
                 data={data}
                 height={220}
@@ -31,8 +31,8 @@ const Chart = () => {
                 dragEnabled
                 drawBorders
                 noDataText='There is no data'
-                borderColor={processColor('#c0c0c0')}
-                gridBackgroundColor={processColor('#fff')}
+                borderColor={processColor(theme['chartBORDER'])}
+                gridBackgroundColor={processColor(theme['secondary'])}
                 zoom={{
                     scaleX: 1,
                     scaleY: 1,
@@ -40,7 +40,7 @@ const Chart = () => {
                     yValue: 0,
                 }}
                 visibleRange={{ x: { max: 3 }}}
-                chartBackgroundColor={processColor('#f0f0c0')}
+                chartBackgroundColor={processColor(theme['chartBG'])}
                 onSelect={handleSelect}
                 chartDescription={{
                     text: 'Simple bar',
@@ -50,8 +50,8 @@ const Chart = () => {
                 marker= {{
                     enabled: true,
                     digits: 2,
-                    markerColor: processColor('#f030c0'),
-                    textColor: processColor('#fff'),
+                    markerColor: processColor(theme['chartMarkerFILL']),
+                    textColor: processColor(theme['chartMarker']),
                     textSize: 14
                 }}
             />

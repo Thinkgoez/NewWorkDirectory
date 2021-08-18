@@ -19,7 +19,7 @@ export const CameraScreen = () => {
     const gallery = useSelector(({ gallery }) => gallery.items)
 
     return (
-        <StyledView flex={1} flexDirection='column' backgroundColor='black'>
+        <StyledView flex={1} flexDirection='column' backgroundColor='primary'>
             <Camera />
             <Gallery gallery={gallery} />
         </StyledView>

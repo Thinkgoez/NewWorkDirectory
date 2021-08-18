@@ -24,7 +24,7 @@ const ContentList = ({ itemsList, refetching = false, onRefetch, onSelect, handl
     }, [isFocused])
 
     return (
-        <StyledView flex={1} backgroundColor='#fff'>
+        <StyledView flex={1} backgroundColor='secondary'>
             {itemsList?.list && itemsList.list.length > 0
                 ? <FlatList
                     data={itemsList.list}

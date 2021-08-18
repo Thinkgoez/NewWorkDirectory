@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import Visible from '../../../assets/visible.svg'
 import Invisible from '../../../assets/invisible.svg'
 import { StyledButton } from '../SimpleComponents'
+import { ThemeContext } from 'styled-components'
 
 const SecureToggle = ({ isSecure, secureToggle }) => {
+    const theme = useContext(ThemeContext)
     return (
         <StyledButton onPress={secureToggle}
             position='absolute'
@@ -13,7 +15,7 @@ const SecureToggle = ({ isSecure, secureToggle }) => {
             alignItems='center'
             justifyContent='center'
         >
-                {isSecure ? <Invisible width='20px' height='20px' fill='#b8b8b8'/> : <Visible width='20px' height='20px' fill='#434141'/>}
+                {isSecure ? <Invisible width='20px' height='20px' fill={theme['loginPointBG']}/> : <Visible width='20px' height='20px' fill={theme['iconTextFILL']}/>}
         </StyledButton>
     )
 }

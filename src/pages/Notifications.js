@@ -1,11 +1,13 @@
 import { useNavigationState } from '@react-navigation/native';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Alert, ScrollView } from 'react-native';
 import { useSelector } from 'react-redux';
+import { ThemeContext } from 'styled-components';
 import { NotifButton } from '../components/common/CombinationComponents';
 import { StyledButton, StyledText, StyledView } from '../components/common/SimpleComponents';
 
-const Notifications = ({navigation}) => {
+const Notifications = () => {
+    const theme = useContext(ThemeContext)
     const routeNames = useNavigationState(({ routeNames }) => routeNames)
     const notif = useSelector(({notification}) => notification.notif)
     const [selectedRoute, setRoute] = useState(null)
@@ -34,7 +36,7 @@ const Notifications = ({navigation}) => {
                 flex={1}
                 justifyContent='center'
                 alignItems='center'
-                backgroundColor='#F5FCFF'
+                backgroundColor='notificationPageBG'
                 paddingBottom='10px'
             >
                 <StyledText
@@ -45,22 +47,18 @@ const Notifications = ({navigation}) => {
                 >
                     Example app react-native-push-notification
                 </StyledText>
-                <StyledView backgroundColor='rgba(0,0,0,0.3)' flexDirection='row' justifyContent='space-evenly' flexWrap='wrap' paddingVertical='8px'>
+                <StyledView backgroundColor='flashModesBG' flexDirection='row' justifyContent='space-evenly' flexWrap='wrap' paddingVertical='8px'>
                     {routeNames.map(el => <StyledButton key={el} onPress={() => setRoute(el)}
-                        backgroundColor={selectedRoute === el ? '#8a8a8a' : '#fff'}
-                        border='1px solid #fff'
+                        backgroundColor={selectedRoute === el ? 'flashModeActiveBG' : 'secondary'}
+                        border={`1px solid ${theme['secondary']}`}
                         borderRadius='4px'
                         height='24px'
                         alignItems='center'
                         paddingHorizontal='8px'
                         marginBottom='8px'
-                    ><StyledText color='#000'>{el}</StyledText></StyledButton>)}
+                    ><StyledText>{el}</StyledText></StyledButton>)}
                 </StyledView>
-
                 {notifiActions.map(({ handlePress, text }) => <NotifButton key={text} handlePress={handlePress} text={text} />)}
-
-                {/* {fcmRegistered && <StyledText paddingTop='10px'>FCM Configured !</StyledText>} */}
-
             </StyledView>
         </ScrollView>
     )

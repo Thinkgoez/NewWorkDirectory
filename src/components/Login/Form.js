@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Formik } from 'formik';
 
 import { StyledText, StyledView, StyledButton } from '../common/SimpleComponents'
 import { CunstomInput, SecureToggle } from '../common/CombinationComponents/';
 import { errorList, validateLoginSchema } from './validationForm';
 import Check from '../../assets/check.svg'
+import { ThemeContext } from 'styled-components';
 
 export const LoginForm = ({handleSubmit}) => {
+    const theme = useContext(ThemeContext)
     const [isSecure, setIsSecure] = useState(true)
     const [passErrors, setPassErrors] = useState(errorList.map(errItem => errItem.message)) // default value is all posible password errors
    
@@ -27,9 +29,9 @@ export const LoginForm = ({handleSubmit}) => {
                                 const isValid = !passErrors.includes(error.message)
                                 return (
                                     <StyledView key={error.id} flexDirection='row' alignItems='center'>
-                                        <StyledView width='5px' height='5px' borderRadius='2px' backgroundColor={isValid ? 'green' : '#b8b8b8'} marginRight='8px' />
+                                        <StyledView width='5px' height='5px' borderRadius='2px' backgroundColor={isValid ? 'access' : 'loginPointBG'} marginRight='8px' />
                                         <StyledText marginRight='16px'>{error.title}</StyledText>
-                                        {isValid && <Check fill='green' width='16px' height='16px' />}
+                                        {isValid && <Check fill={theme['access']} width='16px' height='16px' />}
                                     </StyledView>
                                 )
                             })}
@@ -45,7 +47,7 @@ export const LoginForm = ({handleSubmit}) => {
                             autoCapitalize='none'
                             paddingVertical='2px'
                             paddingHorizontal='4px'
-                            borderBottom={touched.email && errors.email ? '1px red' : '1px #e2e2e3'}
+                            borderBottom={touched.email && errors.email ? `1px ${theme['loginError']}` : `1px ${theme['loginInputBORDER']}`}
                             marginBottom='16px'
                             error={touched.email && errors.email}
                         />
@@ -60,7 +62,7 @@ export const LoginForm = ({handleSubmit}) => {
                             autoCapitalize='none'
                             paddingVertical='2px'
                             paddingHorizontal='4px'
-                            borderBottom={touched.password && errors.password ? '1px red' : '1px #e2e2e3'}
+                            borderBottom={touched.password && errors.password ? `1px ${theme['loginError']}` : `1px ${theme['loginInputBORDER']}`}
                             marginBottom='16px'
                             secureTextEntry={isSecure}
                             error={touched.password && errors.password}
@@ -68,11 +70,11 @@ export const LoginForm = ({handleSubmit}) => {
                         />
                         <StyledButton
                             onPress={handleSubmit}
-                            backgroundColor='#003556'
+                            backgroundColor='infoBlock'
                             paddingVertical='16px'
                             alignItems='center'
                             justifyContent='center'
-                        ><StyledText textTransform='uppercase' color='#dfe6e9'>Login</StyledText></StyledButton>
+                        ><StyledText textTransform='uppercase' color='loginButton'>Login</StyledText></StyledButton>
                     </StyledView>
                 )
             }}

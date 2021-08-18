@@ -7,15 +7,15 @@ import { StyledText, StyledView } from '../components/common/SimpleComponents'
 import { LoginForm } from '../components/Login/Form';
 
 const Login = () => {
-    const customNotOptions = {
+    const customNotifOptions = {
         imgSource: require('../assets/thief.jpeg'),
-        iconProps: { borderColor: '#fff' },
-        titleProps: { color: '#ffc7c7' },
-        descProps: { color: '#faa5a5' }
+        iconProps: { borderColor: 'secondary' },
+        titleProps: { color: 'loginNotifTitle' },
+        descProps: { color: 'loginNotifDesc' }
     }
 
     const keyboardVerticalOffset = Platform.select({ ios: 50, android: 40 })
-    const NotificationComponent = CustomNotification(customNotOptions)
+    const NotificationComponent = CustomNotification(customNotifOptions)
     const handleSubmit = (values) => {
         Notifier.showNotification({
             title: 'Hacked!(was ez)',
@@ -31,8 +31,8 @@ const Login = () => {
     return (
         <KeyboardAvoidingView behavior={Platform.select({ ios: 'position', android: 'height' })} keyboardVerticalOffset={keyboardVerticalOffset}>
             <ScrollView>
-                <StyledView backgroundColor='#ed993f' alignItems='center' justifyContent='center' height='228px'>
-                    <StyledText color='#fff' fontSize='100px'>D</StyledText>
+                <StyledView backgroundColor='loginLogoBG' alignItems='center' justifyContent='center' height='228px'>
+                    <StyledText color='secondary' fontSize='100px'>D</StyledText>
                 </StyledView>
                 <StyledView paddingHorizontal='32px' paddingTop='8px'>
                     <LoginForm handleSubmit={handleSubmit} />

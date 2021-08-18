@@ -40,14 +40,14 @@ export function SummaryTab({ state, descriptors, navigation }) {
                         onPress={onPress}
                         onLongPress={onLongPress}
                         key={label}
-                        backgroundColor={isFocused ? '#fff' : '#efeff0'}
+                        backgroundColor={isFocused ? 'secondary' : 'summaryContentBG'}
                         borderRadius='5px'
                         alignItems='center'
                         paddingVertical='4px'
                         flex={1}
                         margin='2px'
                     >
-                        <StyledText fontWeight='bold' color='#000'>
+                        <StyledText fontWeight='bold'>
                             {label}
                         </StyledText>
                     </StyledButton>

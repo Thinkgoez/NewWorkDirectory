@@ -6,7 +6,7 @@ const CunstomInput = ({label, wrapperProps, error, SecureToggle, ...props}) => {
         <StyledView {...wrapperProps}>
             {label && <StyledLabel>{label}</StyledLabel>}
             <StyledInput {...props}/>
-            {error && <StyledText color='red' position='absolute' right='0'>{error}</StyledText>}
+            {error && <StyledText color='loginError' position='absolute' right='0'>{error}</StyledText>}
             {SecureToggle && SecureToggle()}
         </StyledView>
     )

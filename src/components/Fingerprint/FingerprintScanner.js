@@ -13,7 +13,7 @@ export const FingerPrintScanner = ({ close, onSucces }) => {
     const renderLegacy = () => {
         return (
             <StyledView position='absolute' top={0} bottom={0} left={0} right={0}
-                backgroundColor='rgba(0, 164, 222, 0.9)'
+                backgroundColor='fingerPrintModalBG'
                 flexDirection='column'
                 justifyContent='center'
                 alignItems='center'
@@ -22,12 +22,12 @@ export const FingerPrintScanner = ({ close, onSucces }) => {
                     flexDirection='column'
                     justifyContent='center'
                     alignItems='center'
-                    backgroundColor='#ffffff'
+                    backgroundColor='secondary'
                     width={width * 0.8 + 'px'}
                 >
                     <FPImage marginVertical='45px' />
                     <StyledText
-                        color='#ffffff'
+                        color='secondary'
                         fontSize='22px'
                         marginTop='30px'
                         marginBottom='5px'
@@ -47,6 +47,6 @@ export const FingerPrintScanner = ({ close, onSucces }) => {
         return renderLegacy();
     }
     return <StyledView alignItems='center' justifyContent='center' flex={1}>
-        <StyledText color='green'>Done</StyledText>
+        <StyledText color='access'>Done</StyledText>
     </StyledView>
 }

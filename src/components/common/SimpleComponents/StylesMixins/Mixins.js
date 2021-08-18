@@ -41,7 +41,7 @@ export const borderMixin = css`
     ${({borderRadius}) => borderRadius !== undefined ? `border-radius: ${borderRadius};`: ''}
     ${({border}) => border !== undefined ? `border: ${border};`: ''}
     ${({borderWidth}) => borderWidth !== undefined ? `border-width: ${borderWidth};`: ''}
-    ${({borderColor}) => borderColor !== undefined ? `border-color: ${borderColor};`: ''}
+    ${({borderColor, theme}) => borderColor !== undefined && theme ? `border-color: ${theme[borderColor]};`: ''}
     ${({borderBottom}) => borderBottom !== undefined ? `border-bottom-width: ${borderBottom.split(' ')[0]};
                                                         border-bottom-color: ${borderBottom.split(' ')[1]};`: ''}
     ${({borderTop}) => borderTop !== undefined ? `border-top-width: ${borderTop.split(' ')[0]};

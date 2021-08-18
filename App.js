@@ -34,7 +34,7 @@ setNativeExceptionHandler(() => {
     console.log('setNativeExceptionHandler');
 });
 I18n.fallbacks = true;
-I18n.locale = 'fr';
+// I18n.locale = 'fr';
 I18n.translations = { en, fr };
 
 const App = () => {
@@ -91,7 +91,6 @@ const App = () => {
                         ]}
                     />
                 </Animated.View>
-
                 : <AppContent />
             }
         </StyledView>

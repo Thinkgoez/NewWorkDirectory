@@ -11,17 +11,17 @@ export const HeaderTitleList = ({ title, right, left }) => {
             paddingHorizontal='4px'
             paddingVertical='8px'>
             {left && <StyledButton key={left.text} disabled={left.disabled}>
-                <StyledTitleText color={left.color || '#0d81ff'}>
+                <StyledTitleText color={left.color || 'link'}>
                     {left?.text || left}
                 </StyledTitleText>
             </StyledButton>}
             {title && <StyledButton key={title.text} disabled={title.disabled}>
-                <StyledTitleText color={title.disabled ? '#000' : title.color || '#0d81ff'}>
+                <StyledTitleText color={title.disabled ? 'primary' : title.color || 'link'}>
                     {title?.text || title}
                 </StyledTitleText>
             </StyledButton>}
             {right && <StyledButton key={right.text} disabled={right.disabled}>
-                <StyledTitleText color={right.color || '#0d81ff'}>
+                <StyledTitleText color={right.color || 'link'}>
                     {right?.text || right}
                 </StyledTitleText>
             </StyledButton>}

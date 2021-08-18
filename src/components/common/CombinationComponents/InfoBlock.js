@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ThemeContext } from 'styled-components'
 import { StyledText, StyledView } from "../SimpleComponents"
 
-const InfoBlock = ({ text = '', color = '#000', fill, borderColor = '#000' }) => {
+const InfoBlock = ({ text = '', color, fill, borderColor= 'primary' }) => {
+    const theme = useContext(ThemeContext)
     return (
         <StyledView
-            border={`2px solid ${borderColor}`}
+            border={`2px solid ${theme[borderColor]}`}
             backgroundColor={fill ? borderColor : 'transparent'}
             borderRadius='10px'
             alignItems='center'

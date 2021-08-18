@@ -35,8 +35,8 @@ const WebViewPage = () => {
     }, [])
 
     return (
-        <StyledView backgroundColor='#345678' paddingTop='8px' flex={1}>
-            <StyledText textAlign='center' color='#ebe834' marginBottom='8px'>WebView</StyledText>
+        <StyledView backgroundColor='webViewBG' paddingTop='8px' flex={1}>
+            <StyledText textAlign='center' color='webView' marginBottom='8px'>WebView</StyledText>
             <StyledWebView
                 ref={webRef}
                 source={{ uri: 'https://reactnative.dev/' }}

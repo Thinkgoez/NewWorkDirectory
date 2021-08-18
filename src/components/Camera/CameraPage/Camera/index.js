@@ -50,7 +50,7 @@ export const Camera = () => {
             }}
         >
             {({ camera, status }) => {
-                if (status !== 'READY') return <PendingView />; // color='#00ff00' - green 
+                if (status !== 'READY') return <PendingView />;
                 const takePictureHandle = () => {
                     takePicture(camera)
                 }

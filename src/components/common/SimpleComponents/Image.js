@@ -1,12 +1,12 @@
 import styled from 'styled-components/native'
-import { marginMixin, paddingMixin, sizesMixin, borderMixin} from './StylesMixins/Mixins'
+import { marginMixin, paddingMixin, sizesMixin, borderMixin } from './StylesMixins/Mixins'
 
 const Image = styled.Image`
   ${sizesMixin}
   ${borderMixin}
   ${paddingMixin}
   ${marginMixin}
-  ${({backgroundColor}) => backgroundColor ? `background-color: ${backgroundColor};` : ''}
+  ${({ backgroundColor, theme }) => backgroundColor !== undefined && theme ? `background-color: ${theme[backgroundColor]};` : ''}
 `;
 
 export default Image

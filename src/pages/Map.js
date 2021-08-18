@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Geolocation from 'react-native-geolocation-service';
 import { useDispatch, useSelector } from 'react-redux';
 import { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
@@ -10,6 +10,7 @@ import I18n from 'react-native-i18n';
 import { StyledCallout, StyledMapView, StyledText, StyledView } from '../components/common/SimpleComponents';
 import { setNewCoords } from '../redux/actions/mapAction'
 import MarkerSVG from '../assets/marker.svg'
+import { ThemeContext } from 'styled-components';
 
 const coordsList = [
     { latitude: 47.8405622, longitude: 35.1257554, title: I18n.t('pages.Map.Markers.goodPlace'), id: 1 },
@@ -17,6 +18,7 @@ const coordsList = [
 ]
 
 const Map = () => {
+    const theme = useContext(ThemeContext)
     const dispatch = useDispatch()
     const { longitude, latitude, latitudeDelta, longitudeDelta, loading } = useSelector(({ map }) => map)
 
@@ -75,10 +77,10 @@ const Map = () => {
                 flex={1}
             >
                 {!loading && <Marker coordinate={{ latitude, longitude }} >
-                    <MarkerSVG fill='#000' width='50px' height='50px' />
+                    <MarkerSVG fill={theme['primary']} width='50px' height='50px' />
                     <StyledCallout paddingVertical='4px'>
-                        <StyledView flex={1} backgroundColor='#988fac' alignItems='center'>
-                            <StyledText color='#fff'>{I18n.t('pages.Map.Markers.youAreHere')}!</StyledText>
+                        <StyledView flex={1} backgroundColor='mapCalloutBG' alignItems='center'>
+                            <StyledText color='secondary'>{I18n.t('pages.Map.Markers.youAreHere')}!</StyledText>
                             <Svg height='150' width='200'>
                                 <Image
                                     width={200}
@@ -90,7 +92,7 @@ const Map = () => {
                     </StyledCallout>
                 </Marker>}
                 {coordsList.map(place => (
-                    <Marker key={place.id} coordinate={{ latitude: place.latitude, longitude: place.longitude }} pinColor='#c934eb' title={place.title} />
+                    <Marker key={place.id} coordinate={{ latitude: place.latitude, longitude: place.longitude }} pinColor={theme['mapPinColorFILL']} title={place.title} />
                 ))}
             </StyledMapView>
         </StyledView>

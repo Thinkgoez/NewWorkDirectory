@@ -14,11 +14,11 @@ import { useNotification } from '../hooks/notification';
 
 
 const ArticlesPageHeaderItems = [{ id: 1, icon: BoxIcon, text: '321312312321312409496349058' }, { id: 2, icon: TagIcon, text: '9' }]
+const headerTitles = { title: { text: I18n.t('pages.Articles.title'), disabled: true }, leftText: I18n.t('pageHeader.Cancel'), rightText: I18n.t('pageHeader.Confirm') }
+const headerIcons = { center: { handleClick: () => { } } }
 
 export default ArticlesPage = ({ navigation }) => {
     const [loading, setLoading] = useState(false);
-    const headerTitles = { title: { text: I18n.t('pages.Articles.title'), disabled: true }, leftText: I18n.t('pageHeader.Cancel'), rightText: I18n.t('pageHeader.Confirm') }
-    const headerIcons = { center: { handleClick: () => { } } }
 
     function fakeFecth() {
         setLoading(true);

@@ -8,9 +8,8 @@ const View = styled.View`
     ${marginMixin}
     ${sizesMixin}
     ${shadowMixin}
-    ${({color}) => color !== undefined ? `color: ${color};`: ''}
     ${({textAlign}) => textAlign !== undefined ? `text-align: ${textAlign};`: ''}
-    ${({backgroundColor}) => backgroundColor !== undefined ? `background-color: ${backgroundColor};`: ''}
+    ${({backgroundColor, theme}) => backgroundColor !== undefined  && theme ? `background-color: ${theme[backgroundColor]};`: ''}
     ${({opacity}) => opacity !== undefined ? `opacity: ${opacity};`: ''}
 `
 

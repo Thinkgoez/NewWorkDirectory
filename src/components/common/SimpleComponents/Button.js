@@ -9,9 +9,8 @@ const StyledTouchableOpacity= styled.TouchableOpacity`
     ${sizesMixin}
     ${shadowMixin}
     ${positionMixin}
-    ${(({color}) => color !== undefined ? `color: ${color};`: '')}
     ${(({textAlign}) => textAlign !== undefined ? `text-align: ${textAlign};`: '')}
-    ${(({backgroundColor}) => backgroundColor !== undefined ? `background-color: ${backgroundColor};`: '')}
+    ${({backgroundColor, theme}) => backgroundColor !== undefined  && theme ? `background-color: ${theme[backgroundColor]};`: ''}
     ${(({border}) => border !== undefined ? `border: ${border};`: '')}
     ${(({borderRadius}) => borderRadius !== undefined ? `border-radius: ${borderRadius};`: '')}
 `
