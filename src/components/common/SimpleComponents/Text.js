@@ -12,5 +12,6 @@ const Text = styled.Text`
     ${(({alignSelf}) => alignSelf !== undefined ? `align-self: ${alignSelf};`: '')}
     ${(({justifySelf}) => justifySelf !== undefined ? `justify-self: ${justifySelf};`: '')}
     ${(({textTransform}) => textTransform !== undefined ? `text-transform: ${textTransform};`: '')}
+    ${(({textDecoration}) => textDecoration !== undefined ? `text-decoration: ${textDecoration};`: '')}
 `
 export default Text

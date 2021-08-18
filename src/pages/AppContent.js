@@ -16,10 +16,16 @@ const Login = React.lazy(() => import('./Login'));
 const Summary = React.lazy(() => import('./Summary'));
 const Chart = React.lazy(() => import('./Chart'));
 const Notifications = React.lazy(() => import('./Notifications'));
+const Settings = React.lazy(() => import('./Settings'));
 
 import configureStore from '../redux/configureStore';
 import { PendingView, StyledSafeAreaView } from '../components/common/SimpleComponents';
 import { mapHeader } from '../components/Map/header';
+import {
+    renderContent, ArticlesIcon, SummaryIcon, NorificationsIcon,
+    CameraIcon, MapIcon, WebViewIcon, FingerprintIcon,
+    ChartIcon, SettingsIcon, LoginIcon
+} from './renderDrawerIcons';
 
 const Drawer = createDrawerNavigator();
 const { store, persistor } = configureStore()
@@ -34,16 +40,19 @@ const AppContent = () => {
                             <NavigationContainer>
                                 <Drawer.Navigator
                                     screenOptions={{ headerShown: false }}
-                                    initialRouteName='Articles in Carton'>
-                                    <Drawer.Screen name='Articles in Carton' component={ArticlesPage} />
-                                    <Drawer.Screen name='Summary' component={Summary} />
-                                    <Drawer.Screen name='Camera' component={CameraPage} />
-                                    <Drawer.Screen name='Map' component={Map} options={{ header: mapHeader, headerShown: true }} />
-                                    <Drawer.Screen name='Login' component={Login} />
-                                    <Drawer.Screen name={'WebViewPage'} options={{title: I18n.t('pages.WebViewPage.title')}} component={WebViewPage} />
-                                    <Drawer.Screen name='FingerPrint' component={FingerPrint} />
-                                    <Drawer.Screen name='Chart' component={Chart} />
-                                    <Drawer.Screen name='Notifications' component={Notifications} />
+                                    initialRouteName='Articles in Carton'
+                                    drawerContent={renderContent}
+                                >
+                                    <Drawer.Screen name='Articles in Carton' component={ArticlesPage} options={{ Icon: ArticlesIcon }} />
+                                    <Drawer.Screen name='Summary' component={Summary} options={{ Icon: SummaryIcon }} />
+                                    <Drawer.Screen name='Camera' component={CameraPage} options={{ Icon: CameraIcon }} />
+                                    <Drawer.Screen name='Map' component={Map} options={{ header: mapHeader, headerShown: true, Icon: MapIcon }} />
+                                    <Drawer.Screen name='Login' component={Login} options={{ Icon: LoginIcon }} />
+                                    <Drawer.Screen name='WebViewPage' options={{ title: I18n.t('pages.WebViewPage.title'), Icon: WebViewIcon }} component={WebViewPage} />
+                                    <Drawer.Screen name='FingerPrint' component={FingerPrint} options={{ Icon: FingerprintIcon }} />
+                                    <Drawer.Screen name='Chart' component={Chart} options={{ Icon: ChartIcon }} />
+                                    <Drawer.Screen name='Notifications' component={Notifications} options={{ Icon: NorificationsIcon }} />
+                                    <Drawer.Screen name='Settings' component={Settings} options={{ Icon: SettingsIcon, bottom: true }} />
                                 </Drawer.Navigator>
                             </NavigationContainer>
                         </Suspense>

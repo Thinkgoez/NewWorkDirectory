@@ -91,7 +91,6 @@ const App = () => {
                         ]}
                     />
                 </Animated.View>
-
                 : <AppContent />
             }
         </StyledView>
