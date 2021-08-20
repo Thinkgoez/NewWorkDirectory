@@ -20,6 +20,9 @@ target 'FirstTask' do
     # React Native Maps dependencies
     
   )
+  pre_install do |installer|
+    $RNMBGL.pre_install(installer)
+  end
 
   target 'FirstTaskTests' do
     inherit! :complete
@@ -33,6 +36,9 @@ target 'FirstTask' do
   use_flipper!()
 
   post_install do |installer|
+    $RNMBGL.post_install(installer)
     react_native_post_install(installer)
   end
+
+  
 end
