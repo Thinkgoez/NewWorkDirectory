@@ -7,7 +7,7 @@ import { ContentMap } from '../components/Map/ContentMap';
 const Map = () => {
 
     return (
-        <ContentMap  />
+        <AnotherMap  />
     )
 }
 
