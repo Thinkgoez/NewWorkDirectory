@@ -9,6 +9,9 @@ export const flexMixin = css`
     ${({flexShrink}) => flexShrink !== undefined ? `flex-shrink: ${flexShrink};`: ''}
     ${({flexBasis}) => flexBasis !== undefined ? `flex-basis ${flexBasis};`: ''}
     ${({flexWrap}) => flexWrap !== undefined ? `flex-wrap ${flexWrap};`: ''}
+    ${({flexBasis}) => flexBasis !== undefined ? `flex-basis: ${flexBasis};`: ''}
+    ${({alignSelf}) => alignSelf !== undefined ? `align-self: ${alignSelf};`: ''}
+
 `
 
 // should rework to be able passing object like padding: {top: 20px , left: 20px, ...}
