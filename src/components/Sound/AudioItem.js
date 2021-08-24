@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { TouchableWithoutFeedback } from 'react-native';
 import * as Progress from 'react-native-progress';
-import LottieView from 'lottie-react-native';
-import styled from 'styled-components/native'
 import { useDispatch } from 'react-redux';
 
 import { StyledButton, StyledText, StyledView } from '../common/SimpleComponents';
+import { StyledLottieView } from './styled'
 import { removeAudioItem } from '../../redux/actions/audioActions';
 import { useAudio } from '../../hooks/audio'
 
+const soundGif = require('../../assets/sound.json')
 import PlayIcon from '../../assets/play.svg'
 import PauseIcon from '../../assets/pause.svg'
 import RemoveIcon from '../../assets/delete.svg'
@@ -49,7 +49,11 @@ export const AudioItem = ({ audioInfo }) => {
             borderBottom='1px rgb(210,210,210)'
             alignSelf='stretch'
         >
-            <StyledView flexDirection='row' alignItems={isOpen ? 'flex-start' : 'center'} justifyContent='space-between'>
+            <StyledView
+                flexDirection='row'
+                alignItems={isOpen ? 'flex-start' : 'center'}
+                justifyContent='space-between'
+            >
                 <StyledButton onPress={handleRemove} marginRight='15px'>
                     <RemoveIcon fill='#f53d3d' width={20} height={20} />
                 </StyledButton>
@@ -62,7 +66,7 @@ export const AudioItem = ({ audioInfo }) => {
                     paddingBottom='10px'
                 >{audioInfo.title}</StyledText>
                 {isOpen
-                    ? <StyledLottieView ref={gifRef} source={require('../../assets/sound.json')} colorFilters={gifColors} />
+                    ? <StyledLottieView ref={gifRef} source={soundGif} colorFilters={gifColors} />
                     : <StyledButton onPress={onLoad} marginRight='10px' >
                         <StyledText
                             fontSize='16px'
@@ -87,8 +91,20 @@ export const AudioItem = ({ audioInfo }) => {
                     >
                     </StyledView>
                     <StyledView flexDirection='row' justifyContent='space-between' alignItems='center'>
-                        <StyledButton width='25px' height='25px' backgroundColor='#000' onPress={onReset} borderRadius='2px' alignSelf='flex-end' marginRight='15px' />
-                        <TouchableWithoutFeedback onPress={handlePress}><StyledView flex={1} marginRight='20px' onLayout={onLayoutProgress} height='7px'><Progress.Bar progress={progress} height={7} width={null} /></StyledView></TouchableWithoutFeedback>
+                        <StyledButton
+                            width='25px'
+                            height='25px'
+                            backgroundColor='#000'
+                            onPress={onReset}
+                            borderRadius='2px'
+                            alignSelf='flex-end'
+                            marginRight='15px'
+                        />
+                        <TouchableWithoutFeedback onPress={handlePress}>
+                            <StyledView flex={1} marginRight='20px' onLayout={onLayoutProgress} height='7px'>
+                                <Progress.Bar progress={progress} height={7} width={null} />
+                            </StyledView>
+                        </TouchableWithoutFeedback>
                         <StyledButton
                             onPress={!isPlaying ? onPlay : onPause}
                             alignItems='center' justifyContent='center'
@@ -101,8 +117,3 @@ export const AudioItem = ({ audioInfo }) => {
         </StyledView>
     );
 }
-const StyledLottieView = styled(LottieView)`
-    position: relative;
-    width: 25px;
-    height: 25px; 
-`

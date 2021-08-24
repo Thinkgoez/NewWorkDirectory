@@ -28,10 +28,6 @@
         "source": "/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/build/intermediates/res/merged/debug/raw_psycho.mp3.flat",
-        "source": "/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/res/raw/psycho.mp3"
-    },
-    {
         "merged": "/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
         "source": "/Users/developer/Documents/Projects/Second/NewWorkDirectory/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },

@@ -12,44 +12,31 @@ const hasAndroidStoragePermission = async () => {
     if (hasWPermission && hasRPermission) {
         return true;
     }
-    const status = await PermissionsAndroid.requestMultiple(permission);
+    const status = await PermissionsAndroid.requestMultiple(permissions);
     return status === 'granted';
 }
 export const createNewSound = async (title, originUrl) => {
-// ULTRA SUPER POWER MEGA GALAXY GAMING PLUS PREMIAL function
-    if (Platform.OS === 'android' && await hasAndroidStoragePermission()) {
-        try {
-            const id = uuidv4()
-            try {
-                const res = await RNFS.readDir(musicDirectory)
-                console.log('musicDirectory:', res)
-            } catch (err) {
-                await RNFS.mkdir(musicDirectory)
-            }
-            try {
-                const fileResult = await RNFS.readFile(originUrl, 'base64')
-                try {
-                    let path = (musicDirectory + title.replaceAll(/[ -]/g, '_')).toLocaleLowerCase() // 
-                    const exist = await RNFS.exists(path)
-                    if (exist) {
-                        console.log('File already exist:', path)
-                        return ['File already added', null]
-                    } else {
-                        await RNFS.writeFile(path, fileResult, 'base64')
-                        console.log('writen')
-                        return [null, { title, url: path, id }]
-                    }
-
-                } catch (err) {
-                    console.log('fail to write:', err)
-                }
-            } catch (err) {
-                console.log('didn`t read file', err)
-                return ['Cannot read file', null]
-            }
-        } catch (err) {
-            console.log('err:', err)
-        }
+    if (Platform.OS === 'android' && !(await hasAndroidStoragePermission())) {
+        return ['Error', null]
     }
-    return ['Error', null]
+    try {
+        const id = uuidv4()
+        const existDirectory = await RNFS.exists(musicDirectory)
+        if(!existDirectory){
+            await RNFS.mkdir(musicDirectory)
+        }
+        const fileResult = await RNFS.readFile(originUrl, 'base64')
+        let path = (musicDirectory + title.replaceAll(/[ -]/g, '_').toLocaleLowerCase())
+        const exist = await RNFS.exists(path)
+
+        if (exist) {
+            return ['File already added', null] // path - path to already exist file
+        } else {
+            await RNFS.writeFile(path, fileResult, 'base64')
+            return [null, { title, url: path, id }]
+        }
+    } catch (err) {
+        console.log('err:', err)
+    }
+    return ['Load file error', null]
 }

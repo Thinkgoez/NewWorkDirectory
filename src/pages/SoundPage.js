@@ -1,11 +1,10 @@
 import React from 'react';
-import { FlatList } from 'react-native';
 import DocumentPicker from 'react-native-document-picker'
 import styled from 'styled-components/native'
 import { useDispatch, useSelector } from 'react-redux';
 
 import { AudioItem } from '../components/Sound/AudioItem';
-import { StyledButton, StyledText, StyledView } from '../components/common/SimpleComponents'
+import { StyledButton, StyledFlatList, StyledText, StyledView } from '../components/common/SimpleComponents'
 import { addAudio, clearAudioStore } from '../redux/actions/audioActions';
 import { createNewSound } from '../components/Sound/tools';
 
@@ -73,7 +72,9 @@ const MainView = () => {
                         fontSize='20px'
                         fontWeight='bold'
                         textAlign='center'
-                    >Clear store</StyledText>
+                    >
+                        Clear store
+                    </StyledText>
                 </StyledButton>
                 <StyledButton
                     onPress={loadSingleFile}
@@ -93,11 +94,11 @@ const MainView = () => {
                     >Load file</StyledText>
                 </StyledButton>
             </StyledView>
-            <FlatList
+            <StyledFlatList
                 data={audioItems}
                 renderItem={renderItem}
                 keyExtractor={({ id }) => id}
-                style={{ flex: 1 }}
+                flex={1}
             />
         </StyledView >
     )

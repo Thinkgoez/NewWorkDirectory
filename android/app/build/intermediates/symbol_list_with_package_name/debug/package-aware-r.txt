@@ -3041,7 +3041,6 @@ raw fragment_shader_sharpness
 raw fragment_shader_shift_order_and_convert_to_yuv
 raw fragment_shader_sticker
 raw fragment_shader_tile
-raw psycho
 raw vertex_shader_aspect
 raw vertex_shader_default
 raw vertex_shader_fragcoord

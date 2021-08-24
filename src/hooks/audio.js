@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import {useEffect, useState, useRef, useCallback} from 'react';
 import { Alert } from 'react-native';
 import Sound from 'react-native-sound';
 
@@ -8,7 +8,7 @@ export const useAudio = (audioInfo) => {
     const [sound, setSound] = useState(null)
     const [progress, setProgress] = useState(0)
     const [timerId, setTimerId] = useState(null)
-    const onLoad = () => {
+    const onLoad = useCallback(() => {
         try {
             if (audioInfo.isRequire) {
                 const soundInstance = new Sound(audioInfo.url, error => callback(error, soundInstance));
@@ -18,22 +18,22 @@ export const useAudio = (audioInfo) => {
         } catch (err) {
             console.log('fail to load sound:', err)
         }
-    }
+    },[audioInfo])
     useEffect(() => () => { // return clean interval
         clearInterval(timerId)
         console.log('cleared', timerId)
     }, [timerId])
     useEffect(() => onPause, [sound])
 
-    const onPause = () => {
+    const onPause = useCallback(() => {
         clearInterval(timerId)
         gifRef.current?.pause()
         if (sound) {
             sound.pause()
             setIsPLaying(false)
         }
-    }
-    const callback = (error, sound) => {
+    }, [sound, timerId, gifRef.current])
+    const callback = useCallback((error, sound) => {
         if (error) {
             Alert.alert('error', error.message);
             setIsPLaying(false)
@@ -41,8 +41,8 @@ export const useAudio = (audioInfo) => {
             setSound(sound)
             playAudio(sound)
         }
-    };
-    const playAudio = (sound) => {
+    }, [playAudio])
+    const playAudio = useCallback((sound) => {
         setTimerId(setInterval(getTime, 1000, sound))
         setIsPLaying(true)
         gifRef.current?.play()
@@ -52,12 +52,12 @@ export const useAudio = (audioInfo) => {
             setProgress(1)
             clearInterval(timerId)
         });
-    }
-    const onPlay = () => {
+    }, [getTime, gifRef, timerId])
+    const onPlay = useCallback(() => {
         if (sound) {
             playAudio(sound)
         }
-    }
+    }, [sound])
     const getTime = (sound) => {
         if (sound) {
             sound.getCurrentTime(secs => {
@@ -66,20 +66,21 @@ export const useAudio = (audioInfo) => {
             })
         }
     }
-    const onReset = () => {
-        if (sound) {
-            sound.setCurrentTime(0)
-            onPause()
-            setProgress(0)
-        }
-    }
-    const onRewind = (ratio) => {
+    const onReset = useCallback(() => {
+            if (sound) {
+                sound.setCurrentTime(0)
+                onPause()
+                setProgress(0)
+            }
+        }, [sound, onPause])
+
+    const onRewind = useCallback((ratio) => {
         if (sound) {
             const position = sound.getDuration() / ratio
             sound.setCurrentTime(position)
             getTime(sound)
         }
-    }
+    }, [sound, getTime])
     return {
         onReset,
         onPlay,
