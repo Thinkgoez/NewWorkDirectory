@@ -6,6 +6,10 @@ const ModalPage = () => {
     const [modalVisible, setModalVisible] = useState(false);
     const open = () => setModalVisible(true)
     const close = () => setModalVisible(false)
+    const onRequestClose = () => {
+        Alert.alert('Modal has been closed.');
+        close()
+    }
     return (
         <StyledView
             justifyContent='center'
@@ -16,10 +20,7 @@ const ModalPage = () => {
                 animationType='slide'
                 transparent={true}
                 visible={modalVisible}
-                onRequestClose={() => {
-                    Alert.alert('Modal has been closed.');
-                    close()
-                }}
+                onRequestClose={onRequestClose}
             >
                 <StyledView
                     justifyContent='center'
