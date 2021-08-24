@@ -3,7 +3,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Alert, Animated, Dimensions, StyleSheet } from 'react-native';
 import { setJSExceptionHandler, setNativeExceptionHandler } from 'react-native-exception-handler';
 import BootSplash from 'react-native-bootsplash';
+import I18n from 'react-native-i18n';
 
+import en from './src/i18n/en'
+import fr from './src/i18n/fr'
 import { StyledView } from './src/components/common/SimpleComponents';
 import AppContent from './src/pages/AppContent';
 
@@ -30,7 +33,9 @@ setJSExceptionHandler(errorHandler, true);
 setNativeExceptionHandler(() => {
     console.log('setNativeExceptionHandler');
 });
-
+I18n.fallbacks = true;
+I18n.locale = 'fr';
+I18n.translations = { en, fr };
 
 const App = () => {
     const [bootSplashIsVisible, setBootSplashIsVisible] = useState(true);

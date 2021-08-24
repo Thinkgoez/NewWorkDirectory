@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Alert } from 'react-native';
+import I18n from 'react-native-i18n';
 
 import { StyledView } from '../../common/SimpleComponents'
 import { ContentList } from '../../common/CombinationComponents'
@@ -18,7 +19,7 @@ export const CartonScreen = () => {
         // Some code
     }
     const handleRightSwipe = (id) => {
-        Alert.alert('Alert', `You just clicked item with id: ${id}`)
+        Alert.alert('Alert', `${I18n.t('You just clicked item with id')}: ${id}`)
     }
     return (
         <StyledView flex={1}>

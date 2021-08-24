@@ -1,3 +1,4 @@
+import I18n from 'react-native-i18n';
 import { ArticleItem } from '../../components/common/CombinationComponents';
 
 export const itemsList = {
@@ -66,6 +67,6 @@ export const itemsList = {
         count: 3,
       }
     ],
-    headerItems: ['Article no.', 'act'],
+    headerItems: [I18n.t('pages.Articles.listHeaders.ArticleNo'), I18n.t('pages.Articles.listHeaders.act')],
     ListItemComponent: ArticleItem
   };

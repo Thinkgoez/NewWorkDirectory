@@ -11,6 +11,7 @@ target 'FirstTask' do
   config = use_native_modules!
   rn_maps_path = '../node_modules/react-native-maps'
   pod 'react-native-google-maps', :path => rn_maps_path
+  pod 'RNCharts', :path => '../node_modules/react-native-charts-wrapper'
   
   use_react_native!(
     :path => config[:reactNativePath],

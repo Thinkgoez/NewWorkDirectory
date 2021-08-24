@@ -1,4 +1,5 @@
 import { CartonItem } from '../../../common/CombinationComponents';
+import I18n from 'react-native-i18n';
 
 export const itemsList = {
     list: [
@@ -13,6 +14,6 @@ export const itemsList = {
             count: 2,
         },
     ],
-    headerItems: ['carton no.', 'act'],
+    headerItems: [I18n.t('pages.Summary.listHeaders.CartonNo'), I18n.t('pages.Articles.listHeaders.act')],
     ListItemComponent: CartonItem
 };
