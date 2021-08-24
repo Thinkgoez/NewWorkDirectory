@@ -1,25 +1,26 @@
 import React, { useEffect, useState } from 'react'
-import { Dimensions, PermissionsAndroid, Platform } from 'react-native'
 import MapboxGL from '@react-native-mapbox-gl/maps';
-import { lineString as makeLineString } from '@turf/helpers'
-import MapboxDirectionsFactory from '@mapbox/mapbox-sdk/services/directions'
 import Geolocation from 'react-native-geolocation-service';
-
-import { StyledButton, StyledText, StyledView } from '../common/SimpleComponents';
+import MapboxDirectionsFactory from '@mapbox/mapbox-sdk/services/directions'
+import { Dimensions, PermissionsAndroid, Platform } from 'react-native'
+import { lineString as makeLineString } from '@turf/helpers'
 import { request, PERMISSIONS } from 'react-native-permissions'
 
-const accessToken = 'pk.eyJ1IjoidGhpbmtnb2V6IiwiYSI6ImNrc2s4bGd2ZjJsZXMyb28zZ2Q5bjRjNTQifQ.KzVzyQ6kO7H3THbRMFg7nw'
-const directionsClient = MapboxDirectionsFactory({ accessToken })
+import { StyledButton, StyledText, StyledView } from '../common/SimpleComponents';
+import { MAPBOX_GL_ACCESS_TOKEN } from '../../constants';
 
-MapboxGL.setAccessToken(accessToken);
+const directionsClient = MapboxDirectionsFactory({ accessToken: MAPBOX_GL_ACCESS_TOKEN })
+
+MapboxGL.setAccessToken(MAPBOX_GL_ACCESS_TOKEN);
 const WIDTH = Dimensions.get('screen').width
 
 const styles = {
     lineLayer: {
-        lineColor: 'red',
+        lineColor: 'navy',
         lineCap: 'round',
         lineJoin: 'round',
-        lineWidth: 7,
+        lineWidth: 3.2,
+        lineOpacity: 1.84,
         lineGradient: [
             'interpolate',
             ['linear'],
@@ -38,16 +39,14 @@ const styles = {
             'red',
         ],
     },
-};
+}
 
 const requestLocPermission = async () => {
+    let res = null
     if (Platform.OS === 'ios') {
-        const res = await request(PERMISSIONS.IOS.LOCATION_WHEN_IN_USE)
-        if (res === 'granted') {
-            return true
-        }
+        res = await request(PERMISSIONS.IOS.LOCATION_WHEN_IN_USE)
     } else {
-        const granted = await PermissionsAndroid.request(
+        res = await PermissionsAndroid.request(
             PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
             {
                 title: 'Location Permission',
@@ -57,21 +56,20 @@ const requestLocPermission = async () => {
                 buttonPositive: 'Ok'
             }
         );
-        if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-            console.log('Permission access')
-            return true
-        } else {
-            console.log('Location permission denied');
-        }
     }
+    if (res === PermissionsAndroid.RESULTS.GRANTED) {
+        console.log('Permission access')
+        return true
+    }
+
+    console.log('Location permission denied');
     return false
 }
-
-const getStartPosition = async (cb) => {
+const getStartPosition = async (callBack) => {
     await Geolocation.getCurrentPosition(
         position => {
             const currentPosition = { latitude: position.coords.latitude, longitude: position.coords.longitude } // delta props means zoom
-            cb(currentPosition)
+            callBack(currentPosition)
         },
         (error) => {
             console.log(error.code, error.message);
@@ -96,10 +94,12 @@ const getDirections = async (startLoc, destLoc) => {
         console.log('getDirections error:', err)
     }
 }
+
 export const AnotherMap = () => {
     const [route, setRoute] = useState(null)
     const [isShowRoute, setShowRoute] = useState(false)
-    const [userPosition, setUserPosition] = useState(null)
+    const [isStreetRoute, setStreetRoute] = useState(false)
+    const [userHistoryCoords, setUserHistoryCoords] = useState([])
     const [userStartPosition, setStartPosition] = useState(null)
     useEffect(async () => {
         MapboxGL.setConnected(true);
@@ -113,30 +113,29 @@ export const AnotherMap = () => {
         if (access) {
             getStartPosition(async (pos) => {
                 if (pos) {
-                    setUserPosition(pos)
-                    setStartPosition(pos)
-                    // const resRoute = await getDirections([-122.084, 37.3], [pos.longitude, pos.latitude])
-                    // setRoute(resRoute)
+                    setStartPosition([pos.longitude, pos.latitude])
                 }
             })
         }
     }
-    const onUserLocationUpdate = async (location) => {
-        const currentPosition = {
-            latitude: location.coords.latitude,
-            longitude: location.coords.longitude
-        }
-        setUserPosition(currentPosition);
-        if(userStartPosition){
-            const resRoute = await getDirections([currentPosition.longitude, currentPosition.latitude], [userStartPosition.longitude, userStartPosition.latitude])
+    const onUserLocationUpdate = async ({ coords: { longitude, latitude } }) => {
+        const currentPosition = [longitude, latitude]
+        if (userStartPosition) {
+            const resRoute = await getDirections(currentPosition, userStartPosition)
             setRoute(resRoute)
         }
-        
-        // console.log('resRoute', resRoute)
+        setUserHistoryCoords(prev => [...prev, currentPosition])
     }
     const onShowWay = () => {
         setShowRoute(el => !el)
     }
+    const onStreetRoute = () => {
+        setStreetRoute(el => !el)
+    }
+
+    const showPath = isShowRoute && route
+    const showOriginRoute = showPath && !isStreetRoute
+    const showStreetRoute = showPath && isStreetRoute
     return (
         <StyledView flex={1} justifyContent='center' alignItems='center'>
             <StyledView width={WIDTH + 'px'} flex={1}>
@@ -160,7 +159,6 @@ export const AnotherMap = () => {
                         title='This is a sample'
                     >
                         <MapboxGL.Callout title='This is a sample' />
-
                     </MapboxGL.PointAnnotation>
                     <MapboxGL.PointAnnotation
                         coordinate={[-122.084, 37.3]}
@@ -168,35 +166,68 @@ export const AnotherMap = () => {
                         title='This is a sample'
                     >
                         <MapboxGL.Callout title='This is a sample' />
-
                     </MapboxGL.PointAnnotation>
-                    {userPosition
+                    {userStartPosition
                         && <MapboxGL.PointAnnotation
-                            coordinate={[userPosition.longitude, userPosition.latitude]}
+                            coordinate={userStartPosition}
                             id='PointAnnotation-3'
                             title='This is a sample'
                         >
                             <MapboxGL.Callout title='This is a sample' />
-
                         </MapboxGL.PointAnnotation>
                     }
-                    {isShowRoute && route
-                        ? <MapboxGL.ShapeSource id='routeSource' shape={route.geometry}>
-                            <MapboxGL.LineLayer id='routeFill' style={{ lineColor: 'navy', lineWidth: 3.2, lineCap: MapboxGL.LineJoin.Round, lineOpacity: 1.84 }} />
-                        </MapboxGL.ShapeSource>
-                        : null
+
+                    {
+                        showOriginRoute && (
+                            <MapboxGL.ShapeSource
+                                id='source1'
+                                lineMetrics={true}
+                                shape={{
+                                    type: 'Feature',
+                                    geometry: {
+                                        type: 'LineString',
+                                        coordinates: userHistoryCoords,
+                                    },
+                                }}
+                            >
+                                <MapboxGL.LineLayer id='layer1' style={styles.lineLayer} />
+                            </MapboxGL.ShapeSource>
+                        )
                     }
+                    {
+                        showStreetRoute && (
+                            <MapboxGL.ShapeSource id='routeSource' shape={route.geometry}>
+                                <MapboxGL.LineLayer id='routeFill' style={styles.lineLayer} />
+                            </MapboxGL.ShapeSource>
+
+                        )
+                    }
+
                 </MapboxGL.MapView>
             </StyledView>
-            <StyledButton onPress={onShowWay} paddingVertical='16px' border='1px solid navy' width='100%' alignItems='center'><StyledText>{isShowRoute ? 'Hide route' :'Show last way'}</StyledText></StyledButton>
+            <StyledView flexDirection='row'>
+                <StyledButton
+                    flex={1}
+                    onPress={onShowWay}
+                    paddingVertical='16px'
+                    border='1px solid navy'
+                    alignItems='center'
+                >
+                    <StyledText>{isShowRoute ? 'Hide route' : 'Show last way'}</StyledText>
+                </StyledButton>
+                {isShowRoute
+                    ? <StyledButton
+                        flex={1}
+                        onPress={onStreetRoute}
+                        paddingVertical='16px'
+                        border='1px solid navy'
+                        alignItems='center'
+                    >
+                        <StyledText>{isStreetRoute ? 'Origin route' : 'Street route'}</StyledText>
+                    </StyledButton>
+                    : null
+                }
+            </StyledView>
         </StyledView>
     );
-}
-
-const Anotation = () => {
-    return (
-        <StyledView>
-            <StyledText>Anoitation text</StyledText>
-        </StyledView>
-    )
 }
