@@ -4,7 +4,7 @@ import { Alert } from 'react-native';
 import { StyledView } from '../../common/SimpleComponents'
 import { ContentList } from '../../common/CombinationComponents'
 
-import { itemsList } from './itemsData/ArticleScreen'
+import { itemsList } from '../../items/ArticleItems'
 
 export const ArticleScreen = ({ navigation, route, ...props }) => {
     const [loading, setLoading] = useState(false);
