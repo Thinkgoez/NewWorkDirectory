@@ -6,6 +6,7 @@ export const Signature = () => {
     const signature = useRef()
     const saveSign = () => {
         signature.current.saveImage();
+        resetSign()
     }
 
     const resetSign = () => {
