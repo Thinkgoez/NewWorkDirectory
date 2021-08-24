@@ -1,10 +1,9 @@
-# OSX
-#
-.DS_Store
-
 # Xcode
-#
-build/
+!**/*.xcodeproj
+!**/*.pbxproj
+!**/*.xcworkspacedata
+!**/*.xcsettings
+!**/*.xcscheme
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -57,6 +56,8 @@ buck-out
 .gradle
 local.properties
 *.iml
+/android/
+!/android/app/src/main/res/
 
 # Node
 node_modules
@@ -72,6 +73,12 @@ node_modules
 /bots/node_modules/
 package-lock.json
 
+# Node
+node_modules
+*.log
+.nvm
+/bots/node_modules/
+package-lock.json
 # OS X
 .DS_Store
 

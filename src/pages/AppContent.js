@@ -14,6 +14,7 @@ const FingerPrint = React.lazy(() => import('./FingerPrint'));
 const Map = React.lazy(() => import('./Map'));
 const Login = React.lazy(() => import('./Login'));
 const Summary = React.lazy(() => import('./Summary'));
+const SoundPage = React.lazy(() => import('./SoundPage'));
 const SignaturePage = React.lazy(() => import('./SignaturePage'));
 const ModalPage = React.lazy(() => import('./ModalPage'));
 const Chart = React.lazy(() => import('./Chart'));
@@ -48,6 +49,7 @@ const AppContent = () => {
                                     <Drawer.Screen name='Notifications' component={Notifications} />
                                     <Drawer.Screen name='Modal' component={ModalPage} />
                                     <Drawer.Screen name='Signature' component={SignaturePage} />
+                                    <Drawer.Screen name='SoundPage' component={SoundPage} />
                                 </Drawer.Navigator>
                             </NavigationContainer>
                         </Suspense>

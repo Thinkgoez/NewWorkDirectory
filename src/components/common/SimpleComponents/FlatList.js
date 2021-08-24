@@ -1,7 +1,7 @@
 import styled from 'styled-components/native'
-import { flexMixin, borderMixin, paddingMixin, sizesMixin, shadowMixin, marginMixin, positionMixin} from './StylesMixins/Mixins'
+import { flexMixin, borderMixin, paddingMixin, sizesMixin, shadowMixin, marginMixin, positionMixin } from './StylesMixins/Mixins'
 
-const View = styled.View`
+const Styled = styled.FlatList`
     ${flexMixin}
     ${borderMixin}
     ${paddingMixin}
@@ -15,4 +15,4 @@ const View = styled.View`
     ${({opacity}) => opacity !== undefined ? `opacity: ${opacity};`: ''}
 `
 
-export default View
+export default Styled

@@ -12,6 +12,7 @@ import { StyledView } from './src/components/common/SimpleComponents';
 import AppContent from './src/pages/AppContent';
 
 const bootSplashLogo = require('./src/assets/bootsplash_logo.png');
+
 const height = Dimensions.get('window').height;
 
 const errorHandler = (e, isFatal) => {
@@ -97,7 +98,6 @@ const App = () => {
                         ]}
                     />
                 </Animated.View>
-
                 : <AppContent />
             }
         </StyledView>
@@ -118,3 +118,29 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+
+
+// Total cleaning:
+// echo "Cleaning all the things";
+// watchman watch-del-all;
+// rm -rf node_modules;
+// rm -rf $TMPDIR/react-*
+// rm -rf $TMPDIR/npm-*
+// cd ios
+// rm -rf Pods;
+// rm -rf Podfile.lock;
+// rm -rf build;
+// npm cache clean --force
+// pod cache clean --all
+// cd ../android
+// rm -rf build
+// cd ..
+// rm -rf ~/Library/Developer/Xcode/DerivedData
+
+// echo "Installing things again";
+// npm install;
+// cd ios
+// pod install
+// cd ..;
+
+// npm start -- --reset-cache;

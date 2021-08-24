@@ -12,3 +12,6 @@ export { default as StyledMapView } from './map/MapView';
 export { default as StyledCallout } from './map/Callout';
 export { default as StyledSafeAreaView } from './SafeAreaView';
 export { default as StyledSignature } from './Signature';
+export { default as StyledWithoutFeedback } from './WithoutFeedback';
+export { default as StyledIcon } from './Icon'; // SvgUri
+export { default as StyledFlatList } from './FlatList';

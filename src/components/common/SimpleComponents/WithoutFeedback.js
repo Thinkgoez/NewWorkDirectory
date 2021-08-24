@@ -1,7 +1,7 @@
 import styled from 'styled-components/native'
 import { flexMixin, paddingMixin, sizesMixin, borderMixin, marginMixin, shadowMixin, positionMixin } from './StylesMixins/Mixins'
 
-const StyledTouchableOpacity= styled.TouchableOpacity`
+const Styled = styled.TouchableWithoutFeedback`
     ${flexMixin}
     ${borderMixin}
     ${paddingMixin}
@@ -14,8 +14,6 @@ const StyledTouchableOpacity= styled.TouchableOpacity`
     ${(({backgroundColor}) => backgroundColor !== undefined ? `background-color: ${backgroundColor};`: '')}
     ${(({border}) => border !== undefined ? `border: ${border};`: '')}
     ${(({borderRadius}) => borderRadius !== undefined ? `border-radius: ${borderRadius};`: '')}
-    ${(({opacity}) => opacity !== undefined ? `opacity: ${opacity};`: '')}
-    ${(({transform}) => transform !== undefined ? `transform: ${transform};`: '')}
 `
 
-export default StyledTouchableOpacity
+export default Styled
