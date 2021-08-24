@@ -5,6 +5,7 @@ import { Platform } from 'react-native';
 import styled from 'styled-components/native'
 
 import { StyledButton, StyledText, StyledView } from '../components/common/SimpleComponents';
+import {StyledDatePicker} from "./styled";
 
 const DateTimePicker = () => {
     const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
@@ -21,7 +22,6 @@ const DateTimePicker = () => {
     };
 
     const handleConfirm = (dateTime) => {
-        // console.warn('A date has been picked: ', date);
         setDateTime(dateTime)
         hideDatePicker();
     };
@@ -37,7 +37,13 @@ const DateTimePicker = () => {
             >
                 <StyledText color='#fff' fontWeight='bold' fontSize='18px'>Show Another Date Picker</StyledText>
             </StyledButton>
-            {!!dateTime && <StyledText><StyledText fontWeight='bold' fontSize='16px'>You picked:</StyledText> {dateTime.toLocaleString()}</StyledText>}
+            {
+                !!dateTime &&
+                    <StyledText>
+                        <StyledText fontWeight='bold' fontSize='16px'>You picked:</StyledText>
+                        {dateTime.toLocaleString()}
+                    </StyledText>
+            }
             <DateTimePickerModal
                 isVisible={isDatePickerVisible}
                 mode={Platform.select({ ios: 'date', android: 'datetime' })}
@@ -52,7 +58,6 @@ const DateTimePicker = () => {
                     textColor='#ef4f0f'
                 />
                 <StyledDatePicker
-                    // style={styles.timePicker}
                     date={time}
                     onDateChange={setTime}
                     mode='time'
@@ -63,10 +68,5 @@ const DateTimePicker = () => {
     );
 };
 
-const StyledDatePicker = styled(DatePicker)`
-    width: 100%;
-    background-color: #004F4e;
-    box-shadow: none;
-`
 
 export default DateTimePicker
