@@ -11,6 +11,7 @@ const ArticlesPage = React.lazy(() => import('./Articles'));
 const CameraPage = React.lazy(() => import('./Camera'));
 const WebViewPage = React.lazy(() => import('./WebViewPage'));
 const FingerPrint = React.lazy(() => import('./FingerPrint'));
+const DateTimePicker = React.lazy(() => import('./DateTimePicker'));
 const Map = React.lazy(() => import('./Map'));
 const Login = React.lazy(() => import('./Login'));
 const Summary = React.lazy(() => import('./Summary'));
@@ -52,6 +53,7 @@ const AppContent = () => {
                                     <Drawer.Screen name='Signature' component={SignaturePage} />
                                     <Drawer.Screen name='SoundPage' component={SoundPage} />
                                     <Drawer.Screen name='ScannerCounter' component={ScannerCounter} />
+                                    <Drawer.Screen name='DateTimePicker' component={DateTimePicker} />
                                 </Drawer.Navigator>
                             </NavigationContainer>
                         </Suspense>
