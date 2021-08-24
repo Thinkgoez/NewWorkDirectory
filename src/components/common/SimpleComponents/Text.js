@@ -7,6 +7,7 @@ const Text = styled.Text`
     ${textMixin}
     ${positionMixin}
     ${paddingMixin}
+    ${paddingMixin}
     ${borderMixin}
     ${flexMixin}
     ${(({color}) => color !== undefined ? `color: ${color};`: '')}

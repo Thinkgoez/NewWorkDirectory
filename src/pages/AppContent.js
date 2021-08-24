@@ -15,6 +15,7 @@ const DateTimePicker = React.lazy(() => import('./DateTimePicker'));
 const Map = React.lazy(() => import('./Map'));
 const Login = React.lazy(() => import('./Login'));
 const Summary = React.lazy(() => import('./Summary'));
+const FetchBlob = React.lazy(() => import('./FetchBlob'));
 const ScannerCounter = React.lazy(() => import('./ScannerCounter'));
 const SoundPage = React.lazy(() => import('./SoundPage'));
 const SignaturePage = React.lazy(() => import('./SignaturePage'));
@@ -54,6 +55,7 @@ const AppContent = () => {
                                     <Drawer.Screen name='SoundPage' component={SoundPage} />
                                     <Drawer.Screen name='ScannerCounter' component={ScannerCounter} />
                                     <Drawer.Screen name='DateTimePicker' component={DateTimePicker} />
+                                    <Drawer.Screen name='FetchBlob' component={FetchBlob} />
                                 </Drawer.Navigator>
                             </NavigationContainer>
                         </Suspense>
