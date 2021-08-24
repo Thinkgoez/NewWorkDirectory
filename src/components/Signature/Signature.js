@@ -13,8 +13,6 @@ export const Signature = () => {
     }
 
     const onSaveEvent = (result) => {
-        //result.encoded - for the base64 encoded png
-        //result.pathName - for the file path name
         console.log(result.pathName);
     }
     const onDragEvent = () => {
