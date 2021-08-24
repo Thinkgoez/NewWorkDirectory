@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Alert, Animated, Dimensions, StyleSheet } from 'react-native';
 import { setJSExceptionHandler, setNativeExceptionHandler } from 'react-native-exception-handler';
 import BootSplash from 'react-native-bootsplash';
+// import * as Sentry from "@sentry/react-native";
 import I18n from 'react-native-i18n';
 
 import en from './src/i18n/en'
@@ -33,6 +34,11 @@ setJSExceptionHandler(errorHandler, true);
 setNativeExceptionHandler(() => {
     console.log('setNativeExceptionHandler');
 });
+
+// Sentry.init({
+//   dsn: "https://353a8a3b40564bb5b095e8b2c167e1ae@o949599.ingest.sentry.io/5898355",
+// });
+// throw new Error("My first Sentry error!");
 I18n.fallbacks = true;
 I18n.locale = 'fr';
 I18n.translations = { en, fr };

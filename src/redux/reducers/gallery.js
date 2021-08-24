@@ -4,8 +4,9 @@ const initialState = {
 
 export const galleryReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'ADD_PHOTO':
+        case 'ADD_PHOTO':{
             return {...state, items: [action.payload, ...state.items]}
+        }
         case 'FETCH_PHOTOS':{
             const items = Array.from(new Set([...state.items, ...action.payload]))
             return {...state, items}

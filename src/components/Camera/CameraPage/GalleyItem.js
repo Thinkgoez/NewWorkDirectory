@@ -9,6 +9,6 @@ export const GalleryItem = ({ item }) => {
         navigation.dispatch(pushAction)
     }
     return(
-        <StyledButton onPress={handlePress}><StyledImage width='100px' height='100px' source={{ uri: item }}/></StyledButton>
+        <StyledButton onPress={handlePress} backgroundColor='#c9c9c9'><StyledImage width='100px' height='100px' source={{ uri: item }}/></StyledButton>
     )
 }
