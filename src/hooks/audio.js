@@ -1,85 +1,48 @@
 import { useEffect, useState, useRef, useCallback } from 'react';
-import { Alert, Platform } from 'react-native';
+import { Alert } from 'react-native';
 import Sound from 'react-native-sound';
 import MusicControl, { Command } from 'react-native-music-control'
 
-export const useAudio = (audioInfo) => {
+export const useAudio = (audioInfo, currentPlaying, setCurrentPlaying) => {
     const [isPlaying, setIsPLaying] = useState(false)
-    const gifRef = useRef(null)
-    const [sound, setSound] = useState(null)
-    const [progress, setProgress] = useState(0)
     const [timerId, setTimerId] = useState(null)
-    const onLoad = useCallback(() => {
-        try {
-            if (Platform.OS === 'ios') {
-                // Sound.setCategory('Playback', true)
-                const soundInstance = new Sound(audioInfo.url, undefined, error => callback(error, soundInstance));
-            } else {
-                if (audioInfo.isRequire) {
-                    const soundInstance = new Sound(audioInfo.url, error => callback(error, soundInstance));
-                } else {
-                    const soundInstance = new Sound(audioInfo.url, audioInfo.basePath, error => callback(error, soundInstance));
-                }
-            }
-        } catch (err) {
-            console.log('fail to load sound:', err)
-        }
-    }, [audioInfo])
+    const [progress, setProgress] = useState(0)
+    const [sound, setSound] = useState(null)
+
+    const gifRef = useRef(null)
+
     useEffect(() => () => { // return clean interval
         clearInterval(timerId)
-        console.log('cleared', timerId)
+        // console.log('cleared', timerId)
     }, [timerId])
 
-    useEffect(() => onPause, [sound])
     useEffect(() => {
-        // if (sound) musicControlsDefine()
+        if (sound) musicControlsDefine()
+        return onPause
     }, [sound])
 
-    const callback = (error, sound) => {
-        // console.log('Call back', sound)
-        console.log('Call error', error)
-    }
-    // const callback = useCallback((error, sound) => {
-    //     console.log('Call back')
-    //     if (error) {
-    //         Alert.alert('error', error.message);
-    //         setIsPLaying(false)
-    //     } else {
-    //         setSound(sound)
-    //         playAudio(sound)
-    //         // soundPlayControl(sound)
-    //     }
-    // }, [playAudio])
-
     const playAudio = useCallback((sound) => {
+        sound.getCurrentTime(playSoundControl)
         setTimerId(setInterval(getTime, 1000, sound))
         setIsPLaying(true)
         gifRef.current?.play()
 
         sound.play(() => {
-            setIsPLaying(false)
-            gifRef.current?.pause()
+            pauseAudio(sound)
             setProgress(1)
-            clearInterval(timerId)
         });
-    }, [getTime, gifRef, timerId])
+    }, [getTime, gifRef, pauseAudio])
 
-    const musicControlsDefine = () => {
-        MusicControl.enableBackgroundMode(true);
-        // MusicControl.handleAudioInterruptions(true);
+    const pauseAudio = useCallback((instance = sound) => {
+        instance.pause()
+        gifRef.current?.pause()
+        clearInterval(timerId)
+        setIsPLaying(false)
+    }, [gifRef, timerId, sound])
 
-        MusicControl.enableControl('play', true)
-        MusicControl.enableControl('pause', true)
-        MusicControl.enableControl('changePlaybackPosition', true)
-        MusicControl.enableControl('closeNotification', true, { when: 'always' })
-    }
-
-    const musicControlSubscribe = useCallback((instance = sound) => {
+    const musicControlSubscribe = useCallback((instance) => {
         MusicControl.on(Command.play, () => {
-            onPlay(instance)
-            MusicControl.updatePlayback({
-                state: MusicControl.STATE_PLAYING,
-            })
+            playAudio(instance)
         })
         MusicControl.on(Command.pause, () => {
             onPause(instance)
@@ -88,47 +51,16 @@ export const useAudio = (audioInfo) => {
         MusicControl.on(Command.closeNotification, () => {
             onPause(instance)
         })
-    }, [onPlay, onPause])
+    }, [playAudio, onPause])
 
-    const clearSoundControl = () => {
-        //     MusicControl.off(Command.play)
-        //     MusicControl.off(Command.pause)
-        //     MusicControl.off(Command.closeNotification)
-    }
-
-    const soundPlayControl = (sound) => {
+    const initSoundControl = (sound) => {
         musicControlSubscribe(sound)
-        console.log('Duration:', sound.getDuration())
         MusicControl.setNowPlaying({
             title: audioInfo.title,
-            duration: sound.getDuration(), // (Seconds)
+            duration: sound.getDuration(),
         })
-        MusicControl.updatePlayback({
-            state: MusicControl.STATE_PLAYING,
-            elapsedTime: 1,
-        })
-
+        sound.getCurrentTime(playSoundControl)
     }
-
-    const onPause = useCallback((instance = sound) => {
-        MusicControl.updatePlayback({
-            state: MusicControl.STATE_PAUSED,
-        })
-        if (instance) {
-            gifRef.current?.pause()
-            instance.pause()
-            clearInterval(timerId)
-            setIsPLaying(false)
-        }
-    }, [sound, timerId, gifRef])
-
-    const onPlay = useCallback((instance = sound) => {
-        if (instance) {
-            soundPlayControl(instance)
-            playAudio(instance)
-        }
-    }, [sound, playAudio])
-
     const getTime = (sound) => {
         if (sound) {
             sound.getCurrentTime(secs => {
@@ -137,6 +69,24 @@ export const useAudio = (audioInfo) => {
             })
         }
     }
+
+    const onPause = useCallback((instance = sound) => {
+        if (instance) {
+            instance.getCurrentTime(pauseSoundControl)
+            pauseAudio(instance)
+        }
+    }, [sound, pauseAudio])
+
+    const onPlay = useCallback((instance = sound) => {
+        if (instance) {
+            if (currentPlaying !== audioInfo.id) {
+                setCurrentPlaying(audioInfo.id)
+                initSoundControl(instance)
+            }
+            playAudio(instance)
+        }
+    }, [sound, playAudio, currentPlaying])
+
     const onReset = useCallback(() => {
         if (sound) {
             sound.setCurrentTime(0)
@@ -149,16 +99,64 @@ export const useAudio = (audioInfo) => {
         if (sound) {
             const position = sound.getDuration() / ratio
             sound.setCurrentTime(position)
+            MusicControl.updatePlayback({ elapsedTime: position })
             getTime(sound)
         }
     }, [sound, getTime])
+
+    const onLoad = useCallback(() => {
+        try {
+            if (audioInfo.isRequire) {
+                const soundInstance = new Sound(audioInfo.url, error => initialSoundCallback(error, soundInstance));
+            } else {
+                const soundInstance = new Sound(audioInfo.url, audioInfo.basePath, error => initialSoundCallback(error, soundInstance));
+            }
+            setCurrentPlaying(audioInfo.id)
+        } catch (err) {
+            console.log('fail to load sound:', err)
+        }
+    }, [audioInfo])
+
+    const initialSoundCallback = useCallback((error, sound) => {
+        if (error) {
+            Alert.alert('error', error.message);
+            setIsPLaying(false)
+        } else {
+            setSound(sound)
+            playAudio(sound)
+            initSoundControl(sound)
+        }
+    }, [playAudio])
+
+    const musicControlsDefine = () => {
+        MusicControl.enableBackgroundMode(true);
+        // MusicControl.handleAudioInterruptions(true);
+
+        MusicControl.enableControl('play', true)
+        MusicControl.enableControl('pause', true)
+        MusicControl.enableControl('changePlaybackPosition', true)
+        MusicControl.enableControl('closeNotification', true, { when: 'always' })
+    }
+    const playSoundControl = (seconds) => {
+        MusicControl.updatePlayback({
+            state: MusicControl.STATE_PLAYING,
+            elapsedTime: seconds
+        })
+    }
+    const pauseSoundControl = (seconds) => {
+        MusicControl.updatePlayback({
+            state: MusicControl.STATE_PAUSED,
+            elapsedTime: seconds
+        })
+    }
+
     return {
         onReset,
         onPlay,
         onLoad,
         onPause,
         onRewind,
-        clearSoundControl,
+        onChangedMusic: pauseAudio,
         isOpen: !!sound,
         progress,
         isPlaying,

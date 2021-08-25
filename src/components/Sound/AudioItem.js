@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { TouchableWithoutFeedback } from 'react-native';
 import * as Progress from 'react-native-progress';
 import { useDispatch } from 'react-redux';
@@ -26,15 +26,18 @@ const gifColors = [
 export const AudioItem = ({ audioInfo, currentPlaying, setCurrentPlaying }) => {
     const dispatch = useDispatch()
     const [progressWidth, setProgressWidth] = useState(0)
-    const { onReset, onPlay, onPause, onLoad, onRewind, clearSoundControl, progress, isPlaying, isOpen, gifRef } = useAudio(audioInfo)
+    const {
+        onReset, onPlay, onPause,
+        onLoad, onRewind, onChangedMusic,
+        progress, isPlaying, isOpen, gifRef, 
+    } = useAudio(audioInfo, currentPlaying, setCurrentPlaying)
 
     useEffect(() => {
         if (currentPlaying !== audioInfo.id && isPlaying) {
-            onPause()
-            clearSoundControl()
-            console.log('paused because another sound started playing')
+            onChangedMusic()
+            console.log('Music changed')
         }
-    }, [currentPlaying, isPlaying])
+    }, [currentPlaying, isPlaying, onChangedMusic])
 
     const handlePress = ({ nativeEvent }) => {
         const { locationX } = nativeEvent
@@ -51,13 +54,11 @@ export const AudioItem = ({ audioInfo, currentPlaying, setCurrentPlaying }) => {
         if (isPlaying) {
             onPause()
         } else {
-            setCurrentPlaying(audioInfo.id)
             onPlay()
         }
     }
     const handleLoading = () => {
         onLoad()
-        setCurrentPlaying(audioInfo.id)
     }
     return (
         <StyledView
