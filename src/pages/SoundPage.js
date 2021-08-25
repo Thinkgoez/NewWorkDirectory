@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import DocumentPicker from 'react-native-document-picker'
 import styled from 'styled-components/native'
 import { useDispatch, useSelector } from 'react-redux';
@@ -11,12 +11,15 @@ import { createNewSound } from '../components/Sound/tools';
 import AddIcon from '../assets/add.svg'
 import RemoveIcon from '../assets/delete.svg'
 
+const A = "http://muzovichkoff.com/uploads/files/2020-06/1592385003152_1592385003.mp3"
+
 const MainView = () => {
     const dispatch = useDispatch()
+    const [playingSoundId, setPlayingSoundId] = useState(null)
     const audioItems = useSelector(({ audio }) => audio.items)
 
     const clearAudios = () => dispatch(clearAudioStore())
-    const renderItem = ({ item }) => <AudioItem audioInfo={item} />
+    const renderItem = ({ item }) => <AudioItem audioInfo={item} currentPlaying={playingSoundId} setCurrentPlaying={setPlayingSoundId} />
     const loadSingleFile = async () => {
         try {
             const res = await DocumentPicker.pickSingle({
@@ -38,6 +41,7 @@ const MainView = () => {
             }
         }
     }
+    const flatListItems = audioItems?.length > 0 ? audioItems : [{title: 'AAAAAAAA', url: A, id: 53}, {title: 'BBBBBBB', url: A, id: 5}]
     return (
         <StyledView flex={1}>
             <StyledText
@@ -95,12 +99,12 @@ const MainView = () => {
                 </StyledButton>
             </StyledView>
             <StyledFlatList
-                data={audioItems}
+                data={flatListItems}
                 renderItem={renderItem}
                 keyExtractor={({ id }) => id}
                 flex={1}
             />
-        </StyledView >
+        </StyledView>
     )
 }
 

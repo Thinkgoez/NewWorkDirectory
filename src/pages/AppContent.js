@@ -40,13 +40,13 @@ const AppContent = () => {
                             <NavigationContainer>
                                 <Drawer.Navigator
                                     screenOptions={{ headerShown: false }}
-                                    initialRouteName='Articles in Carton'>
+                                    initialRouteName='SoundPage'>
                                     <Drawer.Screen name='Articles in Carton' component={ArticlesPage} />
                                     <Drawer.Screen name='Summary' component={Summary} />
                                     <Drawer.Screen name='Camera' component={CameraPage} />
                                     <Drawer.Screen name='Map' component={Map} options={{ header: mapHeader, headerShown: true }} />
                                     <Drawer.Screen name='Login' component={Login} />
-                                    <Drawer.Screen name={'WebViewPage'} options={{title: I18n.t('pages.WebViewPage.title')}} component={WebViewPage} />
+                                    <Drawer.Screen name='WebViewPage' options={{title: I18n.t('pages.WebViewPage.title')}} component={WebViewPage} />
                                     <Drawer.Screen name='FingerPrint' component={FingerPrint} />
                                     <Drawer.Screen name='Chart' component={Chart} />
                                     <Drawer.Screen name='Notifications' component={Notifications} />

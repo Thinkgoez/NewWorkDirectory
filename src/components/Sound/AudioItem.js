@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TouchableWithoutFeedback } from 'react-native';
 import * as Progress from 'react-native-progress';
 import { useDispatch } from 'react-redux';
@@ -23,11 +23,18 @@ const gifColors = [
     { keypath: 'path7', color: '#4f3df5' },
 ]
 
-export const AudioItem = ({ audioInfo }) => {
+export const AudioItem = ({ audioInfo, currentPlaying, setCurrentPlaying }) => {
     const dispatch = useDispatch()
     const [progressWidth, setProgressWidth] = useState(0)
+    const { onReset, onPlay, onPause, onLoad, onRewind, clearSoundControl, progress, isPlaying, isOpen, gifRef } = useAudio(audioInfo)
 
-    const { onReset, onPlay, onPause, onLoad, onRewind, progress, isPlaying, isOpen, gifRef } = useAudio(audioInfo)
+    useEffect(() => {
+        if (currentPlaying !== audioInfo.id && isPlaying) {
+            onPause()
+            clearSoundControl()
+            console.log('paused because another sound started playing')
+        }
+    }, [currentPlaying, isPlaying])
 
     const handlePress = ({ nativeEvent }) => {
         const { locationX } = nativeEvent
@@ -39,6 +46,18 @@ export const AudioItem = ({ audioInfo }) => {
     }
     const handleRemove = () => {
         dispatch(removeAudioItem(audioInfo.id, audioInfo.url))
+    }
+    const handlePressPlayButton = () => {
+        if (isPlaying) {
+            onPause()
+        } else {
+            setCurrentPlaying(audioInfo.id)
+            onPlay()
+        }
+    }
+    const handleLoading = () => {
+        onLoad()
+        setCurrentPlaying(audioInfo.id)
     }
     return (
         <StyledView
@@ -67,7 +86,7 @@ export const AudioItem = ({ audioInfo }) => {
                 >{audioInfo.title}</StyledText>
                 {isOpen
                     ? <StyledLottieView ref={gifRef} source={soundGif} colorFilters={gifColors} />
-                    : <StyledButton onPress={onLoad} marginRight='10px' >
+                    : <StyledButton onPress={handleLoading} marginRight='10px' >
                         <StyledText
                             fontSize='16px'
                             backgroundColor='rgba(220,220,220,1)'
@@ -106,7 +125,7 @@ export const AudioItem = ({ audioInfo }) => {
                             </StyledView>
                         </TouchableWithoutFeedback>
                         <StyledButton
-                            onPress={!isPlaying ? onPlay : onPause}
+                            onPress={handlePressPlayButton}
                             alignItems='center' justifyContent='center'
                         >
                             {!isPlaying ? <PlayIcon width={30} height={30} fill='#000' /> : <PauseIcon width={30} height={30} fill='#000' />}
