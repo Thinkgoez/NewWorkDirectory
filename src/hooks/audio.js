@@ -12,12 +12,8 @@ export const useAudio = (audioInfo) => {
     const onLoad = useCallback(() => {
         try {
             if (Platform.OS === 'ios') {
-                if (audioInfo.isRequire) {
-                    Sound.setCategory('Playback', true)
-                    const soundInstance = new Sound(audioInfo.url, error => callback(error, soundInstance));
-                } else {
-                    const soundInstance = new Sound(audioInfo.url, audioInfo.basePath, error => callback(error, soundInstance));
-                }
+                // Sound.setCategory('Playback', true)
+                const soundInstance = new Sound(audioInfo.url, undefined, error => callback(error, soundInstance));
             } else {
                 if (audioInfo.isRequire) {
                     const soundInstance = new Sound(audioInfo.url, error => callback(error, soundInstance));
@@ -25,7 +21,6 @@ export const useAudio = (audioInfo) => {
                     const soundInstance = new Sound(audioInfo.url, audioInfo.basePath, error => callback(error, soundInstance));
                 }
             }
-
         } catch (err) {
             console.log('fail to load sound:', err)
         }
@@ -40,16 +35,21 @@ export const useAudio = (audioInfo) => {
         // if (sound) musicControlsDefine()
     }, [sound])
 
-    const callback = useCallback((error, sound) => {
-        if (error) {
-            Alert.alert('error', error.message);
-            setIsPLaying(false)
-        } else {
-            setSound(sound)
-            playAudio(sound)
-            // soundPlayControl(sound)
-        }
-    }, [playAudio])
+    const callback = (error, sound) => {
+        // console.log('Call back', sound)
+        console.log('Call error', error)
+    }
+    // const callback = useCallback((error, sound) => {
+    //     console.log('Call back')
+    //     if (error) {
+    //         Alert.alert('error', error.message);
+    //         setIsPLaying(false)
+    //     } else {
+    //         setSound(sound)
+    //         playAudio(sound)
+    //         // soundPlayControl(sound)
+    //     }
+    // }, [playAudio])
 
     const playAudio = useCallback((sound) => {
         setTimerId(setInterval(getTime, 1000, sound))
