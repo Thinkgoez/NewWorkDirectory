@@ -8,6 +8,7 @@ import { StyledButton, StyledFlatList, StyledText, StyledView } from '../compone
 import CustomDropDown from '../components/common/CombinationComponents/DropDown';
 import { createNewSound } from '../components/Sound/tools';
 import { addAudio, clearAudioStore } from '../redux/actions/audioActions';
+import { useSoundOrder } from '../hooks/audio/order';
 
 import AddIcon from '../assets/add.svg'
 import ShuffleIcon from '../assets/shuffle.svg'
@@ -17,13 +18,24 @@ import LoopAllIcon from '../assets/loop.svg'
 import RemoveIcon from '../assets/delete.svg'
 import PrevIcon from '../assets/prev.svg'
 import NextIcon from '../assets/next.svg'
+import { ORDER_LOOP_ALL, ORDER_LOOP_ONE, ORDER_MIX, ORDER_SIMPLE } from '../constants';
+
 
 const A = "http://muzovichkoff.com/uploads/files/2020-06/1592385003152_1592385003.mp3"
+const orderList = [
+    { id: 4, title: ORDER_SIMPLE, icon: SimpleOrderIcon },
+    { id: 1, title: ORDER_MIX, icon: ShuffleIcon },
+    { id: 2, title: ORDER_LOOP_ALL, icon: LoopAllIcon },
+    { id: 3, title: ORDER_LOOP_ONE, icon: LoopOneIcon },
+]
 
 const MainView = () => {
     const dispatch = useDispatch()
     const [playingSoundId, setPlayingSoundId] = useState(null)
+    const [soundOrder, setSoundOrder] = useState(ORDER_SIMPLE)
     const audioItems = useSelector(({ audio }) => audio.items)
+    const flatListItems = audioItems?.length > 0 ? audioItems : [{ title: 'AAAAAAAA', url: A, id: 53 }, { title: 'BBBBBBB', url: A, id: 5 }]
+    const { next, prev } = useSoundOrder(flatListItems, playingSoundId, soundOrder)
 
     const clearAudios = () => dispatch(clearAudioStore())
     const renderItem = ({ item }) => <AudioItem audioInfo={item} currentPlaying={playingSoundId} setCurrentPlaying={setPlayingSoundId} />
@@ -48,9 +60,21 @@ const MainView = () => {
             }
         }
     }
+    const handleSelectOrder = (orderTitle) => {
+        setSoundOrder(orderTitle)
+    }
+    const handleNext = () => {
+        setPlayingSoundId(next)
+    }
+    const handlePrev = () => {
+        setPlayingSoundId(prev)
+    }
+    const handleFind = () => {
+        console.log('Found, that was difficult')
+    }
 
-    const flatListItems = audioItems?.length > 0 ? audioItems : [{ title: 'AAAAAAAA', url: A, id: 53 }, { title: 'BBBBBBB', url: A, id: 5 }]
     const currentPlayingAudio = flatListItems.find(el => el.id === playingSoundId)
+
     return (
         <StyledView flex={1}>
             <StyledText
@@ -90,7 +114,11 @@ const MainView = () => {
                             Clear store
                         </StyledText>
                     </StyledButton>
-                    <DropDown />
+                    <CustomDropDown
+                        onSelect={handleSelectOrder}
+                        data={orderList}
+                        defaultValueTitle={ORDER_SIMPLE}
+                    />
                     <StyledButton
                         onPress={loadSingleFile}
                         flexDirection='row'
@@ -117,8 +145,18 @@ const MainView = () => {
                     alignItems='center'
                     borderBottom='1px #000'
                 >
-                    
-                    <ControlPanel title={currentPlayingAudio.title} />
+
+                    <StyledView flexDirection='row' flex={1} justifyContent='space-between'>
+                        <StyledButton onPress={handlePrev} marginRight='25px' disabled={!prev} opacity={!prev ? 0.4 : 1}>
+                            <PrevIcon width={30} height={30} />
+                        </StyledButton>
+                        <StyledButton onPress={handleFind} marginRight='25px'>
+                            <StyledText color='#000' fontSize='20px' fontWeight='bold'>{currentPlayingAudio.title}</StyledText>
+                        </StyledButton>
+                        <StyledButton onPress={handleNext} disabled={!next} opacity={!next ? 0.4 : 1}>
+                            <NextIcon width={30} height={30} />
+                        </StyledButton>
+                    </StyledView>
                 </StyledView>}
             </StyledView>
             <StyledFlatList
@@ -129,50 +167,6 @@ const MainView = () => {
             />
         </StyledView>
     )
-}
-
-const ControlPanel = ({title}) => {
-    const handleFind = () => {
-        console.log('Found, that was difficult')
-    }
-
-    const handlePrev = () => {
-        console.log('Prev')
-    }
-    const handleNext = () => {
-        console.log('Next')
-    }
-
-    return (
-        <StyledView flexDirection='row' flex={1} justifyContent='space-between'>
-            <StyledButton onPress={handlePrev} marginRight='25px'>
-                <PrevIcon width={30} height={30} fill='#000' />
-            </StyledButton>
-            <StyledButton onPress={handleFind} marginRight='25px'>
-                <StyledText color='#000' fontSize='20px' fontWeight='bold'>{title}</StyledText>
-            </StyledButton>
-            <StyledButton onPress={handleNext}>
-                <NextIcon width={30} height={30} fill='#000' />
-            </StyledButton>
-        </StyledView>
-    );
-}
-
-const DropDown = () => {
-    const orderList = [
-        { id: 4, title: 'Simple', icon: SimpleOrderIcon },
-        { id: 1, title: 'Mix', icon: ShuffleIcon },
-        { id: 2, title: 'Loop playlist', icon: LoopAllIcon },
-        { id: 3, title: 'Loop one', icon: LoopOneIcon },
-    ]
-
-    return (
-        <CustomDropDown
-            data={orderList}
-            defaultValueTitle='Simple'
-            onSelect={console.log}
-        />
-    );
 }
 
 const StyledAddIcon = styled(AddIcon)`

@@ -17,7 +17,7 @@ const CustomDropDown = ({ wrapperProps, data, defaultValueTitle, onSelect, ...pr
     }
     const handleSelectItem = (item) => {
         setSelected(item)
-        onSelect(item.id, item.title)
+        onSelect(item.title)
         handleClose()
     }
     const handleLayout = ({ nativeEvent: { layout, ...rest }, ...props }) => {

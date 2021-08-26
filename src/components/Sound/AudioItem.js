@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 import { StyledButton, StyledText, StyledView } from '../common/SimpleComponents';
 import { StyledLottieView } from './styled'
 import { removeAudioItem } from '../../redux/actions/audioActions';
-import { useAudio } from '../../hooks/audio'
+import { useAudio } from '../../hooks/audio/audio'
 
 const soundGif = require('../../assets/sound.json')
 import PlayIcon from '../../assets/play.svg'
@@ -29,7 +29,7 @@ export const AudioItem = ({ audioInfo, currentPlaying, setCurrentPlaying }) => {
     const {
         onReset, onPlay, onPause,
         onLoad, onRewind, onChangedMusic,
-        progress, isPlaying, isOpen, gifRef, 
+        progress, isPlaying, isOpen, gifRef,
     } = useAudio(audioInfo, currentPlaying, setCurrentPlaying)
 
     useEffect(() => {
@@ -38,6 +38,12 @@ export const AudioItem = ({ audioInfo, currentPlaying, setCurrentPlaying }) => {
             console.log('Music changed')
         }
     }, [currentPlaying, isPlaying, onChangedMusic])
+
+    useEffect(() => {
+        if (currentPlaying === audioInfo.id && !isPlaying) {
+            onPlay()
+        }
+    }, [currentPlaying])
 
     const handlePress = ({ nativeEvent }) => {
         const { locationX } = nativeEvent
@@ -66,7 +72,7 @@ export const AudioItem = ({ audioInfo, currentPlaying, setCurrentPlaying }) => {
             paddingHorizontal='20px'
             paddingBottom='10px'
             paddingTop='20px'
-            borderBottom={isPlaying ? undefined :'1px rgb(210,210,210)'}
+            borderBottom={isPlaying ? undefined : '1px rgb(210,210,210)'}
             alignSelf='stretch'
             backgroundColor={isPlaying ? 'lavender' : 'transparent'} // bisque
             border={isPlaying ? '1px solid #000' : '1px solid transparent'}
