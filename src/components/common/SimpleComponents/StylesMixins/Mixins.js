@@ -51,6 +51,8 @@ export const borderMixin = css`
                                                         border-top-color: ${borderTop.split(' ')[1]};`: ''}
     ${({borderRight}) => borderRight !== undefined ? `border-right-width: ${borderRight.split(' ')[0]};
                                                         border-right-color: ${borderRight.split(' ')[1]};`: ''}
+    ${({borderLeft}) => borderLeft !== undefined ? `border-left-width: ${borderLeft.split(' ')[0]};
+                                                        border-left-color: ${borderLeft.split(' ')[1]};`: ''}
 `
 export const sizesMixin = css`
     ${({width}) => width !== undefined ? `width: ${width};`: ''}

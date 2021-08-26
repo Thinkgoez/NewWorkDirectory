@@ -66,8 +66,10 @@ export const AudioItem = ({ audioInfo, currentPlaying, setCurrentPlaying }) => {
             paddingHorizontal='20px'
             paddingBottom='10px'
             paddingTop='20px'
-            borderBottom='1px rgb(210,210,210)'
+            borderBottom={isPlaying ? undefined :'1px rgb(210,210,210)'}
             alignSelf='stretch'
+            backgroundColor={isPlaying ? 'lavender' : 'transparent'} // bisque
+            border={isPlaying ? '1px solid #000' : '1px solid transparent'}
         >
             <StyledView
                 flexDirection='row'
