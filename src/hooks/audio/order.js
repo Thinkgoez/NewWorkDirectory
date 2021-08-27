@@ -1,59 +1,88 @@
 import { useEffect, useState } from 'react';
 
-import { ORDER_LOOP_ALL, ORDER_MIX } from '../../constants'
+import { ORDER_LOOP_ALL, ORDER_LOOP_ONE, ORDER_MIX } from '../../constants'
 
-export const useSoundOrder = (soundList, playingId, order) => {
+export const useSoundOrder = (soundList, playingId, orderList) => {
     const [next, setNext] = useState(null)
     const [prev, setPrev] = useState(null)
+    const [isLooped, setLooped] = useState(null)
+    const [afterCurrentPlay, setAfterCurrentPlay] = useState(null)
+    const [played, setPlayed] = useState([])
 
     const currentIndex = soundList.findIndex(el => el.id === playingId)
-    // console.log('playingId', playingId)
+    // console.log('playingId', playingId) 
     // console.log('currentIndex', currentIndex)
     // console.log('ORDER_MIX === order', ORDER_MIX === order)
-    // console.log('Current order mode', order)
+    // console.log('Current orderList', orderList)
     useEffect(() => {
         if (currentIndex !== -1) {
-            switch (order) {
-                case ORDER_LOOP_ALL: {
-                    if (soundList[currentIndex + 1]) {
-                        setNext(soundList[currentIndex + 1].id)
-                    } else {
-                        setNext(soundList[0].id)
-                    }
-                    if (currentIndex > 0) {
-                        setPrev(soundList[currentIndex - 1].id)
-                    } else {
-                        setPrev(soundList[soundList.length - 1].id)
-                    }
-                    console.log('loop all')
+            if (orderList.includes(ORDER_MIX)) {
+                let randomId = getRandom(soundList.length, currentIndex)
+                setNext(soundList[randomId].id)
+                setPrev(soundList[randomId].id)
+            } else {
+                let nextIndex = getNextLoop(soundList.length, currentIndex)
+                let prevIndex = getPrevLoop(soundList.length, currentIndex)
+                setNext(soundList[nextIndex].id)
+                setPrev(soundList[prevIndex].id)
+                if (played.length > 0) {
+                    setPlayed([])
                 }
-                    break;
-                case ORDER_MIX: {
-                    let randomId
-                    do {
-                        randomId = Math.floor(Math.random() * soundList.length)
-                    } while (randomId === currentIndex)
-                    setNext(soundList[randomId].id)
-                    setPrev(soundList[randomId].id)
-                    break;
-                }
-                default: {
-                    if (soundList[currentIndex + 1]) {
-                        setNext(soundList[currentIndex + 1].id)
-                    } else {
-                        setNext(null)
+            }
+            if (orderList.includes(ORDER_LOOP_ONE)) {
+                setLooped(true)
+            } else {
+                setLooped(false)
+            }
+            if (orderList.includes(ORDER_LOOP_ONE)) {
+                setAfterCurrentPlay(soundList[currentIndex].id)
+            } else if (orderList.includes(ORDER_MIX)) {
+                if (orderList.includes(ORDER_LOOP_ALL)) {
+                    let randomId = getRandom(soundList.length, currentIndex)
+                    setAfterCurrentPlay(soundList[randomId].id)
+                    if (played.length > 0) {
+                        setPlayed([])
                     }
-                    if (currentIndex > 0) {
-                        setPrev(soundList[currentIndex - 1].id)
+                } else {
+                    const unPlayedSoundItems = soundList.filter(el => !played.includes(el.id))
+                    console.log('unPlayedSoundItems', unPlayedSoundItems)
+                    if (unPlayedSoundItems.length > 0) {
+                        let randomId = getRandom(unPlayedSoundItems.length, null)
+                        setAfterCurrentPlay(unPlayedSoundItems[randomId].id)
                     } else {
-                        setPrev(null)
+                        setAfterCurrentPlay(null)
                     }
                 }
-                    break;
+            } else if (orderList.includes(ORDER_LOOP_ALL)) {
+                let nextIndex = getNextLoop(soundList.length, currentIndex)
+                setAfterCurrentPlay(soundList[nextIndex].id)
+            } else {
+                let nextIndex = getNextLoop(soundList.length, currentIndex)
+                setAfterCurrentPlay(nextIndex > 0 ? soundList[nextIndex].id : null)
             }
         }
         // console.log('next', next)
         // console.log('prev', prev)
-    }, [currentIndex, order])
-    return { next, prev }
+    }, [currentIndex, orderList, played.length])
+
+    const getNextLoop = (length, current) => {
+        return length - 1 > current ? current + 1 : 0
+    }
+    const getPrevLoop = (length, current) => {
+        return current > 0 ? current - 1 : length - 1
+    }
+    const getRandom = (max, exclude) => {
+        // test it
+        let randomId
+        do {
+            randomId = Math.floor(Math.random() * max)
+        } while (randomId === exclude)
+        return randomId
+    }
+    const addPlayed = (soundId) => {
+        setPlayed(prev => [...prev, soundId])
+        console.log('Added new played sound', soundId)
+    }
+    // console.log('afterCurrentPlay in order hook', afterCurrentPlay)
+    return { next, prev, afterCurrentPlay, addPlayed, isLooped }
 }

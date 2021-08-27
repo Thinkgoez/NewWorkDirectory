@@ -23,25 +23,29 @@ const gifColors = [
     { keypath: 'path7', color: '#4f3df5' },
 ]
 
-export const AudioItem = ({ audioInfo, currentPlaying, setCurrentPlaying }) => {
+export const AudioItem = ({ audioInfo, currentPlaying, setCurrentPlaying, onFinishPlaying, isLooped }) => {
     const dispatch = useDispatch()
     const [progressWidth, setProgressWidth] = useState(0)
     const {
         onReset, onPlay, onPause,
         onLoad, onRewind, onChangedMusic,
         progress, isPlaying, isOpen, gifRef,
-    } = useAudio(audioInfo, currentPlaying, setCurrentPlaying)
+        isLoaded,
+    } = useAudio(audioInfo, currentPlaying, setCurrentPlaying, onFinishPlaying, isLooped)
 
     useEffect(() => {
         if (currentPlaying !== audioInfo.id && isPlaying) {
             onChangedMusic()
-            console.log('Music changed')
         }
     }, [currentPlaying, isPlaying, onChangedMusic])
 
     useEffect(() => {
         if (currentPlaying === audioInfo.id && !isPlaying) {
-            onPlay()
+            if(isLoaded){
+                onPlay()
+            } else {
+                onLoad()
+            }
         }
     }, [currentPlaying])
 

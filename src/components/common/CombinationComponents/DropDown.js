@@ -3,10 +3,11 @@ import { Modal } from 'react-native'
 
 import { Separator, StyledButton, StyledView, StyledWithoutFeedback } from '../SimpleComponents'
 import ArrowDownIcon from '../../../assets/arrowDown.svg'
+import { ORDER_LOOP_ALL, ORDER_LOOP_ONE } from '../../../constants'
 
-const CustomDropDown = ({ wrapperProps, data, defaultValueTitle, onSelect, ...props }) => {
+const CustomDropDown = ({ wrapperProps, data, defaultValue, onSelect, ...props }) => {
     const [isOpen, setOpen] = useState(false)
-    const [selected, setSelected] = useState(data.find(el => el.title === defaultValueTitle))
+    const [selected, setSelected] = useState([defaultValue]) // data.find(el => el.title === defaultValueTitle)
     const [dropDownOffset, setDropDownOffset] = useState({ x: 0, y: 0 })
     const dropDownRef = useRef(null)
     const handleOpen = () => {
@@ -16,9 +17,25 @@ const CustomDropDown = ({ wrapperProps, data, defaultValueTitle, onSelect, ...pr
         setOpen(false)
     }
     const handleSelectItem = (item) => {
-        setSelected(item)
+        if (selected?.includes(item)) {
+            setSelected(prev => prev.filter(el => el !== item))
+        } else {
+            if (
+                item.title === ORDER_LOOP_ALL
+                && selected?.find(el => el.title === ORDER_LOOP_ONE)
+            ) {
+                setSelected(prev => prev.filter(el => el.title !== ORDER_LOOP_ONE))
+            } else if (
+                item.title === ORDER_LOOP_ONE
+                && selected?.find(el => el.title === ORDER_LOOP_ALL)
+            ) {
+                setSelected(prev => prev.filter(el => el.title !== ORDER_LOOP_ALL))
+            }
+            setSelected(prev => [item, ...prev])
+        }
+
         onSelect(item.title)
-        handleClose()
+        // handleClose()
     }
     const handleLayout = ({ nativeEvent: { layout, ...rest }, ...props }) => {
         console.log(rest)
@@ -28,11 +45,11 @@ const CustomDropDown = ({ wrapperProps, data, defaultValueTitle, onSelect, ...pr
         if (dropDownRef.current) {
             dropDownRef.current.measure((fx, fy, width, height, px, py) => {
                 // fx - frameX, px - pageX
-                setDropDownOffset({ x: px , y: py + height })
+                setDropDownOffset({ x: px, y: py + height })
             })
         }
     }
-    const dropDownSelectedIcon = selected?.icon || ArrowDownIcon
+    const dropDownSelectedIcon = selected?.[0]?.icon || ArrowDownIcon
     return (
         <>
             <StyledView flexDirection='row' onLayout={handleLayout} ref={dropDownRef}>
@@ -85,7 +102,7 @@ const CustomDropDown = ({ wrapperProps, data, defaultValueTitle, onSelect, ...pr
                                             <DropDownItem
                                                 onPress={() => handleSelectItem(el)}
                                                 icon={el.icon}
-                                                selected={el.id === selected?.id}
+                                                selected={selected?.includes(el)}
                                             />
                                             {
                                                 index < data.length - 1
@@ -115,6 +132,7 @@ const DropDownItem = ({ containerStyle = {}, size = 20, onPress, icon: Icon, sel
             flexDirection='row'
             alignItems='center'
             backgroundColor={selected ? '#ccc' : 'transparent'}
+            border='2px transparent'
             borderTop={selected ? '2px #fff' : undefined}
             borderBottom={selected ? '2px #fff' : undefined}
             {...containerStyle}

@@ -3,8 +3,10 @@ import { Alert } from 'react-native';
 import Sound from 'react-native-sound';
 import MusicControl, { Command } from 'react-native-music-control'
 
-export const useAudio = (audioInfo, currentPlaying, setCurrentPlaying) => {
+export const useAudio = (audioInfo, currentPlaying, setCurrentPlaying, onFinishPlaying, isLooped) => {
     const [isPlaying, setIsPLaying] = useState(false)
+    const [isLoaded, setIsLoaded] = useState(false)
+    const [isEnded, setIsEnded] = useState(false)
     const [timerId, setTimerId] = useState(null)
     const [progress, setProgress] = useState(0)
     const [sound, setSound] = useState(null)
@@ -13,23 +15,42 @@ export const useAudio = (audioInfo, currentPlaying, setCurrentPlaying) => {
 
     useEffect(() => () => { // return clean interval
         clearInterval(timerId)
-        // console.log('cleared', timerId)
     }, [timerId])
 
     useEffect(() => {
         if (sound) musicControlsDefine()
         return onPause
     }, [sound])
+    useEffect(() => {
+        // made it because sound.play is hardCode the value of nextPlayMusic
+        if (isEnded && currentPlaying === audioInfo.id) {
+            onFinishPlaying(audioInfo.id)
+            setIsEnded(false)
+        }
+    }, [isEnded, onFinishPlaying, currentPlaying])
+    useEffect(() => {        
+        if (sound) {
+            if (isLooped) {
+                if (currentPlaying === audioInfo.id) {
+                    sound.setNumberOfLoops(-1)
+                }
+            } else {
+                sound.setNumberOfLoops(0)
+            }
+        }
+    }, [isLooped, currentPlaying])
 
     const playAudio = useCallback((sound) => {
         sound.getCurrentTime(playSoundControl)
         setTimerId(setInterval(getTime, 1000, sound))
         setIsPLaying(true)
+        setIsEnded(false)
         gifRef.current?.play()
 
         sound.play(() => {
             pauseAudio(sound)
             setProgress(1)
+            setIsEnded(true)
         });
     }, [getTime, gifRef, pauseAudio])
 
@@ -112,6 +133,7 @@ export const useAudio = (audioInfo, currentPlaying, setCurrentPlaying) => {
                 const soundInstance = new Sound(audioInfo.url, audioInfo.basePath, error => initialSoundCallback(error, soundInstance));
             }
             setCurrentPlaying(audioInfo.id)
+            setIsLoaded(true)
         } catch (err) {
             console.log('fail to load sound:', err)
         }
@@ -160,6 +182,8 @@ export const useAudio = (audioInfo, currentPlaying, setCurrentPlaying) => {
         isOpen: !!sound,
         progress,
         isPlaying,
-        gifRef
+        gifRef,
+        isLoaded,
+        isEnded
     }
 }

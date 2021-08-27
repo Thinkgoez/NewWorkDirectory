@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import DocumentPicker from 'react-native-document-picker'
 import styled from 'styled-components/native'
 import { useDispatch, useSelector } from 'react-redux';
@@ -23,22 +23,22 @@ import { ORDER_LOOP_ALL, ORDER_LOOP_ONE, ORDER_MIX, ORDER_SIMPLE } from '../cons
 
 const A = "http://muzovichkoff.com/uploads/files/2020-06/1592385003152_1592385003.mp3"
 const orderList = [
-    { id: 4, title: ORDER_SIMPLE, icon: SimpleOrderIcon },
     { id: 1, title: ORDER_MIX, icon: ShuffleIcon },
     { id: 2, title: ORDER_LOOP_ALL, icon: LoopAllIcon },
     { id: 3, title: ORDER_LOOP_ONE, icon: LoopOneIcon },
 ]
+const defaultOrder = { id: 99, title: ORDER_SIMPLE, icon: SimpleOrderIcon }
 
 const MainView = () => {
     const dispatch = useDispatch()
     const [playingSoundId, setPlayingSoundId] = useState(null)
-    const [soundOrder, setSoundOrder] = useState(ORDER_SIMPLE)
+    const [soundOrder, setSoundOrder] = useState([ORDER_SIMPLE])
     const audioItems = useSelector(({ audio }) => audio.items)
-    const flatListItems = audioItems?.length > 0 ? audioItems : [{ title: 'AAAAAAAA', url: A, id: 53 }, { title: 'BBBBBBB', url: A, id: 5 }]
-    const { next, prev } = useSoundOrder(flatListItems, playingSoundId, soundOrder)
+    const flatListItems = audioItems?.length > 0 ? audioItems : [{ title: 'AAAAAAAA', url: A, id: 53 }, { title: 'BBBBBBB', url: A, id: 5 }, { title: 'helb', url: A, id: 77 }]
+    const { next, prev, afterCurrentPlay, isLooped, addPlayed } = useSoundOrder(flatListItems, playingSoundId, soundOrder)
 
     const clearAudios = () => dispatch(clearAudioStore())
-    const renderItem = ({ item }) => <AudioItem audioInfo={item} currentPlaying={playingSoundId} setCurrentPlaying={setPlayingSoundId} />
+    
     const loadSingleFile = async () => {
         try {
             const res = await DocumentPicker.pickSingle({
@@ -61,7 +61,24 @@ const MainView = () => {
         }
     }
     const handleSelectOrder = (orderTitle) => {
-        setSoundOrder(orderTitle)
+        setSoundOrder(prev => {
+            if (prev.includes(orderTitle)) {
+                return prev.filter(el => el !== orderTitle)
+            } else {
+                if (
+                    orderTitle === ORDER_LOOP_ALL
+                    && prev?.includes(ORDER_LOOP_ONE)
+                ) {
+                    return [...prev.filter(el => el !== ORDER_LOOP_ONE), orderTitle]
+                } else if (
+                    orderTitle === ORDER_LOOP_ONE
+                    && prev?.find(el => el === ORDER_LOOP_ALL)
+                ) {
+                    return [...prev.filter(el => el !== ORDER_LOOP_ALL), orderTitle]
+                }
+                return [...prev, orderTitle]
+            }
+        })
     }
     const handleNext = () => {
         setPlayingSoundId(next)
@@ -72,9 +89,15 @@ const MainView = () => {
     const handleFind = () => {
         console.log('Found, that was difficult')
     }
+    
+    const currentFinishPlaying = useCallback((soundId) => {
+        addPlayed(soundId)
+        setPlayingSoundId(afterCurrentPlay)
+    }, [afterCurrentPlay])
 
     const currentPlayingAudio = flatListItems.find(el => el.id === playingSoundId)
-
+    const renderItem = ({ item }) => <AudioItem audioInfo={item} currentPlaying={playingSoundId} setCurrentPlaying={setPlayingSoundId} onFinishPlaying={currentFinishPlaying} isLooped={isLooped} />
+    // console.log('Current playing:', playingSoundId)
     return (
         <StyledView flex={1}>
             <StyledText
@@ -117,7 +140,7 @@ const MainView = () => {
                     <CustomDropDown
                         onSelect={handleSelectOrder}
                         data={orderList}
-                        defaultValueTitle={ORDER_SIMPLE}
+                        defaultValue={defaultOrder}
                     />
                     <StyledButton
                         onPress={loadSingleFile}
