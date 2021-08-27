@@ -23,7 +23,7 @@ const gifColors = [
     { keypath: 'path7', color: '#4f3df5' },
 ]
 
-export const AudioItem = ({ audioInfo, currentPlaying, setCurrentPlaying, onFinishPlaying, isLooped }) => {
+export const AudioItem = ({ audioInfo, currentPlaying, setCurrentPlaying, onFinishPlaying, isLooped, handleNext, handlePrev}) => {
     const dispatch = useDispatch()
     const [progressWidth, setProgressWidth] = useState(0)
     const {
@@ -31,7 +31,7 @@ export const AudioItem = ({ audioInfo, currentPlaying, setCurrentPlaying, onFini
         onLoad, onRewind, onChangedMusic,
         progress, isPlaying, isOpen, gifRef,
         isLoaded,
-    } = useAudio(audioInfo, currentPlaying, setCurrentPlaying, onFinishPlaying, isLooped)
+    } = useAudio(audioInfo, currentPlaying, setCurrentPlaying, onFinishPlaying, isLooped, handleNext, handlePrev )
 
     useEffect(() => {
         if (currentPlaying !== audioInfo.id && isPlaying) {
@@ -47,7 +47,7 @@ export const AudioItem = ({ audioInfo, currentPlaying, setCurrentPlaying, onFini
                 onLoad()
             }
         }
-    }, [currentPlaying])
+    }, [currentPlaying, onPlay])
 
     const handlePress = ({ nativeEvent }) => {
         const { locationX } = nativeEvent
@@ -67,9 +67,6 @@ export const AudioItem = ({ audioInfo, currentPlaying, setCurrentPlaying, onFini
             onPlay()
         }
     }
-    const handleLoading = () => {
-        onLoad()
-    }
     return (
         <StyledView
             position='relative'
@@ -78,7 +75,7 @@ export const AudioItem = ({ audioInfo, currentPlaying, setCurrentPlaying, onFini
             paddingTop='20px'
             borderBottom={isPlaying ? undefined : '1px rgb(210,210,210)'}
             alignSelf='stretch'
-            backgroundColor={isPlaying ? 'lavender' : 'transparent'} // bisque
+            backgroundColor={isPlaying ? 'lavender' : 'transparent'}
             border={isPlaying ? '1px solid #000' : '1px solid transparent'}
         >
             <StyledView
@@ -99,7 +96,7 @@ export const AudioItem = ({ audioInfo, currentPlaying, setCurrentPlaying, onFini
                 >{audioInfo.title}</StyledText>
                 {isOpen
                     ? <StyledLottieView ref={gifRef} source={soundGif} colorFilters={gifColors} />
-                    : <StyledButton onPress={handleLoading} marginRight='10px' >
+                    : <StyledButton onPress={onLoad} marginRight='10px' >
                         <StyledText
                             fontSize='16px'
                             backgroundColor='rgba(220,220,220,1)'

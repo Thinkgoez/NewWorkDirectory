@@ -18,10 +18,12 @@ import LoopAllIcon from '../assets/loop.svg'
 import RemoveIcon from '../assets/delete.svg'
 import PrevIcon from '../assets/prev.svg'
 import NextIcon from '../assets/next.svg'
+import PlayIcon from '../assets/play.svg'
 import { ORDER_LOOP_ALL, ORDER_LOOP_ONE, ORDER_MIX, ORDER_SIMPLE } from '../constants';
 
 
-const A = "http://muzovichkoff.com/uploads/files/2020-06/1592385003152_1592385003.mp3"
+const mockSongPath = "http://muzovichkoff.com/uploads/files/2020-06/1592385003152_1592385003.mp3"
+const mockDataList = [{ title: 'AAAAAAAA', url: mockSongPath, id: 53 }, { title: 'BBBBBBB', url: mockSongPath, id: 5 }, { title: 'helb', url: mockSongPath, id: 77 }]
 const orderList = [
     { id: 1, title: ORDER_MIX, icon: ShuffleIcon },
     { id: 2, title: ORDER_LOOP_ALL, icon: LoopAllIcon },
@@ -29,16 +31,16 @@ const orderList = [
 ]
 const defaultOrder = { id: 99, title: ORDER_SIMPLE, icon: SimpleOrderIcon }
 
-const MainView = () => {
+const SoundPage = () => {
     const dispatch = useDispatch()
     const [playingSoundId, setPlayingSoundId] = useState(null)
     const [soundOrder, setSoundOrder] = useState([ORDER_SIMPLE])
     const audioItems = useSelector(({ audio }) => audio.items)
-    const flatListItems = audioItems?.length > 0 ? audioItems : [{ title: 'AAAAAAAA', url: A, id: 53 }, { title: 'BBBBBBB', url: A, id: 5 }, { title: 'helb', url: A, id: 77 }]
-    const { next, prev, afterCurrentPlay, isLooped, addPlayed } = useSoundOrder(flatListItems, playingSoundId, soundOrder)
+    // const flatListItems = audioItems?.length > 0 ? audioItems : mockDataList
+    const { next, prev, afterCurrentPlay, isLooped, addPlayed } = useSoundOrder(audioItems, playingSoundId, soundOrder)
 
     const clearAudios = () => dispatch(clearAudioStore())
-    
+
     const loadSingleFile = async () => {
         try {
             const res = await DocumentPicker.pickSingle({
@@ -86,18 +88,28 @@ const MainView = () => {
     const handlePrev = () => {
         setPlayingSoundId(prev)
     }
-    const handleFind = () => {
-        console.log('Found, that was difficult')
+    const handlePlayFirst = () => {
+        setPlayingSoundId(audioItems[0].id)
     }
-    
+
     const currentFinishPlaying = useCallback((soundId) => {
         addPlayed(soundId)
         setPlayingSoundId(afterCurrentPlay)
     }, [afterCurrentPlay])
 
-    const currentPlayingAudio = flatListItems.find(el => el.id === playingSoundId)
-    const renderItem = ({ item }) => <AudioItem audioInfo={item} currentPlaying={playingSoundId} setCurrentPlaying={setPlayingSoundId} onFinishPlaying={currentFinishPlaying} isLooped={isLooped} />
-    // console.log('Current playing:', playingSoundId)
+    const currentPlayingAudio = audioItems.find(el => el.id === playingSoundId)
+    const renderItem = ({ item }) => (
+        <AudioItem
+            audioInfo={item}
+            currentPlaying={playingSoundId}
+            setCurrentPlaying={setPlayingSoundId}
+            onFinishPlaying={currentFinishPlaying}
+            isLooped={isLooped}
+            handleNext={handleNext}
+            handlePrev={handlePrev}
+        />
+    )
+    const areSoundLoaded = audioItems.length > 0
     return (
         <StyledView flex={1}>
             <StyledText
@@ -127,10 +139,11 @@ const MainView = () => {
                         paddingVertical='10px'
                         justifyContent='space-between'
                         border='1px solid #000'
+                        marginRight='5px'
                     >
                         <StyledRemoveIcon fill='#f53d3d' width='30px' height='30px' />
                         <StyledText
-                            fontSize='20px'
+                            fontSize='18px'
                             fontWeight='bold'
                             textAlign='center'
                         >
@@ -141,6 +154,7 @@ const MainView = () => {
                         onSelect={handleSelectOrder}
                         data={orderList}
                         defaultValue={defaultOrder}
+                        disabled={!areSoundLoaded}
                     />
                     <StyledButton
                         onPress={loadSingleFile}
@@ -148,19 +162,20 @@ const MainView = () => {
                         alignItems='center'
                         borderRadius='10px'
                         paddingHorizontal='10px'
+                        marginLeft='5px'
                         paddingVertical='10px'
                         justifyContent='space-between'
                         border='1px solid #000'
                     >
                         <StyledAddIcon fill='#4fab4f' width='30px' height='30px' />
                         <StyledText
-                            fontSize='20px'
+                            fontSize='18px'
                             fontWeight='bold'
                             textAlign='center'
                         >Load file</StyledText>
                     </StyledButton>
                 </StyledView>
-                {!!currentPlayingAudio && <StyledView
+                <StyledView
                     paddingVertical='10px'
                     paddingHorizontal='16px'
                     flexDirection='row'
@@ -169,21 +184,30 @@ const MainView = () => {
                     borderBottom='1px #000'
                 >
 
-                    <StyledView flexDirection='row' flex={1} justifyContent='space-between'>
+                    {areSoundLoaded
+                    ? <StyledView flexDirection='row' flex={1} justifyContent='space-between' alignItems='center'>
                         <StyledButton onPress={handlePrev} marginRight='25px' disabled={!prev} opacity={!prev ? 0.4 : 1}>
                             <PrevIcon width={30} height={30} />
                         </StyledButton>
-                        <StyledButton onPress={handleFind} marginRight='25px'>
-                            <StyledText color='#000' fontSize='20px' fontWeight='bold'>{currentPlayingAudio.title}</StyledText>
-                        </StyledButton>
+                        {currentPlayingAudio
+                            ? <StyledView marginRight='25px'>
+                                <StyledText color='#000' fontSize='20px' fontWeight='bold'>{currentPlayingAudio.title}</StyledText>
+                            </StyledView>
+                            : <StyledButton onPress={handlePlayFirst} marginRight='25px'>
+                                <PlayIcon width={30} height={30} fill='#000' />
+                            </StyledButton>
+                        }
+
                         <StyledButton onPress={handleNext} disabled={!next} opacity={!next ? 0.4 : 1}>
                             <NextIcon width={30} height={30} />
                         </StyledButton>
                     </StyledView>
-                </StyledView>}
+                    : <StyledText fontSize='18px' color='#000' fontWeight='bold'>Load some music...</StyledText>    
+                }
+                </StyledView>
             </StyledView>
             <StyledFlatList
-                data={flatListItems}
+                data={audioItems}
                 renderItem={renderItem}
                 keyExtractor={({ id }) => id}
                 flex={1}
@@ -198,4 +222,4 @@ const StyledAddIcon = styled(AddIcon)`
 const StyledRemoveIcon = styled(RemoveIcon)`
     margin-right: 8px;
 `
-export default MainView
+export default SoundPage

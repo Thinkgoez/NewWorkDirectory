@@ -3,8 +3,10 @@ import { Alert } from 'react-native';
 import Sound from 'react-native-sound';
 import MusicControl, { Command } from 'react-native-music-control'
 
-export const useAudio = (audioInfo, currentPlaying, setCurrentPlaying, onFinishPlaying, isLooped) => {
+export const useAudio = (audioInfo, currentPlaying, setCurrentPlaying, onFinishPlaying, isLooped, handleNext, handlePrev) => {
     const [isPlaying, setIsPLaying] = useState(false)
+    const [shouldHandleNext, setShouldHandleNext] = useState(false)
+    const [shouldHandlePrev, setShouldHandlePrev] = useState(false)
     const [isLoaded, setIsLoaded] = useState(false)
     const [isEnded, setIsEnded] = useState(false)
     const [timerId, setTimerId] = useState(null)
@@ -13,10 +15,22 @@ export const useAudio = (audioInfo, currentPlaying, setCurrentPlaying, onFinishP
 
     const gifRef = useRef(null)
 
+    useEffect(() => {
+        if(shouldHandleNext){
+            handleNext()
+            setShouldHandleNext(false)
+        }
+    }, [shouldHandleNext])
+    useEffect(() => {
+        if(shouldHandlePrev){
+            handlePrev()
+            setShouldHandlePrev(false)
+        }
+        clearInterval(timerId)
+    }, [shouldHandlePrev])
     useEffect(() => () => { // return clean interval
         clearInterval(timerId)
     }, [timerId])
-
     useEffect(() => {
         if (sound) musicControlsDefine()
         return onPause
@@ -28,7 +42,7 @@ export const useAudio = (audioInfo, currentPlaying, setCurrentPlaying, onFinishP
             setIsEnded(false)
         }
     }, [isEnded, onFinishPlaying, currentPlaying])
-    useEffect(() => {        
+    useEffect(() => {
         if (sound) {
             if (isLooped) {
                 if (currentPlaying === audioInfo.id) {
@@ -64,6 +78,12 @@ export const useAudio = (audioInfo, currentPlaying, setCurrentPlaying, onFinishP
     const musicControlSubscribe = useCallback((instance) => {
         MusicControl.on(Command.play, () => {
             playAudio(instance)
+        })
+        MusicControl.on(Command.nextTrack, () => {
+            setShouldHandleNext(true)
+        })
+        MusicControl.on(Command.previousTrack, () => {
+            setShouldHandlePrev(true)
         })
         MusicControl.on(Command.pause, () => {
             onPause(instance)
@@ -102,8 +122,9 @@ export const useAudio = (audioInfo, currentPlaying, setCurrentPlaying, onFinishP
         if (instance) {
             if (currentPlaying !== audioInfo.id) {
                 setCurrentPlaying(audioInfo.id)
-                initSoundControl(instance)
+                
             }
+            initSoundControl(instance)
             playAudio(instance)
         }
     }, [sound, playAudio, currentPlaying])
@@ -132,7 +153,6 @@ export const useAudio = (audioInfo, currentPlaying, setCurrentPlaying, onFinishP
             } else {
                 const soundInstance = new Sound(audioInfo.url, audioInfo.basePath, error => initialSoundCallback(error, soundInstance));
             }
-            setCurrentPlaying(audioInfo.id)
             setIsLoaded(true)
         } catch (err) {
             console.log('fail to load sound:', err)
@@ -145,15 +165,14 @@ export const useAudio = (audioInfo, currentPlaying, setCurrentPlaying, onFinishP
             setIsPLaying(false)
         } else {
             setSound(sound)
-            playAudio(sound)
-            initSoundControl(sound)
+            onPlay(sound)
         }
     }, [playAudio])
 
     const musicControlsDefine = () => {
         MusicControl.enableBackgroundMode(true);
-        // MusicControl.handleAudioInterruptions(true);
-
+        MusicControl.enableControl('nextTrack', true)
+        MusicControl.enableControl('previousTrack', true)
         MusicControl.enableControl('play', true)
         MusicControl.enableControl('pause', true)
         MusicControl.enableControl('changePlaybackPosition', true)

@@ -10,10 +10,6 @@ export const useSoundOrder = (soundList, playingId, orderList) => {
     const [played, setPlayed] = useState([])
 
     const currentIndex = soundList.findIndex(el => el.id === playingId)
-    // console.log('playingId', playingId) 
-    // console.log('currentIndex', currentIndex)
-    // console.log('ORDER_MIX === order', ORDER_MIX === order)
-    // console.log('Current orderList', orderList)
     useEffect(() => {
         if (currentIndex !== -1) {
             if (orderList.includes(ORDER_MIX)) {
@@ -61,8 +57,6 @@ export const useSoundOrder = (soundList, playingId, orderList) => {
                 setAfterCurrentPlay(nextIndex > 0 ? soundList[nextIndex].id : null)
             }
         }
-        // console.log('next', next)
-        // console.log('prev', prev)
     }, [currentIndex, orderList, played.length])
 
     const getNextLoop = (length, current) => {
@@ -81,8 +75,6 @@ export const useSoundOrder = (soundList, playingId, orderList) => {
     }
     const addPlayed = (soundId) => {
         setPlayed(prev => [...prev, soundId])
-        console.log('Added new played sound', soundId)
     }
-    // console.log('afterCurrentPlay in order hook', afterCurrentPlay)
     return { next, prev, afterCurrentPlay, addPlayed, isLooped }
 }

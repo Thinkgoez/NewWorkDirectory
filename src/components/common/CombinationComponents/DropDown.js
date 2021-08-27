@@ -5,9 +5,9 @@ import { Separator, StyledButton, StyledView, StyledWithoutFeedback } from '../S
 import ArrowDownIcon from '../../../assets/arrowDown.svg'
 import { ORDER_LOOP_ALL, ORDER_LOOP_ONE } from '../../../constants'
 
-const CustomDropDown = ({ wrapperProps, data, defaultValue, onSelect, ...props }) => {
+const CustomDropDown = ({ wrapperProps, data, defaultValue, onSelect, disabled, ...props }) => {
     const [isOpen, setOpen] = useState(false)
-    const [selected, setSelected] = useState([defaultValue]) // data.find(el => el.title === defaultValueTitle)
+    const [selected, setSelected] = useState([defaultValue])
     const [dropDownOffset, setDropDownOffset] = useState({ x: 0, y: 0 })
     const dropDownRef = useRef(null)
     const handleOpen = () => {
@@ -55,6 +55,7 @@ const CustomDropDown = ({ wrapperProps, data, defaultValue, onSelect, ...props }
             <StyledView flexDirection='row' onLayout={handleLayout} ref={dropDownRef}>
                 <DropDownItem
                     onPress={handleOpen}
+                    disabled={disabled}
                     size={30}
                     icon={dropDownSelectedIcon}
                     containerStyle={{
@@ -123,14 +124,16 @@ const CustomDropDown = ({ wrapperProps, data, defaultValue, onSelect, ...props }
     )
 }
 
-const DropDownItem = ({ containerStyle = {}, size = 20, onPress, icon: Icon, selected }) => {
+const DropDownItem = ({ containerStyle = {}, size = 20, onPress, icon: Icon, selected, disabled }) => {
     return (
         <StyledButton
             onPress={onPress}
+            disabled={disabled}
             paddingVertical='5px'
             paddingHorizontal='10px'
             flexDirection='row'
             alignItems='center'
+            opacity={disabled ? 0.4 : 1}
             backgroundColor={selected ? '#ccc' : 'transparent'}
             border='2px transparent'
             borderTop={selected ? '2px #fff' : undefined}
