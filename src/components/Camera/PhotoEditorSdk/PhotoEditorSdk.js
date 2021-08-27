@@ -5,7 +5,6 @@ import RNFS from 'react-native-fs'
 
 import { replacePhotos } from '../../../redux/actions/galleryActions';
 
-
 export const PhotoEditorSdk = ({ route, navigation }) => {
     const dispatch = useDispatch()
 

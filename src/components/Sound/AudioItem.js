@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { TouchableWithoutFeedback } from 'react-native';
 import * as Progress from 'react-native-progress';
 import { useDispatch } from 'react-redux';
@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 import { StyledButton, StyledText, StyledView } from '../common/SimpleComponents';
 import { StyledLottieView } from './styled'
 import { removeAudioItem } from '../../redux/actions/audioActions';
-import { useAudio } from '../../hooks/audio'
+import { useAudio } from '../../hooks/audio/audio'
 
 const soundGif = require('../../assets/sound.json')
 import PlayIcon from '../../assets/play.svg'
@@ -23,11 +23,31 @@ const gifColors = [
     { keypath: 'path7', color: '#4f3df5' },
 ]
 
-export const AudioItem = ({ audioInfo }) => {
+export const AudioItem = ({ audioInfo, currentPlaying, setCurrentPlaying, onFinishPlaying, isLooped, handleNext, handlePrev}) => {
     const dispatch = useDispatch()
     const [progressWidth, setProgressWidth] = useState(0)
+    const {
+        onReset, onPlay, onPause,
+        onLoad, onRewind, onChangedMusic,
+        progress, isPlaying, isOpen, gifRef,
+        isLoaded,
+    } = useAudio(audioInfo, currentPlaying, setCurrentPlaying, onFinishPlaying, isLooped, handleNext, handlePrev )
 
-    const { onReset, onPlay, onPause, onLoad, onRewind, progress, isPlaying, isOpen, gifRef } = useAudio(audioInfo)
+    useEffect(() => {
+        if (currentPlaying !== audioInfo.id && isPlaying) {
+            onChangedMusic()
+        }
+    }, [currentPlaying, isPlaying, onChangedMusic])
+
+    useEffect(() => {
+        if (currentPlaying === audioInfo.id && !isPlaying) {
+            if(isLoaded){
+                onPlay()
+            } else {
+                onLoad()
+            }
+        }
+    }, [currentPlaying, onPlay])
 
     const handlePress = ({ nativeEvent }) => {
         const { locationX } = nativeEvent
@@ -40,14 +60,23 @@ export const AudioItem = ({ audioInfo }) => {
     const handleRemove = () => {
         dispatch(removeAudioItem(audioInfo.id, audioInfo.url))
     }
+    const handlePressPlayButton = () => {
+        if (isPlaying) {
+            onPause()
+        } else {
+            onPlay()
+        }
+    }
     return (
         <StyledView
             position='relative'
             paddingHorizontal='20px'
             paddingBottom='10px'
             paddingTop='20px'
-            borderBottom='1px rgb(210,210,210)'
+            borderBottom={isPlaying ? undefined : '1px rgb(210,210,210)'}
             alignSelf='stretch'
+            backgroundColor={isPlaying ? 'lavender' : 'transparent'}
+            border={isPlaying ? '1px solid #000' : '1px solid transparent'}
         >
             <StyledView
                 flexDirection='row'
@@ -106,7 +135,7 @@ export const AudioItem = ({ audioInfo }) => {
                             </StyledView>
                         </TouchableWithoutFeedback>
                         <StyledButton
-                            onPress={!isPlaying ? onPlay : onPause}
+                            onPress={handlePressPlayButton}
                             alignItems='center' justifyContent='center'
                         >
                             {!isPlaying ? <PlayIcon width={30} height={30} fill='#000' /> : <PauseIcon width={30} height={30} fill='#000' />}

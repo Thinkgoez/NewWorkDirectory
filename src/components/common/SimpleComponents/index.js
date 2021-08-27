@@ -16,3 +16,4 @@ export { default as StyledWithoutFeedback } from './WithoutFeedback';
 export { default as StyledIcon } from './Icon'; // SvgUri
 export { default as StyledFlatList } from './FlatList';
 export { default as InfoBlock } from './InfoBlock';
+export { default as Separator } from './Separator';

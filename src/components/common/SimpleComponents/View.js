@@ -9,10 +9,12 @@ const View = styled.View`
     ${sizesMixin}
     ${shadowMixin}
     ${positionMixin}
+    ${({zIndex}) => zIndex !== undefined ? `z-index: ${zIndex};`: ''}
     ${({color}) => color !== undefined ? `color: ${color};`: ''}
     ${({textAlign}) => textAlign !== undefined ? `text-align: ${textAlign};`: ''}
     ${({backgroundColor}) => backgroundColor !== undefined ? `background-color: ${backgroundColor};`: ''}
     ${({opacity}) => opacity !== undefined ? `opacity: ${opacity};`: ''}
+    ${({transform}) => transform !== undefined ? `transform: ${transform};`: ''}
 `
 
 export default View

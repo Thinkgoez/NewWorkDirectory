@@ -16,7 +16,6 @@ const Text = styled.Text`
     ${(({textAlign}) => textAlign !== undefined ? `text-align: ${textAlign};`: '')}
     ${(({alignSelf}) => alignSelf !== undefined ? `align-self: ${alignSelf};`: '')}
     ${(({justifySelf}) => justifySelf !== undefined ? `justify-self: ${justifySelf};`: '')}
-    ${(({textTransform}) => textTransform !== undefined ? `text-transform: ${textTransform};`: '')}
     ${(({overflow}) => overflow !== undefined ? `overflow: ${overflow};`: '')}
     ${(({lineHeight}) => lineHeight !== undefined ? `line-height: ${lineHeight};`: '')}
 `

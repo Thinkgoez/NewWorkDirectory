@@ -1,29 +1,53 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import DocumentPicker from 'react-native-document-picker'
 import styled from 'styled-components/native'
 import { useDispatch, useSelector } from 'react-redux';
 
 import { AudioItem } from '../components/Sound/AudioItem';
 import { StyledButton, StyledFlatList, StyledText, StyledView } from '../components/common/SimpleComponents'
-import { addAudio, clearAudioStore } from '../redux/actions/audioActions';
+import CustomDropDown from '../components/common/CombinationComponents/DropDown';
 import { createNewSound } from '../components/Sound/tools';
+import { addAudio, clearAudioStore } from '../redux/actions/audioActions';
+import { useSoundOrder } from '../hooks/audio/order';
 
 import AddIcon from '../assets/add.svg'
+import ShuffleIcon from '../assets/shuffle.svg'
+import SimpleOrderIcon from '../assets/simpleOrder.svg'
+import LoopOneIcon from '../assets/loopOne.svg'
+import LoopAllIcon from '../assets/loop.svg'
 import RemoveIcon from '../assets/delete.svg'
+import PrevIcon from '../assets/prev.svg'
+import NextIcon from '../assets/next.svg'
+import PlayIcon from '../assets/play.svg'
+import { ORDER_LOOP_ALL, ORDER_LOOP_ONE, ORDER_MIX, ORDER_SIMPLE } from '../constants';
 
-const MainView = () => {
+
+const mockSongPath = "http://muzovichkoff.com/uploads/files/2020-06/1592385003152_1592385003.mp3"
+const mockDataList = [{ title: 'AAAAAAAA', url: mockSongPath, id: 53 }, { title: 'BBBBBBB', url: mockSongPath, id: 5 }, { title: 'helb', url: mockSongPath, id: 77 }]
+const orderList = [
+    { id: 1, title: ORDER_MIX, icon: ShuffleIcon },
+    { id: 2, title: ORDER_LOOP_ALL, icon: LoopAllIcon },
+    { id: 3, title: ORDER_LOOP_ONE, icon: LoopOneIcon },
+]
+const defaultOrder = { id: 99, title: ORDER_SIMPLE, icon: SimpleOrderIcon }
+
+const SoundPage = () => {
     const dispatch = useDispatch()
+    const [playingSoundId, setPlayingSoundId] = useState(null)
+    const [soundOrder, setSoundOrder] = useState([ORDER_SIMPLE])
     const audioItems = useSelector(({ audio }) => audio.items)
+    // const flatListItems = audioItems?.length > 0 ? audioItems : mockDataList
+    const { next, prev, afterCurrentPlay, isLooped, addPlayed } = useSoundOrder(audioItems, playingSoundId, soundOrder)
 
     const clearAudios = () => dispatch(clearAudioStore())
-    const renderItem = ({ item }) => <AudioItem audioInfo={item} />
+
     const loadSingleFile = async () => {
         try {
             const res = await DocumentPicker.pickSingle({
                 type: [DocumentPicker.types.audio],
             })
             const [error, newSoundItem] = await createNewSound(res.name, res.uri)
-            if(error){
+            if (error) {
                 // handle error
                 console.log(error)
             }
@@ -38,6 +62,54 @@ const MainView = () => {
             }
         }
     }
+    const handleSelectOrder = (orderTitle) => {
+        setSoundOrder(prev => {
+            if (prev.includes(orderTitle)) {
+                return prev.filter(el => el !== orderTitle)
+            } else {
+                if (
+                    orderTitle === ORDER_LOOP_ALL
+                    && prev?.includes(ORDER_LOOP_ONE)
+                ) {
+                    return [...prev.filter(el => el !== ORDER_LOOP_ONE), orderTitle]
+                } else if (
+                    orderTitle === ORDER_LOOP_ONE
+                    && prev?.find(el => el === ORDER_LOOP_ALL)
+                ) {
+                    return [...prev.filter(el => el !== ORDER_LOOP_ALL), orderTitle]
+                }
+                return [...prev, orderTitle]
+            }
+        })
+    }
+    const handleNext = () => {
+        setPlayingSoundId(next)
+    }
+    const handlePrev = () => {
+        setPlayingSoundId(prev)
+    }
+    const handlePlayFirst = () => {
+        setPlayingSoundId(audioItems[0].id)
+    }
+
+    const currentFinishPlaying = useCallback((soundId) => {
+        addPlayed(soundId)
+        setPlayingSoundId(afterCurrentPlay)
+    }, [afterCurrentPlay])
+
+    const currentPlayingAudio = audioItems.find(el => el.id === playingSoundId)
+    const renderItem = ({ item }) => (
+        <AudioItem
+            audioInfo={item}
+            currentPlaying={playingSoundId}
+            setCurrentPlaying={setPlayingSoundId}
+            onFinishPlaying={currentFinishPlaying}
+            isLooped={isLooped}
+            handleNext={handleNext}
+            handlePrev={handlePrev}
+        />
+    )
+    const areSoundLoaded = audioItems.length > 0
     return (
         <StyledView flex={1}>
             <StyledText
@@ -48,51 +120,91 @@ const MainView = () => {
                 paddingTop='25px'
                 textAlign='center'
             >Music</StyledText>
-            <StyledView
-                flexDirection='row'
-                justifyContent='space-between'
-                borderTop='1px #ccc'
-                borderBottom='1px #000'
-                paddingHorizontal='8px'
-                paddingVertical='8px'
-                aligmItems='center'
-            >
-                <StyledButton
-                    onPress={clearAudios}
+            <StyledView>
+                <StyledView
                     flexDirection='row'
-                    alignItems='center'
-                    borderRadius='10px'
-                    paddingHorizontal='10px'
-                    paddingVertical='10px'
                     justifyContent='space-between'
-                    border='1px solid #000'
+                    borderTop='1px #ccc'
+                    borderBottom='1px #000'
+                    paddingHorizontal='8px'
+                    paddingVertical='8px'
+                    aligmItems='center'
                 >
-                    <StyledRemoveIcon fill='#f53d3d' width='30px' height='30px' />
-                    <StyledText
-                        fontSize='20px'
-                        fontWeight='bold'
-                        textAlign='center'
+                    <StyledButton
+                        onPress={clearAudios}
+                        flexDirection='row'
+                        alignItems='center'
+                        borderRadius='10px'
+                        paddingHorizontal='10px'
+                        paddingVertical='10px'
+                        justifyContent='space-between'
+                        border='1px solid #000'
+                        marginRight='5px'
                     >
-                        Clear store
-                    </StyledText>
-                </StyledButton>
-                <StyledButton
-                    onPress={loadSingleFile}
-                    flexDirection='row'
-                    alignItems='center'
-                    borderRadius='10px'
-                    paddingHorizontal='10px'
+                        <StyledRemoveIcon fill='#f53d3d' width='30px' height='30px' />
+                        <StyledText
+                            fontSize='18px'
+                            fontWeight='bold'
+                            textAlign='center'
+                        >
+                            Clear store
+                        </StyledText>
+                    </StyledButton>
+                    <CustomDropDown
+                        onSelect={handleSelectOrder}
+                        data={orderList}
+                        defaultValue={defaultOrder}
+                        disabled={!areSoundLoaded}
+                    />
+                    <StyledButton
+                        onPress={loadSingleFile}
+                        flexDirection='row'
+                        alignItems='center'
+                        borderRadius='10px'
+                        paddingHorizontal='10px'
+                        marginLeft='5px'
+                        paddingVertical='10px'
+                        justifyContent='space-between'
+                        border='1px solid #000'
+                    >
+                        <StyledAddIcon fill='#4fab4f' width='30px' height='30px' />
+                        <StyledText
+                            fontSize='18px'
+                            fontWeight='bold'
+                            textAlign='center'
+                        >Load file</StyledText>
+                    </StyledButton>
+                </StyledView>
+                <StyledView
                     paddingVertical='10px'
+                    paddingHorizontal='16px'
+                    flexDirection='row'
                     justifyContent='space-between'
-                    border='1px solid #000'
+                    alignItems='center'
+                    borderBottom='1px #000'
                 >
-                    <StyledAddIcon fill='#4fab4f' width='30px' height='30px' />
-                    <StyledText
-                        fontSize='20px'
-                        fontWeight='bold'
-                        textAlign='center'
-                    >Load file</StyledText>
-                </StyledButton>
+
+                    {areSoundLoaded
+                    ? <StyledView flexDirection='row' flex={1} justifyContent='space-between' alignItems='center'>
+                        <StyledButton onPress={handlePrev} marginRight='25px' disabled={!prev} opacity={!prev ? 0.4 : 1}>
+                            <PrevIcon width={30} height={30} />
+                        </StyledButton>
+                        {currentPlayingAudio
+                            ? <StyledView marginRight='25px'>
+                                <StyledText color='#000' fontSize='20px' fontWeight='bold'>{currentPlayingAudio.title}</StyledText>
+                            </StyledView>
+                            : <StyledButton onPress={handlePlayFirst} marginRight='25px'>
+                                <PlayIcon width={30} height={30} fill='#000' />
+                            </StyledButton>
+                        }
+
+                        <StyledButton onPress={handleNext} disabled={!next} opacity={!next ? 0.4 : 1}>
+                            <NextIcon width={30} height={30} />
+                        </StyledButton>
+                    </StyledView>
+                    : <StyledText fontSize='18px' color='#000' fontWeight='bold'>Load some music...</StyledText>    
+                }
+                </StyledView>
             </StyledView>
             <StyledFlatList
                 data={audioItems}
@@ -100,7 +212,7 @@ const MainView = () => {
                 keyExtractor={({ id }) => id}
                 flex={1}
             />
-        </StyledView >
+        </StyledView>
     )
 }
 
@@ -110,4 +222,4 @@ const StyledAddIcon = styled(AddIcon)`
 const StyledRemoveIcon = styled(RemoveIcon)`
     margin-right: 8px;
 `
-export default MainView
+export default SoundPage
